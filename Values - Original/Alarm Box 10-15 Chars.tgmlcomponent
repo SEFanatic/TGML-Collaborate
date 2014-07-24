@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<Component Clip="False" ComponentCounter="2" ContentHeight="20"
+    ContentWidth="140" GridSize="10" Height="20.0" Left="0.0"
+    Name="Alarm Box 10-15 Chars" Top="0.0" Width="140.0">
+    <Metadata Name="Name" Value="Alarm Box 10-15 Chars"/>
+    <Metadata Name="Description" Value=""/>
+    <Metadata Name="Version" Value="1.0"/>
+    <Rectangle Fill="None" Height="20.0" Left="0.0" Name="background"
+        RadiusX="5" RadiusY="5" Stroke="#F0080E" StrokeDashArray="0.0"
+        StrokeWidth="1.0" Top="0.0" Width="140.0">
+        <LinearGradient EndPoint="0,1">
+            <GradientStop Color="#FEFEFE" Offset="0"/>
+            <GradientStop Color="#DFE0E2" Offset="1.0"/>
+        </LinearGradient>
+        <Expose ExposedAttribute="Stroke" Name="Alarm Color"/>
+    </Rectangle>
+    <TextBox Fill="None" FontFamily="Arial" FontSize="15.0"
+        FontStyle="Normal" FontWeight="Normal" Height="20.0"
+        HorizontalAlign="Center" Left="5.0" Name="Text" Stroke="#000000"
+        TextDecoration="None" Top="0.0" VerticalAlign="Middle"
+            Width="130.0"><![CDATA[...]]><Expose
+            ExposedAttribute="Content" Name="Display Text"/>
+    </TextBox>
+    <Bind Attribute="Visibility" Name="Alm" PreventDefault="True">
+        <Expose ExposedAttribute="Name" Name="Bind Name"/>
+		<Expose ExposedAttribute="PreventDefault" Name="Prevent Default"/>
+        <ConvertValue AttributeValue="Hidden" SignalLessOrEqualTo="0">
+            <Expose ExposedAttribute="SignalLessOrEqualTo" Name="Hidden ="/>
+        </ConvertValue>
+        <ConvertValue AttributeValue="Visible" SignalMoreOrEqualTo="1">
+            <Expose ExposedAttribute="SignalMoreOrEqualTo" Name="Visible ="/>
+        </ConvertValue>
+    </Bind>
+</Component>

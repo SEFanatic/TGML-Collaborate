@@ -1,0 +1,275 @@
+<?xml version="1.0"?>
+<Component Clip="False" ContentHeight="40.0" ContentWidth="100.0"
+    Height="40.0" Left="0.0" Name="Analog Set Point" Top="0.0" Width="100.0">
+    <Group Name="binds">
+        <Bind Description="ValueBind" Name="#Spt" PreventDefault="True">
+		<Expose ExposedAttribute="PreventDefault" Name="Prevent Default"/>
+            <Expose ExposedAttribute="Name" Name="SptBind"/>
+        </Bind>
+    </Group>
+    <Group Name="display">
+        <Component Clip="False" ContentHeight="20.0"
+            ContentWidth="100.0" Height="20.0" Left="0.0" Name="Text"
+            Top="0.0" Width="100.0">
+            <Group Name="display">
+                <Rectangle Fill="#01FFFFFF" Height="20.0" Left="0.0"
+                    Name="background" RadiusX="0.0" RadiusY="0.0"
+                    Stroke="None" StrokeDashArray="0.0"
+                    StrokeWidth="1.0" Top="0.0" Width="100.0"/>
+                <TextBox FontFamily="Arial" FontSize="15.0"
+                    FontStyle="Normal" FontWeight="Normal" Height="20.0"
+                    HorizontalAlign="Center" Left="0.0"
+                    Name="foreground" Stroke="#000000"
+                    TextDecoration="None" Top="0.0"
+                    VerticalAlign="Middle"
+                        Width="100.0"><![CDATA[...]]><Expose
+                        ExposedAttribute="Content" Name="Text Content"/>
+                </TextBox>
+            </Group>
+        </Component>
+        <Component Clip="False" ContentHeight="20.0"
+            ContentWidth="100.0" Decimals="1" Height="20.0"
+            Increment="0.5" Left="0.0" Name="AnalogPoint" Top="20.0"
+            Units="°F" Width="100.0">
+            <Expose ExposedAttribute="Decimals" Name="Decimals"/>
+            <Expose ExposedAttribute="Units" Name="Units"/>
+            <Expose ExposedAttribute="Increment" Name="Increment"/>
+            <Group Name="display">
+                <Rectangle Fill="#F7F7F6" Height="20.0" Left="20"
+                    Opacity="1.0" RadiusX="0" RadiusY="0"
+                    Stroke="#9FA0A4" StrokeDashArray="0.0"
+                    StrokeWidth="1.0" Top="0" Width="60.0"/>
+                <Polygon Opacity="1.0"
+                    Points="20.5,0.5 80.5,0.5 80.5,4.5 24.5,4.5"
+                    Stroke="None" StrokeDashArray="0.0" StrokeWidth="1.0">
+                    <LinearGradient Attribute="Fill" EndPoint="0,1"
+                        SpreadMethod="Pad" StartPoint="0.0,0.0">
+                        <GradientStop Color="#CECFD2" Offset="0.0"/>
+                        <GradientStop Color="#F7F7F6" Offset=".75"/>
+                    </LinearGradient>
+                </Polygon>
+                <Polygon Opacity="1.0"
+                    Points="24.5,4.5 24.5,19.5 20.5,19.5 20.5,0.5"
+                    Stroke="None" StrokeDashArray="0.0" StrokeWidth="1.0">
+                    <LinearGradient Attribute="Fill" EndPoint="1,0"
+                        SpreadMethod="Pad" StartPoint="0.0,0.0">
+                        <GradientStop Color="#CECFD2" Offset="0.0"/>
+                        <GradientStop Color="#F7F7F6" Offset=".75"/>
+                    </LinearGradient>
+                </Polygon>
+                <Path Name="minusBox"
+                    PathData="M20.0,0.0 C15.0,0.0 10.0,0.0 5.0,0.0 2.0,0.0 0.0,2.0 0.0,5.0 0.0,8.0 0.0,12.0 0.0,15.0 0.0,18.0 2.035014,19.930005 5.0,20.0 10.0,20.0 15.0,20.0 20.0,20.0 20.0,15.0 20.0,5.0 20.0,0.0"
+                    Stroke="#626469" StrokeDashArray="0.0" StrokeWidth="1.0">
+                    <LinearGradient Attribute="Fill" EndPoint="0,1"
+                        SpreadMethod="Pad" StartPoint="0.0,0.0">
+                        <GradientStop Color="#FCFCFC" Offset="0"/>
+                        <GradientStop Color="#DEDFE0" Offset="1"/>
+                    </LinearGradient>
+                </Path>
+                <Path Name="plusBox"
+                    PathData="M80.0,0.0 C85.0,0.0 90.0,0.0 95.0,0.0 98.0,0.0 100.0,2.0 100.0,5.0 100.0,8.0 100.0,12.0 100.0,15.0 100.0,18.0 97.965,19.93 95.0,20.0 90.0,20.0 85.0,20.0 80.0,20.0 80.0,15.0 80.0,5.0 80.0,0.0"
+                    Stroke="#626469" StrokeDashArray="0.0" StrokeWidth="1.0">
+                    <LinearGradient Attribute="Fill" EndPoint="0,1"
+                        SpreadMethod="Pad" StartPoint="0.0,0.0">
+                        <GradientStop Color="#FCFCFC" Offset="0.0"/>
+                        <GradientStop Color="#DEDFE0" Offset="1.0"/>
+                    </LinearGradient>
+                </Path>
+                <Line Name="minus" Opacity="1.0" Stroke="#626469"
+                    StrokeDashArray="0.0" StrokeWidth="2" X1="7" X2="13"
+                    Y1="10" Y2="10"/>
+                <Path Fill="#FFFFFF" Name="plus"
+                    PathData="M87,10 L93,10 M90,13 L90,7"
+                    Stroke="#626469" StrokeDashArray="0.0" StrokeWidth="2"/>
+                <TextBox Fill="None" FontFamily="Arial" FontSize="15.0"
+                    FontStyle="Normal" FontWeight="Normal" Height="20.0"
+                    HorizontalAlign="Center" Left="0.0"
+                    Name="foreground" Stroke="#000000"
+                    TextDecoration="None" Top="0.0"
+                    VerticalAlign="Middle"
+                        Width="100.0"><![CDATA[...]]><Expose
+                        ExposedAttribute="Content" Name="Point Content"/>
+                </TextBox>
+            </Group>
+        </Component>
+    </Group>
+    <Script OnDocumentLoad="onLoad" OnMouseClick="onClick"
+        OnMouseDown="onDown" OnMouseOut="onOut" OnMouseUp="onUp" OnSignalChange="onChange"><![CDATA[var comp;
+var myValue = new valueObject;
+
+function onLoad(evt){
+	comp = evt.getCurrentTarget();
+	myValue.init();	
+}
+
+function onChange(evt){
+	var val = evt.getValue();
+	var	fbn = evt.getTarget().getFullBindName();
+	myValue.changeValue(val,fbn);
+}
+
+function onClick(evt){
+	evt.preventDefault();
+	var xPos = evt.getCurrentTargetX();
+	var btn = parseInt(evt.getButton());
+	myValue.clicked(btn,xPos);
+}
+
+function onDown(evt){
+	var xPos = evt.getCurrentTargetX();
+	var btn = parseInt(evt.getButton());
+	myValue.down(btn,xPos);
+}
+
+function onUp(evt){
+	myValue.up();
+}
+
+function onOut(evt){
+	myValue.up();
+}
+
+function valueObject(){
+	var node;
+	var valueBind;
+	var value;
+	var text;
+	var units;
+	var decs;
+	var inc = false;
+	var dec = false;
+	var increment;
+	var minusBox;
+	var plusBox;
+	var minus;
+	var plus;
+	var btnLight;
+	var btnDark;
+	
+	this.init = function(){
+		node = comp;
+		
+		//get binds
+		var bindGroup = node.getChildByName("binds");		
+		if(bindGroup != null){
+			var bindList = bindGroup.getElementsByTagName("Bind");
+			for(var i=0;i<bindList.length;i++){
+					valueBind = bindList.item(i).getFullBindName();
+			}
+		}
+		
+		//get display objects
+		var displayGroup = node.getChildByName("display");
+		if(displayGroup != null){
+			var point = displayGroup.getChildByName("AnalogPoint");
+			if(point != null){
+				units = point.getAttribute("Units");
+				decs = point.getAttribute("Decimals");
+				minusBox = point.getChildByName("minusBox");
+				plusBox = point.getChildByName("plusBox");
+				minus = point.getChildByName("minus");
+				plus = point.getChildByName("plus");
+				if(minusBox != null){
+					btnLight = minusBox.getElementsByTagName("LinearGradient").item(0).getElementsByTagName("GradientStop").item(0).getAttribute("Color");
+					btnDark = minusBox.getElementsByTagName("LinearGradient").item(0).getElementsByTagName("GradientStop").item(1).getAttribute("Color");
+				}
+				increment = parseFloat(point.getAttribute("Increment"));
+				var display = point.getChildByName("display");			
+				if(display != null){
+					text = display.getChildByName("foreground");			
+				}
+			}
+		}		
+	}
+	
+	this.changeValue = function(val,fbn){
+		if(fbn === valueBind){
+			value = parseFloat(val);
+		}
+		
+		renderPoint();		
+	}
+	
+	this.clicked = function(btn, xPos){
+		if(btn === 0){
+			if(xPos <= 20){
+				dec = true;
+				changeSpt();
+			}else{
+				if(xPos >= 80){
+					inc = true;
+					changeSpt();
+				}else{
+					invoke(valueBind,"EditProperties");
+				}
+			}
+		}
+	}
+	
+	this.down = function(btn,xPos){
+		if(btn === 0){
+			if(xPos <= 20){
+				minusBox.getElementsByTagName("LinearGradient").item(0).getElementsByTagName("GradientStop").item(0).setAttribute("Color","#626469");
+				minusBox.getElementsByTagName("LinearGradient").item(0).getElementsByTagName("GradientStop").item(1).setAttribute("Color","#626469");
+				minus.setAttribute("Stroke","#FFFFFF");
+			}
+			if(xPos >= 80){
+				plusBox.getElementsByTagName("LinearGradient").item(0).getElementsByTagName("GradientStop").item(0).setAttribute("Color","#626469");
+				plusBox.getElementsByTagName("LinearGradient").item(0).getElementsByTagName("GradientStop").item(1).setAttribute("Color","#626469");
+				plus.setAttribute("Stroke","#FFFFFF");
+			}
+		}
+	}
+
+	this.up = function(){
+		minusBox.getElementsByTagName("LinearGradient").item(0).getElementsByTagName("GradientStop").item(0).setAttribute("Color",btnLight);
+		minusBox.getElementsByTagName("LinearGradient").item(0).getElementsByTagName("GradientStop").item(1).setAttribute("Color",btnDark);
+		plusBox.getElementsByTagName("LinearGradient").item(0).getElementsByTagName("GradientStop").item(0).setAttribute("Color",btnLight);
+		plusBox.getElementsByTagName("LinearGradient").item(0).getElementsByTagName("GradientStop").item(1).setAttribute("Color",btnDark);
+		minus.setAttribute("Stroke","#626469");
+		plus.setAttribute("Stroke","#626469");
+	}
+	
+	var changeSpt = function(){
+		if(inc){
+			value += increment;
+			setValue(valueBind,value);
+			inc = false;
+		}
+		if(dec){
+			value -= increment;
+			setValue(valueBind,value);
+			dec = false;
+		}		
+		renderPoint();
+	}
+	
+	var renderPoint = function(){
+		if(text != null){
+			text.setAttribute("Content",getDisplayText());
+		}
+	}
+	
+	var getDisplayText = function(){
+		try{		
+			var str = "...";
+			if(!isNaN(value) && value != Infinity){
+				str = new Number(value).toFixed(decs);
+				str += " " + units;
+			}
+			return str;
+		}catch(ex){
+			return "...";
+		}
+	}
+	
+	var getBool = function(val){
+		if(val == "1" || val == "true" || val === 1 || val === true){
+			return true;
+		}
+		return false;		
+	}
+}]]></Script>
+    <Metadata Name="Name" Value="Analog Set Point"/>
+    <Metadata Name="Description" Value=""/>
+</Component>
