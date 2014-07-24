@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<Component Clip="False" ComponentCounter="8" ContentHeight="15"
+    ContentWidth="15" GridSize="10" Height="15.0" Left="4.5"
+    Name="HwRBendBR" Top="4.5" Width="15.0">
+    <Metadata Name="Name" Value="HwRBendBR"/>
+    <Metadata Name="Description" Value="== Exposed Properties ==&#xd;&#xa;&lt;name> - &lt;default value> - &lt;Description>&#xd;&#xa;HwRColor  - #E44100 - Base color of pipe"/>
+    <Metadata Name="Version" Value="1.0"/>
+    <Path Fill="#E44100"
+        PathData="M15.0,10.0 L10.0,10.0 10.0,4.5 15.0,4.5 z M10.0,10.0 L15.0,10.0 C15.0,12.760987 12.7609869,15.0 10.0,15.0 z M10.0,15.0 L4.5,15.0 4.5,10.0 10.0,10.0 z"
+        Stroke="#E44100" StrokeDashArray="0.0" StrokeWidth="1.0">
+        <Expose ExposedAttribute="Fill" Name="HwRColour"/>
+        <Expose ExposedAttribute="Stroke" Name="HwRColour"/>
+    </Path>
+    <Polyline Opacity="1.0" Points="10.0,4.5 10.0,10.0 4.5,10.0"
+        Stroke="#5F000000" StrokeDashArray="0.0" StrokeWidth="1.0"/>
+    <Path
+        PathData="M9.0,15.0 L4.5,15.0 M15.0,10.0 C15.0,12.761 12.7610009,15.0 10.0,15.0 M15.0,9.0 L15.0,4.5"
+        Stroke="#5F000000" StrokeDashArray="0.0" StrokeWidth="1.0"/>
+</Component>

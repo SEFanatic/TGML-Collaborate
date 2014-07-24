@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<Component Clip="False" ContentHeight="300" ContentWidth="40"
+    Fill="#FFFFFF" Height="300.0" Left="0.0" Name="HeatExchanger_Rotary"
+    Stroke="#000000" Top="0.26" Width="40.0">
+    <Metadata Name="Name" Value="HeatExchanger_Rotary"/>
+    <Metadata Name="Description" Value="RotaryHeatExchanger"/>
+    <Rectangle Height="240.0" Left="0.0" RadiusX="0.0" RadiusY="0.0"
+        StrokeDashArray="0.0" StrokeWidth="1.0" Top="0.256393432617188" Width="40.0"/>
+    <Polyline Points="13.0,120.0 20.0,113.0 20.0,127.0 27.0,120.0"
+        StrokeDashArray="0.0" StrokeWidth="1.0"/>
+    <Line StrokeWidth="1.0" X1="20.0" X2="20.0" Y1="240.0" Y2="270.0"/>
+    <Ellipse Height="30.0" Left="5.0" Top="270.0" Width="30.0"/>
+    <Path Fill="#000000"
+        PathData="M15.778505325317383,289.294921875 L15.778505325317383,280.70504760742188 17.540712356567383,280.70504760742188 19.634706497192383,286.78707885742188 C19.828065872192383,287.35397338867188 19.968690872192383,287.77767944335938 20.057313919067383,288.05856323242188 20.158021926879883,287.74655151367188 20.314760208129883,287.28732299804688 20.527894973754883,286.68161010742188 L22.646425247192383,280.70504760742188 24.221494674682617,280.70504760742188 24.221494674682617,289.294921875 23.092836380004883,289.294921875 23.092836380004883,282.10543823242188 20.522035598754883,289.294921875 19.465883255004883,289.294921875 16.906801223754883,281.98239135742188 16.906801223754883,289.294921875 z"
+        Stroke="None" StrokeDashArray="0.0" StrokeWidth="1.0"/>
+    <Polygon Fill="#000000" Points="29.0,104.0 27.0,97.0 31.0,97.0"
+        Stroke="#000000" StrokeDashArray="0.0" StrokeWidth="1.0">
+        <Rotate Angle="-45.0" Center="0.5,0.5"/>
+    </Polygon>
+    <Arc Center="19.4615631103516,126.717880249023"
+        RadiusX="16.9230651855469" RadiusY="31.8778076171875"
+        StartAngle="252.959711998282" StrokeDashArray="0.0"
+        StrokeWidth="1.0" SweepAngle="34.080568766257"/>
+</Component>

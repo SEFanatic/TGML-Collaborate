@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<Component ComponentCounter="5" ContentHeight="135" ContentWidth="70"
+    GridSize="10" Height="135.0" Left="10.0" Name="DP Wide Vertical"
+    Top="10.0" Width="70.0">
+    <Metadata Name="Name" Value="DP Wide Vertical"/>
+    <Metadata Name="Description" Value=""/>
+    <Line Stroke="#626469" StrokeDashArray="0.0" StrokeWidth="2.0"
+        X1="10.0" X2="38.5" Y1="125.0" Y2="125.0"/>
+    <Polyline Opacity="1.0"
+        Points="41.5,125.0 50.0,125.0 50.0,10 41.5,10" Stroke="#626469"
+        StrokeDashArray="0.0" StrokeWidth="2"/>
+    <Rectangle Fill="#009530" Height="15.0" Left="40.0" RadiusX="2"
+        RadiusY="2" Stroke="#404040" StrokeDashArray="0.0"
+        StrokeWidth="1.0" Top="60.0" Width="20.0"/>
+    <Text FontFamily="Arial" FontSize="10.0" FontStyle="Normal"
+        FontWeight="Normal" HorizontalAlign="Center" Left="50.0"
+        Opacity="1.0" Stroke="#FFFFFF" TextDecoration="None"
+        Top="61.9140424728396" VerticalAlign="Top"><![CDATA[DP]]></Text>
+    <Line Stroke="#626469" StrokeDashArray="0.0" StrokeWidth="2.0"
+        X1="10.0" X2="38.5" Y1="10.0" Y2="10.0"/>
+</Component>

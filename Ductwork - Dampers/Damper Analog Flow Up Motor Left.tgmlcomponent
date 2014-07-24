@@ -1,0 +1,150 @@
+<?xml version="1.0"?>
+<Component Color="#F0080E" ComponentCounter="5" ContentHeight="40"
+    ContentWidth="120" Fill="#FFD100" GridSize="10" Height="40.0"
+    Left="0.0" Name="Damper Analog Flow Up Motor Left" Stroke="#42B4E6"
+    Top="5.0" Width="120.0">
+    <Metadata Name="Name" Value="Damper Analog Flow Up Motor Left"/>
+    <Metadata Name="Description" Value="== Bindings ==&#xd;&#xa;DprCmd - Damper Command&#xd;&#xa;&#xd;&#xa;== Exposed Properties ==&#xd;&#xa;Bind Name - DprCmd - Damper command point&#xd;&#xa;Max Value - 0 - Fully Open Value&#xd;&#xa;Min Value - 100 - Fully Closed Value&#xd;&#xa;Error, Forced, Database Color - Outline color when point in error, forced or database condition"/>
+    <Expose ExposedAttribute="Color" Name="Error Color"/>
+    <Expose ExposedAttribute="Fill" Name="Forced Color"/>
+    <Expose ExposedAttribute="Stroke" Name="Database Color"/>
+    <Rectangle Fill="#009530" Height="15.0" Left="0.0" Name="MotorBg"
+        RadiusX="2" RadiusY="2" Stroke="#404040" StrokeDashArray="0.0"
+        StrokeWidth="1.0" Top="12.5" Width="20.0"/>
+    <Text Fill="None" FontFamily="Arial" FontSize="10.0"
+        FontStyle="Normal" FontWeight="Normal" HorizontalAlign="Center"
+        Left="10.0" Opacity="1.0" Stroke="#FFFFFF" TextDecoration="None"
+        Top="14.41411113739" VerticalAlign="Top"><![CDATA[M]]></Text>
+    <Rectangle Fill="#CCCCCC" Height="30.0" Left="21.0" Name="Body"
+        Opacity="1.0" RadiusX="5.0" RadiusY="5.0" Stroke="#404040"
+        StrokeDashArray="0.0" StrokeWidth="1.0" Top="5.0" Width="88.0">
+        <LinearGradient Attribute="Fill" EndPoint="0,0"
+            SpreadMethod="Pad" StartPoint="0,1">
+            <GradientStop Color="#EFEFEF" Offset="0.0"/>
+            <GradientStop Color="#A1CD53" Offset="1.0">
+                <Bind Attribute="Color" Description=".5" Name="DprCmd" PreventDefault="True">
+                    <Expose ExposedAttribute="Name" Name="BindName"/>
+                    <ConvertRange AttributeMaxValue="#A1CD53"
+                        AttributeMinValue="#DFE0E2" SignalMaxValue="1" SignalMinValue="0">
+                        <Expose ExposedAttribute="SignalMinValue" Name="MinValue"/>
+                        <Expose ExposedAttribute="SignalMaxValue" Name="MaxValue"/>
+						<Expose ExposedAttribute="PreventDefault" Name="Prevent Default"/>
+                    </ConvertRange>
+                </Bind>
+            </GradientStop>
+        </LinearGradient>
+    </Rectangle>
+    <Ellipse Fill="#626469" Height="20.0" Left="96.0" Opacity="1.0"
+        Stroke="#626469" StrokeDashArray="0.0" StrokeWidth="1.0"
+        Top="10.0" Width="3.0">
+        <Rotate>
+            <Bind Attribute="Angle" Name="DprCmd" PreventDefault="True">
+                <ConvertRange AttributeMaxValue="0"
+                    AttributeMinValue="-90" SignalMaxValue="1" SignalMinValue="0">
+                    <Expose ExposedAttribute="SignalMinValue" Name="MinValue"/>
+                    <Expose ExposedAttribute="SignalMaxValue" Name="MaxValue"/>
+                </ConvertRange>
+                <Expose ExposedAttribute="Name" Name="BindName"/>
+				<Expose ExposedAttribute="PreventDefault" Name="Prevent Default"/>
+            </Bind>
+        </Rotate>
+    </Ellipse>
+    <Ellipse Fill="#626469" Height="20.0" Left="74.666666656733"
+        Opacity="1.0" Stroke="#626469" StrokeDashArray="0.0"
+        StrokeWidth="1.0" Top="10.0" Width="3.0">
+        <Rotate>
+            <Bind Attribute="Angle" Name="DprCmd" PreventDefault="True">
+                <ConvertRange AttributeMaxValue="0"
+                    AttributeMinValue="90" SignalMaxValue="1" SignalMinValue="0">
+                    <Expose ExposedAttribute="SignalMinValue" Name="MinValue"/>
+                    <Expose ExposedAttribute="SignalMaxValue" Name="MaxValue"/>
+                </ConvertRange>
+                <Expose ExposedAttribute="Name" Name="BindName"/>
+				<Expose ExposedAttribute="PreventDefault" Name="Prevent Default"/>
+            </Bind>
+        </Rotate>
+    </Ellipse>
+    <Ellipse Fill="#626469" Height="20.0" Left="53.333333343267"
+        Opacity="1.0" Stroke="#626469" StrokeDashArray="0.0"
+        StrokeWidth="1.0" Top="10.0" Width="3.0">
+        <Rotate>
+            <Bind Attribute="Angle" Name="DprCmd" PreventDefault="True">
+                <ConvertRange AttributeMaxValue="0"
+                    AttributeMinValue="-90" SignalMaxValue="1" SignalMinValue="0">
+                    <Expose ExposedAttribute="SignalMinValue" Name="MinValue"/>
+                    <Expose ExposedAttribute="SignalMaxValue" Name="MaxValue"/>
+                </ConvertRange>
+                <Expose ExposedAttribute="Name" Name="BindName"/>
+				<Expose ExposedAttribute="PreventDefault" Name="Prevent Default"/>
+            </Bind>
+        </Rotate>
+    </Ellipse>
+    <Ellipse Fill="#626469" Height="20.0" Left="32.0" Opacity="1.0"
+        Stroke="#626469" StrokeDashArray="0.0" StrokeWidth="1.0"
+        Top="10.0" Width="3.0">
+        <Rotate>
+            <Bind Attribute="Angle" Name="DprCmd" PreventDefault="True">
+                <ConvertRange AttributeMaxValue="0"
+                    AttributeMinValue="90" SignalMaxValue="1" SignalMinValue="0">
+                    <Expose ExposedAttribute="SignalMinValue" Name="MinValue"/>
+                    <Expose ExposedAttribute="SignalMaxValue" Name="MaxValue"/>
+                </ConvertRange>
+                <Expose ExposedAttribute="Name" Name="BindName"/>
+				<Expose ExposedAttribute="PreventDefault" Name="Prevent Default"/>
+            </Bind>
+        </Rotate>
+    </Ellipse>
+    <Bind Attribute="" Color="#FFD100" Description=".5" Name="DprCmd" PreventDefault="True">
+        <Expose ExposedAttribute="Name" Name="BindName"/>
+		<Expose ExposedAttribute="PreventDefault" Name="Prevent Default"/>
+        <Script OnDocumentLoad="onLoad" OnSignalChange="onChange"><![CDATA[var body;
+var HighLightCol="#404040";
+var originalBodyColor;
+
+function onLoad(evt)
+{
+  comp = evt.getCurrentTarget().getParentNode();
+  body = comp.getChildByName("Body");
+  originalBodyColor=body.getAttribute("Stroke");
+}
+
+function onChange(evt)
+{
+  status = parseInt(evt.getStatus());
+  
+  bgStroke = setColour(status);
+  if (bgStroke=="device"){
+  	body.setAttribute("Stroke", originalBodyColor);
+ 	body.setAttribute("StrokeWidth", "1");
+  }
+  else{
+	  body.setAttribute("Stroke", bgStroke);
+	  body.setAttribute("StrokeWidth", "2");
+  }
+}
+
+function setColour(status){
+var col;
+
+  if(status==2){//Value from Device
+  	return "device";
+  }
+  else{
+  		if(status==3){//Forced Value
+  			return comp.getAttribute("Fill");
+  		}
+  		else{
+  	 		if(status==1){//Database Value
+  	 		return comp.getAttribute("Stroke");
+  			}
+  			else{
+  				if(status==0){
+  					return comp.getAttribute("Color")
+  				}
+  			}
+  		}
+  }
+
+}]]></Script>
+    </Bind>
+</Component>

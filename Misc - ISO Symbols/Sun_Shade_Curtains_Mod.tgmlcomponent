@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<Component Clip="False" ContentHeight="90.0" ContentWidth="60.0"
+    Fill="#FFFFFF" Height="90.0" Left="6.0"
+    Name="Sun_Shade_Curtains_Mod" Stroke="#000000" Top="-1.13" Width="60.0">
+    <Line StrokeDashArray="0.0" StrokeWidth="1.0" X1="20.0" X2="20.0"
+        Y1="57.0" Y2="77.0"/>
+    <Metadata Name="Name" Value="Sun_Shade_Curtains_Mod"/>
+    <Metadata Name="Description" Value="Sun Shade Curtains Modulating"/>
+    <Ellipse Height="30.0" Left="15.0" StrokeDashArray="0.0"
+        StrokeWidth="1.0" Top="10.0" Width="30.0"/>
+    <Path Fill="#000000"
+        PathData="M25.77850341796875,29.294925689697266 L25.77850341796875,20.705078125 27.54071044921875,20.705078125 29.63470458984375,26.7871036529541 C29.82806396484375,27.35400390625 29.968687057495117,27.777708053588867 30.05731201171875,28.058586120605469 30.15802001953125,27.746580123901367 30.31475830078125,27.2873477935791 30.527894973754883,26.681631088256836 L32.64642333984375,20.705078125 34.22149658203125,20.705078125 34.22149658203125,29.294925689697266 33.09283447265625,29.294925689697266 33.09283447265625,22.10546875 30.522035598754883,29.294925689697266 29.46588134765625,29.294925689697266 26.90679931640625,21.982421875 26.90679931640625,29.294925689697266 z"
+        Stroke="None" StrokeDashArray="0.0" StrokeWidth="1.0"/>
+    <Line StrokeDashArray="0.0" StrokeWidth="1.0" X1="15.0" X2="15.0"
+        Y1="25.0" Y2="85.0"/>
+    <Polygon Fill="#000000"
+        Points="20.0379066467285,59.0386962890625 19.0,55.0566024780273 21.272102355957,55.0"
+        StrokeDashArray="0.0" StrokeWidth="1.0">
+        <Rotate Angle="180.0" Center="0.5,0.5"/>
+    </Polygon>
+    <Polygon Fill="#000000"
+        Points="20.0379085540771,79.0386962890625 19.0,75.0566024780273 21.272102355957,75.0"
+        StrokeDashArray="0.0" StrokeWidth="1.0">
+        <Rotate Angle="0.0" Center="0.5,0.5"/>
+    </Polygon>
+    <Polygon Fill="#000000"
+        Points="54.11962890625,-0.822616577148438 52.5155639648438,4.7916259765625 55.7236938476563,4.7916259765625"
+        StrokeDashArray="0.0" StrokeWidth="1.0">
+        <Rotate Angle="45.0" Center="0.5,0.5"/>
+    </Polygon>
+    <Line StrokeDashArray="0.0" StrokeWidth="1.0" X1="6.0" X2="56.0"
+        Y1="50.5547637939453" Y2="0.0"/>
+</Component>

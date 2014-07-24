@@ -1,0 +1,173 @@
+<?xml version="1.0"?>
+<Component ComponentCounter="23" ContentHeight="220" ContentWidth="220"
+    GridSize="10" Height="220.0" Left="10.0"
+    Name="Steam Calorifier Vertical Secondary Return Right T2" Top="9.0" Width="220.0">
+    <Metadata Name="Name" Value="Steam Calorifier Vertical Secondary Return Right T2"/>
+    <Metadata Name="Description" Value=""/>
+    <Path Fill="#CCCCCC"
+        PathData="M25.0,120.0 L30.0,120.0 30.0,130.0 25.0,130.0 z M10.0,135.0 L20.0,135.0 20.0,140.0 10.0,140.0 z M20.0,135.0 C20.0,132.0 22.0,130.0 25.0,130.0 25.0,126.0 25.0,125.0 25.0,120.0 15.0,120.0 10.0,127.0 10.0,135.0 14.0,135.0 14.0,135.0 20.0,135.0"
+        Stroke="#CCCCCC" StrokeDashArray="0.0" StrokeWidth="1.0">
+        <Expose ExposedAttribute="Fill" Name="Pipe Color"/>
+        <Expose ExposedAttribute="Stroke" Name="Pipe Color"/>
+    </Path>
+    <Path Fill="None"
+        PathData="M20.0,135.0 C20.0,133.0 21.0,130.0 25.0,130.0 M20.0,135.0 L20.0,140.0 M30.0,130.0 L25.0,130.0"
+        Stroke="#5F000000" StrokeDashArray="0.0" StrokeWidth="1.0"/>
+    <Path Fill="None"
+        PathData="M10.0,135.0 C10.0,126.0 16.0,120.0 25.0,120.0 M30.0,120.0 L26.0,120.0 M10.0,136.0 L10.0,140.0"
+        Stroke="#5F000000" StrokeDashArray="0.0" StrokeWidth="1.0"/>
+    <Metadata Name="Version" Value="1.0"/>
+    <Rectangle Fill="#CCCCCC" Height="10.0" Left="40.0" Opacity="1.0"
+        RadiusX="0.0" RadiusY="0.0" Stroke="#CCCCCC"
+        StrokeDashArray="0.0" StrokeWidth="1.0" Top="120.0" Width="50.0">
+        <Expose ExposedAttribute="Fill" Name="Pipe Color"/>
+        <Expose ExposedAttribute="Stroke" Name="Pipe Color"/>
+    </Rectangle>
+    <Line Opacity="1.0" Stroke="#5F000000" StrokeDashArray="0.0"
+        StrokeWidth="1.0" X1="40.0" X2="90.0" Y1="120.0" Y2="120.0"/>
+    <Line Opacity="1.0" Stroke="#5F000000" StrokeDashArray="0.0"
+        StrokeWidth="1.0" X1="90.0" X2="40.0" Y1="130.0" Y2="130.0"/>
+    <Rectangle Fill="#CCCCCC" Height="10.0" Left="30.5099987983704"
+        Opacity="1.0" RadiusX="0.0" RadiusY="0.0" Stroke="#CCCCCC"
+        StrokeDashArray="0.0" StrokeWidth="1.0" Top="150.0" Width="59.4900012016296">
+        <Expose ExposedAttribute="Fill" Name="Pipe Color"/>
+        <Expose ExposedAttribute="Stroke" Name="Pipe Color"/>
+    </Rectangle>
+    <Line Opacity="1.0" Stroke="#5F000000" StrokeDashArray="0.0"
+        StrokeWidth="1.0" X1="30.510002133991" X2="90.0" Y1="150.0" Y2="150.0"/>
+    <Line Opacity="1.0" Stroke="#5F000000" StrokeDashArray="0.0"
+        StrokeWidth="1.0" X1="90.0" X2="30.510002133991" Y1="160.0" Y2="160.0"/>
+    <Rectangle Fill="#CCCCCC" Height="20.0" Left="135.0" Opacity="1.0"
+        RadiusX="0.0" RadiusY="0.0" Stroke="#404040"
+        StrokeDashArray="0.0" StrokeWidth="1.0" Top="189.0" Width="60.0"/>
+    <Curve Closed="True" Fill="#DDDDDD" Opacity="1.0"
+        Points="205.0,32.0 205.0,12.0 125.0,12.0 125.0,32.0 125.0,72.0 125.0,162.0 125.0,182.0 125.0,202.0 205.0,202.0 205.0,182.0"
+        Stroke="#404040" StrokeDashArray="0.0" StrokeWidth="1.0">
+        <Expose ExposedAttribute="Fill" Name="Base Color"/>
+    </Curve>
+    <Rectangle Fill="#DDDDDD" Height="37.0" Left="95.0" Opacity="1.0"
+        RadiusX="0.0" RadiusY="0.0" Stroke="#404040"
+        StrokeDashArray="0.0" StrokeWidth="1.0" Top="147.0" Width="30.0">
+        <Expose ExposedAttribute="Fill" Name="Base Color"/>
+    </Rectangle>
+    <Rectangle Fill="#DDDDDD" Height="47.0" Left="108.0" Opacity="1.0"
+        RadiusX="0.0" RadiusY="0.0" Stroke="#404040"
+        StrokeDashArray="0.0" StrokeWidth="1.0" Top="142.0" Width="3.0">
+        <Expose ExposedAttribute="Fill" Name="Base Color"/>
+    </Rectangle>
+    <Rectangle Fill="#DDDDDD" Height="47.0" Left="105.0" Opacity="1.0"
+        RadiusX="0.0" RadiusY="0.0" Stroke="#404040"
+        StrokeDashArray="0.0" StrokeWidth="1.0" Top="142.0" Width="3.0">
+        <Expose ExposedAttribute="Fill" Name="Base Color"/>
+    </Rectangle>
+    <Path Fill="#DDDDDD"
+        PathData="M104.5,144.0 L102.5,144.0 102.5,147.0 104.5,147.0 M104.5,149.0 L102.5,149.0 102.5,152.0 104.5,152.0 M104.5,154.0 L102.5,154.0 102.5,157.0 104.5,157.0 M104.5,159.0 L102.5,159.0 102.5,162.0 104.5,162.0 M104.5,164.0 L102.5,164.0 102.5,167.0 104.5,167.0 M104.5,169.0 L102.5,169.0 102.5,172.0 104.5,172.0 M104.5,174.0 L102.5,174.0 102.5,177.0 104.5,177.0 M104.5,179.0 L102.5,179.0 102.5,182.0 104.5,182.0 M104.5,184.0 L102.5,184.0 102.5,187.0 104.5,187.0"
+        Stroke="#404040" StrokeDashArray="0.0" StrokeWidth="1.0"/>
+    <Path Fill="#DDDDDD"
+        PathData="M111.5,144.0 L113.5,144.0 113.5,147.0 111.5,147.0 M111.5,149.0 L113.5,149.0 113.5,152.0 111.5,152.0 M111.5,154.0 L113.5,154.0 113.5,157.0 111.5,157.0 M111.5,159.0 L113.5,159.0 113.5,162.0 111.5,162.0 M111.5,164.0 L113.5,164.0 113.5,167.0 111.5,167.0 M111.5,169.0 L113.5,169.0 113.5,172.0 111.5,172.0 M111.5,174.0 L113.5,174.0 113.5,177.0 111.5,177.0 M111.5,179.0 L113.5,179.0 113.5,182.0 111.5,182.0 M111.5,184.0 L113.5,184.0 113.5,187.0 111.5,187.0"
+        Stroke="#404040" StrokeDashArray="0.0" StrokeWidth="1.0"/>
+    <Ellipse Fill="#DDDDDD" Height="35.0" Left="147.5" Opacity="1.0"
+        Stroke="#404040" StrokeDashArray="0.0" StrokeWidth="1.0"
+        Top="117.5" Width="35.0">
+        <Expose ExposedAttribute="Fill" Name="Base Color"/>
+    </Ellipse>
+    <Path Fill="#CCCCCC"
+        PathData="M167.0,122.0 C167.0,123.10501 166.105004,124.0 165.0,124.0 163.895015,124.0 163.0,123.10501 163.0,122.0 163.0,120.89501 163.895015,120.0 165.0,120.0 166.105004,120.0 167.0,120.89501 167.0,122.0 z M153.0,135.0 C153.0,136.10501 152.105003,137.0 151.0,137.0 149.895012,137.0 149.0,136.10501 149.0,135.0 149.0,133.895 149.895012,133.0 151.0,133.0 152.105003,133.0 153.0,133.895 153.0,135.0 z M160.5,124.0 C160.5,125.10501 159.605004,126.0 158.5,126.0 157.395015,126.0 156.5,125.10501 156.5,124.0 156.5,122.89501 157.395015,122.0 158.5,122.0 159.605004,122.0 160.5,122.89501 160.5,124.0 z M155.5,128.5 C155.5,129.60501 154.605004,130.5 153.5,130.5 152.395012,130.5 151.5,129.60501 151.5,128.5 151.5,127.39501 152.395012,126.5 153.5,126.5 154.605004,126.5 155.5,127.39501 155.5,128.5 z M173.5,124.0 C173.5,125.10501 172.605004,126.0 171.5,126.0 170.395015,126.0 169.5,125.10501 169.5,124.0 169.5,122.89501 170.395015,122.0 171.5,122.0 172.605004,122.0 173.5,122.89501 173.5,124.0 z M178.5,128.5 C178.5,129.60501 177.605004,130.5 176.5,130.5 175.39502,130.5 174.5,129.60501 174.5,128.5 174.5,127.39501 175.39502,126.5 176.5,126.5 177.605004,126.5 178.5,127.39501 178.5,128.5 z M181.0,135.0 C181.0,136.10501 180.105004,137.0 179.0,137.0 177.89502,137.0 177.0,136.10501 177.0,135.0 177.0,133.895 177.89502,133.0 179.0,133.0 180.105004,133.0 181.0,133.895 181.0,135.0 z M167.5,148.0 C167.5,149.10501 166.605004,150.0 165.5,150.0 164.395015,150.0 163.5,149.10501 163.5,148.0 163.5,146.895 164.395015,146.0 165.5,146.0 166.605004,146.0 167.5,146.895 167.5,148.0 z M161.0,146.0 C161.0,147.10501 160.105004,148.0 159.0,148.0 157.895015,148.0 157.0,147.10501 157.0,146.0 157.0,144.895 157.895015,144.0 159.0,144.0 160.105004,144.0 161.0,144.895 161.0,146.0 z M156.0,141.5 C156.0,142.60501 155.105004,143.5 154.0,143.5 152.895015,143.5 152.0,142.60501 152.0,141.5 152.0,140.395 152.895015,139.5 154.0,139.5 155.105004,139.5 156.0,140.395 156.0,141.5 z M174.0,146.0 C174.0,147.10501 173.105004,148.0 172.0,148.0 170.895015,148.0 170.0,147.10501 170.0,146.0 170.0,144.895 170.895015,144.0 172.0,144.0 173.105004,144.0 174.0,144.895 174.0,146.0 z M179.0,141.5 C179.0,142.60501 178.105004,143.5 177.0,143.5 175.89502,143.5 175.0,142.60501 175.0,141.5 175.0,140.395 175.89502,139.5 177.0,139.5 178.105004,139.5 179.0,140.395 179.0,141.5 z"
+        Stroke="#404040" StrokeDashArray="0.0" StrokeWidth="1.0"/>
+    <Curve Fill="#CCCCCC" Opacity="1.0"
+        Points="160.0,9.0 160.0,12.0 160.0,14.0 160.0,17.0 162.0,20.0 168.0,20.0 170.0,17.0 170.0,15.0 170.0,12.0 170.0,9.0"
+        Stroke="#404040" StrokeDashArray="0.0" StrokeWidth="1.0"/>
+    <Rectangle Fill="#DDDDDD" Height="2.0" Left="158.0" Opacity="1.0"
+        RadiusX="0.0" RadiusY="0.0" Stroke="#404040"
+        StrokeDashArray="0.0" StrokeWidth="1.0" Top="9.0" Width="14.0"/>
+    <Rectangle Fill="#DDDDDD" Height="2.0" Left="158.0" Opacity="1.0"
+        RadiusX="0.0" RadiusY="0.0" Stroke="#404040"
+        StrokeDashArray="0.0" StrokeWidth="1.0" Top="11.0" Width="14.0"/>
+    <Curve Fill="#CCCCCC" Opacity="1.0"
+        Points="88.0,150.0 92.0,150.0 91.0,150.0 95.0,150.0 95.0,154.0 95.0,157.0 95.0,160.0 91.0,160.0 91.0,160.0 88.0,160.0"
+        Stroke="#404040" StrokeDashArray="0.0" StrokeWidth="1.0"/>
+    <Rectangle Fill="#DDDDDD" Height="14.0" Left="90.0" Opacity="1.0"
+        RadiusX="0.0" RadiusY="0.0" Stroke="#404040"
+        StrokeDashArray="0.0" StrokeWidth="1.0" Top="148.0" Width="2.0"/>
+    <Rectangle Fill="#DDDDDD" Height="14.0" Left="88.0" Opacity="1.0"
+        RadiusX="0.0" RadiusY="0.0" Stroke="#404040"
+        StrokeDashArray="0.0" StrokeWidth="1.0" Top="148.0" Width="2.0"/>
+    <Curve Fill="#CCCCCC" Opacity="1.0"
+        Points="88.0,170.0 92.0,170.0 91.0,170.0 95.0,170.0 95.0,174.0 95.0,177.0 95.0,180.0 91.0,180.0 91.0,180.0 88.0,180.0"
+        Stroke="#404040" StrokeDashArray="0.0" StrokeWidth="1.0"/>
+    <Rectangle Fill="#DDDDDD" Height="14.0" Left="90.0" Opacity="1.0"
+        RadiusX="0.0" RadiusY="0.0" Stroke="#404040"
+        StrokeDashArray="0.0" StrokeWidth="1.0" Top="168.0" Width="2.0"/>
+    <Rectangle Fill="#DDDDDD" Height="14.0" Left="88.0" Opacity="1.0"
+        RadiusX="0.0" RadiusY="0.0" Stroke="#404040"
+        StrokeDashArray="0.0" StrokeWidth="1.0" Top="168.0" Width="2.0"/>
+    <Curve Fill="#CCCCCC" Opacity="1.0"
+        Points="212.356999993324,170.0 208.356999993324,170.0 209.356999993324,170.0 205.356999993324,170.0 203.0,172.357022603955 203.0,177.642977396045 205.356999993324,180.0 209.356999993324,180.0 209.356999993324,180.0 212.356999993324,180.0"
+        Stroke="#404040" StrokeDashArray="0.0" StrokeWidth="1.0"/>
+    <Rectangle Fill="#DDDDDD" Height="14.0" Left="208.356999993324"
+        Opacity="1.0" RadiusX="0.0" RadiusY="0.0" Stroke="#404040"
+        StrokeDashArray="0.0" StrokeWidth="1.0" Top="168.0" Width="2.0"/>
+    <Rectangle Fill="#DDDDDD" Height="14.0" Left="210.356999993324"
+        Opacity="1.0" RadiusX="0.0" RadiusY="0.0" Stroke="#404040"
+        StrokeDashArray="0.0" StrokeWidth="1.0" Top="168.0" Width="2.0"/>
+    <Rectangle Fill="#DDDDDD" Height="37.0" Left="95.0" Opacity="1.0"
+        RadiusX="0.0" RadiusY="0.0" Stroke="#404040"
+        StrokeDashArray="0.0" StrokeWidth="1.0" Top="97.0" Width="30.0">
+        <Expose ExposedAttribute="Fill" Name="Base Color"/>
+    </Rectangle>
+    <Rectangle Fill="#DDDDDD" Height="47.0" Left="108.0" Opacity="1.0"
+        RadiusX="0.0" RadiusY="0.0" Stroke="#404040"
+        StrokeDashArray="0.0" StrokeWidth="1.0" Top="92.0" Width="3.0">
+        <Expose ExposedAttribute="Fill" Name="Base Color"/>
+    </Rectangle>
+    <Rectangle Fill="#DDDDDD" Height="47.0" Left="105.0" Opacity="1.0"
+        RadiusX="0.0" RadiusY="0.0" Stroke="#404040"
+        StrokeDashArray="0.0" StrokeWidth="1.0" Top="92.0" Width="3.0">
+        <Expose ExposedAttribute="Fill" Name="Base Color"/>
+    </Rectangle>
+    <Path Fill="#DDDDDD"
+        PathData="M104.5,94.0 L102.5,94.0 102.5,97.0 104.5,97.0 M104.5,99.0 L102.5,99.0 102.5,102.0 104.5,102.0 M104.5,104.0 L102.5,104.0 102.5,107.0 104.5,107.0 M104.5,109.0 L102.5,109.0 102.5,112.0 104.5,112.0 M104.5,114.0 L102.5,114.0 102.5,117.0 104.5,117.0 M104.5,119.0 L102.5,119.0 102.5,122.0 104.5,122.0 M104.5,124.0 L102.5,124.0 102.5,127.0 104.5,127.0 M104.5,129.0 L102.5,129.0 102.5,132.0 104.5,132.0 M104.5,134.0 L102.5,134.0 102.5,137.0 104.5,137.0"
+        Stroke="#404040" StrokeDashArray="0.0" StrokeWidth="1.0"/>
+    <Path Fill="#DDDDDD"
+        PathData="M111.5,94.0 L113.5,94.0 113.5,97.0 111.5,97.0 M111.5,99.0 L113.5,99.0 113.5,102.0 111.5,102.0 M111.5,104.0 L113.5,104.0 113.5,107.0 111.5,107.0 M111.5,109.0 L113.5,109.0 113.5,112.0 111.5,112.0 M111.5,114.0 L113.5,114.0 113.5,117.0 111.5,117.0 M111.5,119.0 L113.5,119.0 113.5,122.0 111.5,122.0 M111.5,124.0 L113.5,124.0 113.5,127.0 111.5,127.0 M111.5,129.0 L113.5,129.0 113.5,132.0 111.5,132.0 M111.5,134.0 L113.5,134.0 113.5,137.0 111.5,137.0"
+        Stroke="#404040" StrokeDashArray="0.0" StrokeWidth="1.0"/>
+    <Curve Fill="#CCCCCC" Opacity="1.0"
+        Points="88.0,100.0 92.0,100.0 91.0,100.0 95.0,100.0 95.0,104.0 95.0,107.0 95.0,110.0 91.0,110.0 91.0,110.0 88.0,110.0"
+        Stroke="#404040" StrokeDashArray="0.0" StrokeWidth="1.0"/>
+    <Rectangle Fill="#DDDDDD" Height="14.0" Left="90.0" Opacity="1.0"
+        RadiusX="0.0" RadiusY="0.0" Stroke="#404040"
+        StrokeDashArray="0.0" StrokeWidth="1.0" Top="98.0" Width="2.0"/>
+    <Rectangle Fill="#DDDDDD" Height="14.0" Left="88.0" Opacity="1.0"
+        RadiusX="0.0" RadiusY="0.0" Stroke="#404040"
+        StrokeDashArray="0.0" StrokeWidth="1.0" Top="98.0" Width="2.0"/>
+    <Curve Fill="#CCCCCC" Opacity="1.0"
+        Points="88.0,120.0 92.0,120.0 91.0,120.0 95.0,120.0 95.0,124.0 95.0,127.0 95.0,130.0 91.0,130.0 91.0,130.0 88.0,130.0"
+        Stroke="#404040" StrokeDashArray="0.0" StrokeWidth="1.0"/>
+    <Rectangle Fill="#DDDDDD" Height="14.0" Left="90.0" Opacity="1.0"
+        RadiusX="0.0" RadiusY="0.0" Stroke="#404040"
+        StrokeDashArray="0.0" StrokeWidth="1.0" Top="118.0" Width="2.0"/>
+    <Rectangle Fill="#DDDDDD" Height="14.0" Left="88.0" Opacity="1.0"
+        RadiusX="0.0" RadiusY="0.0" Stroke="#404040"
+        StrokeDashArray="0.0" StrokeWidth="1.0" Top="118.0" Width="2.0"/>
+    <Curve Closed="True" Fill="#CCCCCC" Opacity="1.0"
+        Points="65.0,117.0 58.0,117.0 47.0,117.0 40.0,117.0 40.0,119.0 40.0,117.0 40.0,120.0 38.0,120.0 37.0,120.0 35.0,120.0 35.0,118.0 35.0,117.0 35.0,115.0 33.0,115.0 32.0,115.0 30.0,115.0 30.0,119.0 30.0,132.0 30.0,135.0 32.0,135.0 33.0,135.0 35.0,135.0 35.0,133.0 35.0,132.0 35.0,130.0 37.0,130.0 38.0,130.0 40.0,130.0 40.0,132.0 40.0,139.0 40.0,142.0 40.0,146.0 65.0,146.0 65.0,142.0 65.0,139.0 65.0,133.0 65.0,130.0 67.0,130.0 67.0,130.0 70.0,130.0 70.0,132.0 70.0,133.0 70.0,135.0 72.0,135.0 73.0,135.0 75.0,135.0 75.0,130.0 75.0,119.0 75.0,115.0 73.0,115.0 72.0,115.0 70.0,115.0 70.0,117.0 70.0,118.0 70.0,120.0 68.0,120.0 67.0,120.0 65.0,120.0"
+        Stroke="#CCCCCC" StrokeDashArray="0.0" StrokeWidth="1.0">
+        <Expose ExposedAttribute="Fill" Name="Pipe Color"/>
+        <Expose ExposedAttribute="Stroke" Name="Pipe Color"/>
+    </Curve>
+    <Path Fill="None"
+        PathData="M65.0,117.0 C58.0,117.0 47.0,117.0 40.0,117.0 40.0,119.0 40.0,117.0 40.0,120.0 38.0,120.0 37.0,120.0 35.0,120.0 35.0,118.0 35.0,117.0 35.0,115.0 33.0,115.0 32.0,115.0 30.0,115.0 30.0,119.0 30.0,132.0 30.0,135.0 32.0,135.0 33.0,135.0 35.0,135.0 35.0,133.0 35.0,132.0 35.0,130.0 37.0,130.0 38.0,130.0 40.0,130.0 40.0,132.0 40.0,139.0 40.0,142.0 40.0,146.0 65.0,146.0 65.0,142.0 65.0,139.0 65.0,133.0 65.0,130.0 67.0,130.0 67.0,130.0 70.0,130.0 70.0,132.0 70.0,133.0 70.0,135.0 72.0,135.0 73.0,135.0 75.0,135.0 75.0,130.0 75.0,119.0 75.0,115.0 73.0,115.0 72.0,115.0 70.0,115.0 70.0,117.0 70.0,118.0 70.0,120.0 68.0,120.0 67.0,120.0 65.0,120.0 z M40.0,120.0 C41.0,123.0 41.0,127.0 40.0,130.0 M65.0,120.0 C64.0,123.0 64.0,127.0 65.0,130.0 M35.0,120.0 L35.0,130.0 M70.0,120.0 L70.0,130.0"
+        Stroke="#5F000000" StrokeDashArray="0.0" StrokeWidth="1.0"/>
+    <Path Fill="#CCCCCC"
+        PathData="M25.0,160.0 L30.0,160.0 30.0,150.0 25.0,150.0 z M10.0,145.0 L20.0,145.0 20.0,140.0 10.0,140.0 z M20.0,145.0 C20.0,148.0 22.0,150.0 25.0,150.0 25.0,154.0 25.0,155.0 25.0,160.0 15.0,160.0 10.0,153.0 10.0,145.0 14.0,145.0 14.0,145.0 20.0,145.0"
+        Stroke="#CCCCCC" StrokeDashArray="0.0" StrokeWidth="1.0">
+        <Expose ExposedAttribute="Fill" Name="Pipe Color"/>
+        <Expose ExposedAttribute="Stroke" Name="Pipe Color"/>
+    </Path>
+    <Path Fill="None"
+        PathData="M20.0,145.0 C20.0,147.0 21.0,150.0 25.0,150.0 M20.0,145.0 L20.0,140.0 M30.0,150.0 L25.0,150.0"
+        Stroke="#5F000000" StrokeDashArray="0.0" StrokeWidth="1.0"/>
+    <Path Fill="None"
+        PathData="M10.0,145.0 C10.0,154.0 16.0,160.0 25.0,160.0 M30.0,160.0 L26.0,160.0 M10.0,144.0 L10.0,140.0"
+        Stroke="#5F000000" StrokeDashArray="0.0" StrokeWidth="1.0"/>
+</Component>

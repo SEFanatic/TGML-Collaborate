@@ -1,0 +1,110 @@
+<?xml version="1.0"?>
+<Component ComponentCounter="5" ContentHeight="110" ContentWidth="80"
+    GridSize="10" Height="110.0" Left="10.0" Name="Bag Filter Flow Left"
+    Top="5.0" Width="80.0">
+    <Metadata Name="Name" Value="Bag Filter Flow Left"/>
+    <Metadata Name="Description" Value="== Bindings ==&#xd;&#xa;FilBag - Bag Filter State&#xd;&#xa;&#xd;&#xa;== Exposed Properties ==&#xd;&#xa;&lt;name> - &lt;default value> - &lt;Description>&#xd;&#xa;Bind Name - FilBag - Filter state point&#xd;&#xa;Clean - 0 - Clean Value&#xd;&#xa;Dirty - 1 - Dirty Value&#xd;&#xa;Alarm Color - #F0080E - Border color when in dirty state&#xd;&#xa;DP Text - DP - Text displayed in DP box&#xd;&#xa;Error, Forced, Database Color - Outline color when point in error, forced or database condition"/>
+    <Metadata Name="Version" Value="1.0"/>
+    <Rectangle Fill="#CCCCCC" Height="88.0" Left="20.0" Name="Body"
+        Opacity="1.0" RadiusX="5.0" RadiusY="5.0" Stroke="#404040"
+        StrokeDashArray="0.0" StrokeWidth="1.0" Top="21.0" Width="40.0">
+        <LinearGradient Attribute="Fill" EndPoint="1,0"
+            SpreadMethod="Pad" StartPoint="0.0,0.0">
+            <GradientStop Color="#A1CD53" Offset="0.0">
+                <Bind Attribute="Color" Name="FilBag">
+                    <Expose ExposedAttribute="Name" Name="BindName"/>
+                    <ConvertValue AttributeValue="#A1CD53" SignalLessOrEqualTo="0">
+                        <Expose ExposedAttribute="SignalLessOrEqualTo" Name="Clean = "/>
+                    </ConvertValue>
+                    <ConvertValue AttributeValue="#F0080E" SignalMoreOrEqualTo="1">
+                        <Expose ExposedAttribute="SignalMoreOrEqualTo" Name="Dirty ="/>
+                        <Expose ExposedAttribute="AttributeValue" Name="Alarm Color"/>
+                    </ConvertValue>
+                </Bind>
+            </GradientStop>
+            <GradientStop Color="#EFEFEF" Offset="1.0"/>
+        </LinearGradient>
+    </Rectangle>
+    <Line Stroke="#626469" StrokeDashArray="0.0" StrokeWidth="2.0"
+        X1="10.0" X2="10.0" Y1="21.4999991357327" Y2="50.0"/>
+    <Polyline Opacity="1.0"
+        Points="70.0,19.0 70.0,11.5 10.0,11.5 10.0,19.0"
+        Stroke="#626469" StrokeDashArray="0.0" StrokeWidth="2"/>
+    <Rectangle Fill="#009530" Height="15.0" Left="30.0"
+        Name="Background" RadiusX="2" RadiusY="2" Stroke="#404040"
+        StrokeDashArray="0.0" StrokeWidth="1.0" Top="5.0" Width="20.0"/>
+    <Text FontFamily="Arial" FontSize="10.0" FontStyle="Normal"
+        FontWeight="Normal" HorizontalAlign="Center" Left="40.0"
+        Name="Text" Opacity="1.0" Stroke="#FFFFFF" TextDecoration="None"
+        Top="6.914050102234" VerticalAlign="Top"><![CDATA[DP]]><Expose
+            ExposedAttribute="Content" Name="DP Text"/>
+    </Text>
+    <Line Stroke="#626469" StrokeDashArray="0.0" StrokeWidth="2.0"
+        X1="70.0" X2="70.0" Y1="21.4999997913837" Y2="50.0"/>
+    <Path
+        PathData="M52.0,44.0 L52.0,37.0 C37.087561,37.0 25.0,40.1340043 25.0,44.0 25.0,47.8660013 37.087561,51.0 52.0,51.0 52.0,51.0 52.0,51.0 52.0,51.0 z M52.0,30.0 L52.0,23.0 C37.087561,23.0 25.0,26.1340043 25.0,30.0 25.0,33.866002 37.087561,37.0 52.0,37.0 52.0,37.0 52.0,37.0 52.0,37.0 z M52.0,58.0 L52.0,51.0 C37.087561,51.0 25.0,54.1340043 25.0,58.0 25.0,61.8660033 37.087561,65.0 52.0,65.0 52.0,65.0 52.0,65.0 52.0,65.0 z M52.0,72.0 L52.0,65.0 C37.087561,65.0 25.0,68.13401 25.0,72.0 25.0,75.8660003 37.087561,79.0 52.0,79.0 52.0,79.0 52.0,79.0 52.0,79.0 z M52.0,86.0 L52.0,79.0 C37.087561,79.0 25.0,82.13401 25.0,86.0 25.0,89.8660023 37.087561,93.0 52.0,93.0 52.0,93.0 52.0,93.0 52.0,93.0 z M52.0,100.0 L52.0,93.0 C37.087561,93.0 25.0,96.13401 25.0,100.0 25.0,103.866013 37.087561,107.0 52.0,107.0 52.0,107.0 52.0,107.0 52.0,107.0 z"
+        Stroke="#626469" StrokeDashArray="0.0" StrokeWidth="1.0">
+        <LinearGradient Attribute="Fill" EndPoint="1,0"
+            SpreadMethod="Pad" StartPoint="0.0,0.0">
+            <GradientStop Color="#EFEFEF" Offset="0.0"/>
+            <GradientStop Color="#F8F0CC" Offset="1.0"/>
+        </LinearGradient>
+    </Path>
+    <Line Opacity="1.0" Stroke="#808080" StrokeDashArray="0.0"
+        StrokeWidth="2" X1="52.0" X2="52.0" Y1="24.0" Y2="106.0"/>
+    <Bind Color="#F0080E" Fill="#FFD100" Name="FilBag" Stroke="#42B4E6">
+        <Expose ExposedAttribute="Color" Name="Error Color"/>
+        <Expose ExposedAttribute="Fill" Name="Forced Color"/>
+        <Expose ExposedAttribute="Stroke" Name="Database Color"/>
+        <Expose ExposedAttribute="Name" Name="Bind Name"/>
+        <Script OnDocumentLoad="onLoad" OnSignalChange="onChange"><![CDATA[var body;
+var HighLightCol="#404040";
+var originalBodyColor;
+
+function onLoad(evt)
+{
+  comp = evt.getCurrentTarget();
+  body = comp.getParentNode().getChildByName("Body");
+  originalBodyColor=body.getAttribute("Stroke");
+}
+
+function onChange(evt)
+{
+  status = parseInt(evt.getStatus());
+  
+  bgStroke = setColour(status);
+  if (bgStroke=="device"){
+  	body.setAttribute("Stroke", originalBodyColor);
+ 	body.setAttribute("StrokeWidth", "1");
+  }
+  else{
+	  body.setAttribute("Stroke", bgStroke);
+	  body.setAttribute("StrokeWidth", "2");
+  }
+}
+
+function setColour(status){
+var col;
+
+  if(status==2){//Value from Device
+  	return "device";
+  }
+  else{
+  		if(status==3){//Forced Value
+  			return comp.getAttribute("Fill");
+  		}
+  		else{
+  	 		if(status==1){//Database Value
+  	 		return comp.getAttribute("Stroke");
+  			}
+  			else{
+  				if(status==0){
+  					return comp.getAttribute("Color")
+  				}
+  			}
+  		}
+  }
+
+}]]></Script>
+    </Bind>
+</Component>

@@ -1,0 +1,135 @@
+<?xml version="1.0"?>
+<Component Clip="False" ContentHeight="150" ContentWidth="70.0"
+    Decimals="1" Fill="#404040" Height="150.0" Left="0.0"
+    Name="Thermometer" Stroke="#C00000" Top="0.0" Width="70.0">
+    <Script OnDocumentLoad="" OnSignalChange="signal"><![CDATA[function signal(evt)
+{
+  var component = evt.getCurrentTarget();
+  var valueText = component.getChild("ValueText");
+  var unitText = component.getChild("Unit");
+
+  //Value
+  var decimals = parseInt(component.getAttribute("Decimals"));
+  if(decimals > 1) decimals = 1;
+  if(decimals < 0) decimals = 0;
+
+  var value = new Number(evt.getValue());
+  valueText.setAttribute("Content", value.toFixed(decimals));
+
+  //Unit
+  var unit = unitText.getAttribute("Content");
+  if(unit.length() == 0)
+  {
+    unit = evt.getUnit();
+    if(unit != null)
+      unitText.setAttribute("Content", unit);
+  }
+}]]></Script>
+    <Expose ExposedAttribute="Fill" Name="ThermometerColor"/>
+    <Expose ExposedAttribute="Stroke" Name="BarColor"/>
+    <Path Name="Frame"
+        PathData="M-0.0,-0.0 L70.0,-0.0 70.0,150.0 -0.0,150.0 z M8.0,8.0 L8.0,142.0 62.0,142.0 62.0,8.0 z"
+        Stroke="None" StrokeDashArray="0.0" StrokeWidth="1.0"/>
+    <Path Fill="#FFFFFF" Name="InnerEdge"
+        PathData="M5.0,5.0 L65.0,5.0 L65.0,145.0 L5.0,145.0 z M8.0,8.0 L8.0,142.0 L62.0,142.0 L62.0,8.0 z"
+        Stroke="None" StrokeDashArray="0.0" StrokeWidth="1.0" Visibility="Visible">
+        <LinearGradient EndPoint="0.0,1.0">
+            <GradientStop Color="#4C000000" Offset="0"/>
+            <GradientStop Color="#CCFFFFFF" Offset="1.0"/>
+        </LinearGradient>
+    </Path>
+    <Path Fill="None" Name="Light"
+        PathData="M-0.0,-0.0 L70.0,-0.0 70.0,150.0 -0.0,150.0 z M5.0,5.0 L5.0,145.0 65.0,145.0 65.0,5.0 z"
+        Stroke="None" StrokeDashArray="0.0" StrokeWidth="1.0" Visibility="Visible">
+        <LinearGradient EndPoint="0.0,1.0" SpreadMethod="Pad">
+            <GradientStop Color="#0C000000" Offset="0"/>
+            <GradientStop Color="#CCFFFFFF" Offset="0.2"/>
+            <GradientStop Color="#33000000" Offset="1"/>
+        </LinearGradient>
+    </Path>
+    <Rectangle Fill="#F4F4F4" Height="134" Left="8.0" Name="Background"
+        Stroke="None" Top="8.0" Width="54"/>
+    <Rectangle Fill="#26000000" Height="3" Left="8.0" Name="Shadow"
+        Stroke="None" Top="8.0" Width="54"/>
+    <Group Name="Scale" Visibility="Visible">
+        <Line Name="Min" Stroke="#000000" StrokeWidth="1.0"
+            Visibility="Visible" X1="15.0" X2="40.0" Y1="97.0" Y2="97.0"/>
+        <Line Name="Mid" Stroke="#808080" StrokeWidth="1.0" X1="24.0"
+            X2="40.0" Y1="66.0" Y2="66.0"/>
+        <Line Name="Max" Stroke="#000000" StrokeWidth="1.0"
+            Visibility="Visible" X1="15.0" X2="40.0" Y1="35.0" Y2="35.0"/>
+        <Text Fill="None" FontFamily="Arial" FontSize="10.0"
+            FontStyle="Normal" FontWeight="Normal"
+            HorizontalAlign="Center" Left="51.0" Name="MinText"
+            Stroke="#000000" TextDecoration="None" Top="97.0"
+                VerticalAlign="Middle"><![CDATA[-50]]><Expose
+                ExposedAttribute="Content" Name="Min"/>
+        </Text>
+        <Text Fill="None" FontFamily="Arial" FontSize="10.0"
+            FontStyle="Normal" FontWeight="Normal"
+            HorizontalAlign="Center" Left="51.0" Name="MaxText"
+            Stroke="#000000" TextDecoration="None" Top="35.0" VerticalAlign="Middle">
+            <Expose ExposedAttribute="Content" Name="Max"/><![CDATA[50]]></Text>
+    </Group>
+    <Rectangle Fill="#FFFFFF" Height="20.0" Left="11.0" Name="Display"
+        Opacity="1.0" RadiusX="0.0" RadiusY="0.0" Stroke="#808080"
+        StrokeWidth="1.0" Top="119.0" Width="48.0"/>
+    <Expose ExposedAttribute="Decimals" Name="Decimals (max 1)"/>
+    <Rectangle Fill="None" Height="20.0" Left="11.0" Name="Status"
+        Opacity="1.0" RadiusX="0.0" RadiusY="0.0" Stroke="None"
+        StrokeWidth="3.0" Top="119.0" Visibility="Visible" Width="48.0">
+        <Bind Attribute="Stroke" Name="Value" PreventDefault="True">
+            <Expose ExposedAttribute="Name" Name="BindName"/>
+            <ConvertStatus Error="#C00000" Forced="#1E90FF" Stored="#FFBF00"/>
+        </Bind>
+    </Rectangle>
+    <Text Fill="None" FontFamily="Arial" FontSize="15"
+        FontWeight="Normal" HorizontalAlign="Center" Left="35.0"
+        Name="ValueText" Stroke="#000000" Top="121.0"><![CDATA[value]]></Text>
+    <Text Fill="None" FontFamily="Arial" FontSize="15"
+        HorizontalAlign="Center" Left="35.0" Name="Unit"
+        Stroke="#000000" Top="11.0" VerticalAlign="Top">
+        <Expose ExposedAttribute="Content" Name="Unit"/>
+    </Text>
+    <Group Name="Bar">
+        <Ellipse Fill="#FFFFFF" Height="6.0" Left="32.0" Name="Liquid"
+            Opacity="1.0" StrokeDashArray="0.0" StrokeWidth="6.0"
+            Top="106" Width="6.0"/>
+        <Ellipse Fill="None" Height="14.0" Left="28.0" Name="Bulb"
+            Opacity="1.0" Stroke="None" StrokeDashArray="0.0"
+            StrokeWidth="1.0" Top="102.0" Visibility="Visible" Width="14.0">
+            <RadialGradient Center="0.5,0.4" Focus="0.5,0.3">
+                <GradientStop Color="#CCFFFFFF" Offset="0"/>
+                <GradientStop Color="#33000000" Offset="1"/>
+            </RadialGradient>
+        </Ellipse>
+        <Line Name="Bar" Opacity="1.0" StrokeDashArray="0.0"
+            StrokeWidth="5.5" X1="35.0" X2="35.0" Y1="69.0" Y2="101.0">
+            <Bind Attribute="Y1" Name="Value">
+                <Expose ExposedAttribute="Name" Name="BindName"/>
+                <ConvertValue AttributeValue="100" SignalLessThan="-50">
+                    <Expose ExposedAttribute="SignalLessThan" Name="Min"/>
+                </ConvertValue>
+                <ConvertRange AttributeMaxValue="38"
+                    AttributeMinValue="100" SignalMaxValue="50" SignalMinValue="-50">
+                    <Expose ExposedAttribute="SignalMinValue" Name="Min"/>
+                    <Expose ExposedAttribute="SignalMaxValue" Name="Max"/>
+                </ConvertRange>
+                <ConvertValue AttributeValue="38" SignalMoreThan="50">
+                    <Expose ExposedAttribute="SignalMoreThan" Name="Max"/>
+                </ConvertValue>
+            </Bind>
+        </Line>
+        <Path Fill="None" Name="Tube"
+            PathData="M31.0,33.0 L39.0,33.0 L39.0,104.0 L31.0,104.0 z M39.0,33.0 C39.0,35.209 37.209,37.0 35.0,37.0 C32.791,37.0 31.0,35.209 31.0,33.0 C31.0,30.791 32.791,29.0 35.0,29.0 C37.209,29.0 39.0,30.791 39.0,33.0 z"
+            Stroke="None" StrokeDashArray="0.0" StrokeWidth="1.0">
+            <LinearGradient>
+                <GradientStop Color="#33000000" Offset="0"/>
+                <GradientStop Color="#B2FFFFFF" Offset="0.5"/>
+                <GradientStop Color="#19000000" Offset="1"/>
+            </LinearGradient>
+        </Path>
+    </Group>
+    <Metadata Name="Name" Value="Thermometer"/>
+    <Metadata Name="Description" Value="Displays an analog value.&#xd;&#xa;&#xd;&#xa;The displayed unit is fetched from the bound signal. You can replace this unit by specifying your own, using the exposed property &quot;Unit&quot;.&#xd;&#xa;&#xd;&#xa;== Bindings ==&#xd;&#xa;Value: An analog variable.&#xd;&#xa;&#xd;&#xa;== Exposed Properties ==&#xd;&#xa;ThermometerColor: The color of the thermometer.&#xd;&#xa;BarColor: The color of the bar.&#xd;&#xa;Min: Min value.&#xd;&#xa;Max: Max value.&#xd;&#xa;Decimals (max 1): Number of decimals.&#xd;&#xa;BindName: The name of the binding.&#xd;&#xa;Unit: An unit (replaces the fetched unit)."/>
+</Component>

@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<Component ContentHeight="150" ContentWidth="80" Height="150.0"
+    Left="10.0" Name="Vessel 2" Top="0.0" Width="80.0">
+    <Metadata Name="Name" Value="Vessel 2"/>
+    <Metadata Name="Description" Value=""/>
+    <Rectangle Fill="#404040" Height="2.0" Left="38.0" Opacity="1.0"
+        RadiusX="0.0" RadiusY="0.0" Stroke="#404040"
+        StrokeDashArray="0.0" StrokeWidth="1.0" Top="6.0" Width="4.0"/>
+    <Polyline Fill="#CCCCCC" Opacity="1.0"
+        Points="36.0,133.0 36.0,140.0 41.0,140.0 41.0,133.0"
+        Stroke="#404040" StrokeDashArray="0.0" StrokeWidth="1.0">
+        <Expose ExposedAttribute="Fill" Name="Base Color"/>
+    </Polyline>
+    <Curve Closed="True" Fill="#CCCCCC" Opacity="1.0"
+        Points="10.0,30.0 10.0,0.0 70.0,0.0 70.0,30.0 70.0,50.0 70.0,85.0 70.0,115.0 70.0,140.0 10.0,140.0 10.0,115.0"
+        Stroke="#404040" StrokeDashArray="0.0" StrokeWidth="1.0">
+        <Expose ExposedAttribute="Fill" Name="Base Color"/>
+    </Curve>
+    <Curve Opacity="1.0"
+        Points="10.0,115.0 15.0,117.0 21.0,118.0 27.0,118.0"
+        Stroke="#404040" StrokeDashArray="0.0" StrokeWidth="1.0"/>
+    <Curve Opacity="1.0"
+        Points="70.0,115.0 65.0,117.0 59.0,118.0 53.0,118.0"
+        Stroke="#404040" StrokeDashArray="0.0" StrokeWidth="1.0"/>
+    <Curve Opacity="1.0"
+        Points="10.0,30.0 15.0,32.0 21.0,33.0 27.0,33.0"
+        Stroke="#404040" StrokeDashArray="0.0" StrokeWidth="1.0"/>
+    <Curve Opacity="1.0"
+        Points="69.0,30.0 64.0,32.0 58.0,33.0 52.0,33.0"
+        Stroke="#404040" StrokeDashArray="0.0" StrokeWidth="1.0"/>
+    <Polyline Fill="#CCCCCC" Opacity="1.0"
+        Points="22.0,128.0 20.0,140.0 15.0,140.0 16.0,124.0"
+        Stroke="#404040" StrokeDashArray="0.0" StrokeWidth="1.0">
+        <Expose ExposedAttribute="Fill" Name="Base Color"/>
+    </Polyline>
+    <Polyline Fill="#CCCCCC" Opacity="1.0"
+        Points="57.0,128.0 59.0,140.0 64.0,140.0 63.0,124.0"
+        Stroke="#404040" StrokeDashArray="0.0" StrokeWidth="1.0">
+        <Expose ExposedAttribute="Fill" Name="Base Color"/>
+    </Polyline>
+</Component>

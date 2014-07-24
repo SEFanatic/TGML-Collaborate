@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<Component ContentHeight="50" ContentWidth="10" GridSize="10"
+    Height="50.0" Left="0.0" Name="ChwFlVert" Top="0.5" Width="10.0">
+    <Metadata Name="Name" Value="ChwFlVert"/>
+    <Metadata Name="Description" Value="== Exposed Properties ==&#xd;&#xa;&lt;name> - &lt;default value> - &lt;Description>&#xd;&#xa;ChwFlColour  - #42B4E6 - Base color of pipe"/>
+    <Metadata Name="Version" Value="1.0"/>
+    <Rectangle Fill="#42B4E6" Height="50.0" Left="0.0" Opacity="1.0"
+        RadiusX="0.0" RadiusY="0.0" Stroke="#42B4E6"
+        StrokeDashArray="0.0" StrokeWidth="1.0" Top="0.5" Width="10.0">
+        <Expose ExposedAttribute="Fill" Name="ChwFlColour"/>
+        <Expose ExposedAttribute="Stroke" Name="ChwFlColour"/>
+    </Rectangle>
+    <Line Opacity="1.0" Stroke="#5F000000" StrokeDashArray="0.0"
+        StrokeWidth="1.0" X1="10.0" X2="10.0" Y1="0.5" Y2="50.5"/>
+    <Line Opacity="1.0" Stroke="#5F000000" StrokeDashArray="0.0"
+        StrokeWidth="1.0" X1="0.0" X2="0.0" Y1="0.5" Y2="50.5"/>
+</Component>

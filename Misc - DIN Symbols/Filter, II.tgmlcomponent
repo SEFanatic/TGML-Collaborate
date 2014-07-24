@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<Component Clip="False" ContentHeight="40" ContentWidth="60"
+    Fill="#FFFFFF" Height="40.0" Left="-0.71" Name="Filter, II"
+    Stroke="#000000" Top="-1.21" Width="60.0">
+    <Metadata Name="Name" Value="Filter, II"/>
+    <Metadata Name="Description" Value="Filter"/>
+    <Rectangle Height="40.0" Width="60.0"/>
+    <Polyline Fill="None" Points="20.0,0.0 0.0,20.0 20.0,40.0"
+        StrokeDashArray="0.0" StrokeWidth="1.0"/>
+</Component>

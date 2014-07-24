@@ -1,0 +1,193 @@
+<?xml version="1.0"?>
+<Component Clip="False" ContentHeight="30.0" ContentWidth="80.0"
+    Height="30.0" Left="40.0" Name="SlideButton_SBO_Style" Top="130.0" Width="80.0">
+    <Rectangle Fill="#21BCEF" Height="30.0" Left="0.0" Name="Background"
+        Opacity="1.0" RadiusX="0.0" RadiusY="0.0" Stroke="None"
+        StrokeDashArray="0.0" StrokeWidth="1.0" Top="0.0" Width="80.0">
+        <Expose ExposedAttribute="Fill" Name="ButtonFillColor"/>
+        <Bind Attribute="Fill" Format="Presentation" Name="Value" PreventDefault="True">
+            <Expose ExposedAttribute="Name" Name="BindName"/>
+            <ConvertStatus Error="#C00000" Forced="#FF8000" Stored="#0080FF">
+                <Expose ExposedAttribute="Error" Name="Status_ErrorColor"/>
+                <Expose ExposedAttribute="Stored" Name="Status_StoredColor"/>
+                <Expose ExposedAttribute="Forced" Name="Status_ForcedColor"/>
+            </ConvertStatus>
+        </Bind>
+    </Rectangle>
+    <Rectangle Fill="#AA333366" Height="30.0" Left="0.0" Name="Hover"
+        Opacity="1.0" RadiusX="0.0" RadiusY="0.0" Stroke="None"
+        StrokeDashArray="0.0" StrokeWidth="1.0" Top="0.0"
+        Visibility="Hidden" Width="80.0">
+        <Expose ExposedAttribute="Fill" Name="ButtonHoverColor"/>
+    </Rectangle>
+    <Rectangle Fill="#21BCEF" Height="30.0" Left="0.0"
+        Name="BackgroundShading" Opacity="1.0" RadiusX="0.0"
+        RadiusY="0.0" Stroke="None" StrokeDashArray="0.0"
+        StrokeWidth="1.0" Top="0.0" Width="80.0">
+        <Expose ExposedAttribute="Fill" Name="ButtonFillColor"/>
+        <LinearGradient EndPoint="0.0,1.0">
+            <GradientStop Color="#B2FFFFFF" Offset="0"/>
+            <GradientStop Color="#19FFFFFF" Offset="0.5"/>
+            <GradientStop Color="#19000000" Offset="0.5"/>
+            <GradientStop Color="None" Offset="0.8"/>
+            <GradientStop Color="#33FFFFFF" Offset="1.0"/>
+        </LinearGradient>
+    </Rectangle>
+    <TextBox FontFamily="Arial" FontSize="15.0" FontStyle="Normal"
+        FontWeight="Normal" Height="30.0" HorizontalAlign="Center"
+        Left="0.0" Name="OnText" Opacity="1.0" Stroke="#FFFFFF"
+        TextDecoration="None" Top="0.0" VerticalAlign="Middle"
+            Width="40.0"><![CDATA[On]]><Bind Attribute="Content"
+            Format="Presentation" Name="Value">
+            <ConvertText AttributeValue="On" SignalEqualTo="true">
+                <Expose ExposedAttribute="AttributeValue" Name="ButtonText_On"/>
+            </ConvertText>
+            <Expose ExposedAttribute="Name" Name="BindName"/>
+        </Bind>
+        <Bind Attribute="FontStyle" Format="Presentation" Name="Value" PreventDefault="True">
+            <Expose ExposedAttribute="Name" Name="BindName"/>
+            <ConvertStatus Error="Normal" Forced="Italic" Stored="Normal">
+                <Expose ExposedAttribute="Error" Name="Status_ErrorFontStyle"/>
+                <Expose ExposedAttribute="Stored" Name="Status_StoredFontStyle"/>
+                <Expose ExposedAttribute="Forced" Name="Status_ForcedFontStyle"/>
+            </ConvertStatus>
+        </Bind>
+        <Expose ExposedAttribute="Stroke" Name="ButtonTextColor"/>
+        <Expose ExposedAttribute="Content" Name="ButtonText_On"/>
+    </TextBox>
+    <TextBox FontFamily="Arial" FontSize="15.0" FontStyle="Normal"
+        FontWeight="Normal" Height="30.0" HorizontalAlign="Center"
+        Left="40.0" Name="OffText" Opacity="1.0" Stroke="#FFFFFF"
+        TextDecoration="None" Top="0.0" VerticalAlign="Middle"
+            Width="40.0"><![CDATA[Off]]><Bind Attribute="Content"
+            Format="Presentation" Name="Value">
+            <ConvertText AttributeValue="Off" SignalEqualTo="false">
+                <Expose ExposedAttribute="AttributeValue" Name="ButtonText_Off"/>
+            </ConvertText>
+            <Expose ExposedAttribute="Name" Name="BindName"/>
+        </Bind>
+        <Bind Attribute="FontStyle" Format="Presentation" Name="Value" PreventDefault="True">
+            <Expose ExposedAttribute="Name" Name="BindName"/>
+            <ConvertStatus Error="Normal" Forced="Italic" Stored="Normal">
+                <Expose ExposedAttribute="Error" Name="Status_ErrorFontStyle"/>
+                <Expose ExposedAttribute="Stored" Name="Status_StoredFontStyle"/>
+                <Expose ExposedAttribute="Forced" Name="Status_ForcedFontStyle"/>
+            </ConvertStatus>
+        </Bind>
+        <Expose ExposedAttribute="Stroke" Name="ButtonTextColor"/>
+        <Expose ExposedAttribute="Content" Name="ButtonText_Off"/>
+    </TextBox>
+    <Group>
+        <Rectangle Fill="#FFFFFF" Height="24.0" Left="3.0" Name="Slider"
+            Opacity="1.0" RadiusX="5.0" RadiusY="5.0" Stroke="#006699"
+            StrokeDashArray="0.0" StrokeWidth="1.0" Top="3.0" Width="34.0">
+            <Expose ExposedAttribute="Stroke" Name="ButtonStrokeColor"/>
+        </Rectangle>
+        <Rectangle Fill="#FFFFFF" Height="24.0" Left="3.0"
+            Name="SliderShading" Opacity="1.0" RadiusX="5.0"
+            RadiusY="5.0" Stroke="None" StrokeDashArray="0.0"
+            StrokeWidth="1.0" Top="3.0" Width="34.0">
+            <LinearGradient EndPoint="0.0,1.0">
+                <GradientStop Color="#B2FFFFFF" Offset="0"/>
+                <GradientStop Color="#19FFFFFF" Offset="0.5"/>
+                <GradientStop Color="#19000000" Offset="0.5"/>
+                <GradientStop Color="None" Offset="0.8"/>
+                <GradientStop Color="#33FFFFFF" Offset="1.0"/>
+            </LinearGradient>
+        </Rectangle>
+        <Translate>
+            <Animate Animation="Stop" Attribute="X" CalcMode="Linear"
+                Duration="0.5" Freeze="True" From="0" Name="AnimationOn"
+                Repeat="1" To="40">
+                <Bind Attribute="Animation" Name="Value">
+                    <ConvertValue AttributeValue="Stop" SignalLessOrEqualTo="0"/>
+                    <ConvertValue AttributeValue="Start"
+                        SignalLessOrEqualTo="" SignalMoreOrEqualTo="1"/>
+                    <ConvertText AttributeValue="Start" SignalEqualTo="On">
+                        <Expose ExposedAttribute="SignalEqualTo" Name="ButtonText_On"/>
+                    </ConvertText>
+                    <ConvertText AttributeValue="Stop" SignalEqualTo="Off">
+                        <Expose ExposedAttribute="SignalEqualTo" Name="ButtonText_Off"/>
+                    </ConvertText>
+                    <Expose ExposedAttribute="Name" Name="BindName"/>
+                </Bind>
+            </Animate>
+            <Animate Animation="Stop" Attribute="X" CalcMode="Linear"
+                Duration="0.5" Freeze="True" From="40"
+                Name="AnimationOff" Repeat="1" To="0">
+                <Bind Attribute="Animation" Name="Value">
+                    <ConvertValue AttributeValue="Start" SignalLessOrEqualTo="0"/>
+                    <ConvertValue AttributeValue="Stop"
+                        SignalLessOrEqualTo="" SignalMoreOrEqualTo="1"/>
+                    <ConvertText AttributeValue="Stop" SignalEqualTo="On">
+                        <Expose ExposedAttribute="SignalEqualTo" Name="ButtonText_On"/>
+                    </ConvertText>
+                    <ConvertText AttributeValue="Start" SignalEqualTo="Off">
+                        <Expose ExposedAttribute="SignalEqualTo" Name="ButtonText_Off"/>
+                    </ConvertText>
+                    <Expose ExposedAttribute="Name" Name="BindName"/>
+                </Bind>
+            </Animate>
+        </Translate>
+    </Group>
+    <Rectangle Fill="None" Height="30.0" Left="0.0" Name="Frame"
+        Opacity="1.0" RadiusX="0.0" RadiusY="0.0" Stroke="#006699"
+        StrokeDashArray="0.0" StrokeWidth="1.0" Top="0.0" Width="80.0">
+        <Expose ExposedAttribute="Stroke" Name="ButtonStrokeColor"/>
+    </Rectangle>
+    <Script Name="VisualEffects" OnDocumentLoad="" OnMouseClick=""
+        OnMouseMove="" OnMouseOut="onMouseOut" OnMouseOver="onMouseOver"><![CDATA[function onMouseOut(evt)
+{
+	var t = evt.getCurrentTarget();
+	
+	var rect = t.firstChild;
+		
+	rect.setAttribute("StrokeWidth","2.0");
+	t.getChild("Hover").setAttribute("Visibility","Hidden");	
+}
+
+function onMouseOver(evt)
+{
+	var t = evt.getCurrentTarget();
+		
+	var rect = t.firstChild;
+		
+	rect.setAttribute("StrokeWidth","4.0");
+	t.getChild("Hover").setAttribute("Visibility", "Visible");	
+}]]></Script>
+    <Script OnMouseClick="onMouseClick" OnSignalChange="onSignalChange"><![CDATA[var currentValue = NaN;
+var bindName = null;
+var waitState = 0;
+
+function onSignalChange(evt)
+{
+	waitState = 0;
+	
+	currentValue = new Number(evt.getValue());
+	if(bindName == null)
+	{
+		bindName = evt.getTarget().getFullBindName();
+	}
+}
+
+function onMouseClick(evt)
+{
+	if(isNaN(currentValue) && waitState == 0) return;
+	
+	waitState = 1;
+	if(setValue(bindName,currentValue > 0 ? false : true) == false)
+	{
+		// Here we could add error indication, but not included in this version
+		waitState = 0;
+	}
+	
+	
+	// Stops mouse click from bubbling up
+	evt.stopPropagation();
+	
+	// Prevents opening dialog for setting value
+	evt.preventDefault();
+}]]></Script>
+    <Metadata Name="Name" Value="SlideButton_SBO_Style"/>
+    <Metadata Name="Description" Value="SlideButton - SBO Style&#xd;&#xa;========================&#xd;&#xa;This button is suitable for digital (binary) values and for string values that can have the value 'On' or 'Off'&#xd;&#xa;&#xd;&#xa;The text correspoding to 0 / false / 'Off' can be edited. The text correspoding to 1 / true / 'On' can be edited.&#xd;&#xa;&#xd;&#xa;Exposed properties for the button&#xd;&#xa;----------------------------------&#xd;&#xa;BindName&#xd;&#xa;ButtonTextColor&#xd;&#xa;ButtonText_On&#xd;&#xa;ButtonText_Off&#xd;&#xa;ButtonHoverColor&#xd;&#xa;ButtonFillColor&#xd;&#xa;ButtonStrokeColor&#xd;&#xa;&#xd;&#xa;Status_ErrorColor&#xd;&#xa;Status_StoredColor&#xd;&#xa;Status_ForcedColor&#xd;&#xa;Status_ErrorFontStyle&#xd;&#xa;Status_StoredFontStyle&#xd;&#xa;Status_ForcedFontStyle"/>
+</Component>

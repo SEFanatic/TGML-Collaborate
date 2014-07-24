@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<Component Clip="False" ContentHeight="20" ContentWidth="30"
+    Fill="#FFFFFF" Height="20.0" Left="0.0" Name="3-Way-Valve, IV"
+    Stroke="#000000" Top="0.0" Width="30.0">
+    <Metadata Name="Name" Value="3-Way-Valve, IV"/>
+    <Metadata Name="Description" Value="3 way valve"/>
+    <Ellipse Height="10.0" Left="20.0" StrokeDashArray="0.0"
+        StrokeWidth="1.0" Top="5.0" Width="10.0"/>
+    <Polygon Fill="#000000" Points="5.0,0.0 10.0,10.0 15.0,0.0"
+        StrokeDashArray="0.0" StrokeWidth="1.0"/>
+    <Polygon Points="5.0,20.0 10.0,10.0 15.0,20.0" StrokeDashArray="0.0" StrokeWidth="1.0"/>
+    <Line StrokeDashArray="0.0" StrokeWidth="2.0" X1="10.0" X2="20.0"
+        Y1="10.0" Y2="10.0"/>
+    <Polygon Fill="#000000" Points="0.0,5.0 10.0,10.0 0.0,15.0"
+        StrokeDashArray="0.0" StrokeWidth="1.0"/>
+    <Polyline Fill="None"
+        Points="22.8082218170166,12.1917791366577 22.8082218170166,7.80821990966797 25.0,10.0 27.1917762756348,7.80821990966797 27.1917762756348,12.1917791366577"
+        StrokeDashArray="0.0" StrokeWidth="1.0"/>
+</Component>

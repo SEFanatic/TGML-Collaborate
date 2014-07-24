@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<Component Clip="False" ContentHeight="50" ContentWidth="10"
+    GridSize="5" Height="50.0" Left="0.0" Name="GasRVert" Top="0.5" Width="10.0">
+    <Metadata Name="Name" Value="ChwRVert"/>
+    <Metadata Name="Description" Value=""/>
+    <Metadata Name="Version" Value="1.0"/>
+    <Rectangle Fill="#A78900" Height="50.0" Left="0.0" Opacity="1.0"
+        RadiusX="0.0" RadiusY="0.0" Stroke="#A78900"
+        StrokeDashArray="0.0" StrokeWidth="1.0" Top="0.5" Width="5">
+        <Expose ExposedAttribute="Fill" Name="GasRColour"/>
+        <Expose ExposedAttribute="Stroke" Name="GasRColour"/>
+    </Rectangle>
+    <Line Opacity="1.0" Stroke="#5F000000" StrokeDashArray="0.0"
+        StrokeWidth="1.0" X1="5" X2="5" Y1="0.5" Y2="50.5"/>
+    <Line Opacity="1.0" Stroke="#5F000000" StrokeDashArray="0.0"
+        StrokeWidth="1.0" X1="0.0" X2="0.0" Y1="0.5" Y2="50.5"/>
+</Component>

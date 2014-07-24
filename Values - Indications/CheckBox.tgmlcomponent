@@ -1,0 +1,151 @@
+<?xml version="1.0"?>
+<Component ContentHeight="20" ContentWidth="20" GridSize="5"
+    Height="20.0" Left="467.0" Name="CheckBox" Top="118.0" Width="20.0">
+    <Script OnDocumentLoad="" OnMouseClick="" OnMouseOut="onOut"
+        OnMouseOver="onOver" OnMouseUp="onUp" OnSignalChange="onChange"><![CDATA[var waitState = 0;
+var initiated = false;
+var currentValue = NaN;
+
+//OnMouseDown Function
+//
+//What to do when the mouse is pushed on the check box
+//
+function onDown(evt)
+{
+	if(waitState == 0 && initiated)
+	{
+		component.getChild("Hover").setAttribute("Visibility", "Hidden");
+		component.getChild("Push").setAttribute("Visibility", "Visible");
+	}
+}
+
+
+//OnMouseUp Function
+//
+//What to do when the mouse is released on the check box
+//
+function onUp(evt)
+{
+	if(evt.getButton() != 0 || !initiated) return;
+
+	var component = evt.getCurrentTarget();
+    
+	// Get bind name
+	var nodeList = component.getChild("Check").getChildNodes();
+	var length = nodeList.getLength();
+	var fullName = "";
+	for(i=0; i<length; ++i)
+	{
+		var node = nodeList.item(i);
+		if(node.getTagName() == "Bind")
+		{
+			fullName = node.getFullBindName();
+			break;
+		}
+	}
+
+	// Set value
+	waitState = 1;
+	var value = (currentValue.valueOf()==1) ? false : true;
+	if(setValue(fullName, value) == false)
+	{
+		alert("Failed to set value");
+	}	
+}
+
+//OnMouseOut Function
+//
+//What to do when the mouse leaves the check box
+//
+function onOut(evt)
+{
+  var component = evt.getCurrentTarget();
+  component.getChild("Hover").setAttribute("Visibility", "Hidden");  
+}
+
+
+//OnMouseOver Function
+//
+//What to do when the mouse enters the check box
+//
+function onOver(evt)
+{
+  var component = evt.getCurrentTarget();
+  component.getChild("Hover").setAttribute("Visibility", "Visible");
+}
+
+//OnSignalChange
+//
+//What to do on a signal change
+//
+function onChange(evt)
+{
+	var component = evt.getCurrentTarget();
+	var status = parseInt(evt.getStatus());
+	var outline = evt.getCurrentTarget().getParentNode().getChildByName("background");
+	var onColor=evt.getCurrentTarget().getAttribute("Color");
+  
+	if(!initiated)
+	{
+		component.getChild("EditMode").setAttribute("Visibility", "Hidden");
+	}
+  
+	currentValue = new Number(evt.getValue());
+	waitState = 0;
+	initiated = true;
+  
+	//Reset appearance
+	component.getChild("Hover").setAttribute("Visibility", "Hidden");	
+}]]></Script>
+    <Rectangle Fill="None" Height="19.5" Left=".25" Name="Box"
+        Opacity="1.0" RadiusX="2.5" RadiusY="2.5" Stroke="#004000"
+        StrokeDashArray="0.0" StrokeWidth="1" Top=".25" Width="19.5">
+        <LinearGradient EndPoint="0,1">
+            <GradientStop Color="#FEFEFE" Offset="0"/>
+            <GradientStop Color="#DFE0E2" Offset="1.0"/>
+        </LinearGradient>
+    </Rectangle>
+    <Rectangle Fill="None" Height="19.5" Left=".25" Name="Push"
+        Opacity="1.0" RadiusX="2.5" RadiusY="2.5" Stroke="None"
+        StrokeDashArray="0.0" StrokeWidth="10" Top=".25"
+        Visibility="Hidden" Width="19.5">
+        <RadialGradient Attribute="Fill" Center="0.5,0.5"
+            Focus="0.5,1.0" RadiusX="0.7" RadiusY="0.7" SpreadMethod="Pad">
+            <GradientStop Color="#009530" Offset="0.0">
+                <Expose Description="The color of the push indication."
+                    ExposedAttribute="Color" Name="PushColor"/>
+            </GradientStop>
+            <GradientStop Color="None" Offset="1.0"/>
+        </RadialGradient>
+    </Rectangle>
+    <Rectangle Fill="None" Height="19.5" Left=".25" Name="Hover"
+        Opacity="1.0" RadiusX="2.5" RadiusY="2.5" Stroke="None"
+        StrokeDashArray="0.0" StrokeWidth="10" Top=".25"
+        Visibility="Hidden" Width="19.5">
+        <RadialGradient Attribute="Fill" Center="0.5,0.5"
+            Focus="0.5,1.0" RadiusX="0.7" RadiusY="0.7" SpreadMethod="Pad">
+            <GradientStop Color="#00E84B" Offset="0.0">
+                <Expose Description="The color of the hover indication."
+                    ExposedAttribute="Color" Name="HoverColor"/>
+            </GradientStop>
+            <GradientStop Color="None" Offset="1.0"/>
+        </RadialGradient>
+    </Rectangle>
+    <Polyline Name="Check" Opacity="1.0"
+        Points="4.5,13.0 9.5,16.5 17.0,5.0" Stroke="#000000"
+        StrokeDashArray="0.0" StrokeWidth="2" Visibility="Hidden">
+        <Expose Description="The color of the check mark."
+            ExposedAttribute="Stroke" Name="CheckColor"/>
+        <Bind Attribute="Visibility" Name="Value" PreventDefault="True">
+            <Expose ExposedAttribute="Name" Name="Bind Name"/>
+            <ConvertValue AttributeValue="Visible" SignalEqualTo="1"/>
+            <ConvertValue AttributeValue="Hidden" SignalEqualTo="0"/>
+        </Bind>
+    </Polyline>
+    <Polyline Name="EditMode" Opacity="1.0"
+        Points="4.5,13.0 9.5,16.5 17.0,5.0" Stroke="#000000"
+        StrokeDashArray="0.0" StrokeWidth="2"/>
+    <TargetArea Height="20" Left="0" Top="0" Width="20"/>
+    <Metadata Name="Name" Value="CheckBox"/>
+    <Metadata Name="Description" Value=""/>
+</Component>

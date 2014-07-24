@@ -1,0 +1,133 @@
+<?xml version="1.0"?>
+<Component Clip="False" ContentHeight="60.0" ContentWidth="341.0"
+    Height="60.0" Left="1020.25" Name="Header Info" Top="10.95" Width="341.0">
+    <Group>
+        <Rectangle Fill="#626469" Height="60.0"
+            Left="-0.002924539775449" RadiusX="5" RadiusY="5"
+            Stroke="#626469" StrokeDashArray="0.0" StrokeWidth="1.0"
+            Top="0.002026557922363" Width="341.0"/>
+        <Text FontFamily="Arial" FontSize="15.0" FontStyle="Normal"
+            FontWeight="Normal" HorizontalAlign="Left"
+            Left="9.8079833984375" Stroke="#FFFFFF"
+            TextDecoration="None" Top="12.342968940734863"><![CDATA[Date]]></Text>
+        <Text FontFamily="Arial" FontSize="15.0" FontStyle="Normal"
+            FontWeight="Normal" HorizontalAlign="Left"
+            Left="198.2529296875" Stroke="#FFFFFF" TextDecoration="None" Top="11.350964546203613"><![CDATA[OA Temp]]></Text>
+        <Text FontFamily="Arial" FontSize="15.0" FontStyle="Normal"
+            FontWeight="Normal" HorizontalAlign="Left"
+            Left="10.636962890625" Stroke="#FFFFFF"
+            TextDecoration="None" Top="35.16001605987549"><![CDATA[Time]]></Text>
+        <Text FontFamily="Arial" FontSize="15.0" FontStyle="Normal"
+            FontWeight="Normal" HorizontalAlign="Left"
+            Left="198.2529296875" Stroke="#FFFFFF" TextDecoration="None" Top="34.35096454620361"><![CDATA[OA RH]]></Text>
+        <Text FontFamily="Arial" FontSize="15.0" FontStyle="Normal"
+            FontWeight="Normal" HorizontalAlign="Left"
+            Left="50.636962890625" Name="Date" Stroke="#87D300"
+            TextDecoration="None" Top="12.159955024719238">
+            <Script OnDocumentLoad="load"><![CDATA[function load(evt)
+{
+	text = evt.getTarget();
+  
+	var d=new Date();
+	var month=new Array(12);
+	var day=d.getDate().toFixed(0);
+	//var suffix="th";
+	//if (day==1 || day ==21 || day ==31) suffix = "st";
+	//if (day==2 || day ==22) suffix = "nd";
+	//if (day==3 || day ==23) suffix = "rd";
+	var suffix="";
+	month[0]="January";
+	month[1]="February";
+	month[2]="March";
+	month[3]="April";
+	month[4]="May";
+	month[5]="June";
+	month[6]="July";
+	month[7]="August";
+	month[8]="September";
+	month[9]="October";
+	month[10]="November";
+	month[11]="December";
+	text.setAttribute("Content", day+suffix+" "+month[d.getMonth()]+" "+d.getFullYear());
+}
+
+]]></Script><![CDATA[## ######### ####]]></Text>
+        <Text FontFamily="Arial" FontSize="15.0" FontStyle="Normal"
+            FontWeight="Normal" HorizontalAlign="Left"
+            Left="50.5418701171875" Name="Time" Stroke="#87D300"
+            TextDecoration="None" Top="35.3429536819458">
+            <Bind Attribute="" Name="Time.Value">
+                <Script OnDocumentLoad="load" OnSignalChange="load"><![CDATA[function load(evt)
+{
+	text = evt.getTarget().getParentNode();
+	var d=new Date();
+	var minutes=d.getMinutes();
+	if(minutes<10) minutes='0'+minutes;
+	var seconds=d.getSeconds();
+	if(seconds<10) seconds='0'+seconds;
+	var hours=d.getHours();
+	if(hours>=12){
+		if(hours==12){
+			hours=12;
+		}else {
+			hours=hours-12;
+		}
+		text.setAttribute("Content", d.getHours()+":"+minutes+":"+seconds+' PM');
+	}else if(hours<12){
+		if (hours==0){
+			hours=12;
+		}
+		text.setAttribute("Content", d.getHours()+":"+minutes+":"+seconds+' AM');
+		}
+	}	
+
+]]></Script>
+            </Bind><![CDATA[##:##:## ##]]></Text>
+        <Text FontFamily="Arial" FontSize="15.0" FontStyle="Normal"
+            FontWeight="Normal" HorizontalAlign="Left" Id=""
+            Left="277.31787109375" Name="OaT" Stroke="#87D300"
+            TextDecoration="None" Top="11.203946113586426">
+            <Bind Attribute="Content" Name="temp_F">
+                <Script OnDocumentLoad="load" OnSignalChange="signal"><![CDATA[function load(evt)
+{
+  text = evt.getTarget().getParentNode();
+  text.setAttribute("Content", " °F");
+}
+
+function signal(evt)
+{
+  text = evt.getTarget().getParentNode();
+  value = new Number(evt.getValue());
+  text.setAttribute("Content", value.toFixed(1)+" °F");
+}
+]]></Script>
+            </Bind><![CDATA[##.#°F]]></Text>
+        <Script OnMouseClick="onClick"><![CDATA[function onClick(evt){
+evt.preventDefault();
+}]]></Script>
+        <Text FontFamily="Arial" FontSize="15.0" FontStyle="Normal"
+            FontWeight="Normal" HorizontalAlign="Left" Id=""
+            Left="277.31787109375" Name="OaRh" Stroke="#87D300"
+            TextDecoration="None" Top="34.203946113586426">
+            <Bind Attribute="Content" Name="humidity">
+                <Script OnDocumentLoad="load" OnSignalChange="signal"><![CDATA[function load(evt)
+{
+  text = evt.getTarget().getParentNode();
+  text.setAttribute("Content", " %rh");
+}
+
+function signal(evt)
+{
+  text = evt.getTarget().getParentNode();
+  value = new Number(evt.getValue());
+  text.setAttribute("Content", value.toFixed(0)+" %rh");
+}
+]]></Script>
+            </Bind><![CDATA[##.#%rh]]></Text>
+        <Line Opacity="1.0" Stroke="#FFFFFF" StrokeDashArray="0.0"
+            StrokeWidth="1.0" X1="190.510498046875"
+            X2="190.510498046875" Y1="5.228100776672363" Y2="55.22810077667236"/>
+    </Group>
+    <Metadata Name="Name" Value="Header Info"/>
+    <Metadata Name="Description" Value=""/>
+</Component>

@@ -1,0 +1,234 @@
+<?xml version="1.0"?>
+<Component ComponentCounter="5" ContentHeight="200" ContentWidth="80"
+    GridSize="1" Height="200.0" Left="0.0"
+    Name="Gas Flow Left 2 Port Bottom" Top="0.0" Width="80.0">
+    <Metadata Name="Name" Value="Gas Flow Left 2 Port Bottom"/>
+    <Metadata Name="Description" Value="== Bindings ==&#xd;&#xa;###VlvPos - Valve position&#xd;&#xa;&#xd;&#xa;== Exposed Properties ==&#xd;&#xa;&lt;name> - &lt;default value> - &lt;Description>&#xd;&#xa;Bind Name - GasVlvPos - Valve Position&#xd;&#xa;Top of scale - 100 - fully open value&#xd;&#xa;Bottom of Scale - 0 - fully closed value&#xd;&#xa;Coil Base Color - #FFD100 - Base color of Coil&#xd;&#xa;Error, Forced, Database Color - Outline color when point in error, forced or database condition"/>
+    <Polyline Opacity="1.0"
+        Points="48.5,177.0 50.5,177.0 50.5,167.0 52.5,167.0 48.5,160.0 44.5,167.0 46.5,167.0 46.5,177.0"
+        Stroke="#9FA0A4" StrokeDashArray="0.0" StrokeWidth="1.0"/>
+    <Rectangle Fill="#FFD100" Height="54.0" Left="46.5" Opacity="1.0"
+        RadiusX="0.0" RadiusY="0.0" Stroke="#FFD100"
+        StrokeDashArray="0.0" StrokeWidth="1.0" Top="99.0" Width="3.0">
+        <Expose ExposedAttribute="Fill" Name="Pipe Colour"/>
+        <Expose ExposedAttribute="Stroke" Name="Pipe Colour"/>
+    </Rectangle>
+    <Component BottomScale="0" ComponentCounter="3" ContentHeight="110"
+        ContentWidth="70" GridSize="10" Height="110.0" Left="0.0"
+        Name="" Top="0.0" TopScale="100" Width="70.0">
+        <Expose ExposedAttribute="TopScale" Name="Top of Scale"/>
+        <Expose ExposedAttribute="BottomScale" Name="Bottom of Scale"/>
+        <Rectangle Fill="#E0E0E0" Height="88.0" Left="27.0"
+            Opacity="1.0" RadiusX="5.0" RadiusY="5.0" Stroke="#E0E0E0"
+            StrokeDashArray="0.0" StrokeWidth="1.0" Top="11.0" Width="30.0">
+            <Expose ExposedAttribute="Fill" Name="Coil Base Colour"/>
+            <Expose ExposedAttribute="Stroke" Name="Coil Base Colour"/>
+        </Rectangle>
+        <Rectangle Height="88.0" Left="27.0" Name="Body" Opacity="1.0"
+            RadiusX="5.0" RadiusY="5.0" Stroke="#404040"
+            StrokeDashArray="0.0" StrokeWidth="1.0" Top="11.0" Width="30.0">
+            <LinearGradient Attribute="Fill" EndPoint="1.0,0.0"
+                SpreadMethod="Pad" StartPoint="0.0,0.0">
+                <GradientStop Color="#EFEFEF" Offset="0.2"/>
+                <GradientStop Color="#7FFFFFFF" Offset="1.0"/>
+            </LinearGradient>
+            <Bind Color="#F0080E" Fill="#FFD100" Name="GasVlvPos" Stroke="#42B4E6" PreventDefault="True">
+                <Expose ExposedAttribute="Color" Name="Error Color"/>
+                <Expose ExposedAttribute="Fill" Name="Forced Color"/>
+                <Expose ExposedAttribute="Stroke" Name="Database Color"/>
+                <Expose ExposedAttribute="Name" Name="Gas Valve Bind"/>
+				<Expose ExposedAttribute="PreventDefault" Name="Prevent Default"/>
+				
+                <Script OnDocumentLoad="onLoad" OnSignalChange="onChange"><![CDATA[var body;
+var HighLightCol="#404040";
+var originalBodyColor;
+
+function onLoad(evt)
+{
+  comp = evt.getCurrentTarget();
+  body = comp.getParentNode();
+  originalBodyColor=body.getAttribute("Stroke");
+}
+
+function onChange(evt)
+{
+  status = parseInt(evt.getStatus());
+  
+  bgStroke = setColour(status);
+  if (bgStroke=="device"){
+  	body.setAttribute("Stroke", originalBodyColor);
+ 	body.setAttribute("StrokeWidth", "1");
+  }
+  else{
+	  body.setAttribute("Stroke", bgStroke);
+	  body.setAttribute("StrokeWidth", "2");
+  }
+}
+
+function setColour(status){
+var col;
+
+  if(status==2){//Value from Device
+  	return "device";
+  }
+  else{
+  		if(status==3){//Forced Value
+  			return comp.getAttribute("Fill");
+  		}
+  		else{
+  	 		if(status==1){//Database Value
+  	 		return comp.getAttribute("Stroke");
+  			}
+  			else{
+  				if(status==0){
+  					return comp.getAttribute("Color")
+  				}
+  			}
+  		}
+  }
+
+}]]></Script>
+            </Bind>
+        </Rectangle>
+        <Component Clip="False" ContentHeight="88.0" ContentWidth="42.0"
+            Height="88.0" Left="6.0" Top="12.0" Width="42.0">
+            <Curve Opacity="1.0"
+                Points="42.0,72.0 34.0,70.0 42.0,72.0 34.0,70.0 34.0,68.0 34.0,70.0 34.0,68.0 24.0,64.0 10.0,72.0 0.0,76.0 10.0,80.0 24.0,88.0 34.0,84.0 34.0,82.0 34.0,84.0 34.0,82.0 42.0,80.0 34.0,82.0 42.0,80.0"
+                Stroke="None" StrokeDashArray="0.0" StrokeWidth="1.0">
+                <RadialGradient Attribute="Fill" Focus=".8,.5"
+                    RadiusX="0.5" RadiusY="0.5" SpreadMethod="Pad">
+                    <GradientStop Color="#0126D8FC" Offset="0.0"/>
+                    <GradientStop Color="#60325FE0" Offset=".5"/>
+                    <GradientStop Color="#AA903BC6" Offset="1"/>
+                </RadialGradient>
+            </Curve>
+            <Curve Opacity="1.0"
+                Points="40.0,72.0 34.0,70.0 40.0,72.0 34.0,70.0 34.0,68.0 34.0,70.0 34.0,68.0 26.0,68.0 26.0,70.0 24.0,74.0 24.0,76.0 24.0,76.0 24.0,78.0 26.03816986084,82.0311737060547 26.0,84.0 34.0,84.0 34.0,82.0 33.928207397461,84.0311737060547 34.0,82.0 40.0,80.0 34.0,82.0 40.0,80.0"
+                Stroke="None" StrokeDashArray="0.0" StrokeWidth="1.0">
+                <RadialGradient Attribute="Fill" Focus="0,.5"
+                    RadiusX="0.5" RadiusY="1" SpreadMethod="Pad">
+                    <GradientStop Color="#0126D8FC" Offset="0.0"/>
+                    <GradientStop Color="#60325FE0" Offset=".5"/>
+                    <GradientStop Color="None" Offset="1"/>
+                </RadialGradient>
+            </Curve>
+            <Curve Opacity="1.0"
+                Points="42.0,30.0 34.0,28.0 42.0,30.0 34.0,28.0 34.0,26.0 34.0,28.0 34.0,26.0 24.0,22.0 10.0,30.0 0.0,34.0 10.0,38.0 24.0,46.0 34.0,42.0 34.0,40.0 34.0,42.0 34.0,40.0 42.0,38.0 34.0,40.0 42.0,38.0"
+                Stroke="None" StrokeDashArray="0.0" StrokeWidth="1.0">
+                <RadialGradient Attribute="Fill" Focus=".8,.5"
+                    RadiusX="0.5" RadiusY="0.5" SpreadMethod="Pad">
+                    <GradientStop Color="#0126D8FC" Offset="0.0"/>
+                    <GradientStop Color="#60325FE0" Offset=".5"/>
+                    <GradientStop Color="#AA903BC6" Offset="1"/>
+                </RadialGradient>
+            </Curve>
+            <Curve Opacity="1.0"
+                Points="40.0,30.0 34.0,28.0 40.0,30.0 34.0,28.0 34.0,26.0 34.0,28.0 34.0,26.0 26.0,26.0 26.0,28.0 24.0,32.0 24.0,34.0 24.0,34.0 24.0,36.0 26.03816986084,40.031173706055 26.0,42.0 34.0,42.0 34.0,40.0 33.928207397461,42.031173706055 34.0,40.0 40.0,38.0 34.0,40.0 40.0,38.0"
+                Stroke="None" StrokeDashArray="0.0" StrokeWidth="1.0">
+                <RadialGradient Attribute="Fill" Focus="0,.5"
+                    RadiusX="0.5" RadiusY="1" SpreadMethod="Pad">
+                    <GradientStop Color="#0126D8FC" Offset="0.0"/>
+                    <GradientStop Color="#60325FE0" Offset=".5"/>
+                    <GradientStop Color="None" Offset="1"/>
+                </RadialGradient>
+            </Curve>
+            <Curve Opacity="1.0"
+                Points="42.0,8.0 34.0,6.0 42.0,8.0 34.0,6.0 34.0,4.0 34.0,6.0 34.0,4.0 24.0,0.0 10.0,8.0 0.0,12.0 10.0,16.0 24.0,24.0 34.0,20.0 34.0,18.0 34.0,20.0 34.0,18.0 42.0,16.0 34.0,18.0 42.0,16.0"
+                Stroke="None" StrokeDashArray="0.0" StrokeWidth="1.0">
+                <RadialGradient Attribute="Fill" Focus=".8,.5"
+                    RadiusX="0.5" RadiusY="0.5" SpreadMethod="Pad">
+                    <GradientStop Color="#5726D8FC" Offset="0.0"/>
+                    <GradientStop Color="#AAA3DAF2" Offset=".5"/>
+                    <GradientStop Color="#50903BC6" Offset="1"/>
+                </RadialGradient>
+            </Curve>
+            <Curve Opacity="1.0"
+                Points="40.0,8.0 34.0,6.0 40.0,8.0 34.0,6.0 34.0,4.0 34.0,6.0 34.0,4.0 26.0,4.0 26.0,6.0 24.0,10.0 24.0,12.0 24.0,12.0 24.0,14.0 26.03816986084,18.031173706055 26.0,20.0 34.0,20.0 34.0,18.0 33.928207397461,20.031173706055 34.0,18.0 40.0,16.0 34.0,18.0 40.0,16.0"
+                Stroke="None" StrokeDashArray="0.0" StrokeWidth="1.0">
+                <RadialGradient Attribute="Fill" Focus="0,.5"
+                    RadiusX="0.5" RadiusY="1" SpreadMethod="Pad">
+                    <GradientStop Color="#0126D8FC" Offset="0.0"/>
+                    <GradientStop Color="#60325FE0" Offset=".5"/>
+                    <GradientStop Color="None" Offset="1"/>
+                </RadialGradient>
+            </Curve>
+            <Curve Opacity="1.0"
+                Points="42.0,50.0 34.0,48.0 42.0,50.0 34.0,48.0 34.0,46.0 34.0,48.0 34.0,46.0 24.0,42.0 10.0,50.0 0.0,54.0 10.0,58.0 24.0,66.0 34.0,62.0 34.0,60.0 34.0,62.0 34.0,60.0 42.0,58.0 34.0,60.0 42.0,58.0"
+                Stroke="None" StrokeDashArray="0.0" StrokeWidth="1.0">
+                <RadialGradient Attribute="Fill" Focus=".8,.5"
+                    RadiusX="0.5" RadiusY="0.5" SpreadMethod="Pad">
+                    <GradientStop Color="#5726D8FC" Offset="0.0"/>
+                    <GradientStop Color="#AAA3DAF2" Offset=".5"/>
+                    <GradientStop Color="#50903BC6" Offset="1"/>
+                </RadialGradient>
+            </Curve>
+            <Curve Opacity="1.0"
+                Points="40.0,50.0 34.0,48.0 40.0,50.0 34.0,48.0 34.0,46.0 34.0,48.0 34.0,46.0 26.0,46.0 26.0,48.0 24.0,52.0 24.0,54.0 24.0,54.0 24.0,56.0 26.03816986084,60.031173706055 26.0,62.0 34.0,62.0 34.0,60.0 33.928207397461,62.031173706055 34.0,60.0 40.0,58.0 34.0,60.0 40.0,58.0"
+                Stroke="None" StrokeDashArray="0.0" StrokeWidth="1.0">
+                <RadialGradient Attribute="Fill" Focus="0,.5"
+                    RadiusX="0.5" RadiusY="1" SpreadMethod="Pad">
+                    <GradientStop Color="#0126D8FC" Offset="0.0"/>
+                    <GradientStop Color="#60325FE0" Offset=".5"/>
+                    <GradientStop Color="None" Offset="1"/>
+                </RadialGradient>
+            </Curve>
+            <Scale Center="1,0.5" ScaleX="1">
+                <Bind Attribute="ScaleX" Name="GasVlvPos" PreventDefault="True">
+                    <ConvertRange AttributeMaxValue="1"
+                        AttributeMinValue="0" SignalMaxValue="100" SignalMinValue="0">
+                        <Expose ExposedAttribute="SignalMaxValue" Name="Top of Scale"/>
+                        <Expose ExposedAttribute="SignalMinValue" Name="Bottom of Scale"/>
+                    </ConvertRange>
+                    <Expose ExposedAttribute="Name" Name="Gas Valve Bind"/>
+					<Expose ExposedAttribute="PreventDefault" Name="Prevent Default"/>
+                </Bind>
+            </Scale>
+        </Component>
+        <Polygon Fill="#EFEFEF" Opacity="1.0"
+            Points="40.0,16.0 52.0,16.0 52.0,96.0 40.0,96.0 40.0,94.0 48.0,92.0 48.0,84.0 40.0,82.0 40.0,72.0 48.0,70.0 48.0,62.0 40.0,60.0 40.0,52.0 48.0,50.0 48.0,42.0 40.0,40.0 40.0,30.0 48.0,28.0 48.0,20.0 40.0,18.0"
+            Stroke="#EFEFEF" StrokeDashArray="0.0" StrokeWidth="1.0"/>
+        <Path Fill="None"
+            PathData="M48.0,84.0 L40.0,82.0 40.0,80.0 M48.0,92.0 L40.0,94.0 40.0,96.0"
+            Stroke="#404040" StrokeDashArray="0.0" StrokeWidth="1.0"/>
+        <Ellipse Fill="#FFFFFF" Height="8.0" Left="44.0" Opacity="1.0"
+            Stroke="#404040" StrokeDashArray="0.0" StrokeWidth="1.0"
+            Top="84.0" Width="8.0"/>
+        <Path Fill="None"
+            PathData="M48.0,42.0 L40.0,40.0 40.0,38.0 M48.0,50.0 L40.0,52.0 40.0,54.0"
+            Stroke="#404040" StrokeDashArray="0.0" StrokeWidth="1.0"/>
+        <Ellipse Fill="#FFFFFF" Height="8.0" Left="44.0" Opacity="1.0"
+            Stroke="#404040" StrokeDashArray="0.0" StrokeWidth="1.0"
+            Top="42.0" Width="8.0"/>
+        <Path Fill="None"
+            PathData="M48.0,20.0 L40.0,18.0 40.0,16.0 M48.0,28.0 L40.0,30.0 40.0,32.0"
+            Stroke="#404040" StrokeDashArray="0.0" StrokeWidth="1.0"/>
+        <Ellipse Fill="#FFFFFF" Height="8.0" Left="44.0" Opacity="1.0"
+            Stroke="#404040" StrokeDashArray="0.0" StrokeWidth="1.0"
+            Top="20.0" Width="8.0"/>
+        <Path Fill="None"
+            PathData="M48.0,62.0 L40.0,60.0 40.0,58.0 M48.0,70.0 L40.0,72.0 40.0,74.0"
+            Stroke="#404040" StrokeDashArray="0.0" StrokeWidth="1.0"/>
+        <Ellipse Fill="#FFFFFF" Height="8.0" Left="44.0" Opacity="1.0"
+            Stroke="#404040" StrokeDashArray="0.0" StrokeWidth="1.0"
+            Top="62.0" Width="8.0"/>
+    </Component>
+    <Rectangle Fill="#009530" Height="3.0" Left="32.0" Opacity="1.0"
+        RadiusX="1" RadiusY="1" Stroke="#404040" StrokeDashArray="0.0"
+        StrokeWidth="1.0" Top="129.0" Width="7.0"/>
+    <Rectangle Fill="#009530" Height="20.0" Left="18.0" RadiusX="2"
+        RadiusY="2" Stroke="#404040" StrokeDashArray="0.0"
+        StrokeWidth="1.0" Top="120.5" Width="15.0"/>
+    <Text FontFamily="Arial" FontSize="10.0" FontStyle="Normal"
+        FontWeight="Normal" HorizontalAlign="Center" Left="25.5"
+        Opacity="1.0" Stroke="#FFFFFF" TextDecoration="None"
+        Top="124.914020240307" VerticalAlign="Top"><![CDATA[V]]></Text>
+    <Path Fill="#FFD100"
+        PathData="M43.5,127.0 C43.5,126.44801 43.051998,126.0 42.5,126.0 L39.5,126.0 C38.9479958,126.0 38.5,126.44801 38.5,127.0 38.5,127.0 38.5,127.0 38.5,127.0 L38.5,134.0 C38.5,134.55201 38.9479958,135.0 39.5,135.0 L42.5,135.0 C43.051998,135.0 43.5,134.55201 43.5,134.0 z M52.5,125.0 C52.5,123.89501 51.604996,123.0 50.5,123.0 L45.5,123.0 C44.3949968,123.0 43.5,123.89501 43.5,125.0 43.5,125.0 43.5,125.0 43.5,125.0 L43.5,136.0 C43.5,137.10501 44.3949968,138.0 45.5,138.0 L50.5,138.0 C51.604996,138.0 52.5,137.10501 52.5,136.0 z"
+        Stroke="#FFD100" StrokeDashArray="0.0" StrokeWidth="1.0">
+        <Expose ExposedAttribute="Fill" Name="Pipe Colour"/>
+        <Expose ExposedAttribute="Stroke" Name="Pipe Colour"/>
+    </Path>
+    <Path Fill="None"
+        PathData="M49.5,153.0 L49.5,138.0 M46.5,153.0 L46.5,138.0 M46.5,123.0 L46.5,99.0 M49.5,99.0 L49.5,123.0 M45.5,123.0 L50.5,123.0 M52.5,125.0 L52.5,136.0 M43.5,126.0 L39.5,126.0 M38.5,127.0 L38.5,134.0 M50.5,138.0 L45.5,138.0 M43.5,135.0 L43.5,126.0 M43.5,125.0 L43.5,126.0 M50.5,138.0 C51.604999,138.0 52.5,137.105 52.5,136.0 M52.5,125.0 C52.5,123.89501 51.604999,123.0 50.5,123.0 M45.5,123.0 C44.394998,123.0 43.5,123.89501 43.5,125.0 M43.5,136.0 C43.5,137.105 44.394998,138.0 45.5,138.0 45.5,138.0 45.5,138.0 45.5,138.0 M39.5,126.0 C38.948,126.0 38.5,126.44801 38.5,127.0 M38.5,134.0 C38.5,134.552 38.948,135.0 39.5,135.0 39.5,135.0 39.5,135.0 39.5,135.0 M43.5,135.0 L43.5,136.0 M43.5,135.0 L39.5,135.0"
+        Stroke="#5F000000" StrokeDashArray="0.0" StrokeWidth="1.0"/>
+</Component>

@@ -1,0 +1,315 @@
+<?xml version="1.0"?>
+<Component ComponentCounter="10" ContentHeight="60" ContentWidth="110"
+    ForcedColour="#FFD100" GridSize="1" Height="60.0" Left="9.5"
+    Name="Fan Axial Flow Up" Top="11.0" Width="110.0">
+    <Curve Opacity="1.0"
+        Points="45.0,39.0 43.8459883865228,39.978178060883 41.5379651595685,41.9345341826489 41.0,44.0 40.4889503633087,45.9621262395546 40.6246328414336,48.5102093132765 42.0,50.0 43.8645423162679,52.0196627209517 47.2562606904456,51.8343191116588 50.0,52.0 52.6825329637841,52.1619849389105 56.0315909344198,52.8296414874952 58.0,51.0 59.2449312028315,49.8428331195953 59.0816437342772,47.2809443731984 59.0,46.0"
+        Stroke="#404040" StrokeDashArray="0.0" StrokeWidth="1.0"/>
+    <Rectangle Fill="None" Height="17.0" Left="11.0" Opacity="1.0"
+        RadiusX="0.0" RadiusY="0.0" Stroke="#404040"
+        StrokeDashArray="0.0" StrokeWidth="1.0" Top="11.0" Width="88.0">
+        <Bind Color="#F0080E" Fill="#FFD100" Name="Fan#Fbk" Stroke="#42B4E6" PreventDefault="True">
+            <Expose ExposedAttribute="Color" Name="Error Color"/>
+            <Expose ExposedAttribute="Fill" Name="Forced Color"/>
+            <Expose ExposedAttribute="Stroke" Name="Database Color"/>
+            <Expose ExposedAttribute="Name" Name="Feedback Bind"/>
+			<Expose ExposedAttribute="PreventDefault" Name="Prevent Default"/>
+            <Script OnDocumentLoad="onLoad" OnSignalChange="onChange"><![CDATA[var body;
+var HighLightCol="#404040";
+var originalBodyColor;
+
+function onLoad(evt)
+{
+  comp = evt.getCurrentTarget();
+  body = comp.getParentNode();
+  originalBodyColor=body.getAttribute("Stroke");
+}
+
+function onChange(evt)
+{
+  status = parseInt(evt.getStatus());
+  
+  bgStroke = setColour(status);
+  if (bgStroke=="device"){
+  	body.setAttribute("Stroke", originalBodyColor);
+ 	body.setAttribute("StrokeWidth", "1");
+  }
+  else{
+	  body.setAttribute("Stroke", bgStroke);
+	  body.setAttribute("StrokeWidth", "2");
+  }
+}
+
+function setColour(status){
+var col;
+
+  if(status==2){//Value from Device
+  	return "device";
+  }
+  else{
+  		if(status==3){//Forced Value
+  			return comp.getAttribute("Fill");
+  		}
+  		else{
+  	 		if(status==1){//Database Value
+  	 		return comp.getAttribute("Stroke");
+  			}
+  			else{
+  				if(status==0){
+  					return comp.getAttribute("Color")
+  				}
+  			}
+  		}
+  }
+
+}]]></Script>
+        </Bind>
+    </Rectangle>
+    <Curve Fill="#CCCCCC" Opacity="1.0"
+        Points="53.101144113882,28.0 53.101144113882,26.5393264797458 53.101144113882,24.4943825329853 53.101144113882,23.1797757100679 47.6966495513916,18.6516855422411 53.101144113882,23.1797757100679 47.6966495513916,18.6516855422411 50.9831664547373,15.0 59.0168748170105,15.0 62.3033915888518,18.6516855422411 56.8988971578658,23.3258431348365 62.3033915888518,18.6516855422411 56.8988971578658,23.3258431348365 56.8988971578658,24.7865173825226 56.8988971578658,26.6853939045144 56.8988971578658,28.0"
+        Stroke="#404040" StrokeDashArray="0.0" StrokeWidth="1.0"/>
+    <Metadata Name="Name" Value="Fan Axial Flow Up"/>
+    <Metadata Name="Description" Value="== Bindings ==&#xd;&#xa;P#Cmd - Pump Command&#xd;&#xa;P#Fbk - Pump Command&#xd;&#xa;&#xd;&#xa;== Exposed Properties ==&#xd;&#xa;Command Bind - P#Cmd - Pump command point&#xd;&#xa;Feedback Bind - P#Fbk - Pump feedback point&#xd;&#xa;Command on color - #87d300 - pump color when command is true&#xd;&#xa;Pump color - #cccccc - pump color when command is false&#xd;&#xa;Animation Speed - .4 - speed at which the blades spin when feedback is true&#xd;&#xa;Error, Forced, Database Color - Outline color when point in error, forced or database condition"/>
+    <Rectangle Fill="#C6C9CD" Height="19.0" Left="45.0" Opacity="1.0"
+        RadiusX="0.0" RadiusY="0.0" Stroke="#404040"
+        StrokeDashArray="0.0" StrokeWidth="1.0" Top="28.0" Width="20.0">
+        <Bind Attribute="Fill" Name="Fan#Cmd" PreventDefault="True">
+            <Expose ExposedAttribute="Name" Name="Command Bind"/>
+			<Expose ExposedAttribute="PreventDefault" Name="Prevent Default"/>
+            <ConvertValue AttributeValue="#87D300" SignalMoreOrEqualTo="1">
+                <Expose ExposedAttribute="AttributeValue" Name="On Color"/>
+            </ConvertValue>
+            <ConvertValue AttributeValue="#C6C9CD" SignalLessOrEqualTo="0"/>
+        </Bind>
+    </Rectangle>
+    <Path Fill="None"
+        PathData="M59.5,46.5 L59.5,28.5 M56.5,46.5 L56.5,28.5 M53.5,46.5 L53.5,28.5 M50.5,46.5 L50.5,28.5 M47.5,46.5 L47.5,28.5 M62.5,46.5 L62.5,28.5"
+        Stroke="#505050" StrokeDashArray="0.0" StrokeWidth=".5"/>
+    <Rectangle Fill="None" Height="19.0" Left="45.0" Opacity="1.0"
+        RadiusX="0.0" RadiusY="0.0" Stroke="#404040"
+        StrokeDashArray="0.0" StrokeWidth="1.0" Top="28.0" Width="20.0">
+        <LinearGradient Attribute="Fill" EndPoint="1,0"
+            SpreadMethod="Pad" StartPoint="0.0,0.0">
+            <GradientStop Color="#50000000" Offset="0.0"/>
+            <GradientStop Color="#50FFFFFF" Offset="0.3"/>
+            <GradientStop Color="#80000000" Offset="1"/>
+        </LinearGradient>
+    </Rectangle>
+    <Polyline Opacity="1.0"
+        Points="65.0,28.0 65.0,47.0 45.0,47.0 45.0,28.0"
+        Stroke="#404040" StrokeDashArray="0.0" StrokeWidth="1.0">
+        <Bind Color="#F0080E" Fill="#FFD100" Name="Fan#Cmd" Stroke="#42B4E6" PreventDefault="True">
+            <Expose ExposedAttribute="Color" Name="Error Color"/>
+            <Expose ExposedAttribute="Fill" Name="Forced Color"/>
+            <Expose ExposedAttribute="Stroke" Name="Database Color"/>
+            <Expose ExposedAttribute="Name" Name="Command Bind"/>
+			<Expose ExposedAttribute="PreventDefault" Name="Prevent Default"/>
+            <Script OnDocumentLoad="onLoad" OnSignalChange="onChange"><![CDATA[var body;
+var HighLightCol="#404040";
+var originalBodyColor;
+
+function onLoad(evt)
+{
+  comp = evt.getCurrentTarget();
+  body = comp.getParentNode();
+  originalBodyColor=body.getAttribute("Stroke");
+}
+
+function onChange(evt)
+{
+  status = parseInt(evt.getStatus());
+  
+  bgStroke = setColour(status);
+  if (bgStroke=="device"){
+  	body.setAttribute("Stroke", originalBodyColor);
+ 	body.setAttribute("StrokeWidth", "1");
+  }
+  else{
+	  body.setAttribute("Stroke", bgStroke);
+	  body.setAttribute("StrokeWidth", "2");
+  }
+}
+
+function setColour(status){
+var col;
+
+  if(status==2){//Value from Device
+  	return "device";
+  }
+  else{
+  		if(status==3){//Forced Value
+  			return comp.getAttribute("Fill");
+  		}
+  		else{
+  	 		if(status==1){//Database Value
+  	 		return comp.getAttribute("Stroke");
+  			}
+  			else{
+  				if(status==0){
+  					return comp.getAttribute("Color")
+  				}
+  			}
+  		}
+  }
+
+}]]></Script>
+        </Bind>
+    </Polyline>
+    <Polyline Name="Alarm Outline" Opacity="1.0"
+        Points="45.0,28.0 99.0,28.0 99.0,11.0 11.0,11.0 11.0,28.0 45.0,28.0 45.0,47.0 65.0,47.0 65.0,28.0"
+        Stroke="#F0080E" StrokeDashArray="0.0" StrokeWidth="2" Visibility="Hidden">
+        <Bind Attribute="Visibility" Description="AlarmBind" Name="Fan#Alm" PreventDefault="True">
+            <Expose ExposedAttribute="Name" Name="Alarm Bind"/>
+			<Expose ExposedAttribute="PreventDefault" Name="Prevent Default"/>
+            <ConvertValue AttributeValue="Visible" SignalMoreOrEqualTo="1"/>
+            <ConvertValue AttributeValue="Hidden" SignalLessOrEqualTo="0"/>
+        </Bind>
+    </Polyline>
+    <Rectangle Fill="#9FA0A4" Height="10.0" Left="41.0" Opacity="1.0"
+        RadiusX="0.0" RadiusY="0.0" Stroke="#404040"
+        StrokeDashArray="0.0" StrokeWidth="1.0" Top="29.0" Width="6.0"/>
+    <Component Clip="False" ContentHeight="9.0" ContentWidth="45.0"
+        Height="9.0" Left="9.5" Top="15.0" Width="45.0">
+        <Curve Fill="#CCCCCC" Opacity="1.0"
+            Points="45.0,3.0 33.0,0.0 24.0,0.0 12.0,1.0 3.0,2.0 0.0,9.0 26.0,9.0 30.0,9.0 39.0,7.0 45.0,5.0"
+            Stroke="#404040" StrokeDashArray="0.0" StrokeWidth="1.0">
+            <Bind Attribute="Fill" Name="Fan#Fbk" PreventDefault="True">
+                <Expose ExposedAttribute="Name" Name="Feedback Bind"/>
+				<Expose ExposedAttribute="PreventDefault" Name="Prevent Default"/>
+                <ConvertValue AttributeValue="#87D300" SignalMoreOrEqualTo="1">
+                    <Expose ExposedAttribute="AttributeValue" Name="On Color"/>
+                </ConvertValue>
+                <ConvertValue AttributeValue="#C6C9CD" SignalLessOrEqualTo="0"/>
+            </Bind>
+        </Curve>
+        <Curve Fill="None" Opacity="1.0"
+            Points="45.0,3.0 33.0,0.0 24.0,0.0 12.0,1.0 3.0,2.0 0.0,9.0 26.0,9.0 30.0,9.0 39.0,7.0 45.0,5.0"
+            Stroke="#404040" StrokeDashArray="0.0" StrokeWidth="1.0">
+            <LinearGradient EndPoint="0,0" StartPoint="0,1">
+                <GradientStop Color="#50000000" Offset=".2"/>
+                <GradientStop Color="#50FFFFFF" Offset=".75"/>
+            </LinearGradient>
+        </Curve>
+        <Scale Center="1,0" ScaleX="1.0" ScaleY="1.0">
+            <Animate Animation="Stop" Attribute="ScaleX"
+                CalcMode="Linear" Duration=".4" Freeze="True" From="1" To="0.1">
+                <Bind Attribute="Animation" Name="Fan#Fbk" PreventDefault="True">
+                    <Expose ExposedAttribute="Name" Name="Feedback Bind"/>
+					<Expose ExposedAttribute="PreventDefault" Name="Prevent Default"/>
+                    <ConvertValue AttributeValue="Stop" SignalEqualTo="" SignalLessThan="1"/>
+                    <ConvertValue AttributeValue="Start"
+                        SignalEqualTo="" SignalMoreThan="0"/>
+                </Bind>
+                <Expose ExposedAttribute="Duration" Name="Fan Speed"/>
+            </Animate>
+        </Scale>
+    </Component>
+    <Component Clip="False" ContentHeight="9.0" ContentWidth="45.0"
+        Height="9.0" Left="9.5" Top="15.0" Width="45.0">
+        <Curve Fill="#CCCCCC" Opacity="1.0"
+            Points="45.0,3.0 33.0,0.0 24.0,0.0 12.0,1.0 3.0,2.0 0.0,9.0 26.0,9.0 30.0,9.0 39.0,7.0 45.0,5.0"
+            Stroke="#404040" StrokeDashArray="0.0" StrokeWidth="1.0">
+            <Bind Attribute="Fill" Name="Fan#Fbk" PreventDefault="True">
+                <Expose ExposedAttribute="Name" Name="Feedback Bind"/>
+				<Expose ExposedAttribute="PreventDefault" Name="Prevent Default"/>
+                <ConvertValue AttributeValue="#87D300" SignalMoreOrEqualTo="1">
+                    <Expose ExposedAttribute="AttributeValue" Name="On Color"/>
+                </ConvertValue>
+                <ConvertValue AttributeValue="#C6C9CD" SignalLessOrEqualTo="0"/>
+            </Bind>
+        </Curve>
+        <Curve Fill="None" Opacity="1.0"
+            Points="45.0,3.0 33.0,0.0 24.0,0.0 12.0,1.0 3.0,2.0 0.0,9.0 26.0,9.0 30.0,9.0 39.0,7.0 45.0,5.0"
+            Stroke="#404040" StrokeDashArray="0.0" StrokeWidth="1.0">
+            <LinearGradient EndPoint="0,0" StartPoint="0,1">
+                <GradientStop Color="#50000000" Offset=".2"/>
+                <GradientStop Color="#50FFFFFF" Offset=".75"/>
+            </LinearGradient>
+        </Curve>
+        <Scale Center="1,0" ScaleX="1.0" ScaleY="1.0">
+            <Animate Animation="Stop" Attribute="ScaleX"
+                CalcMode="Linear" Duration=".4" Freeze="True" From=".1" To="1">
+                <Bind Attribute="Animation" Name="Fan#Fbk" PreventDefault="True">
+                    <Expose ExposedAttribute="Name" Name="Feedback Bind"/>
+					<Expose ExposedAttribute="PreventDefault" Name="Prevent Default"/>
+                    <ConvertValue AttributeValue="Stop" SignalEqualTo="" SignalLessThan="1"/>
+                    <ConvertValue AttributeValue="Start"
+                        SignalEqualTo="" SignalMoreThan="0"/>
+                </Bind>
+                <Expose ExposedAttribute="Duration" Name="Fan Speed"/>
+            </Animate>
+        </Scale>
+    </Component>
+    <Component Clip="False" ContentHeight="9.0" ContentWidth="45.0"
+        Height="9.0" Left="55.5" Top="15.0" Width="45.0">
+        <Curve Fill="#CCCCCC" Opacity="1.0"
+            Points="0.0,3.0 12.0,0.0 21.0,0.0 33.0,1.0 42.0,2.0 45.0,9.0 19.0,9.0 15.0,9.0 6.0,7.0 0.0,5.0"
+            Stroke="#404040" StrokeDashArray="0.0" StrokeWidth="1.0">
+            <Bind Attribute="Fill" Name="Fan#Fbk" PreventDefault="True">
+                <Expose ExposedAttribute="Name" Name="Feedback Bind"/>
+				<Expose ExposedAttribute="PreventDefault" Name="Prevent Default"/>
+                <ConvertValue AttributeValue="#87D300" SignalMoreOrEqualTo="1">
+                    <Expose ExposedAttribute="AttributeValue" Name="On Color"/>
+                </ConvertValue>
+                <ConvertValue AttributeValue="#C6C9CD" SignalLessOrEqualTo="0"/>
+            </Bind>
+        </Curve>
+        <Curve Fill="None" Opacity="1.0"
+            Points="0.0,3.0 12.0,0.0 21.0,0.0 33.0,1.0 42.0,2.0 45.0,9.0 19.0,9.0 15.0,9.0 6.0,7.0 0.0,5.0"
+            Stroke="#404040" StrokeDashArray="0.0" StrokeWidth="1.0">
+            <LinearGradient EndPoint="0,0" StartPoint="0,1">
+                <GradientStop Color="#50000000" Offset=".2"/>
+                <GradientStop Color="#50FFFFFF" Offset=".75"/>
+            </LinearGradient>
+        </Curve>
+        <Scale Center="0,1" ScaleX="1.0" ScaleY="1.0">
+            <Animate Animation="Stop" Attribute="ScaleX"
+                CalcMode="Linear" Duration=".4" Freeze="True" From=".1" To="1">
+                <Bind Attribute="Animation" Name="Fan#Fbk" PreventDefault="True">
+                    <Expose ExposedAttribute="Name" Name="Feedback Bind"/>
+					<Expose ExposedAttribute="PreventDefault" Name="Prevent Default"/>
+                    <ConvertValue AttributeValue="Stop" SignalEqualTo="" SignalLessThan="1"/>
+                    <ConvertValue AttributeValue="Start"
+                        SignalEqualTo="" SignalMoreThan="0"/>
+                </Bind>
+                <Expose ExposedAttribute="Duration" Name="Fan Speed"/>
+            </Animate>
+        </Scale>
+    </Component>
+    <Component Clip="False" ContentHeight="9.0" ContentWidth="45.0"
+        Height="9.0" Left="55.5" Top="15.0" Width="45.0">
+        <Curve Fill="#CCCCCC" Opacity="1.0"
+            Points="0.0,3.0 12.0,0.0 21.0,0.0 33.0,1.0 42.0,2.0 45.0,9.0 19.0,9.0 15.0,9.0 6.0,7.0 0.0,5.0"
+            Stroke="#404040" StrokeDashArray="0.0" StrokeWidth="1.0">
+            <Bind Attribute="Fill" Name="Fan#Fbk" PreventDefault="True">
+                <Expose ExposedAttribute="Name" Name="Feedback Bind"/>
+				<Expose ExposedAttribute="PreventDefault" Name="Prevent Default"/>
+                <ConvertValue AttributeValue="#87D300" SignalMoreOrEqualTo="1">
+                    <Expose ExposedAttribute="AttributeValue" Name="On Color"/>
+                </ConvertValue>
+                <ConvertValue AttributeValue="#C6C9CD" SignalLessOrEqualTo="0"/>
+            </Bind>
+        </Curve>
+        <Curve Fill="None" Opacity="1.0"
+            Points="0.0,3.0 12.0,0.0 21.0,0.0 33.0,1.0 42.0,2.0 45.0,9.0 19.0,9.0 15.0,9.0 6.0,7.0 0.0,5.0"
+            Stroke="#404040" StrokeDashArray="0.0" StrokeWidth="1.0">
+            <LinearGradient EndPoint="0,0" StartPoint="0,1">
+                <GradientStop Color="#50000000" Offset=".2"/>
+                <GradientStop Color="#50FFFFFF" Offset=".75"/>
+            </LinearGradient>
+        </Curve>
+        <Scale Center="0,1" ScaleX="1.0" ScaleY="1.0">
+            <Animate Animation="Stop" Attribute="ScaleX"
+                CalcMode="Linear" Duration=".4" Freeze="True" From="1" To=".1">
+                <Bind Attribute="Animation" Name="Fan#Fbk" PreventDefault="True">
+                    <Expose ExposedAttribute="Name" Name="Feedback Bind"/>
+					<Expose ExposedAttribute="PreventDefault" Name="Prevent Default"/>
+                    <ConvertValue AttributeValue="Stop" SignalEqualTo="" SignalLessThan="1"/>
+                    <ConvertValue AttributeValue="Start"
+                        SignalEqualTo="" SignalMoreThan="0"/>
+                </Bind>
+                <Expose ExposedAttribute="Duration" Name="Fan Speed"/>
+            </Animate>
+        </Scale>
+    </Component>
+</Component>

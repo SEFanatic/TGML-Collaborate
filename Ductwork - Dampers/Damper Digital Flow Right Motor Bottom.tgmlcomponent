@@ -1,0 +1,131 @@
+<?xml version="1.0"?>
+<Component Color="#F0080E" ComponentCounter="6" ContentHeight="120"
+    ContentWidth="40" Fill="#FFD100" GridSize="1" Height="120.0"
+    Left="5.0" Name="Damper Digital Flow Right Motor Bottom"
+    OnValue="1,on,open,true" Stroke="#42B4E6" Top="11.0" Width="40.0">
+    <Metadata Name="Name" Value="Damper Digital Flow Right Motor Bottom"/>
+    <Metadata Name="Description" Value="== Bindings ==&#xd;&#xa;Value - Damper Command&#xd;&#xa;&#xd;&#xa;== Exposed Properties ==&#xd;&#xa;Bind Name - DprCmd - Damper command point&#xd;&#xa;Open Value - 1,on,open,true - Fully open value/s (commer seperated if multiple)&#xd;&#xa;Error, Forced, Database Color - Outline color when point in error, forced or database condition"/>
+    <Expose ExposedAttribute="OnValue" Name="OpenValue"/>
+    <Expose ExposedAttribute="Color" Name="Error Color"/>
+    <Expose ExposedAttribute="Fill" Name="Forced Color"/>
+    <Expose ExposedAttribute="Stroke" Name="Database Color"/>
+    <Rectangle Fill="#009530" Height="15.0" Left="10.0" Name="MotorBg"
+        RadiusX="2" RadiusY="2" Stroke="#404040" StrokeDashArray="0.0"
+        StrokeWidth="1.0" Top="100.0" Width="20.0"/>
+    <Text Fill="None" FontFamily="Arial" FontSize="10.0"
+        FontStyle="Normal" FontWeight="Normal" HorizontalAlign="Center"
+        Left="20.0" Opacity="1.0" Stroke="#FFFFFF" TextDecoration="None"
+        Top="101.914011955261" VerticalAlign="Top"><![CDATA[M]]></Text>
+    <Rectangle Fill="#CCCCCC" Height="88.0" Left="5.0" Name="Body"
+        Opacity="1.0" RadiusX="5.0" RadiusY="5.0" Stroke="#404040"
+        StrokeDashArray="0.0" StrokeWidth="1.0" Top="11.0" Width="30.0">
+        <LinearGradient Attribute="Fill" EndPoint="1,0"
+            SpreadMethod="Pad" StartPoint="0.0,0.0">
+            <GradientStop Color="#EFEFEF" Offset="0"/>
+            <GradientStop Color="#A1CD53" Name="ColorChange" Offset="1"/>
+        </LinearGradient>
+    </Rectangle>
+    <Path Fill="#626469" Name="Closed"
+        PathData="M20.0,96.5 C19.172,96.5 18.5,92.023 18.5,86.5 C18.5,80.977 19.172,76.5 20.0,76.5 C20.828,76.5 21.5,80.977 21.5,86.5 C21.5,92.023 20.828,96.5 20.0,96.5 z M20.0,75.167 C19.172,75.167 18.5,70.69 18.5,65.167 C18.5,59.644 19.172,55.167 20.0,55.167 C20.828,55.167 21.5,59.644 21.5,65.167 C21.5,70.69 20.828,75.167 20.0,75.167 z M20.0,53.833 C19.172,53.833 18.5,49.356 18.5,43.833 C18.5,38.31 19.172,33.833 20.0,33.833 C20.828,33.833 21.5,38.31 21.5,43.833 C21.5,49.356 20.828,53.833 20.0,53.833 z M20.0,32.5 C19.172,32.5 18.5,28.023 18.5,22.5 C18.5,16.977 19.172,12.5 20.0,12.5 C20.828,12.5 21.5,16.977 21.5,22.5 C21.5,28.023 20.828,32.5 20.0,32.5 z"
+        Stroke="#626469" StrokeDashArray="0.0" StrokeWidth="1.0" Visibility="Hidden"/>
+    <Path Fill="#626469" Name="Open"
+        PathData="M30.0,22.5 C30.0,23.328 25.523,24.0 20.0,24.0 C14.477,24.0 10.0,23.328 10.0,22.5 C10.0,21.672 14.477,21.0 20.0,21.0 C25.523,21.0 30.0,21.672 30.0,22.5 z M30.0,43.833 C30.0,44.662 25.523,45.333 20.0,45.333 C14.477,45.333 10.0,44.662 10.0,43.833 C10.0,43.005 14.477,42.333 20.0,42.333 C25.523,42.333 30.0,43.005 30.0,43.833 z M30.0,65.167 C30.0,65.995 25.523,66.667 20.0,66.667 C14.477,66.667 10.0,65.995 10.0,65.167 C10.0,64.338 14.477,63.667 20.0,63.667 C25.523,63.667 30.0,64.338 30.0,65.167 z M30.0,86.5 C30.0,87.328 25.523,88.0 20.0,88.0 C14.477,88.0 10.0,87.328 10.0,86.5 C10.0,85.672 14.477,85.0 20.0,85.0 C25.523,85.0 30.0,85.672 30.0,86.5 z"
+        Stroke="#626469" StrokeDashArray="0.0" StrokeWidth="1.0"/>
+    <Bind Attribute="" Description=".5" Name="DprCmd" PreventDefault="True">
+        <Expose ExposedAttribute="Name" Name="BindName"/>
+		<Expose ExposedAttribute="PreventDefault" Name="Prevent Default"/>
+        <Script OnDocumentLoad="onLoad" OnSignalChange="onChange"><![CDATA[var dispOpen;
+var dispClosed;
+var dispColor;
+var body;
+var HighLightCol="#404040";
+var originalBodyColor;
+var onValue;
+
+function onLoad(evt)
+{
+  comp = evt.getCurrentTarget().getParentNode();
+  dispOpen = comp.getChildByName("Open");
+  dispClosed = comp.getChildByName("Closed");
+  dispColor = comp.getChildByName("ColorChange");
+  body = comp.getChildByName("Body");
+  originalBodyColor=body.getAttribute("Stroke");
+  onValue=comp.getAttribute("OnValue").split(',');
+}
+
+function onChange(evt)
+{
+  status = parseInt(evt.getStatus());
+  val = evt.getValue();
+  
+  if(getBool(val)){
+	dispOpen.setAttribute("Visibility", "Visible");
+	dispClosed.setAttribute("Visibility", "Hidden");
+	dispColor.setAttribute("Color", "#A1CD53");
+  }
+  else{
+	dispOpen.setAttribute("Visibility", "Hiddene");
+	dispClosed.setAttribute("Visibility", "Visible");
+	dispColor.setAttribute("Color", "#DFE0E2");
+  }
+  
+  
+  bgStroke = setColour(status);
+  if (bgStroke=="device"){
+  	body.setAttribute("Stroke", originalBodyColor);
+ 	body.setAttribute("StrokeWidth", "1");
+  }
+  else{
+	  body.setAttribute("Stroke", bgStroke);
+	  body.setAttribute("StrokeWidth", "2");
+  }
+}
+
+function setColour(status){
+var col;
+
+  if(status==2){//Value from Device
+  	return "device";
+  }
+  else{
+  		if(status==3){//Forced Value
+  			return comp.getAttribute("Fill");
+  		}
+  		else{
+  	 		if(status==1){//Database Value
+  	 		return comp.getAttribute("Stroke");
+  			}
+  			else{
+  				if(status==0){
+  					return comp.getAttribute("Color")
+  				}
+  			}
+  		}
+  }
+
+}
+
+function getBool(val){
+	for (var i=0;i<onValue.length;i++){
+		if (val == true || val == false){
+		val = val.toString();
+		}
+		else{
+			if (isNumber(val)){
+				val = Math.round(parseFloat(val));
+				val = val.toString();
+			}
+		}
+		if(String(val).toLowerCase() == String(onValue[i]).toLowerCase())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+function isNumber (o) {
+  return ! isNaN (o-0) && o != null;
+}]]></Script>
+    </Bind>
+</Component>

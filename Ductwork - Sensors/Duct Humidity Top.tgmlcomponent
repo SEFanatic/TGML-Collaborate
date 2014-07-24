@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<Component ComponentCounter="2" ContentHeight="70" ContentWidth="40"
+    Height="70.0" Left="10.0" Name="Duct Humidity Top" Top="5.0" Width="40.0">
+    <Metadata Name="Name" Value="Duct Humidity Top"/>
+    <Metadata Name="Description" Value=""/>
+    <Metadata Name="Version" Value="1.0"/>
+    <Line Stroke="#626469" StrokeDashArray="0.0" StrokeWidth="2.0"
+        X1="20.0" X2="20.0" Y1="21.0" Y2="61.0"/>
+    <Line Opacity="1.0" Stroke="#626469" StrokeDashArray="0.0"
+        StrokeWidth="3" X1="15.0" X2="25.0" Y1="30.0" Y2="30.0"/>
+    <Rectangle Fill="#009530" Height="15.0" Left="10.0" RadiusX="2"
+        RadiusY="2" Stroke="#404040" StrokeDashArray="0.0"
+        StrokeWidth="1.0" Top="5.0" Width="20.0"/>
+    <Text FontFamily="Arial" FontSize="10.0" FontStyle="Normal"
+        FontWeight="Normal" HorizontalAlign="Center" Left="20.0"
+        Opacity="1.0" Stroke="#FFFFFF" TextDecoration="None"
+        Top="6.914050102234" VerticalAlign="Top"><![CDATA[H]]></Text>
+</Component>

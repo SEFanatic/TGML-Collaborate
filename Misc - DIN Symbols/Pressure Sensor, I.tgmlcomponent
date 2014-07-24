@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<Component Clip="False" ContentHeight="40" ContentWidth="20"
+    Fill="#FFFFFF" Height="40.0" Left="0.0" Name="Pressure Sensor, I"
+    Stroke="#000000" Top="0.0" Width="20.0">
+    <Metadata Name="Name" Value="Pressure Sensor, I"/>
+    <Metadata Name="Description" Value="Pressure Sensor"/>
+    <Ellipse Height="20.0" Left="0.0" Top="20.0" Width="20.0"/>
+    <Line StrokeWidth="2.0" X1="10.0" X2="10.0" Y1="0.0" Y2="19.5"/>
+    <Group>
+        <Arc Center="11.2061395645142,27.529239654541" Fill="None"
+            RadiusX="2.5" RadiusY="2.5" StartAngle="90.0"
+            StrokeDashArray="0.0" StrokeWidth="1.0" SweepAngle="-180.0"/>
+        <Polyline Fill="None"
+            Points="6.52777767181396,34.9707565307617 6.41081857681274,25.029239654541 11.673975944519,25.029239654541"
+            StrokeDashArray="0.0" StrokeWidth="1.0"/>
+        <Line StrokeDashArray="0.0" StrokeWidth="1.0"
+            X1="6.29385948181152" X2="11.5570163726807"
+            Y1="30.0584774017334" Y2="30.0584774017334"/>
+    </Group>
+</Component>

@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<Component Clip="False" ContentHeight="240" ContentWidth="40"
+    Fill="#FFFFFF" Height="240.0" Left="0.0" Name="HeatExchanger"
+    Stroke="#000000" Top="0.0" Width="40.0">
+    <Metadata Name="Name" Value="HeatExchanger"/>
+    <Metadata Name="Description" Value="HeatExchanger"/>
+    <Rectangle Height="240.0" Left="0.0" RadiusX="0.0" RadiusY="0.0"
+        StrokeDashArray="0.0" StrokeWidth="1.0" Top="0.256393432617188" Width="40.0"/>
+    <Line StrokeDashArray="0.0" StrokeWidth="1.0" X1="40.0" X2="0.0"
+        Y1="0.0" Y2="240.0"/>
+</Component>

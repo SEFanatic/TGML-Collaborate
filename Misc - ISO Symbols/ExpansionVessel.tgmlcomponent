@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<Component Clip="False" ContentHeight="40" ContentWidth="40"
+    Fill="#FFFFFF" Height="40.0" Left="5.0" Name="ExpansionVessel"
+    Stroke="#000000" Top="0.0" Width="40.0">
+    <Metadata Name="Name" Value="ExpansionVessel"/>
+    <Metadata Name="Description" Value="ExpansionVessel"/>
+    <Rectangle Height="40.0" Left="5.0" RadiusX="15.0" RadiusY="5.0"
+        StrokeDashArray="0.0" StrokeWidth="1.0" Top="0.0" Width="30.0"/>
+    <Polygon Points="15.0,7.0 20.0,15.0 25.0,7.0" StrokeDashArray="0.0" StrokeWidth="1.0"/>
+    <Line StrokeDashArray="7.0 3.0 4.0 2.0 4.0 3.0 7.0"
+        StrokeWidth="1.0" X1="5.0" X2="35.0" Y1="20.0" Y2="20.0"/>
+</Component>

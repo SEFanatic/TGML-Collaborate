@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<Component ContentHeight="240" ContentWidth="280" Height="240.0"
+    Left="10.0" Name="Heat Recovery" Top="10.0" Width="280.0">
+    <Metadata Name="Name" Value="Heat Recovery"/>
+    <Metadata Name="Description" Value=""/>
+    <Metadata Name="Version" Value="1.0"/>
+    <Polygon Fill="#FFFFFF" Opacity="1.0"
+        Points="10.0,230.0 10.0,140.0 20.0,140.0 40.0,120.0 240.0,120.0 260.0,140.0 270.0,140.0 270.0,230.0"
+        Stroke="None" StrokeDashArray="0.0" StrokeWidth="1.0">
+        <LinearGradient Attribute="Fill" EndPoint="0,1"
+            SpreadMethod="Pad" StartPoint="0.0,0.0">
+            <GradientStop Color="#FEFEFE" Offset="0.2"/>
+            <GradientStop Color="#C6C9CD" Offset="1"/>
+        </LinearGradient>
+    </Polygon>
+    <Polygon Fill="#FFFFFF" Opacity="1.0"
+        Points="10.0,10.0 10.0,100.0 20.0,100.0 40.0,120.0 240.0,120.0 260.0,100.0 270.0,100.0 270.0,10.0"
+        Stroke="None" StrokeDashArray="0.0" StrokeWidth="1.0">
+        <LinearGradient Attribute="Fill" EndPoint="0,1"
+            SpreadMethod="Pad" StartPoint="0.0,0.0">
+            <GradientStop Color="#FEFEFE" Offset="0.0"/>
+            <GradientStop Color="#C6C9CD" Offset=".8"/>
+        </LinearGradient>
+    </Polygon>
+    <Polygon Fill="#CCCCCC" Opacity="1.0"
+        Points="140.0,20.0 240.0,120.0 140.0,220.0 40.0,120.0"
+        Stroke="None" StrokeDashArray="0.0" StrokeWidth="1.0"/>
+    <Path Fill="None"
+        PathData="M10.0,100.0 L20.0,100.0 40.0,120.0 140.0,20.0 140.0,10.0 10.0,10.0 M10.0,140.0 L20.0,140.0 40.0,120.0 M10.0,230.0 L140.0,230.0 140.0,220.0 140.0,230.0 270.0,230.0 M270.0,140.0 L260.0,140.0 240.0,120.0 M270.0,100.0 L260.0,100.0 240.0,120.0 140.0,20.0 M40.0,120.0 L140.0,220.0 240.0,120.0 M140.0,10.0 L270.0,10.0"
+        Stroke="#009530" StrokeDashArray="0.0" StrokeWidth="1.0"/>
+</Component>

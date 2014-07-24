@@ -1,0 +1,239 @@
+<?xml version="1.0"?>
+<Component Color="#4FA600" ContentHeight="120" ContentWidth="210"
+    Height="120.0" Left="10.0" Name="Cooling Tower Top Shaded"
+    OnValue="1,on,open,true" Top="10.0" Width="210.0">
+    <Metadata Name="Name" Value="Cooling Tower Top Shaded"/>
+    <Metadata Name="Description" Value="== Bindings ==&#xd;&#xa;Ct#Cmd - Cooling Tower Value&#xd;&#xa;&#xd;&#xa;== Exposed Properties ==&#xd;&#xa;&lt;name> - &lt;default value> - &lt;Description>&#xd;&#xa;Cooling Tower Command Bind - Ct#Cmd - Cooling Tower Value&#xd;&#xa;On Value - 1,on,open,true - Chiller running (commer seperated if multiple)&#xd;&#xa;On Color - #4FA600 - On color&#xd;&#xa;Fan Speed - 1 - Fan rotate speed in seconds"/>
+    <Expose ExposedAttribute="Color" Name="On Color"/>
+    <Expose ExposedAttribute="OnValue" Name="On Value"/>
+    <Rectangle Fill="#CCCCCC" Height="100.0" Left="10.0" Opacity="1.0"
+        RadiusX="0.0" RadiusY="0.0" Stroke="#404040"
+        StrokeDashArray="0.0" StrokeWidth="1.0" Top="10.0" Width="190.0"/>
+    <Ellipse Fill="#CCCCCC" Height="80.0" Left="20.0" Opacity="1.0"
+        Stroke="#404040" StrokeDashArray="0.0" StrokeWidth="1.0"
+        Top="20.0" Width="80.0">
+        <LinearGradient Attribute="Fill" EndPoint="1.0,1.0"
+            SpreadMethod="Pad" StartPoint="0.0,0.0">
+            <GradientStop Color="#E1E1E1" Offset="0.0"/>
+            <GradientStop Color="#5F000000" Offset="1.0"/>
+        </LinearGradient>
+    </Ellipse>
+    <Ellipse Fill="#CCCCCC" Height="72.3809575683136"
+        Left="23.80945178873" Opacity="1.0" Stroke="#404040"
+        StrokeDashArray="0.0" StrokeWidth="1.0" Top="23.809520445713" Width="72.3809575683135">
+        <LinearGradient Attribute="Fill" EndPoint="1.0,1.0"
+            SpreadMethod="Pad" StartPoint="0.0,0.0">
+            <GradientStop Color="#101010" Offset="0.0"/>
+            <GradientStop Color="#505050" Offset="1.0"/>
+        </LinearGradient>
+    </Ellipse>
+    <Ellipse Fill="None" Height="75.0" Left="21.80945178873"
+        Opacity="1.0" Stroke="#7FFFFFFF" StrokeDashArray="0.0"
+        StrokeWidth="1.0" Top="22.809520445713" Width="75.0">
+        <LinearGradient Attribute="Fill" EndPoint="1.0,1.0"
+            SpreadMethod="Pad" StartPoint="0.0,0.0">
+            <GradientStop Color="#101010" Offset="0.0"/>
+            <GradientStop Color="#505050" Offset="1.0"/>
+        </LinearGradient>
+    </Ellipse>
+    <Component Clip="False" ContentHeight="61.99" ContentWidth="63.62"
+        Height="61.99" Left="28.76" Name="F1" Top="28.76" Width="63.62">
+        <Curve Fill="#5F87D300" Opacity="1.0"
+            Points="32.382842118778,28.192366173343 32.382842118778,24.382842297592 30.859032568477,17.906653881073 37.335223157254,13.716175445489 43.430461358457,10.668556344887 41.525699420581,1.14474665551 31.239990234375,0.001889492784017 22.097127654249,0.001889492784017 17.28075522917,4.38316262507101 16.382841840623,10.668556344887 14.478079902747,22.097127972142 26.287603917576,24.763794685167 28.573322057724,28.192366173343"
+            Stroke="#404040" StrokeDashArray="0.0" StrokeWidth="1.0">
+            <LinearGradient Attribute="Fill" EndPoint="1.0,1.0"
+                SpreadMethod="Pad" StartPoint="0.0,0.0">
+                <GradientStop Color="#707070" Offset="0.0"/>
+                <GradientStop Color="#CCCCCC" Id="skip" Name="" Offset="1.0"/>
+            </LinearGradient>
+        </Curve>
+        <Curve Fill="#5F87D300" Opacity="1.0"
+            Points="27.430461080301,30.818150230106 22.8590324294,31.577246252693 17.906655311584,29.299958184931 11.430460802146,23.606738015526 5.33522260094401,19.81141364669 0.001889174892995,28.16131415105 0.763793950043009,36.511370399511 2.28760350034298,44.861426647972 10.668556026996,46.75916670444 15.620937065473,46.379618693146 24.382841979701,45.240974659266 25.14474675485,36.511370399511 28.573322057724,34.234082331749"
+            Stroke="#404040" StrokeDashArray="0.0" StrokeWidth="1.0">
+            <LinearGradient Attribute="Fill" EndPoint="1.0,1.0"
+                SpreadMethod="Pad" StartPoint="0.0,0.0">
+                <GradientStop Color="#707070" Offset="0.0"/>
+                <GradientStop Color="#CCCCCC" Id="skip" Name="" Offset="1.0"/>
+            </LinearGradient>
+        </Curve>
+        <Curve Fill="#5F87D300" Opacity="1.0"
+            Points="31.620937343628,33.906654000282 31.620937343628,37.702024312 33.144746893928,44.154340503993 26.668556305151,48.329368628223 20.573321998119,51.365752718573 22.478080041825,60.854453000914 32.763794506353,61.993097034795 41.906655490398,61.993097034795 46.723024233236,57.627975411911 47.620937621783,51.365752718573 49.525699559658,39.979312379763 37.716175544829,37.322476300706 35.430461219379,33.906654000282"
+            Stroke="#404040" StrokeDashArray="0.0" StrokeWidth="1.0">
+            <LinearGradient Attribute="Fill" EndPoint="1.0,1.0"
+                SpreadMethod="Pad" StartPoint="0.0,0.0">
+                <GradientStop Color="#707070" Offset="0.0"/>
+                <GradientStop Color="#CCCCCC" Id="skip" Name="" Offset="1.0"/>
+            </LinearGradient>
+        </Curve>
+        <Curve Fill="#5F87D300" Opacity="1.0"
+            Points="36.192365994529,31.239990234375 40.76379464543,30.478080498793 45.716175683907,32.763794824245 52.192366272684,38.478080637871 58.287604473886,42.287604513622 63.620937899938,33.906654000282 62.859033124788,25.525699460318 61.335223574487,17.144746933665 52.954271047834,15.239990234375 48.001890009358,15.620937383364 39.239990234375,16.76379454609 38.47808031998,25.525699460318 35.049508831804,27.811413785768"
+            Stroke="#404040" StrokeDashArray="0.0" StrokeWidth="1.0">
+            <LinearGradient Attribute="Fill" EndPoint="1.0,1.0"
+                SpreadMethod="Pad" StartPoint="0.0,0.0">
+                <GradientStop Color="#707070" Offset="0.0"/>
+                <GradientStop Color="#CCCCCC" Id="skip" Name="" Offset="1.0"/>
+            </LinearGradient>
+        </Curve>
+        <Rotate>
+            <Animate Animation="Stop" Attribute="Angle"
+                CalcMode="Linear" Duration="1" From="0" To="360">
+                <Expose ExposedAttribute="Duration" Name="Speed in Seconds"/>
+            </Animate>
+        </Rotate>
+    </Component>
+    <Ellipse Fill="#CCCCCC" Height="14.4761915136628"
+        Left="52.76183481605" Opacity="1.0" Stroke="None"
+        StrokeDashArray="0.0" StrokeWidth="1.0" Top="52.761903473039" Width="14.4761915136626">
+        <RadialGradient Attribute="Fill" Focus="0.2,0.2" RadiusX="0.5"
+            RadiusY="0.5" SpreadMethod="Pad">
+            <GradientStop Color="#FFFFFF" Offset="0.0"/>
+            <GradientStop Color="#808080" Offset="1.0"/>
+        </RadialGradient>
+    </Ellipse>
+    <Ellipse Fill="#CCCCCC" Height="80.0" Left="110.0" Opacity="1.0"
+        Stroke="#404040" StrokeDashArray="0.0" StrokeWidth="1.0"
+        Top="20.0" Width="80.0">
+        <LinearGradient Attribute="Fill" EndPoint="1.0,1.0"
+            SpreadMethod="Pad" StartPoint="0.0,0.0">
+            <GradientStop Color="#E1E1E1" Offset="0.0"/>
+            <GradientStop Color="#5F000000" Offset="1.0"/>
+        </LinearGradient>
+    </Ellipse>
+    <Ellipse Fill="#CCCCCC" Height="72.3809575683136"
+        Left="113.80945178873" Opacity="1.0" Stroke="#404040"
+        StrokeDashArray="0.0" StrokeWidth="1.0" Top="23.809520445713" Width="72.3809575683135">
+        <LinearGradient Attribute="Fill" EndPoint="1.0,1.0"
+            SpreadMethod="Pad" StartPoint="0.0,0.0">
+            <GradientStop Color="#101010" Offset="0.0"/>
+            <GradientStop Color="#505050" Offset="1.0"/>
+        </LinearGradient>
+    </Ellipse>
+    <Ellipse Fill="None" Height="75.0" Left="111.80945178873"
+        Opacity="1.0" Stroke="#7FFFFFFF" StrokeDashArray="0.0"
+        StrokeWidth="1.0" Top="22.809520445713" Width="75.0">
+        <LinearGradient Attribute="Fill" EndPoint="1.0,1.0"
+            SpreadMethod="Pad" StartPoint="0.0,0.0">
+            <GradientStop Color="#101010" Offset="0.0"/>
+            <GradientStop Color="#505050" Offset="1.0"/>
+        </LinearGradient>
+    </Ellipse>
+    <Component Clip="False" ContentHeight="61.99" ContentWidth="63.62"
+        Height="61.99" Left="118.76" Name="F2" Top="28.76" Width="63.62">
+        <Curve Fill="#5F87D300" Opacity="1.0"
+            Points="32.382842118778,28.192366173343 32.382842118778,24.382842297592 30.859032568477,17.906653881073 37.335223157254,13.716175445489 43.430461358457,10.668556344887 41.525699420581,1.14474665551 31.239990234375,0.001889492784017 22.097127654249,0.001889492784017 17.28075522917,4.38316262507101 16.382841840623,10.668556344887 14.478079902747,22.097127972142 26.287603917576,24.763794685167 28.573322057724,28.192366173343"
+            Stroke="#404040" StrokeDashArray="0.0" StrokeWidth="1.0">
+            <LinearGradient Attribute="Fill" EndPoint="1.0,1.0"
+                SpreadMethod="Pad" StartPoint="0.0,0.0">
+                <GradientStop Color="#707070" Offset="0.0"/>
+                <GradientStop Color="#CCCCCC" Id="skip" Name="" Offset="1.0"/>
+            </LinearGradient>
+        </Curve>
+        <Curve Fill="#5F87D300" Opacity="1.0"
+            Points="27.430461080301,30.818150230106 22.8590324294,31.577246252693 17.906655311584,29.299958184931 11.430460802146,23.606738015526 5.33522260094401,19.81141364669 0.001889174892995,28.16131415105 0.763793950043009,36.511370399511 2.28760350034298,44.861426647972 10.668556026996,46.75916670444 15.620937065473,46.379618693146 24.382841979701,45.240974659266 25.14474675485,36.511370399511 28.573322057724,34.234082331749"
+            Stroke="#404040" StrokeDashArray="0.0" StrokeWidth="1.0">
+            <LinearGradient Attribute="Fill" EndPoint="1.0,1.0"
+                SpreadMethod="Pad" StartPoint="0.0,0.0">
+                <GradientStop Color="#707070" Offset="0.0"/>
+                <GradientStop Color="#CCCCCC" Id="skip" Offset="1.0"/>
+            </LinearGradient>
+        </Curve>
+        <Curve Fill="#5F87D300" Opacity="1.0"
+            Points="31.620937343628,33.906654000282 31.620937343628,37.702024312 33.144746893928,44.154340503993 26.668556305151,48.329368628223 20.573321998119,51.365752718573 22.478080041825,60.854453000914 32.763794506353,61.993097034795 41.906655490398,61.993097034795 46.723024233236,57.627975411911 47.620937621783,51.365752718573 49.525699559658,39.979312379763 37.716175544829,37.322476300706 35.430461219379,33.906654000282"
+            Stroke="#404040" StrokeDashArray="0.0" StrokeWidth="1.0">
+            <LinearGradient Attribute="Fill" EndPoint="1.0,1.0"
+                SpreadMethod="Pad" StartPoint="0.0,0.0">
+                <GradientStop Color="#707070" Offset="0.0"/>
+                <GradientStop Color="#CCCCCC" Id="skip" Offset="1.0"/>
+            </LinearGradient>
+        </Curve>
+        <Curve Fill="#5F87D300" Opacity="1.0"
+            Points="36.192365994529,31.239990234375 40.76379464543,30.478080498793 45.716175683907,32.763794824245 52.192366272684,38.478080637871 58.287604473886,42.287604513622 63.620937899938,33.906654000282 62.859033124788,25.525699460318 61.335223574487,17.144746933665 52.954271047834,15.239990234375 48.001890009358,15.620937383364 39.239990234375,16.76379454609 38.47808031998,25.525699460318 35.049508831804,27.811413785768"
+            Stroke="#404040" StrokeDashArray="0.0" StrokeWidth="1.0">
+            <LinearGradient Attribute="Fill" EndPoint="1.0,1.0"
+                SpreadMethod="Pad" StartPoint="0.0,0.0">
+                <GradientStop Color="#707070" Offset="0.0"/>
+                <GradientStop Color="#CCCCCC" Id="skip" Offset="1.0"/>
+            </LinearGradient>
+        </Curve>
+        <Rotate>
+            <Animate Animation="Stop" Attribute="Angle"
+                CalcMode="Linear" Duration="1" From="0" To="360">
+                <Expose ExposedAttribute="Duration" Name="Speed in Seconds"/>
+            </Animate>
+        </Rotate>
+    </Component>
+    <Ellipse Fill="#CCCCCC" Height="14.4761915136628"
+        Left="142.76183481605" Opacity="1.0" Stroke="None"
+        StrokeDashArray="0.0" StrokeWidth="1.0" Top="52.761903473039" Width="14.4761915136626">
+        <RadialGradient Attribute="Fill" Focus="0.2,0.2" RadiusX="0.5"
+            RadiusY="0.5" SpreadMethod="Pad">
+            <GradientStop Color="#FFFFFF" Offset="0.0"/>
+            <GradientStop Color="#808080" Offset="1.0"/>
+        </RadialGradient>
+    </Ellipse>
+    <Bind Id="" Name="Ct#Cmd">
+        <Expose ExposedAttribute="Name" Name="Cooling Tower Command Bind"/>
+        <Script OnDocumentLoad="onLoad" OnSignalChange="onChange"><![CDATA[var comp;
+var onValue;
+var onColor;
+var offColor = "#CCCCCC";
+
+function onLoad(evt)
+{
+comp = evt.getCurrentTarget().getParentNode();
+onValue=comp.getAttribute("OnValue").split(',');
+onColor = comp.getAttribute("Color");
+//comp = comp.getChildByName("Fans");
+}
+
+function onChange(evt)
+{
+	val = evt.getValue();
+	if(getBool(val)){
+		moneySpider(comp, "Animate", "Animation", "Start", true);
+		moneySpider(comp.getChildByName("F1"), "GradientStop", "Color", onColor, "skip");
+		moneySpider(comp.getChildByName("F2"), "GradientStop", "Color", onColor, "skip");
+	}
+	else{
+		moneySpider(comp, "Animate", "Animation", "Stop", true);
+		moneySpider(comp.getChildByName("F1"), "GradientStop", "Color", offColor, "skip");
+		moneySpider(comp.getChildByName("F2"), "GradientStop", "Color", offColor, "skip");
+	}
+}
+
+function moneySpider(tree, elem, att, value, e){
+//alert(e);
+var bindList = tree.getElementsByTagName(elem);
+	for(var i=0; i < bindList.length;i++){
+		if (bindList.item(i).getAttribute("Id")!=e){
+			bindList.item(i).setAttribute(att, value);
+			//alert();
+		}
+	}
+}
+
+function getBool(val){
+	for (var i=0;i<onValue.length;i++){
+		if (val == true || val == false){
+		val = val.toString();
+		}
+		else{
+			if (isNumber(val)){
+				val = Math.round(parseFloat(val));
+				val = val.toString();
+			}
+		}
+		if(String(val).toLowerCase() == String(onValue[i]).toLowerCase())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+function isNumber (o) {
+  return ! isNaN (o-0) && o != null;
+}
+]]></Script>
+    </Bind>
+</Component>

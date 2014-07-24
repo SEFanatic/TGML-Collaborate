@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<Component ComponentCounter="2" ContentHeight="70" ContentWidth="40"
+    GridSize="10" Height="70.0" Left="10.0"
+    Name="Duct Flow Meter Bottom" Top="9.0" Width="40.0">
+    <Metadata Name="Name" Value="Duct Flow Meter Bottom"/>
+    <Metadata Name="Description" Value=""/>
+    <Metadata Name="Version" Value="1.0"/>
+    <Line Stroke="#626469" StrokeDashArray="0.0" StrokeWidth="5"
+        X1="19.5" X2="19.5" Y1="50.0" Y2="10.0"/>
+    <Ellipse Fill="#FFFFFF" Height="4.0" Left="17.5" Opacity="1.0"
+        Stroke="#404040" StrokeDashArray="0.0" StrokeWidth="1.0"
+        Top="9.0" Width="4.0"/>
+    <Rectangle Fill="#009530" Height="15.0" Left="10.0" RadiusX="2"
+        RadiusY="2" Stroke="#404040" StrokeDashArray="0.0"
+        StrokeWidth="1.0" Top="50.0" Width="20.0"/>
+    <Text FontFamily="Arial" FontSize="10.0" FontStyle="Normal"
+        FontWeight="Normal" HorizontalAlign="Center" Left="20.0"
+        Opacity="1.0" Stroke="#FFFFFF" TextDecoration="None"
+        Top="51.914050102234" VerticalAlign="Top"><![CDATA[Mtr]]></Text>
+</Component>

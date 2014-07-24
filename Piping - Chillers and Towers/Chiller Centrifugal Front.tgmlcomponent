@@ -1,0 +1,145 @@
+<?xml version="1.0"?>
+<Component ContentHeight="190" ContentWidth="300" Height="190.0"
+    Left="10.0" Name="Chiller Centrifugal Front" Top="14.0" Width="300.0">
+    <Metadata Name="Name" Value="Chiller Centrifugal Front"/>
+    <Metadata Name="Description" Value="== Exposed Properties ==&#xd;&#xa;&lt;name> - &lt;default value> - &lt;Description>&#xd;&#xa;Base Color - #CCCCCC - Overall base color"/>
+    <Ellipse Fill="#CCCCCC" Height="38.0" Left="188.0" Opacity="1.0"
+        Stroke="#404040" StrokeDashArray="0.0" StrokeWidth="1.0"
+        Top="15.0" Width="51.0">
+        <Expose ExposedAttribute="Fill" Name="BaseColour"/>
+    </Ellipse>
+    <Path Fill="#CCCCCC"
+        PathData="M16.0,163.0 C15.0,163.0 14.0,163.0 13.0,163.0 11.85000101,162.652 10.567001001,162.06 10.0,161.0 10.0,153.0 10.0,142.0 10.0,133.0 10.337,130.59699999999998 11.0,129.0 12.0,126.0 13.0,126.0 15.0,126.0 16.0,126.0 16.0,136.0 16.0,154.0 16.0,163.0 M18.0,168.0 L16.0,166.0 16.0,126.0 18.0,126.0 z M22.0,88.0 L278.0,88.0 278.0,165.0 22.0,165.0 z M282.0,157.0 C283.0,157.0 284.0,157.0 285.0,157.0 286.15,156.652 287.433,156.06 288.0,155.0 288.0,147.0 288.0,136.0 288.0,127.0 287.663,124.597 287.0,123.0 286.0,120.0 285.0,120.0 283.0,120.0 282.0,120.0 282.0,130.0 282.0,148.0 282.0,157.0"
+        Stroke="#404040" StrokeDashArray="0.0" StrokeWidth="1.0">
+        <Expose ExposedAttribute="Fill" Name="BaseColour"/>
+    </Path>
+    <Path Fill="#CCCCCC"
+        PathData="M270.0,35.0 C279.286002,35.0 282.949001,45.0450011 283.0,60.0 283.0,74.0 277.428,84.0 270.0,84.0 M30.0,35.0 L270.0,35.0 270.0,84.0 30.0,84.0 z M30.0,35.0 C23.0,35.0 19.055001009999998,45.0450011 19.0,60.0 19.0,74.0 23.0,84.0 30.0,84.0"
+        Stroke="#404040" StrokeDashArray="0.0" StrokeWidth="1.0">
+        <Expose ExposedAttribute="Fill" Name="BaseColour"/>
+    </Path>
+    <Curve Fill="#CCCCCC" Opacity="1.0"
+        Points="78.0,70.0 78.0,80.0 78.0,88.0 78.0,94.0 80.0,102.0 89.0,113.0 98.0,118.0 102.0,120.0 106.76650473192,119.963490665352 111.0,118.0 121.29911808549,113.223279833405 128.09507498314,102.660227460123 132.0,92.0 132.0,86.0 132.0,80.0 132.0,70.0 120.0,70.0 92.0,70.0 78.0,70.0"
+        Stroke="#404040" StrokeDashArray="0.0" StrokeWidth="1.0">
+        <Expose ExposedAttribute="Fill" Name="BaseColour"/>
+    </Curve>
+    <Ellipse Fill="#CCCCCC" Height="12.0" Left="78.0" Opacity="1.0"
+        Stroke="#404040" StrokeDashArray="0.0" StrokeWidth="1.0"
+        Top="64.0" Width="54.0">
+        <Expose ExposedAttribute="Fill" Name="BaseColour"/>
+    </Ellipse>
+    <Polygon Fill="#CCCCCC" Opacity="1.0"
+        Points="132.0,20.0 152.0,17.0 211.0,17.0 217.0,27.0 249.0,27.0 249.0,58.0 217.0,58.0 211.0,68.0 152.0,68.0 132.0,64.0"
+        Stroke="#404040" StrokeDashArray="0.0" StrokeWidth="1.0">
+        <Expose ExposedAttribute="Fill" Name="BaseColour"/>
+    </Polygon>
+    <Rectangle Fill="#CCCCCC" Height="57.0" Left="159.0" Opacity="1.0"
+        RadiusX="0.0" RadiusY="0.0" Stroke="#404040"
+        StrokeDashArray="0.0" StrokeWidth="1.0" Top="14.0" Width="8.0">
+        <Expose ExposedAttribute="Fill" Name="BaseColour"/>
+    </Rectangle>
+    <Rectangle Fill="#CCCCCC" Height="63.0" Left="220.0" Opacity="1.0"
+        RadiusX="0.0" RadiusY="0.0" Stroke="#404040"
+        StrokeDashArray="0.0" StrokeWidth="1.0" Top="43.0" Width="45.0">
+        <Expose ExposedAttribute="Fill" Name="BaseColour"/>
+    </Rectangle>
+    <Line Opacity="1.0" Stroke="#404040" StrokeDashArray="0.0"
+        StrokeWidth="1.0" X1="211.0" X2="211.0" Y1="18.0" Y2="68.0"/>
+    <Line Opacity="1.0" Stroke="#404040" StrokeDashArray="0.0"
+        StrokeWidth="1.0" X1="217.0" X2="217.0" Y1="28.0" Y2="58.0"/>
+    <Curve Fill="#CCCCCC" Opacity="1.0"
+        Points="87.0,72.0 87.0,67.0 87.0,59.0 87.0,54.0 97.0,42.0 102.0,37.0 113.0,25.0 118.0,25.0 128.0,25.0 132.0,25.0 132.0,29.0 132.0,56.0 132.0,60.0 130.0,60.0 130.0,60.0 128.0,60.0 126.0,62.0 124.0,64.0 122.0,66.0 122.0,69.0 122.0,69.0 122.0,72.0 115.0,75.0 93.0,75.0 87.0,72.0"
+        Stroke="#404040" StrokeDashArray="0.0" StrokeWidth="1.0">
+        <Expose ExposedAttribute="Fill" Name="BaseColour"/>
+    </Curve>
+    <Rectangle Fill="#CCCCCC" Height="40.0" Left="51.0" Opacity="1.0"
+        RadiusX="0.0" RadiusY="0.0" Stroke="#404040"
+        StrokeDashArray="0.0" StrokeWidth="1.0" Top="71.0" Width="27.0">
+        <Expose ExposedAttribute="Fill" Name="BaseColour"/>
+    </Rectangle>
+    <Curve Fill="#CCCCCC" Opacity="1.0"
+        Points="33.0,24.0 33.070163774885,26.446460042694 33.210491324655,31.339380128081 33.0,35.0 31.0,35.0 30.122737437005,52.276695200059 30.0,61.0 29.891733182996,68.69483596437 30.0,83.0 32.0,84.0 30.0,88.0 32.0,84.0 30.0,88.0 30.0,83.0 30.0,41.0 30.0,37.0 30.503232173408,32.581342380606 32.167744057803,26.860447460202 33.0,24.0"
+        Stroke="#404040" StrokeDashArray="0.0" StrokeWidth="1.0">
+        <Expose ExposedAttribute="Fill" Name="BaseColour"/>
+    </Curve>
+    <Polygon Fill="#CCCCCC" Opacity="1.0"
+        Points="30.0,88.0 30.0,38.0 33.0,24.0 30.0,24.0 26.0,38.0 30.0,38.0 26.0,38.0 26.0,88.0"
+        Stroke="#404040" StrokeDashArray="0.0" StrokeWidth="1.0">
+        <Expose ExposedAttribute="Fill" Name="BaseColour"/>
+    </Polygon>
+    <Polygon Fill="#CCCCCC" Opacity="1.0"
+        Points="22.0,181.0 22.0,88.0 25.0,76.0 22.0,76.0 18.0,88.0 22.0,88.0 18.0,88.0 18.0,181.0"
+        Stroke="#404040" StrokeDashArray="0.0" StrokeWidth="1.0">
+        <Expose ExposedAttribute="Fill" Name="BaseColour"/>
+    </Polygon>
+    <Curve Fill="#CCCCCC" Opacity="1.0"
+        Points="25.0,76.0 24.753666091005,78.442491867191 25.0,84.0 25.0,88.0 23.0,92.0 21.991240192496,111.982920154266 22.0,125.0 22.008535793928,137.684195521558 23.0,161.0 25.0,165.0 23.0,181.0 25.0,165.0 22.0,181.0 22.0,175.0 22.0,92.0 22.0,88.0 22.334472991174,83.958642274851 24.444824330391,78.652880758284 25.0,76.0"
+        Stroke="#404040" StrokeDashArray="0.0" StrokeWidth="1.0">
+        <Expose ExposedAttribute="Fill" Name="BaseColour"/>
+    </Curve>
+    <Polygon Fill="#CCCCCC" Opacity="1.0"
+        Points="278.0,181.0 278.0,88.0 275.0,76.0 278.0,76.0 282.0,88.0 278.0,88.0 282.0,88.0 282.0,181.0"
+        Stroke="#404040" StrokeDashArray="0.0" StrokeWidth="1.0">
+        <Expose ExposedAttribute="Fill" Name="BaseColour"/>
+    </Polygon>
+    <Curve Fill="#CCCCCC" Opacity="1.0"
+        Points="275.0,76.0 275.246333908995,78.442491867191 275.0,84.0 275.0,88.0 277.0,92.0 278.008759807504,111.982920154266 278.0,125.0 277.991464206072,137.684195521558 277.0,161.0 275.0,165.0 277.0,181.0 275.0,165.0 278.0,181.0 278.0,175.0 278.0,92.0 278.0,88.0 277.665527008826,83.958642274851 275.555175669609,78.652880758284 275.0,76.0"
+        Stroke="#404040" StrokeDashArray="0.0" StrokeWidth="1.0">
+        <Expose ExposedAttribute="Fill" Name="BaseColour"/>
+    </Curve>
+    <Curve Fill="#CCCCCC" Opacity="1.0"
+        Points="267.203876018524,24.0 267.135755904034,26.446460042694 267.0,31.339380128081 267.203876018524,35.0 269.145622014999,35.0 269.997332549776,52.276695200059 270.116495013237,61.0 270.221608342471,68.69483596437 270.116495013237,83.0 268.174749016762,84.0 270.116495013237,88.0 268.174749016762,84.0 270.116495013237,88.0 270.116495013237,83.0 270.116495013237,41.0 270.116495013237,37.0 269.627920484231,32.581342380606 268.011890840426,26.860447460202 267.203876018524,24.0"
+        Stroke="#404040" StrokeDashArray="0.0" StrokeWidth="1.0">
+        <Expose ExposedAttribute="Fill" Name="BaseColour"/>
+    </Curve>
+    <Polygon Fill="#CCCCCC" Opacity="1.0"
+        Points="270.116495013237,88.0 270.116495013237,38.0 267.203876018524,24.0 270.116495013237,24.0 274.0,38.0 270.116495013237,38.0 274.0,38.0 274.0,88.0"
+        Stroke="#404040" StrokeDashArray="0.0" StrokeWidth="1.0">
+        <Expose ExposedAttribute="Fill" Name="BaseColour"/>
+    </Polygon>
+    <Line Opacity="1.0" Stroke="#626469" StrokeDashArray="0.0"
+        StrokeWidth="1.0" X1="152.0" X2="152.0" Y1="68.0" Y2="55.0"/>
+    <Line Opacity="1.0" Stroke="#626469" StrokeDashArray="0.0"
+        StrokeWidth="1.0" X1="152.0" X2="152.0" Y1="29.0" Y2="17.0"/>
+    <Line Opacity="1.0" Stroke="#404040" StrokeDashArray="0.0"
+        StrokeWidth="1.0" X1="54.0" X2="54.0" Y1="111.0" Y2="118.0"/>
+    <Line Opacity="1.0" Stroke="#404040" StrokeDashArray="0.0"
+        StrokeWidth="1.0" X1="56.0" X2="56.0" Y1="111.0" Y2="118.0"/>
+    <Line Opacity="1.0" Stroke="#404040" StrokeDashArray="0.0"
+        StrokeWidth="1.0" X1="76.0" X2="76.0" Y1="111.0" Y2="118.0"/>
+    <Line Opacity="1.0" Stroke="#404040" StrokeDashArray="0.0"
+        StrokeWidth="1.0" X1="74.0" X2="74.0" Y1="111.0" Y2="118.0"/>
+    <Line Opacity="1.0" Stroke="#404040" StrokeDashArray="0.0"
+        StrokeWidth="1.0" X1="259.0" X2="259.0" Y1="106.0" Y2="113.0"/>
+    <Line Opacity="1.0" Stroke="#404040" StrokeDashArray="0.0"
+        StrokeWidth="1.0" X1="224.0" X2="224.0" Y1="106.0" Y2="113.0"/>
+    <Line Opacity="1.0" Stroke="#404040" StrokeDashArray="0.0"
+        StrokeWidth="1.0" X1="222.0" X2="222.0" Y1="106.0" Y2="113.0"/>
+    <Line Opacity="1.0" Stroke="#404040" StrokeDashArray="0.0"
+        StrokeWidth="1.0" X1="261.0" X2="261.0" Y1="106.0" Y2="113.0"/>
+    <Rectangle Fill="#CCCCCC" Height="14.0" Left="54.0" Opacity="1.0"
+        RadiusX="0.0" RadiusY="0.0" Stroke="#404040"
+        StrokeDashArray="0.0" StrokeWidth="1.0" Top="74.0" Width="21.0">
+        <Expose ExposedAttribute="Fill" Name="BaseColour"/>
+    </Rectangle>
+    <Ellipse Fill="#CCCCCC" Height="3.0" Left="72.0" Opacity="1.0"
+        Stroke="#404040" StrokeDashArray="0.0" StrokeWidth="1.0"
+        Top="92.0" Width="3.0">
+        <Expose ExposedAttribute="Fill" Name="BaseColour"/>
+    </Ellipse>
+    <Curve Fill="#CCCCCC" Opacity="1.0"
+        Points="258.121000289917,76.0 256.0,76.0 256.0,72.0 259.121000289917,72.0 262.0,72.0 262.0,76.0 260.121000289917,76.0 260.0,78.0 260.0,82.0 260.121000289917,85.0 258.0,85.0 260.0,85.0 258.121000289917,85.0 258.0,82.0 258.0,78.0 258.121000289917,76.0"
+        Stroke="#404040" StrokeDashArray="0.0" StrokeWidth="1.0">
+        <Expose ExposedAttribute="Fill" Name="BaseColour"/>
+    </Curve>
+    <Polygon Fill="#CCCCCC" Opacity="1.0"
+        Points="51.0,71.0 78.0,71.0 77.0,68.0 52.0,68.0"
+        Stroke="#404040" StrokeDashArray="0.0" StrokeWidth="1.0">
+        <Expose ExposedAttribute="Fill" Name="BaseColour"/>
+    </Polygon>
+    <Polygon Fill="#CCCCCC" Opacity="1.0"
+        Points="220.0,43.0 265.0,43.0 263.0,37.0 221.0,37.0"
+        Stroke="#404040" StrokeDashArray="0.0" StrokeWidth="1.0">
+        <Expose ExposedAttribute="Fill" Name="BaseColour"/>
+    </Polygon>
+</Component>

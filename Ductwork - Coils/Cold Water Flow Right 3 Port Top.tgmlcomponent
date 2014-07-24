@@ -1,0 +1,191 @@
+<?xml version="1.0"?>
+<Component ComponentCounter="4" ContentHeight="180" ContentWidth="80"
+    GridSize="10" Height="180.0" Left="0.0"
+    Name="Cold Water Flow Right 3 Port Top" Top="7.0" Width="80.0">
+    <Metadata Name="Name" Value="Cold Water Flow Right 3 Port Top"/>
+    <Metadata Name="Description" Value="Batteries&#xd;&#xa;== Bindings ==&#xd;&#xa;###VlvPos - Valve position&#xd;&#xa;&#xd;&#xa;== Exposed Properties ==&#xd;&#xa;&lt;name> - &lt;default value> - &lt;Description>&#xd;&#xa;Bind Name - ChwVlvPos - Valve Position&#xd;&#xa;Pipe Color - #42B4E6 - Color of conecting pipework&#xd;&#xa;Top of scale - 100 - fully open value&#xd;&#xa;Bottom of Scale - 0 - fully closed value&#xd;&#xa;Coil Base Color - #42B4E6 - Base color of Coil&#xd;&#xa;Error, Forced, Database Color - Outline color when point in error, forced or database condition"/>
+    <Rectangle Fill="#009530" Height="3.0" Left="45.0" Opacity="1.0"
+        RadiusX="1" RadiusY="1" Stroke="#404040" StrokeDashArray="0.0"
+        StrokeWidth="1.0" Top="48.5" Width="7.0"/>
+    <Rectangle Fill="#009530" Height="20.0" Left="51.0" RadiusX="2"
+        RadiusY="2" Stroke="#404040" StrokeDashArray="0.0"
+        StrokeWidth="1.0" Top="40.0" Width="15.0"/>
+    <Text FontFamily="Arial" FontSize="10.0" FontStyle="Normal"
+        FontWeight="Normal" HorizontalAlign="Center"
+        Left="58.4999511837954" Opacity="1.0" Stroke="#FFFFFF"
+        TextDecoration="None" Top="44.4140437245372" VerticalAlign="Top"><![CDATA[V]]></Text>
+    <Polygon Fill="#42B4E6" Name="" Opacity="1.0"
+        Points="35.0,26.0 35.0,48.5 20.0,48.5 20.0,26.0 17.0,26.0 17.0,81.0 20.0,81.0 20.0,51.5 35.0,51.5 35.0,81.0 38.0,81.0 38.0,26.0"
+        Stroke="#42B4E6" StrokeDashArray="0.0" StrokeWidth="1.0" Visibility="Visible">
+        <Expose ExposedAttribute="Fill" Name="Pipe Colour"/>
+        <Expose ExposedAttribute="Stroke" Name="Pipe Colour"/>
+    </Polygon>
+    <Path Fill="#42B4E6"
+        PathData="M29.0,53.5 C29.0,54.051999 29.4480026,54.5 30.0,54.5 L34.0,54.5 C34.552004,54.5 35.0,54.051999 35.0,53.5 35.0,53.5 35.0,53.5 35.0,53.5 L35.0,46.5 C35.0,45.947996 34.552004,45.5 34.0,45.5 L30.0,45.5 C29.4480026,45.5 29.0,45.947996 29.0,46.5 z M32.0,55.5 C32.0,56.605 32.895002,57.5 34.0,57.5 L39.0,57.5 C40.105004,57.5 41.0,56.605 41.0,55.5 41.0,55.5 41.0,55.5 41.0,55.5 L41.0,44.5 C41.0,43.394995 40.105004,42.5 39.0,42.5 L34.0,42.5 C32.895002,42.5 32.0,43.394995 32.0,44.5 z"
+        Stroke="#42B4E6" StrokeDashArray="0.0" StrokeWidth="1.0">
+        <Expose ExposedAttribute="Stroke" Name="Pipe Colour"/>
+        <Expose ExposedAttribute="Fill" Name="Pipe Colour"/>
+    </Path>
+    <Rectangle Fill="#42B4E6" Height="9.0" Left="41.0" Opacity="1.0"
+        RadiusX="1" RadiusY="1" Stroke="#42B4E6" StrokeDashArray="0.0"
+        StrokeWidth="1.0" Top="45.5" Width="5.0">
+        <Expose ExposedAttribute="Fill" Name="Pipe Colour"/>
+        <Expose ExposedAttribute="Stroke" Name="Pipe Colour"/>
+    </Rectangle>
+    <Path
+        PathData="M20.0,47.5 L20.0,26.0 M17.06228,80.91445 L17.0,26.0 M38.0,41.5 L38.0,26.0 M35.0,41.5 L35.0,26.0 M39.0,42.5 C40.105044,42.5 41.0,43.394991 41.0,44.5 M34.0,57.5 C32.895002,57.5 32.0,56.605 32.0,55.5 M39.0,57.5 C40.105044,57.5 41.0,56.605 41.0,55.5 M34.0,42.5 C32.895002,42.5 32.0,43.394991 32.0,44.5 M34.0,57.5 L39.0,57.5 M41.0,55.5 L41.0,44.5 M39.0,42.5 L35.0,42.5 M30.0,45.5 C29.4480416,45.5 29.0,45.947991 29.0,46.5 M32.0,44.5 L32.0,45.5 30.0,45.5 M30.0,54.5 C29.4480416,54.5 29.0,54.051999 29.0,53.5 M32.0,55.5 L32.0,54.5 30.0,54.5 M29.0,53.5 L29.0,46.5 M38.0,80.0 L38.0,58.5 M35.0,80.0 L35.0,58.5 M20.0,80.0 L20.0,52.5 M28.0,51.5 L21.0,51.5 M21.0,48.5 L28.0,48.5 M20.0,51.5 C19.448041,51.5 19.0,50.82799 19.0,50.0 19.0,49.172 19.448041,48.5 20.0,48.5 M41.0,53.495001 C41.0,54.047 41.448001,54.495001 42.0,54.495001 L45.0,54.495001 C45.552044,54.495001 46.0,54.047 46.0,53.495001 46.0,53.495001 46.0,53.495001 46.0,53.495001 L46.0,46.505 C46.0,45.95299 45.552044,45.505 45.0,45.505 L42.0,45.505 C41.448001,45.505 41.0,45.95299 41.0,46.505 z" Stroke="#5F000000"/>
+    <Polyline Opacity="1.0"
+        Points="37.0,24.0 35.0,24.0 35.0,14.0 33.0,14.0 37.0,7.0 41.0,14.0 39.0,14.0 39.0,24.0"
+        Stroke="#9FA0A4" StrokeDashArray="0.0" StrokeWidth="1.0"/>
+    <Polyline Opacity="1.0"
+        Points="19.0,7.0 17.0,7.0 17.0,17.0 15.0,17.0 19.0,24.0 23.0,17.0 21.0,17.0 21.0,7.0"
+        Stroke="#9FA0A4" StrokeDashArray="0.0" StrokeWidth="1.0"/>
+    <Component BottomScale="0" ComponentCounter="3" ContentHeight="110"
+        ContentWidth="70" GridSize="10" Height="110.0" Id="Coil"
+        Left="0.0" Name="" Top="70.0" TopScale="100" Width="70.0">
+        <Expose ExposedAttribute="TopScale" Name="Top of Scale"/>
+        <Expose ExposedAttribute="BottomScale" Name="Bottom of Scale"/>
+        <Curve Fill="None" Opacity="1.0"
+            Points="38.0,11.0 38.0,18.0 38.0,90.0 38.0,99.0 43.0,99.0 55.0,99.0 61.0,99.0 61.0,90.0 61.0,18.0 61.0,11.0"
+            Stroke="None" StrokeDashArray="0.0" StrokeWidth="1.0">
+            <LinearGradient Attribute="Fill" EndPoint="1.0,0.5"
+                SpreadMethod="Pad" StartPoint="0.0,0.5">
+                <GradientStop Color="#42B4E6" Offset="0.0">
+                    <Expose ExposedAttribute="Color" Name="Coil Base Colour"/>
+                </GradientStop>
+                <GradientStop Color="#01F0080E" Offset="1.0"/>
+            </LinearGradient>
+            <Bind Attribute="Opacity" Name="ChwVlvPos" PreventDefault="True">
+                <ConvertRange AttributeMaxValue="1"
+                    AttributeMinValue="0" SignalMaxValue="100" SignalMinValue="0">
+                    <Expose ExposedAttribute="SignalMaxValue" Name="Top of Scale"/>
+                    <Expose ExposedAttribute="SignalMinValue" Name="Bottom of Scale"/>
+                </ConvertRange>
+                <Expose ExposedAttribute="Name" Name="Bind Name"/>
+				<Expose ExposedAttribute="PreventDefault" Name="Prevent Default"/>
+            </Bind>
+        </Curve>
+        <Rectangle Fill="#42B4E6" Height="88.0" Left="13.0"
+            Opacity="1.0" RadiusX="5.0" RadiusY="5.0" Stroke="#42B4E6"
+            StrokeDashArray="0.0" StrokeWidth="1.0" Top="11.0" Width="30.0">
+            <Expose ExposedAttribute="Fill" Name="Coil Base Colour"/>
+            <Expose ExposedAttribute="Stroke" Name="Coil Base Colour"/>
+        </Rectangle>
+        <Rectangle Height="88.0" Left="13.0" Name="Body" Opacity="1.0"
+            RadiusX="5.0" RadiusY="5.0" Stroke="#404040"
+            StrokeDashArray="0.0" StrokeWidth="1.0" Top="11.0" Width="30.0">
+            <LinearGradient Attribute="Fill" EndPoint="1.0,0.0"
+                SpreadMethod="Pad" StartPoint="0.0,0.0">
+                <GradientStop Color="#EFEFEF" Offset="0.2"/>
+                <GradientStop Color="#7FFFFFFF" Offset="1.0"/>
+            </LinearGradient>
+        </Rectangle>
+        <Path Fill="None"
+            PathData="M21.0,94.5 C19.895001,94.5 19.0,92.48501 19.0,90.0 19.0,87.515 19.895001,85.5 21.0,85.5 M21.0,80.5 C19.895001,80.5 19.0,78.48501 19.0,76.0 19.0,73.515 19.895001,71.5 21.0,71.5 M21.0,66.5 C19.895001,66.5 19.0,64.48501 19.0,62.0 19.0,59.515 19.895001,57.5 21.0,57.5 M21.0,52.5 C19.895001,52.5 19.0,50.48501 19.0,48.0 19.0,45.515 19.895001,43.5 21.0,43.5 M21.0,38.5 C19.895001,38.5 19.0,36.4850095 19.0,34.0 19.0,31.515 19.895001,29.5 21.0,29.5 M21.0,24.5 C19.895001,24.5 19.0,22.485006 19.0,20.0 19.0,17.5150045 19.895001,15.5 21.0,15.5 M29.0,94.5 C27.895011,94.5 27.0,92.48501 27.0,90.0 27.0,87.515 27.895011,85.5 29.0,85.5 M29.0,80.5 C27.895011,80.5 27.0,78.48501 27.0,76.0 27.0,73.515 27.895011,71.5 29.0,71.5 M29.0,66.5 C27.895011,66.5 27.0,64.48501 27.0,62.0 27.0,59.515 27.895011,57.5 29.0,57.5 M29.0,52.5 C27.895011,52.5 27.0,50.48501 27.0,48.0 27.0,45.515 27.895011,43.5 29.0,43.5 M29.0,38.5 C27.895011,38.5 27.0,36.4850095 27.0,34.0 27.0,31.515 27.895011,29.5 29.0,29.5 M29.0,24.5 C27.895011,24.5 27.0,22.485006 27.0,20.0 27.0,17.5150045 27.895011,15.5 29.0,15.5 M37.0,94.5 C35.895011,94.5 35.0,92.48501 35.0,90.0 35.0,87.515 35.895011,85.5 37.0,85.5 M37.0,80.5 C35.895011,80.5 35.0,78.48501 35.0,76.0 35.0,73.515 35.895011,71.5 37.0,71.5 M37.0,66.5 C35.895011,66.5 35.0,64.48501 35.0,62.0 35.0,59.515 35.895011,57.5 37.0,57.5 M37.0,52.5 C35.895011,52.5 35.0,50.48501 35.0,48.0 35.0,45.515 35.895011,43.5 37.0,43.5 M37.0,38.5 C35.895011,38.5 35.0,36.4850095 35.0,34.0 35.0,31.515 35.895011,29.5 37.0,29.5 M37.0,24.5 C35.895011,24.5 35.0,22.485006 35.0,20.0 35.0,17.5150045 35.895011,15.5 37.0,15.5"
+            Stroke="#626469" StrokeDashArray="0.0" StrokeWidth="2" Visibility="Visible">
+            <LinearGradient Attribute="Stroke" EndPoint="0,0"
+                SpreadMethod="Pad" StartPoint="0,1">
+                <GradientStop Color="#42B4E6" Name="T" Offset=".5">
+                    <Expose ExposedAttribute="Color" Name="Coil Base Colour"/>
+                </GradientStop>
+                <GradientStop Color="#626469" Name="B" Offset=".51"/>
+            </LinearGradient>
+        </Path>
+        <Bind Name="ChwVlvPos" PreventDefault="True">
+            <Expose ExposedAttribute="Name" Name="Bind Name"/>
+			<Expose ExposedAttribute="PreventDefault" Name="Prevent Default"/>
+            <Script OnDocumentLoad="onLoad" OnSignalChange="onChange"><![CDATA[var comp;
+var topScale;
+var bottomScale;
+var scaleFactor;
+
+function onLoad(evt)
+{
+	comp = evt.getCurrentTarget().getParentNode();
+	topScale = parseFloat(comp.getAttribute("TopScale"));
+	bottomScale = parseFloat(comp.getAttribute("BottomScale"));
+	scaleFactor = topScale-bottomScale;
+	
+	
+	//alert();
+}
+
+function onChange(evt)
+{
+	val = parseFloat(evt.getValue());
+	setDisplay(val)
+}
+
+function setDisplay(val){
+	if (bottomScale == 0){
+		val = (val)/scaleFactor;
+	}
+	else{
+		val = (val-scaleFactor)/scaleFactor;
+	}
+	t=val;
+	b=val-.01;
+	if(t == 1) b = .99;
+	if (b == 0) t= .01;
+	comp.getChildByName("B").setAttribute("Offset", b);
+	comp.getChildByName("T").setAttribute("Offset", t);
+}]]></Script>
+        </Bind>
+        <Bind Color="#F0080E" Fill="#FFD100" Name="ChwVlvPos" Stroke="#42B4E6" PreventDefault="True">
+            <Expose ExposedAttribute="Color" Name="Error Color"/>
+            <Expose ExposedAttribute="Fill" Name="Forced Color"/>
+            <Expose ExposedAttribute="Stroke" Name="Database Color"/>
+            <Expose ExposedAttribute="Name" Name="Bind Name"/>
+			<Expose ExposedAttribute="PreventDefault" Name="Prevent Default"/>
+            <Script OnDocumentLoad="onLoad" OnSignalChange="onChange"><![CDATA[var body;
+var HighLightCol="#404040";
+var originalBodyColor;
+
+function onLoad(evt)
+{
+  comp = evt.getCurrentTarget();
+  body = comp.getParentNode().getChildByName("Body");
+  originalBodyColor=body.getAttribute("Stroke");
+}
+
+function onChange(evt)
+{
+  status = parseInt(evt.getStatus());
+  
+  bgStroke = setColour(status);
+  if (bgStroke=="device"){
+  	body.setAttribute("Stroke", originalBodyColor);
+ 	body.setAttribute("StrokeWidth", "1");
+  }
+  else{
+	  body.setAttribute("Stroke", bgStroke);
+	  body.setAttribute("StrokeWidth", "2");
+  }
+}
+
+function setColour(status){
+var col;
+
+  if(status==2){//Value from Device
+  	return "device";
+  }
+  else{
+  		if(status==3){//Forced Value
+  			return comp.getAttribute("Fill");
+  		}
+  		else{
+  	 		if(status==1){//Database Value
+  	 		return comp.getAttribute("Stroke");
+  			}
+  			else{
+  				if(status==0){
+  					return comp.getAttribute("Color")
+  				}
+  			}
+  		}
+  }
+
+}]]></Script>
+        </Bind>
+    </Component>
+</Component>

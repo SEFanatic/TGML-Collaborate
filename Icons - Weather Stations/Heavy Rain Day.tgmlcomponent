@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<Component ContentHeight="65" ContentWidth="70" Height="65.0"
+    Left="10.0" Name="Heavy Rain Day" Top="10.0" Width="70.0">
+    <Rectangle Fill="#FFFFFF" Height="46.0" Left="10.0" Opacity="1.0"
+        RadiusX="5" RadiusY="5" Stroke="#009530" StrokeDashArray="0.0"
+        StrokeWidth="1.0" Top="10.0" Width="49.0"/>
+    <Curve Closed="True" Fill="#9FA0A4" Opacity="1.0"
+        Points="24.625,38.0 16.625,38.0 16.625,23.0 27.625,27.0 27.625,20.0 38.625,21.0 38.625,27.0 49.625,23.0 49.625,38.0 41.625,38.0"
+        Stroke="None" StrokeDashArray="0.0" StrokeWidth="1.0"/>
+    <Curve Closed="True" Opacity="1.0"
+        Points="24.625,38.0 16.625,38.0 16.625,23.0 27.625,27.0 27.625,20.0 38.625,21.0 38.625,27.0 49.625,23.0 49.625,38.0 41.625,38.0"
+        Stroke="#626469" StrokeDashArray="0.0" StrokeWidth="1.0">
+        <RadialGradient Attribute="Fill" Focus="0.3,0.25" RadiusX="1.8"
+            RadiusY="1.5" SpreadMethod="Pad">
+            <GradientStop Color="#40FFFFFF" Offset=".2"/>
+            <GradientStop Color="#40000000" Offset=".4"/>
+        </RadialGradient>
+    </Curve>
+    <Line Opacity="1.0" Stroke="#E47F00" StrokeDashArray="0.0"
+        StrokeWidth="1.0" X1="51.375" X2="54.375" Y1="25.0" Y2="25.0"/>
+    <Line Opacity="1.0" Stroke="#E47F00" StrokeDashArray="0.0"
+        StrokeWidth="1.0" X1="49.125" X2="51.375" Y1="19.0" Y2="16.75"/>
+    <Line Opacity="1.0" Stroke="#E47F00" StrokeDashArray="0.0"
+        StrokeWidth="1.0" X1="42.375" X2="42.375" Y1="16.75" Y2="13.0"/>
+    <Line Opacity="1.0" Stroke="#E47F00" StrokeDashArray="0.0"
+        StrokeWidth="1.0" X1="48.375" X2="50.625" Y1="31.0" Y2="33.25"/>
+    <Line Opacity="1.0" Stroke="#E47F00" StrokeDashArray="0.0"
+        StrokeWidth="1.0" X1="36.375" X2="34.125" Y1="19.0" Y2="16.75"/>
+    <Line Opacity="1.0" Stroke="#E47F00" StrokeDashArray="0.0"
+        StrokeWidth="1.0" X1="37.864623069763" X2="39.242526054382"
+        Y1="14.006419181824" Y2="17.248540401459"/>
+    <Line Opacity="1.0" Stroke="#E47F00" StrokeDashArray="0.0"
+        StrokeWidth="1.0" X1="49.779421806335" X2="53.102597236634"
+        Y1="28.514912605286" Y2="30.298079490662"/>
+    <Line Opacity="1.0" Stroke="#E47F00" StrokeDashArray="0.0"
+        StrokeWidth="1.0" X1="45.56466293335" X2="47.104671478271"
+        Y1="17.491700172424" Y2="14.249577522278"/>
+    <Line Opacity="1.0" Stroke="#E47F00" StrokeDashArray="0.0"
+        StrokeWidth="1.0" X1="50.265738487244" X2="53.426808357238"
+        Y1="22.111722946167" Y2="20.895928382874"/>
+    <Curve Opacity="1.0"
+        Points="37.375,22.0 39.375,22.0 40.125,23.640747070312 40.125,24.640747070312 43.574077606201,24.012054443358 46.375,25.0 48.375,28.0 51.375,21.0 42.375,15.0 37.375,22.0"
+        Stroke="None" StrokeDashArray="0.0" StrokeWidth="1.0">
+        <RadialGradient Attribute="Fill" Focus="0.35,0.35" RadiusX="0.5"
+            RadiusY="0.5" SpreadMethod="Pad">
+            <GradientStop Color="#FFD100" Offset="0.0"/>
+            <GradientStop Color="#E47F00" Offset="1.0"/>
+        </RadialGradient>
+    </Curve>
+    <Curve Fill="#626469" Opacity="1.0"
+        Points="24.9580000005662,39.75 20.9580000005662,41.75 19.0,42.785125732422 19.9580000005662,44.75 22.9580000005662,46.75 23.9580000005662,43.75 24.9580000005662,39.75"
+        Stroke="None" StrokeDashArray="0.0" StrokeWidth="1.0"/>
+    <Curve Fill="#626469" Opacity="1.0"
+        Points="32.916000001133,40.0 28.916000001133,42.0 26.958000000566,43.035125732422 27.916000001133,45.0 30.916000001133,47.0 31.916000001133,44.0 32.916000001133,40.0"
+        Stroke="None" StrokeDashArray="0.0" StrokeWidth="1.0"/>
+    <Curve Fill="#626469" Opacity="1.0"
+        Points="40.916000001133,40.0 36.916000001133,42.0 34.958000000566,43.035125732422 35.916000001133,45.0 38.916000001133,47.0 39.916000001133,44.0 40.916000001133,40.0"
+        Stroke="None" StrokeDashArray="0.0" StrokeWidth="1.0"/>
+    <Curve Fill="#626469" Opacity="1.0"
+        Points="20.958000000566,46.75 16.958000000566,48.75 15.0,49.785125732422 15.9580000005662,51.75 18.958000000566,53.75 19.958000000566,50.75 20.958000000566,46.75"
+        Stroke="None" StrokeDashArray="0.0" StrokeWidth="1.0"/>
+    <Curve Fill="#626469" Opacity="1.0"
+        Points="28.916000001133,47.0 24.916000001133,49.0 22.958000000566,50.035125732422 23.916000001133,52.0 26.916000001133,54.0 27.916000001133,51.0 28.916000001133,47.0"
+        Stroke="None" StrokeDashArray="0.0" StrokeWidth="1.0"/>
+    <Curve Fill="#626469" Opacity="1.0"
+        Points="36.916000001133,47.0 32.916000001133,49.0 30.958000000566,50.035125732422 31.916000001133,52.0 34.916000001133,54.0 35.916000001133,51.0 36.916000001133,47.0"
+        Stroke="None" StrokeDashArray="0.0" StrokeWidth="1.0"/>
+</Component>

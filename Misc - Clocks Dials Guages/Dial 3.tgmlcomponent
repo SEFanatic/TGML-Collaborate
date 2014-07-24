@@ -1,0 +1,221 @@
+<?xml version="1.0"?>
+<Component ComponentCounter="3" ContentHeight="210" ContentWidth="460"
+    GridSize="10" Height="210.0" Left="10.0" Name="Dial 3" Top="10.0" Width="460.0">
+    <Metadata Name="Name" Value="Dial 3"/>
+    <Metadata Name="Description" Value="== Bindings ==&#xd;&#xa;Gauge - Value&#xd;&#xa;&#xd;&#xa;== Exposed Properties ==&#xd;&#xa;&lt;name> - &lt;default value> - &lt;Description>&#xd;&#xa;Needle Bind - Gauge - Value&#xd;&#xa;Top of Scale - 100&#xd;&#xa;Bottom of Scale - 0&#xd;&#xa;Display Text - ... - Units of value"/>
+    <Rectangle Fill="#808080" Height="190.0" Left="10.0" Opacity="1.0"
+        RadiusX="0.0" RadiusY="0.0" Stroke="#404040"
+        StrokeDashArray="0.0" StrokeWidth="1.0" Top="10.0" Width="440.0"/>
+    <Rectangle Fill="#FFFFFF" Height="160.0" Left="25.0" Opacity="1.0"
+        RadiusX="0.0" RadiusY="0.0" Stroke="None" StrokeDashArray="0.0"
+        StrokeWidth="1.0" Top="25.0" Width="410.0">
+        <LinearGradient EndPoint="0,.0" SpreadMethod="Pad" StartPoint=".25,1">
+            <GradientStop Color="#CCCCCC" Offset="0"/>
+            <GradientStop Color="#EFEFEF" Offset=".5"/>
+            <GradientStop Color="#FAFAFA" Offset="1"/>
+        </LinearGradient>
+    </Rectangle>
+    <Group>
+        <Line Opacity="1.0" Stroke="#404040" StrokeDashArray="0.0"
+            StrokeWidth="2.0" X1="65.0" X2="51.0" Y1="164.0" Y2="148.0"/>
+        <Line Opacity="1.0" Stroke="#404040" StrokeDashArray="0.0"
+            StrokeWidth="2.0" X1="387.0" X2="398.0" Y1="163.0" Y2="149.0"/>
+        <Line Opacity="1.0" Stroke="#404040" StrokeDashArray="0.0"
+            StrokeWidth="2.0" X1="358.0" X2="368.0" Y1="143.0" Y2="127.0"/>
+        <Line Opacity="1.0" Stroke="#404040" StrokeDashArray="0.0"
+            StrokeWidth="2.0" X1="328.0" X2="335.0" Y1="126.0" Y2="110.0"/>
+        <Line Opacity="1.0" Stroke="#404040" StrokeDashArray="0.0"
+            StrokeWidth="2.0" X1="295.0" X2="300.0" Y1="114.0" Y2="97.0"/>
+        <Line Opacity="1.0" Stroke="#404040" StrokeDashArray="0.0"
+            StrokeWidth="2.0" X1="260.0" X2="262.0" Y1="107.0" Y2="89.0"/>
+        <Line Opacity="1.0" Stroke="#404040" StrokeDashArray="0.0"
+            StrokeWidth="2.0" X1="225.0" X2="225.0" Y1="104.0" Y2="86.0"/>
+        <Line Opacity="1.0" Stroke="#404040" StrokeDashArray="0.0"
+            StrokeWidth="2.0" X1="190.0" X2="188.0" Y1="106.0" Y2="89.0"/>
+        <Line Opacity="1.0" Stroke="#404040" StrokeDashArray="0.0"
+            StrokeWidth="2.0" X1="156.0" X2="151.0" Y1="113.0" Y2="97.0"/>
+        <Line Opacity="1.0" Stroke="#404040" StrokeDashArray="0.0"
+            StrokeWidth="2.0" X1="123.0" X2="116.0" Y1="125.0" Y2="109.0"/>
+        <Line Opacity="1.0" Stroke="#404040" StrokeDashArray="0.0"
+            StrokeWidth="2.0" X1="92.0" X2="82.0" Y1="142.0" Y2="127.0"/>
+        <Line Opacity="1.0" Stroke="#404040" StrokeDashArray="0.0"
+            StrokeWidth="1.0" X1="78.0" X2="70.0" Y1="153.0" Y2="142.0"/>
+        <Line Opacity="1.0" Stroke="#404040" StrokeDashArray="0.0"
+            StrokeWidth="1.0" X1="102.0" X2="107.0" Y1="123.0" Y2="133.0"/>
+        <Line Opacity="1.0" Stroke="#404040" StrokeDashArray="0.0"
+            StrokeWidth="1.0" X1="135.0" X2="139.0" Y1="108.0" Y2="119.0"/>
+        <Line Opacity="1.0" Stroke="#404040" StrokeDashArray="0.0"
+            StrokeWidth="1.0" X1="170.0" X2="173.0" Y1="97.0" Y2="109.0"/>
+        <Line Opacity="1.0" Stroke="#404040" StrokeDashArray="0.0"
+            StrokeWidth="1.0" X1="208.0" X2="207.0" Y1="105.0" Y2="92.0"/>
+        <Line Opacity="1.0" Stroke="#404040" StrokeDashArray="0.0"
+            StrokeWidth="1.0" X1="244.0" X2="243.0" Y1="92.0" Y2="104.0"/>
+        <Line Opacity="1.0" Stroke="#404040" StrokeDashArray="0.0"
+            StrokeWidth="1.0" X1="280.0" X2="278.0" Y1="98.0" Y2="109.0"/>
+        <Line Opacity="1.0" Stroke="#404040" StrokeDashArray="0.0"
+            StrokeWidth="1.0" X1="315.0" X2="311.0" Y1="108.0" Y2="119.0"/>
+        <Line Opacity="1.0" Stroke="#404040" StrokeDashArray="0.0"
+            StrokeWidth="1.0" X1="349.0" X2="343.0" Y1="122.0" Y2="133.0"/>
+        <Line Opacity="1.0" Stroke="#404040" StrokeDashArray="0.0"
+            StrokeWidth="1.0" X1="373.0" X2="380.0" Y1="152.0" Y2="142.0"/>
+    </Group>
+    <Component Clip="False" ContentHeight="43.0" ContentWidth="36.0"
+        Height="43.0" Left="51.0" Name="Needle" Top="148.0" Width="36.0">
+        <Line Opacity="1.0" Stroke="#30000000" StrokeDashArray="0.0"
+            StrokeWidth="4" X1="36.0" X2="0.0" Y1="43.0" Y2="0.0"/>
+        <Line Opacity="1.0" Stroke="#9D0307" StrokeDashArray="0.0"
+            StrokeWidth="2" X1="36.0" X2="0.0" Y1="43.0" Y2="0.0"/>
+        <Rotate Center="4.833,4.813">
+            <Animate Animation="Stop" Attribute="Angle"
+                AutoReverse="False" CalcMode="Linear" Duration=".5"
+                Freeze="True" From="0" Name="NeedleAnimate" Repeat="1" To="0"/>
+        </Rotate>
+    </Component>
+    <Text FontFamily="Arial" FontSize="20" FontStyle="Normal"
+        FontWeight="Bold" HorizontalAlign="Left" Left="397.0" Name="Top"
+        Opacity="1.0" Stroke="#404040" TextDecoration="None" Top="121.0"
+            VerticalAlign="Top"><![CDATA[100]]><Expose
+            ExposedAttribute="Content" Name="Top of Scale"/>
+    </Text>
+    <Text FontFamily="Arial" FontSize="20" FontStyle="Normal"
+        FontWeight="Bold" HorizontalAlign="Right"
+        Left="43.1230026129626" Name="Bottom" Opacity="1.0"
+        Stroke="#404040" TextDecoration="None" Top="123.0"
+            VerticalAlign="Top"><![CDATA[0]]><Expose
+            ExposedAttribute="Content" Name="Bottom of Scale"/>
+    </Text>
+    <Text FontFamily="Arial" FontSize="20" FontStyle="Normal"
+        FontWeight="Bold" HorizontalAlign="Right"
+        Left="83.5570206046093" Name="t1" Opacity="1.0" Stroke="#404040"
+        TextDecoration="None" Top="102.0" VerticalAlign="Top"><![CDATA[.]]></Text>
+    <Text FontFamily="Arial" FontSize="20" FontStyle="Normal"
+        FontWeight="Bold" HorizontalAlign="Right"
+        Left="117.556999206543" Name="t2" Opacity="1.0" Stroke="#404040"
+        TextDecoration="None" Top="85.0" VerticalAlign="Top"><![CDATA[.]]></Text>
+    <Text FontFamily="Arial" FontSize="20" FontStyle="Normal"
+        FontWeight="Bold" HorizontalAlign="Right"
+        Left="152.556999206543" Name="t3" Opacity="1.0" Stroke="#404040"
+        TextDecoration="None" Top="74.0" VerticalAlign="Top"><![CDATA[.]]></Text>
+    <Text FontFamily="Arial" FontSize="20" FontStyle="Normal"
+        FontWeight="Bold" HorizontalAlign="Right"
+        Left="188.556999206543" Name="t4" Opacity="1.0" Stroke="#404040"
+        TextDecoration="None" Top="65.0" VerticalAlign="Top"><![CDATA[.]]></Text>
+    <Text FontFamily="Arial" FontSize="20" FontStyle="Normal"
+        FontWeight="Bold" HorizontalAlign="Center"
+        Left="224.777999997139" Name="t5" Opacity="1.0" Stroke="#404040"
+        TextDecoration="None" Top="60.0" VerticalAlign="Top"><![CDATA[.]]></Text>
+    <Text FontFamily="Arial" FontSize="20" FontStyle="Normal"
+        FontWeight="Bold" HorizontalAlign="Left" Left="260.0" Name="t6"
+        Opacity="1.0" Stroke="#404040" TextDecoration="None" Top="65.0" VerticalAlign="Top"><![CDATA[.]]></Text>
+    <Text FontFamily="Arial" FontSize="20" FontStyle="Normal"
+        FontWeight="Bold" HorizontalAlign="Left" Left="298.0" Name="t7"
+        Opacity="1.0" Stroke="#404040" TextDecoration="None" Top="74.0" VerticalAlign="Top"><![CDATA[.]]></Text>
+    <Text FontFamily="Arial" FontSize="20" FontStyle="Normal"
+        FontWeight="Bold" HorizontalAlign="Left" Left="334.0" Name="t8"
+        Opacity="1.0" Stroke="#404040" TextDecoration="None" Top="88.0" VerticalAlign="Top"><![CDATA[.]]></Text>
+    <Text FontFamily="Arial" FontSize="20" FontStyle="Normal"
+        FontWeight="Bold" HorizontalAlign="Left" Left="367.0" Name="t9"
+        Opacity="1.0" Stroke="#404040" TextDecoration="None" Top="102.0" VerticalAlign="Top"><![CDATA[.]]></Text>
+    <Curve Closed="True" Name="topcurve" Opacity="1.0"
+        Points="84.0,186.0 116.0,155.0 171.0,134.0 225.0,134.0 278.0,133.0 339.0,160.0 367.0,185.0"
+        Stroke="None" StrokeDashArray="0.0" StrokeWidth="1.0">
+        <RadialGradient Attribute="Fill" Focus="0.5,0.1" RadiusX=".67"
+            RadiusY="0.5" SpreadMethod="Pad">
+            <GradientStop Color="#404040" Offset=".5"/>
+            <GradientStop Color="#000000" Offset="1.0"/>
+        </RadialGradient>
+    </Curve>
+    <Polygon Opacity="1.0"
+        Points="25.0,25.0 20.0,20.0 20.0,190.0 25.0,185.0" Stroke="None"
+        StrokeDashArray="0.0" StrokeWidth="1.0">
+        <LinearGradient Attribute="Fill" EndPoint="0.0,1.0"
+            SpreadMethod="Pad" StartPoint="0.0,0.0">
+            <GradientStop Color="#AAAAAA" Offset="0.0"/>
+            <GradientStop Color="#BBBBBB" Offset="1.0"/>
+        </LinearGradient>
+    </Polygon>
+    <Polygon Fill="#BBBBBB" Opacity="1.0"
+        Points="20.0,20.0 25.0,20.0 440.0,20.0 435.0,25.0 25.0,25.0"
+        Stroke="None" StrokeDashArray="0.0" StrokeWidth="1.0">
+        <LinearGradient Attribute="Fill" EndPoint="0.0,0"
+            SpreadMethod="Pad" StartPoint="0.0,1">
+            <GradientStop Color="#AAAAAA" Offset="0.0"/>
+            <GradientStop Color="#BBBBBB" Offset="1.0"/>
+        </LinearGradient>
+    </Polygon>
+    <Polygon Fill="#EEEEEE" Opacity="1.0"
+        Points="20.0,190.0 440.0,190.0 435.0,185.0 25.0,185.0"
+        Stroke="None" StrokeDashArray="0.0" StrokeWidth="1.0">
+        <LinearGradient Attribute="Fill" EndPoint="0.0,0"
+            SpreadMethod="Pad" StartPoint="0.0,1">
+            <GradientStop Color="#DDDDDD" Offset="0.0"/>
+            <GradientStop Color="#EEEEEE" Offset="1.0"/>
+        </LinearGradient>
+    </Polygon>
+    <Polygon Fill="#EEEEEE" Opacity="1.0"
+        Points="435.0,25.0 435.0,185.0 440.0,190.0 440.0,20.0"
+        Stroke="None" StrokeDashArray="0.0" StrokeWidth="1.0">
+        <LinearGradient Attribute="Fill" EndPoint="0.0,1.0"
+            SpreadMethod="Pad" StartPoint="0.0,0.0">
+            <GradientStop Color="#DDDDDD" Offset="0.0"/>
+            <GradientStop Color="#EEEEEE" Offset="1.0"/>
+        </LinearGradient>
+    </Polygon>
+    <Curve Fill="#606060" Opacity="1.0"
+        Points="85.0,185.0 84.0,187.0 82.0,188.0 81.0,190.0 116.0,190.0 348.0,190.0 371.0,190.0 368.0,187.0 370.0,187.0 366.0,185.0"
+        Stroke="None" StrokeDashArray="0.0" StrokeWidth="1.0"/>
+    <Rectangle Fill="#808080" Height="9.5" Left="68.0" Opacity="1.0"
+        RadiusX="0.0" RadiusY="0.0" Stroke="None" StrokeDashArray="0.0"
+        StrokeWidth="1.0" Top="190.0" Width="316.0"/>
+    <Line Opacity="1.0" Stroke="#404040" StrokeDashArray="0.0"
+        StrokeWidth="1.0" X1="76.0" X2="390.0" Y1="200.0" Y2="200.0"/>
+    <Text FontFamily="Arial" FontSize="40" FontStyle="Normal"
+        FontWeight="Bold" HorizontalAlign="Center" Left="230.0"
+        Opacity="1.0" Stroke="#404040" TextDecoration="None" Top="22.0"
+            VerticalAlign="Top"><![CDATA[....]]><Expose
+            ExposedAttribute="Content" Name="Display Text"/>
+    </Text>
+    <Bind Name="Guage">
+        <Expose ExposedAttribute="Name" Name="Needle Bind"/>
+        <Script OnDocumentLoad="onLoad" OnSignalChange="onChange"><![CDATA[var comp;
+var tS;
+var bS;
+var ani;
+var offset;
+
+function onLoad(evt)
+{
+	var niftyP
+	comp=evt.getCurrentTarget().getParentNode();
+	ani = comp.getChildByName("NeedleAnimate");	
+	tS = parseFloat(comp.getChildByName("Top").getAttribute("Content"));
+	bS = parseFloat(comp.getChildByName("Bottom").getAttribute("Content"));
+	niftyP = (tS-bS)/10;
+	comp.getChildByName("t1").setAttribute("Content", bS+niftyP);
+	comp.getChildByName("t2").setAttribute("Content", bS+(niftyP*2));
+	comp.getChildByName("t3").setAttribute("Content", bS+(niftyP*3));
+	comp.getChildByName("t4").setAttribute("Content", bS+(niftyP*4));
+	comp.getChildByName("t5").setAttribute("Content", bS+(niftyP*5));
+	comp.getChildByName("t6").setAttribute("Content", bS+(niftyP*6));
+	comp.getChildByName("t7").setAttribute("Content", bS+(niftyP*7));
+	comp.getChildByName("t8").setAttribute("Content", bS+(niftyP*8));
+	comp.getChildByName("t9").setAttribute("Content", bS+(niftyP*9));
+	offset = bS/tS;
+}
+
+function onChange(evt)
+{
+	ani.setAttribute("Animation", "Stop");
+	ani.setAttribute("Animation", "Stop");
+	val=parseFloat(evt.getValue());
+	if (val >= bS && val <= tS){ 
+		var angle = ((val - bS) / (tS-bS)*100) * 0.8;
+	}
+	ani.setAttribute("From", ani.getAttribute("To"));
+	ani.setAttribute("To", angle);
+	ani.setAttribute("Animation", "Start");
+	ani.setAttribute("Animation", "Start");
+}
+]]></Script>
+    </Bind>
+</Component>

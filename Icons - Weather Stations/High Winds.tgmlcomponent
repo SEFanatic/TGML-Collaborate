@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<Component ContentHeight="65" ContentWidth="70" Height="65.0"
+    Left="10.0" Name="High Winds" Top="10.0" Width="70.0">
+    <Metadata Name="Name" Value="High Winds"/>
+    <Metadata Name="Description" Value=""/>
+    <Rectangle Fill="#FFFFFF" Height="46.0" Left="10.0" Opacity="1.0"
+        RadiusX="5" RadiusY="5" Stroke="#009530" StrokeDashArray="0.0"
+        StrokeWidth="1.0" Top="10.0" Width="49.0"/>
+    <Curve Closed="False" Opacity="1.0"
+        Points="20.0,28.0 20.0,26.0 22.0,20.0 30.0,23.0 30.0,16.0 41.0,17.0 41.0,23.0 52.0,19.0 52.0,34.0 44.0,34.0"
+        Stroke="#626469" StrokeDashArray="0.0" StrokeWidth="1.0"/>
+    <Rectangle Fill="#FFFFFF" Height="12.0" Left="18.5" Opacity="1.0"
+        RadiusX="0.0" RadiusY="0.0" Stroke="None" StrokeDashArray="0.0"
+        StrokeWidth="1.0" Top="35.0" Width="22.0">
+        <LinearGradient EndPoint="0,1">
+            <GradientStop Color="#5F000000" Offset="0"/>
+            <GradientStop Color="None" Offset="1"/>
+        </LinearGradient>
+    </Rectangle>
+    <Line Opacity="1.0" Stroke="#626469" StrokeDashArray="0.0"
+        StrokeWidth="1.0" X1="47.0" X2="26.0" Y1="39.0" Y2="39.0"/>
+    <Line Opacity="1.0" Stroke="#626469" StrokeDashArray="0.0"
+        StrokeWidth="1.0" X1="53.0" X2="21.0" Y1="43.0" Y2="43.0"/>
+    <Line Opacity="1.0" Stroke="#626469" StrokeDashArray="0.0"
+        StrokeWidth="1.0" X1="42.0" X2="18.0" Y1="47.0" Y2="47.0"/>
+    <Line Opacity="1.0" Stroke="#626469" StrokeDashArray="0.0"
+        StrokeWidth="1.0" X1="40.0" X2="19.0" Y1="35.0" Y2="35.0"/>
+</Component>

@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<Component Clip="True" ContentHeight="10" ContentWidth="50" GridSize="5"
+    Height="10.0" Left="0.0" Name="GasFlHoz" Top="0.0" Width="50.0">
+    <Metadata Name="Name" Value="GasFlHoz"/>
+    <Metadata Name="Description" Value="== Exposed Properties ==&#xd;&#xa;&lt;name> - &lt;default value> - &lt;Description>&#xd;&#xa;GasFlColour  - #FFD100 - Base color of pipe"/>
+    <Metadata Name="Version" Value="1.0"/>
+    <Rectangle Fill="#FFD100" Height="5" Left="0" Opacity="1.0"
+        RadiusX="0.0" RadiusY="0.0" Stroke="#FFD100"
+        StrokeDashArray="0.0" StrokeWidth="1.0" Top="0.0" Width="50.0">
+        <Expose ExposedAttribute="Fill" Name="GasFlColour"/>
+        <Expose ExposedAttribute="Stroke" Name="GasFlColour"/>
+    </Rectangle>
+    <Line Opacity="1.0" Stroke="#5F000000" StrokeDashArray="0.0"
+        StrokeWidth="1.0" X1="0" X2="50" Y1="0.0" Y2="0.0"/>
+    <Line Opacity="1.0" Stroke="#5F000000" StrokeDashArray="0.0"
+        StrokeWidth="1.0" X1="50" X2="0" Y1="5" Y2="5"/>
+</Component>

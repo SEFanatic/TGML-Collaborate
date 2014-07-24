@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<Component Clip="False" ContentHeight="60" ContentWidth="40"
+    Fill="#FFFFFF" Height="60.0" Left="5.0" Name="HeatingCoilWater1"
+    Stroke="#000000" Top="6.0" Width="40.0">
+    <Metadata Name="Name" Value="HeatingCoilWater1"/>
+    <Metadata Name="Description" Value="HeatingCoilWater1"/>
+    <Polygon Fill="#000000" Points="35.0,6.0 33.0,13.0 37.0,13.0"
+        StrokeDashArray="0.0" StrokeWidth="1.0"/>
+    <Line StrokeDashArray="0.0" StrokeWidth="1.0" X1="35.0" X2="35.0"
+        Y1="13.0" Y2="20.0"/>
+    <Rectangle Height="30.0" Left="5.0" RadiusX="0.0" RadiusY="0.0"
+        StrokeDashArray="0.0" StrokeWidth="1.0" Top="25.0" Width="30.0"/>
+    <Polyline
+        Points="6.0,40.0 10.0,40.0 20.0,30.0 20.0,50.0 30.0,40.0 34.0,40.0"
+        StrokeDashArray="0.0" StrokeWidth="1.5"/>
+    <Line StrokeDashArray="0.0" StrokeWidth="1.0" X1="29.0" X2="33.0"
+        Y1="29.0" Y2="29.0"/>
+    <Line StrokeDashArray="0.0" StrokeWidth="1.0" X1="31.0" X2="31.0"
+        Y1="27.0" Y2="31.0"/>
+</Component>

@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<Component ComponentCounter="2" ContentHeight="90" ContentWidth="40"
+    Height="90.0" Left="10.0" Name="Duct Differential PressureTop"
+    Top="5.0" Width="40.0">
+    <Metadata Name="Name" Value="Duct Differential PressureTop"/>
+    <Metadata Name="Description" Value=""/>
+    <Metadata Name="Version" Value="1.0"/>
+    <Line Stroke="#626469" StrokeDashArray="0.0" StrokeWidth="2.0"
+        X1="18.0" X2="18.0" Y1="20.0" Y2="80.0"/>
+    <Line Stroke="#626469" StrokeDashArray="0.0" StrokeWidth="2.0"
+        X1="22.0" X2="22.0" Y1="20.0" Y2="80.0"/>
+    <Rectangle Fill="#009530" Height="15.0" Left="10.0" RadiusX="2"
+        RadiusY="2" Stroke="#404040" StrokeDashArray="0.0"
+        StrokeWidth="1.0" Top="5.0" Width="20.0"/>
+    <Text FontFamily="Arial" FontSize="10.0" FontStyle="Normal"
+        FontWeight="Normal" HorizontalAlign="Center" Left="20.0"
+        Opacity="1.0" Stroke="#FFFFFF" TextDecoration="None"
+        Top="6.914050102234" VerticalAlign="Top"><![CDATA[DP]]></Text>
+</Component>
