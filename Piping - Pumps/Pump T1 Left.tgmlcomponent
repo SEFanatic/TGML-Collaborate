@@ -1,0 +1,192 @@
+<?xml version="1.0"?>
+<Component ComponentCounter="4" ContentHeight="70" ContentWidth="100"
+    GridSize="10" Height="70.0" Left="0.0" Name="Pump T1 Left"
+    Top="9.41" Width="100.0">
+    <Metadata Name="Name" Value="Pump T1 Left"/>
+    <Metadata Name="Description" Value="== Bindings ==&#xd;&#xa;P#Cmd - Pump Command&#xd;&#xa;P#Fbk - Pump Command&#xd;&#xa;&#xd;&#xa;== Exposed Properties ==&#xd;&#xa;Command Bind - P#Cmd - Pump command point&#xd;&#xa;Feedback Bind - P#Fbk - Pump feedback point&#xd;&#xa;Command on color - #87d300 - pump color when command is true&#xd;&#xa;Pump color - #cccccc - pump color when command is false&#xd;&#xa;Error, Forced, Database Color - Outline color when point in error, forced or database condition"/>
+    <Metadata Name="Version" Value="1.0"/>
+    <Pie Center="50.0,35.0" Fill="#DFE0E2" Opacity="1.0" RadiusX="25.0"
+        RadiusY="25.0" StartAngle="260.0" Stroke="#CCCCCC"
+        StrokeDashArray="0.0" StrokeWidth="1.0" SweepAngle="-180.0">
+        <Bind Attribute="Fill" Name="P#Cmd" PreventDefault="True">
+            <Expose ExposedAttribute="Name" Name="Command Bind"/>
+			<Expose ExposedAttribute="PreventDefault" Name="Prevent Default"/>
+            <ConvertValue AttributeValue="#87D300" SignalMoreOrEqualTo="1">
+                <Expose ExposedAttribute="AttributeValue" Name="Command On Colour"/>
+            </ConvertValue>
+            <ConvertValue AttributeValue="#EEEEEE" SignalLessOrEqualTo="0"/>
+        </Bind>
+        <Expose ExposedAttribute="Stroke" Name="Pump Colour"/>
+    </Pie>
+    <Path Fill="None"
+        PathData="M50.3032103,34.697003699999996 C44.242605,33.181852 36.6668503,31.6667 30.6062403,37.727306 M50.3032103,34.360639 C47.0880603,29.004579 42.8032103,22.575791000000002 34.232,22.575791000000002 M50.3032103,34.697003699999996 C51.8183613,28.636397 53.3335143,21.06064 47.27291,15.0000333 M50.898664,34.697003699999996 C54.112301,40.053063 58.3986661,46.481852 66.969878,46.481852 M50.6623013,34.934881000000004 C49.1471503,40.995487 47.6320003,48.571246 53.692604,54.631852 M50.898664,34.697003699999996 C45.5426043,37.910639700000004 39.1138163,42.195488 39.1138163,50.7667 M50.06533,34.101548 C55.421392,30.887912 61.85018,26.601548 61.85018,18.030337 M50.3032103,34.337912 C56.3638173,35.853063 63.9395751,37.368215 70.00018,31.307609"
+        Stroke="#404040" StrokeDashArray="0.0" StrokeWidth="2">
+        <Rotate>
+            <Animate Animation="Stop" Attribute="Angle"
+                CalcMode="Linear" Duration="2" From="360" To="0">
+                <Bind Attribute="Animation" Name="P#Fbk" PreventDefault="True">
+                    <Expose ExposedAttribute="Name" Name="Feedback Bind"/>
+					<Expose ExposedAttribute="PreventDefault" Name="Prevent Default"/>
+                    <ConvertValue AttributeValue="Start" SignalMoreOrEqualTo="1"/>
+                    <ConvertValue AttributeValue="Stop" SignalLessOrEqualTo="0"/>
+                </Bind>
+            </Animate>
+        </Rotate>
+        <Bind Color="#F0080E" Fill="#FFD100" Name="P#Fbk" Stroke="#42B4E6" PreventDefault="True">
+            <Expose ExposedAttribute="Color" Name="Error Color"/>
+            <Expose ExposedAttribute="Fill" Name="Forced Color"/>
+            <Expose ExposedAttribute="Stroke" Name="Database Color"/>
+            <Expose ExposedAttribute="Name" Name="Feedback Bind"/>
+			<Expose ExposedAttribute="PreventDefault" Name="Prevent Default"/>
+            <Script OnDocumentLoad="onLoad" OnSignalChange="onChange"><![CDATA[var body;
+var HighLightCol="#404040";
+var originalBodyColor;
+
+function onLoad(evt)
+{
+  comp = evt.getCurrentTarget();
+  body = comp.getParentNode();
+  originalBodyColor=body.getAttribute("Stroke");
+}
+
+function onChange(evt)
+{
+  status = parseInt(evt.getStatus());
+  
+  bgStroke = setColour(status);
+  if (bgStroke=="device"){
+  	body.setAttribute("Stroke", originalBodyColor);
+  }
+  else{
+	  body.setAttribute("Stroke", bgStroke);
+  }
+}
+
+function setColour(status){
+var col;
+
+  if(status==2){//Value from Device
+  	return "device";
+  }
+  else{
+  		if(status==3){//Forced Value
+  			return comp.getAttribute("Fill");
+  		}
+  		else{
+  	 		if(status==1){//Database Value
+  	 		return comp.getAttribute("Stroke");
+  			}
+  			else{
+  				if(status==0){
+  					return comp.getAttribute("Color")
+  				}
+  			}
+  		}
+  }
+
+}]]></Script>
+        </Bind>
+    </Path>
+    <Pie Center="50.0,35.0" Fill="#CCCCCC" Opacity="1.0" RadiusX="25.0"
+        RadiusY="25.0" StartAngle="76.0" Stroke="#CCCCCC"
+        StrokeDashArray="0.0" StrokeWidth="1.0" SweepAngle="-169.0">
+        <Expose ExposedAttribute="Fill" Name="Pump Colour"/>
+        <Expose ExposedAttribute="Stroke" Name="Pump Colour"/>
+    </Pie>
+    <Ellipse Fill="None" Height="50.0" Left="25.0" Opacity="1.0"
+        Stroke="#5F000000" StrokeDashArray="0.0" StrokeWidth="1.0"
+        Top="10.0" Width="50.0"/>
+    <Ellipse Fill="None" Height="51" Left="24.5" Opacity="1.0"
+        Stroke="#FFD100" StrokeDashArray="0.0" StrokeWidth="2" Top="9.5"
+        Visibility="Hidden" Width="51">
+        <Bind Color="#F0080E" Fill="#FFD100" Name="P#Cmd" Stroke="#42B4E6" PreventDefault="True">
+            <Expose ExposedAttribute="Color" Name="Error Color"/>
+            <Expose ExposedAttribute="Fill" Name="Forced Color"/>
+            <Expose ExposedAttribute="Stroke" Name="Database Color"/>
+            <Expose ExposedAttribute="Name" Name="Command Bind"/>
+			<Expose ExposedAttribute="PreventDefault" Name="Prevent Default"/>
+            <Script OnDocumentLoad="onLoad" OnSignalChange="onChange"><![CDATA[var body;
+var HighLightCol="#404040";
+var originalBodyColor;
+
+function onLoad(evt)
+{
+  comp = evt.getCurrentTarget();
+  body = comp.getParentNode();
+  originalBodyColor=body.getAttribute("Stroke");
+}
+
+function onChange(evt)
+{
+  status = parseInt(evt.getStatus());
+  
+  bgStroke = setColour(status);
+  if (bgStroke=="device"){
+  	body.setAttribute("Visibility", "Hidden");
+  }
+  else{
+	  body.setAttribute("Stroke", bgStroke);
+	  body.setAttribute("Visibility", "Visible");
+  }
+}
+
+function setColour(status){
+var col;
+
+  if(status==2){//Value from Device
+  	return "device";
+  }
+  else{
+  		if(status==3){//Forced Value
+  			return comp.getAttribute("Fill");
+  		}
+  		else{
+  	 		if(status==1){//Database Value
+  	 		return comp.getAttribute("Stroke");
+  			}
+  			else{
+  				if(status==0){
+  					return comp.getAttribute("Color")
+  				}
+  			}
+  		}
+  }
+
+}]]></Script>
+        </Bind>
+    </Ellipse>
+    <Rectangle Fill="#CCCCCC" Height="10.0" Left="0.0" Opacity="1.0"
+        RadiusX="0.0" RadiusY="0.0" Stroke="#CCCCCC"
+        StrokeDashArray="0.0" StrokeWidth="1.0" Top="10.0" Width="50.0">
+        <Expose ExposedAttribute="Fill" Name="Pump Colour"/>
+        <Expose ExposedAttribute="Stroke" Name="Pump Colour"/>
+    </Rectangle>
+    <Line Opacity="1.0" Stroke="#5F000000" StrokeDashArray="0.0"
+        StrokeWidth="1.0" X1="50.0" X2="0.0" Y1="10.0" Y2="10.0"/>
+    <Line Opacity="1.0" Stroke="#5F000000" StrokeDashArray="0.0"
+        StrokeWidth="1.0" X1="0.0" X2="50.0" Y1="20.0" Y2="20.0"/>
+    <Line Opacity="1.0" Stroke="#5F000000" StrokeDashArray="0.0"
+        StrokeWidth="1.0" X1="55.0" X2="50.0" Y1="58.5" Y2="35.0"/>
+    <Ellipse Fill="#EEEEEE" Height="30.0" Left="35.0" Opacity="1.0"
+        Stroke="#626469" StrokeDashArray="0.0" StrokeWidth="1.0"
+        Top="20.0" Width="30.0"/>
+    <Ellipse Fill="#CCCCCC" Height="10.0" Left="45.0" Opacity="1.0"
+        Stroke="#CCCCCC" StrokeDashArray="0.0" StrokeWidth="1.0"
+        Top="30.0" Width="10.0">
+        <Expose ExposedAttribute="Fill" Name="Pump Colour"/>
+        <Expose ExposedAttribute="Stroke" Name="Pump Colour"/>
+    </Ellipse>
+    <Ellipse Fill="None" Height="10.0" Left="45.0" Opacity="1.0"
+        Stroke="#5F000000" StrokeDashArray="0.0" StrokeWidth="1.0"
+        Top="30.0" Width="10.0"/>
+    <Rectangle Fill="#CCCCCC" Height="10.0" Left="50.0" Opacity="1.0"
+        RadiusX="0.0" RadiusY="0.0" Stroke="#CCCCCC"
+        StrokeDashArray="0.0" StrokeWidth="1.0" Top="30.0" Width="50.0">
+        <Expose ExposedAttribute="Fill" Name="Pump Colour"/>
+        <Expose ExposedAttribute="Stroke" Name="Pump Colour"/>
+    </Rectangle>
+    <Line Opacity="1.0" Stroke="#5F000000" StrokeDashArray="0.0"
+        StrokeWidth="1.0" X1="100.0" X2="50.0" Y1="30.0" Y2="30.0"/>
+    <Line Opacity="1.0" Stroke="#5F000000" StrokeDashArray="0.0"
+        StrokeWidth="1.0" X1="50.0" X2="100.0" Y1="40.0" Y2="40.0"/>
+</Component>

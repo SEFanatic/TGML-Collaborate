@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<Component Clip="False" ContentHeight="50.0" ContentWidth="20.0"
+    Fill="#FFFFFF" Height="50.0" Left="0.0" Name="SensSpec_Temp_3"
+    Stroke="#000000" Top="0.0" Width="20.0">
+    <Metadata Name="Name" Value="SensSpec_Temp_3"/>
+    <Metadata Name="Description" Value="TempSensSpec3"/>
+    <Line StrokeWidth="1.0" X1="10.0" X2="10.0" Y1="20.5" Y2="45.5"/>
+    <Ellipse Height="20.0" Left="0.0" Top="0.0" Width="20.0"/>
+    <Ellipse Height="4.0" Left="8.0" Top="46.0" Width="4.0"/>
+    <Path Fill="#000000"
+        PathData="M9.4083890914917,14.294924736022949 L9.4083890914917,6.7187485694885254 6.493708610534668,6.7187485694885254 6.493708610534668,5.7050771713256836 13.506291389465332,5.7050771713256836 13.506291389465332,6.7187485694885254 10.579532623291016,6.7187485694885254 10.579532623291016,14.294924736022949 z"
+        Stroke="None" StrokeDashArray="0.0" StrokeWidth="1.0"/>
+</Component>

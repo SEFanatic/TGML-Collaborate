@@ -1,0 +1,478 @@
+<?xml version="1.0"?>
+<Component ComponentCounter="4" ContentHeight="110" ContentWidth="130"
+    ForcedColour="#FFD100" GridSize="10" Height="110.0" Left="8.0"
+    Name="Fan 2 Motor Flow Left" OnValue="1,on,open,true" Top="11.0" Width="130.0">
+    <Metadata Name="Name" Value="Fan 2 Motor Flow Left"/>
+    <Metadata Name="Description" Value=""/>
+    <Expose ExposedAttribute="OnValue" Name="On Value"/>
+    <Path Fill="#C6C9CD" Name="FanBodyExt"
+        PathData="M13.0,12.0 L57.0,12.0 L57.0,49.0 L13.0,49.0 z M55.0,81.0 L94.0,81.0 L91.2,76.8 L89.1,72.75 L87.65,67.95 L87.8,62.2 L89.0,58.0 z"
+        Stroke="None" StrokeDashArray="0.0" StrokeWidth="1.0"/>
+    <Ellipse Height="69.0" Left="22.0" Opacity="1.0" Stroke="None"
+        StrokeDashArray="0.0" StrokeWidth="1.0" Top="12.0" Width="69.0">
+        <RadialGradient Attribute="Fill" Focus=".5,.5" RadiusX="0.5"
+            RadiusY="0.5" SpreadMethod="Pad">
+            <GradientStop Color="#FEFEFE" Offset=".6"/>
+            <GradientStop Color="#C6C9CD" Name="FanBody" Offset="1.0"/>
+        </RadialGradient>
+    </Ellipse>
+    <Ellipse Fill="#EEEEEE" Height="44.0" Left="33.0" Opacity="1.0"
+        Stroke="#404040" StrokeDashArray="0.0" StrokeWidth="1.0"
+        Top="25.0" Width="44.0">
+        <Bind Color="#F0080E" Fill="#FFD100" Name="Fan#Fbk" Stroke="#42B4E6" PreventDefault="True">
+            <Expose ExposedAttribute="Color" Name="Error Color"/>
+            <Expose ExposedAttribute="Fill" Name="Forced Color"/>
+            <Expose ExposedAttribute="Stroke" Name="Database Color"/>
+            <Expose ExposedAttribute="Name" Name="Feedback Bind"/>
+			<Expose ExposedAttribute="PreventDefault" Name="Prevent Default"/>
+            <Script OnDocumentLoad="onLoad" OnSignalChange="onChange"><![CDATA[var body;
+var HighLightCol="#404040";
+var originalBodyColor;
+
+function onLoad(evt)
+{
+  comp = evt.getCurrentTarget();
+  body = comp.getParentNode();
+  originalBodyColor=body.getAttribute("Stroke");
+}
+
+function onChange(evt)
+{
+  status = parseInt(evt.getStatus());
+  
+  bgStroke = setColour(status);
+  if (bgStroke=="device"){
+  	body.setAttribute("Stroke", originalBodyColor);
+ 	body.setAttribute("StrokeWidth", "1");
+  }
+  else{
+	  body.setAttribute("Stroke", bgStroke);
+	  body.setAttribute("StrokeWidth", "2");
+  }
+}
+
+function setColour(status){
+var col;
+
+  if(status==2){//Value from Device
+  	return "device";
+  }
+  else{
+  		if(status==3){//Forced Value
+  			return comp.getAttribute("Fill");
+  		}
+  		else{
+  	 		if(status==1){//Database Value
+  	 		return comp.getAttribute("Stroke");
+  			}
+  			else{
+  				if(status==0){
+  					return comp.getAttribute("Color")
+  				}
+  			}
+  		}
+  }
+
+}]]></Script>
+        </Bind>
+    </Ellipse>
+    <Ellipse Fill="None" Height="44.0" Left="33.0" Name="" Opacity="1.0"
+        Stroke="#F0080E" StrokeDashArray="0.0" StrokeWidth="2"
+        Top="25.0" Visibility="Hidden" Width="44.0">
+        <Bind Attribute="Visibility" Name="Fan#Alm" PreventDefault="True">
+            <Expose ExposedAttribute="Name" Name="Alarm Bind"/>
+			<Expose ExposedAttribute="PreventDefault" Name="Prevent Default"/>
+            <ConvertValue AttributeValue="Visible" SignalMoreOrEqualTo="1"/>
+            <ConvertValue AttributeValue="Hidden" SignalLessOrEqualTo="0"/>
+        </Bind>
+        <Expose ExposedAttribute="Stroke" Name="Alarm Color"/>
+    </Ellipse>
+    <Curve Opacity="1.0"
+        Points="84.0,63.0 82.802358111014,65.864118189327 86.40752065262,63.592379363513 87.0,68.0 87.655209159151,72.877756630951 91.884920946523,78.292577278473 94.0,81.0"
+        Stroke="#404040" StrokeDashArray="0.0" StrokeWidth="1.0"/>
+    <Arc Center="59.0,49.0" Opacity="1.0" RadiusX="37.0" RadiusY="32.0"
+        StartAngle="88.3153156821037" Stroke="#404040"
+        StrokeDashArray="0.0" StrokeWidth="1.0" SweepAngle="91.6846843178963"/>
+    <Curve Opacity="1.0"
+        Points="90.0,56.0 92.486067124261,47.970099804123 91.458647692367,35.9103242079 85.0,27.0 78.066505908728,17.435192270068 66.022019863049,12.145055824845 57.0,12.0"
+        Stroke="#404040" StrokeDashArray="0.0" StrokeWidth="1.0"/>
+    <Line Opacity="1.0" Stroke="#404040" StrokeDashArray="0.0"
+        StrokeWidth="1.0" X1="56.0" X2="14.0" Y1="12.0" Y2="12.0"/>
+    <Line Opacity="1.0" Stroke="#404040" StrokeDashArray="0.0"
+        StrokeWidth="1.0" X1="22.0" X2="14.0" Y1="49.0" Y2="49.0"/>
+    <Line Opacity="1.0" Stroke="#404040" StrokeDashArray="0.0"
+        StrokeWidth="1.0" X1="55.0" X2="37.0" Y1="47.0" Y2="59.0"/>
+    <Component Clip="False" ContentHeight="41.63" ContentWidth="41.63"
+        Height="41.63" Left="34.0" Top="26.369987602234" Width="41.63">
+        <Path
+            PathData="M20.6300048828125,20.6300048828125 L41.6300038828125,20.6300048828125 M20.6300048828125,20.6300048828125 L34.6300038828125,25.6300048828125 C40.506503882812467,26.72900488281249 41.6300038828125,22.6300048828125 41.6300038828125,20.6300048828125"
+            Stroke="None" StrokeDashArray="0.0" StrokeWidth="1.0">
+            <LinearGradient Attribute="Fill" EndPoint="0.0,1"
+                SpreadMethod="Reflect" StartPoint="0,0">
+                <GradientStop Color="#9FA0A4" Offset="0.0"/>
+                <GradientStop Color="#EEEEEE" Offset="0.2"/>
+                <GradientStop Color="#101010" Offset="1.0"/>
+            </LinearGradient>
+        </Path>
+        <Path
+            PathData="M20.6300048828125,20.6300048828125 L41.6300048828125,20.6300048828125 M20.6300048828125,20.6300048828125 L34.6300048828125,25.6300048828125 C40.506504882812465,26.72900488281249 41.6300048828125,22.6300048828125 41.6300048828125,20.6300048828125"
+            Stroke="None" StrokeDashArray="0.0" StrokeWidth="1.0">
+            <LinearGradient Attribute="Fill" EndPoint="0.0,1"
+                SpreadMethod="Reflect" StartPoint="0,0">
+                <GradientStop Color="#9FA0A4" Offset="0.0"/>
+                <GradientStop Color="#EEEEEE" Offset="0.2"/>
+                <GradientStop Color="#101010" Offset="1.0"/>
+            </LinearGradient>
+            <Rotate Angle="45" Center="0.0,0.0"/>
+        </Path>
+        <Path
+            PathData="M20.6300048828125,20.6300048828125 L41.6300048828125,20.6300048828125 M20.6300048828125,20.6300048828125 L34.6300048828125,25.6300048828125 C40.506504882812465,26.72900488281249 41.6300048828125,22.6300048828125 41.6300048828125,20.6300048828125"
+            Stroke="None" StrokeDashArray="0.0" StrokeWidth="1.0">
+            <LinearGradient Attribute="Fill" EndPoint="0.0,1"
+                SpreadMethod="Reflect" StartPoint="0,0">
+                <GradientStop Color="#9FA0A4" Offset="0.0"/>
+                <GradientStop Color="#EEEEEE" Offset="0.2"/>
+                <GradientStop Color="#101010" Offset="1.0"/>
+            </LinearGradient>
+            <Rotate Angle="90" Center="0.0,0.0"/>
+        </Path>
+        <Path
+            PathData="M20.729004882812546,20.6300048828125 L41.729004882812546,20.6300048828125 M20.729004882812546,20.6300048828125 L34.729004882812546,25.6300048828125 C40.605504882812511,26.72900488281249 41.729004882812546,22.6300048828125 41.729004882812546,20.6300048828125"
+            Stroke="None" StrokeDashArray="0.0" StrokeWidth="1.0">
+            <LinearGradient Attribute="Fill" EndPoint="0.0,1"
+                SpreadMethod="Reflect" StartPoint="0,0">
+                <GradientStop Color="#9FA0A4" Offset="0.0"/>
+                <GradientStop Color="#EEEEEE" Offset="0.2"/>
+                <GradientStop Color="#101010" Offset="1.0"/>
+            </LinearGradient>
+            <Rotate Angle="135" Center="0.0,0.0"/>
+        </Path>
+        <Path
+            PathData="M20.998005882812549,20.6300048828125 L41.998005882812549,20.6300048828125 M20.998005882812549,20.6300048828125 L34.998005882812549,25.6300048828125 C40.874505882812514,26.72900488281249 41.998005882812549,22.6300048828125 41.998005882812549,20.6300048828125"
+            Stroke="None" StrokeDashArray="0.0" StrokeWidth="1.0">
+            <LinearGradient Attribute="Fill" EndPoint="0.0,1"
+                SpreadMethod="Reflect" StartPoint="0,0">
+                <GradientStop Color="#9FA0A4" Offset="0.0"/>
+                <GradientStop Color="#EEEEEE" Offset="0.2"/>
+                <GradientStop Color="#101010" Offset="1.0"/>
+            </LinearGradient>
+            <Rotate Angle="180" Center="0.0,0.0"/>
+        </Path>
+        <Path
+            PathData="M20.630006882812495,20.72900488281249 L41.630006882812495,20.72900488281249 M20.630006882812495,20.72900488281249 L34.630006882812495,25.72900488281249 C40.506506882812459,26.828004882812479 41.630006882812495,22.72900488281249 41.630006882812495,20.72900488281249"
+            Stroke="None" StrokeDashArray="0.0" StrokeWidth="1.0">
+            <LinearGradient Attribute="Fill" EndPoint="0.0,1"
+                SpreadMethod="Reflect" StartPoint="0,0">
+                <GradientStop Color="#9FA0A4" Offset="0.0"/>
+                <GradientStop Color="#EEEEEE" Offset="0.2"/>
+                <GradientStop Color="#101010" Offset="1.0"/>
+            </LinearGradient>
+            <Rotate Angle="225" Center="0.0,0.0"/>
+        </Path>
+        <Path
+            PathData="M20.479007882812539,20.998005882812492 L41.479007882812539,20.998005882812492 M20.479007882812539,20.998005882812492 L34.479007882812539,25.998005882812492 C40.3555078828125,27.097005882812482 41.479007882812539,22.998005882812492 41.479007882812539,20.998005882812492"
+            Stroke="None" StrokeDashArray="0.0" StrokeWidth="1.0">
+            <LinearGradient Attribute="Fill" EndPoint="0.0,1"
+                SpreadMethod="Reflect" StartPoint="0,0">
+                <GradientStop Color="#9FA0A4" Offset="0.0"/>
+                <GradientStop Color="#EEEEEE" Offset="0.2"/>
+                <GradientStop Color="#101010" Offset="1.0"/>
+            </LinearGradient>
+            <Rotate Angle="270" Center="0.0,0.0"/>
+        </Path>
+        <Path
+            PathData="M20.630009882812487,21.630006882812495 L41.630009882812487,21.630006882812495 M20.630009882812487,21.630006882812495 L34.630009882812487,26.630006882812495 C40.506509882812452,27.729006882812484 41.630009882812487,23.630006882812495 41.630009882812487,21.630006882812495"
+            Stroke="None" StrokeDashArray="0.0" StrokeWidth="1.0">
+            <LinearGradient Attribute="Fill" EndPoint="0.0,1"
+                SpreadMethod="Reflect" StartPoint="0,0">
+                <GradientStop Color="#9FA0A4" Offset="0.0"/>
+                <GradientStop Color="#EEEEEE" Offset="0.2"/>
+                <GradientStop Color="#101010" Offset="1.0"/>
+            </LinearGradient>
+            <Rotate Angle="315" Center="0.0,0.0"/>
+        </Path>
+        <Rotate>
+            <Animate Animation="Stop" Attribute="Angle"
+                CalcMode="Linear" Duration="2" From="360" To="0">
+                <Bind Attribute="Animation" Name="Fan#Fbk" PreventDefault="True">
+					<Expose ExposedAttribute="PreventDefault" Name="Prevent Default"/>
+                    <ConvertValue AttributeValue="Start" SignalMoreOrEqualTo="1"/>
+                    <ConvertValue AttributeValue="Stop" SignalLessOrEqualTo="0"/>
+                </Bind>
+            </Animate>
+        </Rotate>
+    </Component>
+    <Curve Opacity="1.0"
+        Points="59.0,38.0 47.0,33.0 39.0,51.0 51.0,56.0"
+        Stroke="#404040" StrokeDashArray="0.0" StrokeWidth="1.0"/>
+    <Line Opacity="1.0" Stroke="#404040" StrokeDashArray="0.0"
+        StrokeWidth="1.0" X1="55.0" X2="55.0" Y1="47.0" Y2="26.0"/>
+    <Line Opacity="1.0" Stroke="#404040" StrokeDashArray="0.0"
+        StrokeWidth="1.0" X1="55.0" X2="74.0" Y1="47.0" Y2="58.0"/>
+    <Path Fill="None" Name="asdasdasd"
+        PathData="M22.0,49.0 L14.0,49.0 M59.941,80.99 C39.513,81.439 22.532,67.481 22.012,49.814 C22.004,49.543 22.0,49.271 22.0,49.0 M90.0,56.0 C92.486,47.97 91.459,35.91 85.0,27.0 C78.066,17.435 66.022,12.145 57.0,12.0 M56.0,12.0 L14.0,12.0"
+        Stroke="#F0080E" StrokeDashArray="0.0" StrokeWidth="2" Visibility="Hidden">
+        <Bind Attribute="Visibility" Name="Fan#Alm" PreventDefault="True">
+            <Expose ExposedAttribute="Name" Name="Alarm Bind"/>
+			<Expose ExposedAttribute="PreventDefault" Name="Prevent Default"/>
+            <ConvertValue AttributeValue="Visible" SignalMoreOrEqualTo="1"/>
+            <ConvertValue AttributeValue="Hidden" SignalLessOrEqualTo="0"/>
+        </Bind>
+        <Expose ExposedAttribute="Stroke" Name="Alarm Color"/>
+    </Path>
+    <Ellipse Fill="#EEEEEE" Height="20.0" Left="45.0" Opacity="1.0"
+        Stroke="#404040" StrokeDashArray="0.0" StrokeWidth="1.0"
+        Top="37.0" Width="20.0"/>
+    <Ellipse Fill="#DFE0E2" Height="22.0" Left="13.0" Name="Mtr1"
+        Opacity="1.0" Stroke="#404040" StrokeDashArray="0.0"
+        StrokeWidth="1.0" Top="56.0" Width="22.0"/>
+    <Ellipse Fill="#DFE0E2" Height="22.0" Left="75.0" Name="Mtr2"
+        Opacity="1.0" Stroke="#404040" StrokeDashArray="0.0"
+        StrokeWidth="1.0" Top="56.0" Width="22.0"/>
+    <Path Fill="None"
+        PathData="M22.0,49.0 C22.0,51.0 22.0,54.0 23.0,56.0 M22.0,49.0 L14.0,49.0 M34.0,72.5 C36.0,74.5 40.0,76.5 43.0,77.5 M35.0,67.0 C35.0,73.075 30.075,78.0 24.0,78.0 C17.925,78.0 13.0,73.075 13.0,67.0 C13.0,60.925 17.925,56.0 24.0,56.0 C30.075,56.0 35.0,60.925 35.0,67.0 z M90.0,56.0 C92.486,47.97 91.459,35.91 85.0,27.0 C78.066,17.435 66.022,12.145 57.0,12.0 M56.0,12.0 L14.0,12.0"
+        Stroke="#000000" StrokeDashArray="0.0" StrokeWidth="2" Visibility="Hidden">
+        <Bind Color="#F0080E" Fill="#FFD100" Name="Fan#Mtr1Cmd" Stroke="#42B4E6" PreventDefault="True">
+            <Expose ExposedAttribute="Color" Name="Error Color"/>
+            <Expose ExposedAttribute="Fill" Name="Forced Color"/>
+            <Expose ExposedAttribute="Stroke" Name="Database Color"/>
+            <Expose ExposedAttribute="Name" Name="Motor 1 Command Bind"/>
+			<Expose ExposedAttribute="PreventDefault" Name="Prevent Default"/>
+            <Script OnDocumentLoad="onLoad" OnSignalChange="onChange"><![CDATA[var body;
+var HighLightCol="#404040";
+var originalBodyColor;
+
+function onLoad(evt)
+{
+  comp = evt.getCurrentTarget();
+  body = comp.getParentNode();
+  originalBodyColor=body.getAttribute("Stroke");
+}
+
+function onChange(evt)
+{
+  status = parseInt(evt.getStatus());
+  
+  bgStroke = setColour(status);
+  if (bgStroke=="device"){
+  	body.setAttribute("Visibility", "Hidden");
+  }
+  else{
+	  body.setAttribute("Stroke", bgStroke);
+	  body.setAttribute("Visibility", "Visible");
+  }
+}
+
+function setColour(status){
+var col;
+
+  if(status==2){//Value from Device
+  	return "device";
+  }
+  else{
+  		if(status==3){//Forced Value
+  			return comp.getAttribute("Fill");
+  		}
+  		else{
+  	 		if(status==1){//Database Value
+  	 		return comp.getAttribute("Stroke");
+  			}
+  			else{
+  				if(status==0){
+  					return comp.getAttribute("Color")
+  				}
+  			}
+  		}
+  }
+
+}]]></Script>
+        </Bind>
+    </Path>
+    <Path Fill="None"
+        PathData="M34.0,72.5 C36.0,74.5 40.0,76.5 43.0,77.5 M22.0,49.0 C22.0,51.0 22.0,54.0 23.0,56.0 M22.0,49.0 L14.0,49.0 M56.0,12.0 L14.0,12.0 M90.0,56.0 C92.486,47.97 91.459,35.91 85.0,27.0 78.066,17.435 66.022,12.145 57.0,12.0 M97.0,67.0 C97.0,73.075 92.075,78.0 86.0,78.0 79.925001,78.0 75.0,73.075 75.0,67.0 75.0,60.925 79.925001,56.0 86.0,56.0 92.075,56.0 97.0,60.925 97.0,67.0 z"
+        Stroke="#000000" StrokeDashArray="0.0" StrokeWidth="2" Visibility="Hidden">
+        <Bind Color="#F0080E" Fill="#FFD100" Name="Fan#Mtr2Cmd" Stroke="#42B4E6" PreventDefault="True">
+            <Expose ExposedAttribute="Color" Name="Error Color"/>
+            <Expose ExposedAttribute="Fill" Name="Forced Color"/>
+            <Expose ExposedAttribute="Stroke" Name="Database Color"/>
+            <Expose ExposedAttribute="Name" Name="Motor 2 Command Bind"/>
+			<Expose ExposedAttribute="PreventDefault" Name="Prevent Default"/>
+            <Script OnDocumentLoad="onLoad" OnSignalChange="onChange"><![CDATA[var body;
+var HighLightCol="#404040";
+var originalBodyColor;
+
+function onLoad(evt)
+{
+  comp = evt.getCurrentTarget();
+  body = comp.getParentNode();
+  originalBodyColor=body.getAttribute("Stroke");
+}
+
+function onChange(evt)
+{
+  status = parseInt(evt.getStatus());
+  
+  bgStroke = setColour(status);
+  if (bgStroke=="device"){
+  	body.setAttribute("Visibility", "Hidden");
+  }
+  else{
+	  body.setAttribute("Stroke", bgStroke);
+	  body.setAttribute("Visibility", "Visible");
+  }
+}
+
+function setColour(status){
+var col;
+
+  if(status==2){//Value from Device
+  	return "device";
+  }
+  else{
+  		if(status==3){//Forced Value
+  			return comp.getAttribute("Fill");
+  		}
+  		else{
+  	 		if(status==1){//Database Value
+  	 		return comp.getAttribute("Stroke");
+  			}
+  			else{
+  				if(status==0){
+  					return comp.getAttribute("Color")
+  				}
+  			}
+  		}
+  }
+
+}]]></Script>
+        </Bind>
+    </Path>
+    <Rectangle Fill="#404040" Height="39.0" Left="12.0" Opacity="1.0"
+        RadiusX="0.0" RadiusY="0.0" Stroke="#404040"
+        StrokeDashArray="0.0" StrokeWidth="1.0" Top="11.0" Width="2.0"/>
+    <Rectangle Fill="#9FA0A4" Height="88.0" Left="8.0" Opacity="1.0"
+        RadiusX="0.0" RadiusY="0.0" Stroke="#9FA0A4"
+        StrokeDashArray="0.0" StrokeWidth="1.0" Top="11.0" Width="3.0"/>
+    <Rectangle Height="21.0" Left="13.0" Opacity="1.0" RadiusX="2"
+        RadiusY="2" Stroke="#404040" StrokeDashArray="0.0"
+        StrokeWidth="1" Top="78.0" Visibility="Visible" Width="86.0">
+        <LinearGradient Attribute="Fill" EndPoint="0.0,1.0"
+            SpreadMethod="Pad" StartPoint="0.0,0.0">
+            <GradientStop Color="#EFEFEF" Offset="0.0"/>
+            <GradientStop Color="#DFE0E2" Offset="1.0"/>
+        </LinearGradient>
+    </Rectangle>
+    <Curve Opacity="1.0"
+        Points="62.0,39.0 59.0,35.0 52.0,36.0 49.0,39.0 20.0,61.0 49.0,39.0 20.0,61.0 15.0,65.0 16.0,75.0 26.0,74.0 55.0,59.0 26.0,74.0 55.0,59.0 83.0,73.0 55.0,59.0 83.0,73.0 92.0,77.0 96.0,66.0 91.0,62.0 62.0,39.0 91.0,61.0 62.0,39.0"
+        Stroke="#404040" StrokeDashArray="0.0" StrokeWidth="1.0">
+        <LinearGradient Attribute="Fill" EndPoint="0.0,1.0"
+            SpreadMethod="Pad" StartPoint="1.0,0.0">
+            <GradientStop Color="#EFEFEF" Offset="0.0"/>
+            <GradientStop Color="#DFE0E2" Offset="1.0"/>
+        </LinearGradient>
+    </Curve>
+    <Bind Name="Fan#Mtr1Cmd" PreventDefault="True">
+        <Expose ExposedAttribute="Name" Name="Motor 1 Command Bind"/>
+		<Expose ExposedAttribute="PreventDefault" Name="Prevent Default"/>
+        <Script OnDocumentLoad="onLoad" OnSignalChange="onChange"><![CDATA[var comp;
+var onValue;
+
+function onLoad(evt)
+{
+	comp=evt.getCurrentTarget().getParentNode();
+	onValue=comp.getAttribute("OnValue").split(',');
+}
+
+function onChange(evt)
+{
+	val = evt.getValue();
+	if(getBool(val)){
+		comp.getChildByName("FanBody").setAttribute("Color", "#4FA600");
+		comp.getChildByName("FanBodyExt").setAttribute("Fill", "#4FA600");
+		comp.getChildByName("Mtr1").setAttribute("Fill", "#4FA600");
+	}
+	else{
+		comp.getChildByName("Mtr1").setAttribute("Fill", "#DFE0E2");
+		if(comp.getChildByName("Mtr2").getAttribute("Fill") == "#DFE0E2"){
+			comp.getChildByName("FanBody").setAttribute("Color", "#C6C9CD");
+			comp.getChildByName("FanBodyExt").setAttribute("Fill", "#C6C9CD");
+		}
+	}
+}
+
+function getBool(val){
+	for (var i=0;i<onValue.length;i++){
+		if (val == true || val == false){
+		val = val.toString();
+		}
+		else{
+			if (isNumber(val)){
+				val = Math.round(parseFloat(val));
+				val = val.toString();
+			}
+		}
+		if(String(val).toLowerCase() == String(onValue[i]).toLowerCase())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+function isNumber (o) {
+  return ! isNaN (o-0) && o != null;
+}]]></Script>
+    </Bind>
+    <Bind Name="Fan#Mtr2Cmd" PreventDefault="True">
+        <Expose ExposedAttribute="Name" Name="Motor 2 Command Bind"/>
+		<Expose ExposedAttribute="PreventDefault" Name="Prevent Default"/>
+        <Script OnDocumentLoad="onLoad" OnSignalChange="onChange"><![CDATA[var comp;
+var onValue;
+
+function onLoad(evt)
+{
+	comp=evt.getCurrentTarget().getParentNode();
+	onValue=comp.getAttribute("OnValue").split(',');
+}
+
+function onChange(evt)
+{
+	val = evt.getValue();
+	if(getBool(val)){
+		comp.getChildByName("FanBody").setAttribute("Color", "#4FA600");
+		comp.getChildByName("FanBodyExt").setAttribute("Fill", "#4FA600");
+		comp.getChildByName("Mtr2").setAttribute("Fill", "#4FA600");
+	}
+	else{
+		comp.getChildByName("Mtr2").setAttribute("Fill", "#DFE0E2");
+		if(comp.getChildByName("Mtr1").getAttribute("Fill") == "#DFE0E2"){
+			comp.getChildByName("FanBody").setAttribute("Color", "#C6C9CD");
+			comp.getChildByName("FanBodyExt").setAttribute("Fill", "#C6C9CD");
+		}
+	}
+}
+
+function getBool(val){
+	for (var i=0;i<onValue.length;i++){
+		if (val == true || val == false){
+		val = val.toString();
+		}
+		else{
+			if (isNumber(val)){
+				val = Math.round(parseFloat(val));
+				val = val.toString();
+			}
+		}
+		if(String(val).toLowerCase() == String(onValue[i]).toLowerCase())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+function isNumber (o) {
+  return ! isNaN (o-0) && o != null;
+}]]></Script>
+    </Bind>
+</Component>

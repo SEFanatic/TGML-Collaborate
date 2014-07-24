@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<Component ContentHeight="65" ContentWidth="70" Height="65.0"
+    Left="10.0" Name="Light Rain" Top="10.0" Width="70.0">
+    <Rectangle Fill="#FFFFFF" Height="46.0" Left="10.0" Opacity="1.0"
+        RadiusX="5" RadiusY="5" Stroke="#009530" StrokeDashArray="0.0"
+        StrokeWidth="1.0" Top="10.0" Width="49.0"/>
+    <Curve Closed="True" Fill="#EEEEEE" Opacity="1.0"
+        Points="26.0,36.25 18.0,36.25 18.0,21.25 29.0,25.25 29.0,18.25 40.0,19.25 40.0,25.25 51.0,21.25 51.0,36.25 43.0,36.25"
+        Stroke="None" StrokeDashArray="0.0" StrokeWidth="1.0"/>
+    <Curve Closed="True" Opacity="1.0"
+        Points="26.0,36.25 18.0,36.25 18.0,21.25 29.0,25.25 29.0,18.25 40.0,19.25 40.0,25.25 51.0,21.25 51.0,36.25 43.0,36.25"
+        Stroke="#626469" StrokeDashArray="0.0" StrokeWidth="1.0">
+        <RadialGradient Attribute="Fill" Focus="0.3,0.25" RadiusX="1.8"
+            RadiusY="1.5" SpreadMethod="Pad">
+            <GradientStop Color="#40FFFFFF" Offset=".2"/>
+            <GradientStop Color="#40000000" Offset=".4"/>
+        </RadialGradient>
+    </Curve>
+    <Curve Fill="#626469" Opacity="1.0"
+        Points="26.3330000005662,38.0 22.3330000005662,40.0 20.375,41.035125732422 21.3330000005662,43.0 24.3330000005662,45.0 25.3330000005662,42.0 26.3330000005662,38.0"
+        Stroke="None" StrokeDashArray="0.0" StrokeWidth="1.0"/>
+    <Curve Fill="#626469" Opacity="1.0"
+        Points="34.2910000011325,38.25 30.2910000011325,40.25 28.3330000005662,41.285125732422 29.2910000011325,43.25 32.2910000011325,45.25 33.2910000011325,42.25 34.2910000011325,38.25"
+        Stroke="None" StrokeDashArray="0.0" StrokeWidth="1.0"/>
+    <Curve Fill="#626469" Opacity="1.0"
+        Points="42.2910000011325,38.25 38.2910000011325,40.25 36.3330000005663,41.285125732422 37.2910000011325,43.25 40.2910000011325,45.25 41.2910000011325,42.25 42.2910000011325,38.25"
+        Stroke="None" StrokeDashArray="0.0" StrokeWidth="1.0"/>
+</Component>

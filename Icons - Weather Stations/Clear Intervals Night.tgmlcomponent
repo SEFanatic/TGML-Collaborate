@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<Component ContentHeight="65" ContentWidth="70" Height="65.0"
+    Left="10.0" Name="Clear Intervals Night" Top="10.0" Width="70.0">
+    <Metadata Name="Name" Value="Clear Intervals Night"/>
+    <Metadata Name="Description" Value=""/>
+    <Rectangle Fill="#FFFFFF" Height="46.0" Left="10.0" Opacity="1.0"
+        RadiusX="5" RadiusY="5" Stroke="#009530" StrokeDashArray="0.0"
+        StrokeWidth="1.0" Top="10.0" Width="49.0"/>
+    <Curve Closed="True" Fill="#EEEEEE" Opacity="1.0"
+        Points="26.5,49.0 18.5,49.0 18.5,34.0 29.5,38.0 29.5,31.0 40.5,32.0 40.5,38.0 51.5,34.0 51.5,49.0 43.5,49.0"
+        Stroke="None" StrokeDashArray="0.0" StrokeWidth="1.0"/>
+    <Curve Closed="True" Opacity="1.0"
+        Points="26.5,49.0 18.5,49.0 18.5,34.0 29.5,38.0 29.5,31.0 40.5,32.0 40.5,38.0 51.5,34.0 51.5,49.0 43.5,49.0"
+        Stroke="#626469" StrokeDashArray="0.0" StrokeWidth="1.0">
+        <RadialGradient Attribute="Fill" Focus="0.3,0.25" RadiusX="1.8"
+            RadiusY="1.5" SpreadMethod="Pad">
+            <GradientStop Color="#40FFFFFF" Offset=".2"/>
+            <GradientStop Color="#40000000" Offset=".4"/>
+        </RadialGradient>
+    </Curve>
+    <Group>
+        <Curve Fill="#ECE58B" Opacity="1.0"
+            Points="46.0,19.0 32.0,24.0 42.0,41.0 52.0,33.0 45.0,33.0 42.0,25.0 46.0,19.0"
+            Stroke="#626469" StrokeDashArray="0.0" StrokeWidth="1"/>
+        <Path Fill="#626469"
+            PathData="M50.5,19.0 L49.875,21.5 50.5,24.0 51.125,21.5 z M48.0,21.5 L50.5,22.125 53.0,21.5 50.5,20.875 z"
+            Stroke="None" StrokeDashArray="0.0" StrokeWidth="1.0"/>
+        <Path Fill="#626469"
+            PathData="M52.5,27.0 L52.125,28.5 52.5,30.0 52.875,28.5 z M51.0,28.5 L52.5,28.875 54.0,28.5 52.5,28.125 z"
+            Stroke="None" StrokeDashArray="0.0" StrokeWidth="1.0"/>
+    </Group>
+</Component>

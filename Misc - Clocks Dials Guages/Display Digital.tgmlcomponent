@@ -1,0 +1,332 @@
+<?xml version="1.0"?>
+<Component ComponentCounter="7" ContentHeight="140" ContentWidth="400"
+    Fill="#303030" GridSize="10" Height="140.0" Left="10.0"
+    Name="Display Digital" Top="10.0" Width="400.0">
+    <Metadata Name="Name" Value="Display Digital"/>
+    <Metadata Name="Description" Value="== Bindings ==&#xd;&#xa;Gauge - Value&#xd;&#xa;&#xd;&#xa;== Exposed Properties ==&#xd;&#xa;&lt;name> - &lt;default value> - &lt;Description>&#xd;&#xa;Needle Bind - Gauge - Value&#xd;&#xa;LED Color - #303030 - Color of LED digits&#xd;&#xa;LED Background Color - #C1D1AF - color of led background"/>
+    <Expose ExposedAttribute="Fill" Name="LED Color"/>
+    <Rectangle Fill="#C1D1AF" Height="120.0" Left="10.0" Opacity="1.0"
+        RadiusX="0.0" RadiusY="0.0" Stroke="#000000"
+        StrokeDashArray="0.0" StrokeWidth="1.0" Top="10.0" Width="380.0">
+        <Expose ExposedAttribute="Fill" Name="LED Background Color"/>
+    </Rectangle>
+    <Component Clip="False" ContentHeight="94.0" ContentWidth="52.0"
+        Height="94.0" Left="20.0" Name="D6" Top="20.0" Width="52.0">
+        <Polygon Fill="#303030" Name="a" Opacity="1.0"
+            Points="11.0,0.0 6.0,5.0 11.0,10.0 41.0,10.0 46.0,5.0 41.0,0.0"
+            Stroke="None" StrokeDashArray="0.0" StrokeWidth="1.0">
+            <Expose ExposedAttribute="Fill" Name="LED Color"/>
+        </Polygon>
+        <Polygon Fill="#303030" Name="b" Opacity="1.0"
+            Points="42.0,11.0 47.0,6.0 52.0,11.0 52.0,41.0 47.0,46.0 42.0,41.0"
+            Stroke="None" StrokeDashArray="0.0" StrokeWidth="1.0">
+            <Expose ExposedAttribute="Fill" Name="LED Color"/>
+        </Polygon>
+        <Polygon Fill="#303030" Name="c" Opacity="1.0"
+            Points="42.0,53.0 47.0,48.0 52.0,53.0 52.0,83.0 47.0,88.0 42.0,83.0"
+            Stroke="None" StrokeDashArray="0.0" StrokeWidth="1.0">
+            <Expose ExposedAttribute="Fill" Name="LED Color"/>
+        </Polygon>
+        <Polygon Fill="#303030" Name="d" Opacity="1.0"
+            Points="11.0,84.0 6.0,89.0 11.0,94.0 41.0,94.0 46.0,89.0 41.0,84.0"
+            Stroke="None" StrokeDashArray="0.0" StrokeWidth="1.0">
+            <Expose ExposedAttribute="Fill" Name="LED Color"/>
+        </Polygon>
+        <Polygon Fill="#303030" Name="e" Opacity="1.0"
+            Points="0.0,53.0 5.0,48.0 10.0,53.0 10.0,83.0 5.0,88.0 0.0,83.0"
+            Stroke="None" StrokeDashArray="0.0" StrokeWidth="1.0">
+            <Expose ExposedAttribute="Fill" Name="LED Color"/>
+        </Polygon>
+        <Polygon Fill="#303030" Name="f" Opacity="1.0"
+            Points="0.0,11.0 5.0,6.0 10.0,11.0 10.0,41.0 5.0,46.0 0.0,41.0"
+            Stroke="None" StrokeDashArray="0.0" StrokeWidth="1.0">
+            <Expose ExposedAttribute="Fill" Name="LED Color"/>
+        </Polygon>
+        <Polygon Fill="#303030" Name="g" Opacity="1.0"
+            Points="11.0,42.0 6.0,47.0 11.0,52.0 41.0,52.0 46.0,47.0 41.0,42.0"
+            Stroke="None" StrokeDashArray="0.0" StrokeWidth="1.0">
+            <Expose ExposedAttribute="Fill" Name="LED Color"/>
+        </Polygon>
+        <Polygon Fill="#303030" Name="h" Opacity="1.0"
+            Points="25.0,84.0 20.0,89.0 25.0,94.0 30.0,89" Stroke="None"
+            StrokeDashArray="0.0" StrokeWidth="1.0">
+            <Expose ExposedAttribute="Fill" Name="LED Color"/>
+        </Polygon>
+    </Component>
+    <Component Clip="False" ContentHeight="94.0" ContentWidth="52.0"
+        Height="94.0" Left="80.0" Name="D5" Top="20.0" Width="52.0">
+        <Polygon Fill="#303030" Name="a" Opacity="1.0"
+            Points="11.0,0.0 6.0,5.0 11.0,10.0 41.0,10.0 46.0,5.0 41.0,0.0"
+            Stroke="None" StrokeDashArray="0.0" StrokeWidth="1.0">
+            <Expose ExposedAttribute="Fill" Name="LED Color"/>
+        </Polygon>
+        <Polygon Fill="#303030" Name="b" Opacity="1.0"
+            Points="42.0,11.0 47.0,6.0 52.0,11.0 52.0,41.0 47.0,46.0 42.0,41.0"
+            Stroke="None" StrokeDashArray="0.0" StrokeWidth="1.0">
+            <Expose ExposedAttribute="Fill" Name="LED Color"/>
+        </Polygon>
+        <Polygon Fill="#303030" Name="c" Opacity="1.0"
+            Points="42.0,53.0 47.0,48.0 52.0,53.0 52.0,83.0 47.0,88.0 42.0,83.0"
+            Stroke="None" StrokeDashArray="0.0" StrokeWidth="1.0">
+            <Expose ExposedAttribute="Fill" Name="LED Color"/>
+        </Polygon>
+        <Polygon Fill="#303030" Name="d" Opacity="1.0"
+            Points="11.0,84.0 6.0,89.0 11.0,94.0 41.0,94.0 46.0,89.0 41.0,84.0"
+            Stroke="None" StrokeDashArray="0.0" StrokeWidth="1.0">
+            <Expose ExposedAttribute="Fill" Name="LED Color"/>
+        </Polygon>
+        <Polygon Fill="#303030" Name="e" Opacity="1.0"
+            Points="0.0,53.0 5.0,48.0 10.0,53.0 10.0,83.0 5.0,88.0 0.0,83.0"
+            Stroke="None" StrokeDashArray="0.0" StrokeWidth="1.0">
+            <Expose ExposedAttribute="Fill" Name="LED Color"/>
+        </Polygon>
+        <Polygon Fill="#303030" Name="f" Opacity="1.0"
+            Points="0.0,11.0 5.0,6.0 10.0,11.0 10.0,41.0 5.0,46.0 0.0,41.0"
+            Stroke="None" StrokeDashArray="0.0" StrokeWidth="1.0">
+            <Expose ExposedAttribute="Fill" Name="LED Color"/>
+        </Polygon>
+        <Polygon Fill="#303030" Name="g" Opacity="1.0"
+            Points="11.0,42.0 6.0,47.0 11.0,52.0 41.0,52.0 46.0,47.0 41.0,42.0"
+            Stroke="None" StrokeDashArray="0.0" StrokeWidth="1.0">
+            <Expose ExposedAttribute="Fill" Name="LED Color"/>
+        </Polygon>
+        <Polygon Fill="#303030" Name="h" Opacity="1.0"
+            Points="25.0,84.0 20.0,89.0 25.0,94.0 30.0,89" Stroke="None"
+            StrokeDashArray="0.0" StrokeWidth="1.0">
+            <Expose ExposedAttribute="Fill" Name="LED Color"/>
+        </Polygon>
+    </Component>
+    <Component Clip="False" ContentHeight="94.0" ContentWidth="52.0"
+        Height="94.0" Left="140.0" Name="D4" Top="20.0" Width="52.0">
+        <Polygon Fill="#303030" Name="a" Opacity="1.0"
+            Points="11.0,0.0 6.0,5.0 11.0,10.0 41.0,10.0 46.0,5.0 41.0,0.0"
+            Stroke="None" StrokeDashArray="0.0" StrokeWidth="1.0">
+            <Expose ExposedAttribute="Fill" Name="LED Color"/>
+        </Polygon>
+        <Polygon Fill="#303030" Name="b" Opacity="1.0"
+            Points="42.0,11.0 47.0,6.0 52.0,11.0 52.0,41.0 47.0,46.0 42.0,41.0"
+            Stroke="None" StrokeDashArray="0.0" StrokeWidth="1.0">
+            <Expose ExposedAttribute="Fill" Name="LED Color"/>
+        </Polygon>
+        <Polygon Fill="#303030" Name="c" Opacity="1.0"
+            Points="42.0,53.0 47.0,48.0 52.0,53.0 52.0,83.0 47.0,88.0 42.0,83.0"
+            Stroke="None" StrokeDashArray="0.0" StrokeWidth="1.0">
+            <Expose ExposedAttribute="Fill" Name="LED Color"/>
+        </Polygon>
+        <Polygon Fill="#303030" Name="d" Opacity="1.0"
+            Points="11.0,84.0 6.0,89.0 11.0,94.0 41.0,94.0 46.0,89.0 41.0,84.0"
+            Stroke="None" StrokeDashArray="0.0" StrokeWidth="1.0">
+            <Expose ExposedAttribute="Fill" Name="LED Color"/>
+        </Polygon>
+        <Polygon Fill="#303030" Name="e" Opacity="1.0"
+            Points="0.0,53.0 5.0,48.0 10.0,53.0 10.0,83.0 5.0,88.0 0.0,83.0"
+            Stroke="None" StrokeDashArray="0.0" StrokeWidth="1.0">
+            <Expose ExposedAttribute="Fill" Name="LED Color"/>
+        </Polygon>
+        <Polygon Fill="#303030" Name="f" Opacity="1.0"
+            Points="0.0,11.0 5.0,6.0 10.0,11.0 10.0,41.0 5.0,46.0 0.0,41.0"
+            Stroke="None" StrokeDashArray="0.0" StrokeWidth="1.0">
+            <Expose ExposedAttribute="Fill" Name="LED Color"/>
+        </Polygon>
+        <Polygon Fill="#303030" Name="g" Opacity="1.0"
+            Points="11.0,42.0 6.0,47.0 11.0,52.0 41.0,52.0 46.0,47.0 41.0,42.0"
+            Stroke="None" StrokeDashArray="0.0" StrokeWidth="1.0">
+            <Expose ExposedAttribute="Fill" Name="LED Color"/>
+        </Polygon>
+        <Polygon Fill="#303030" Name="h" Opacity="1.0"
+            Points="25.0,84.0 20.0,89.0 25.0,94.0 30.0,89" Stroke="None"
+            StrokeDashArray="0.0" StrokeWidth="1.0">
+            <Expose ExposedAttribute="Fill" Name="LED Color"/>
+        </Polygon>
+    </Component>
+    <Component Clip="False" ContentHeight="94.0" ContentWidth="52.0"
+        Height="94.0" Left="200.0" Name="D3" Top="20.0" Width="52.0">
+        <Polygon Fill="#303030" Name="a" Opacity="1.0"
+            Points="11.0,0.0 6.0,5.0 11.0,10.0 41.0,10.0 46.0,5.0 41.0,0.0"
+            Stroke="None" StrokeDashArray="0.0" StrokeWidth="1.0">
+            <Expose ExposedAttribute="Fill" Name="LED Color"/>
+        </Polygon>
+        <Polygon Fill="#303030" Name="b" Opacity="1.0"
+            Points="42.0,11.0 47.0,6.0 52.0,11.0 52.0,41.0 47.0,46.0 42.0,41.0"
+            Stroke="None" StrokeDashArray="0.0" StrokeWidth="1.0">
+            <Expose ExposedAttribute="Fill" Name="LED Color"/>
+        </Polygon>
+        <Polygon Fill="#303030" Name="c" Opacity="1.0"
+            Points="42.0,53.0 47.0,48.0 52.0,53.0 52.0,83.0 47.0,88.0 42.0,83.0"
+            Stroke="None" StrokeDashArray="0.0" StrokeWidth="1.0">
+            <Expose ExposedAttribute="Fill" Name="LED Color"/>
+        </Polygon>
+        <Polygon Fill="#303030" Name="d" Opacity="1.0"
+            Points="11.0,84.0 6.0,89.0 11.0,94.0 41.0,94.0 46.0,89.0 41.0,84.0"
+            Stroke="None" StrokeDashArray="0.0" StrokeWidth="1.0">
+            <Expose ExposedAttribute="Fill" Name="LED Color"/>
+        </Polygon>
+        <Polygon Fill="#303030" Name="e" Opacity="1.0"
+            Points="0.0,53.0 5.0,48.0 10.0,53.0 10.0,83.0 5.0,88.0 0.0,83.0"
+            Stroke="None" StrokeDashArray="0.0" StrokeWidth="1.0">
+            <Expose ExposedAttribute="Fill" Name="LED Color"/>
+        </Polygon>
+        <Polygon Fill="#303030" Name="f" Opacity="1.0"
+            Points="0.0,11.0 5.0,6.0 10.0,11.0 10.0,41.0 5.0,46.0 0.0,41.0"
+            Stroke="None" StrokeDashArray="0.0" StrokeWidth="1.0">
+            <Expose ExposedAttribute="Fill" Name="LED Color"/>
+        </Polygon>
+        <Polygon Fill="#303030" Name="g" Opacity="1.0"
+            Points="11.0,42.0 6.0,47.0 11.0,52.0 41.0,52.0 46.0,47.0 41.0,42.0"
+            Stroke="None" StrokeDashArray="0.0" StrokeWidth="1.0">
+            <Expose ExposedAttribute="Fill" Name="LED Color"/>
+        </Polygon>
+        <Polygon Fill="#303030" Name="h" Opacity="1.0"
+            Points="25.0,84.0 20.0,89.0 25.0,94.0 30.0,89" Stroke="None"
+            StrokeDashArray="0.0" StrokeWidth="1.0">
+            <Expose ExposedAttribute="Fill" Name="LED Color"/>
+        </Polygon>
+    </Component>
+    <Component Clip="False" ContentHeight="94.0" ContentWidth="52.0"
+        Height="94.0" Left="260.0" Name="D2" Top="20.0" Width="52.0">
+        <Polygon Fill="#303030" Name="a" Opacity="1.0"
+            Points="11.0,0.0 6.0,5.0 11.0,10.0 41.0,10.0 46.0,5.0 41.0,0.0"
+            Stroke="None" StrokeDashArray="0.0" StrokeWidth="1.0">
+            <Expose ExposedAttribute="Fill" Name="LED Color"/>
+        </Polygon>
+        <Polygon Fill="#303030" Name="b" Opacity="1.0"
+            Points="42.0,11.0 47.0,6.0 52.0,11.0 52.0,41.0 47.0,46.0 42.0,41.0"
+            Stroke="None" StrokeDashArray="0.0" StrokeWidth="1.0">
+            <Expose ExposedAttribute="Fill" Name="LED Color"/>
+        </Polygon>
+        <Polygon Fill="#303030" Name="c" Opacity="1.0"
+            Points="42.0,53.0 47.0,48.0 52.0,53.0 52.0,83.0 47.0,88.0 42.0,83.0"
+            Stroke="None" StrokeDashArray="0.0" StrokeWidth="1.0">
+            <Expose ExposedAttribute="Fill" Name="LED Color"/>
+        </Polygon>
+        <Polygon Fill="#303030" Name="d" Opacity="1.0"
+            Points="11.0,84.0 6.0,89.0 11.0,94.0 41.0,94.0 46.0,89.0 41.0,84.0"
+            Stroke="None" StrokeDashArray="0.0" StrokeWidth="1.0">
+            <Expose ExposedAttribute="Fill" Name="LED Color"/>
+        </Polygon>
+        <Polygon Fill="#303030" Name="e" Opacity="1.0"
+            Points="0.0,53.0 5.0,48.0 10.0,53.0 10.0,83.0 5.0,88.0 0.0,83.0"
+            Stroke="None" StrokeDashArray="0.0" StrokeWidth="1.0">
+            <Expose ExposedAttribute="Fill" Name="LED Color"/>
+        </Polygon>
+        <Polygon Fill="#303030" Name="f" Opacity="1.0"
+            Points="0.0,11.0 5.0,6.0 10.0,11.0 10.0,41.0 5.0,46.0 0.0,41.0"
+            Stroke="None" StrokeDashArray="0.0" StrokeWidth="1.0">
+            <Expose ExposedAttribute="Fill" Name="LED Color"/>
+        </Polygon>
+        <Polygon Fill="#303030" Name="g" Opacity="1.0"
+            Points="11.0,42.0 6.0,47.0 11.0,52.0 41.0,52.0 46.0,47.0 41.0,42.0"
+            Stroke="None" StrokeDashArray="0.0" StrokeWidth="1.0">
+            <Expose ExposedAttribute="Fill" Name="LED Color"/>
+        </Polygon>
+        <Polygon Fill="#303030" Name="h" Opacity="1.0"
+            Points="25.0,84.0 20.0,89.0 25.0,94.0 30.0,89" Stroke="None"
+            StrokeDashArray="0.0" StrokeWidth="1.0">
+            <Expose ExposedAttribute="Fill" Name="LED Color"/>
+        </Polygon>
+    </Component>
+    <Component Clip="False" ContentHeight="94.0" ContentWidth="52.0"
+        Height="94.0" Left="320.0" Name="D1" Top="20.0" Width="52.0">
+        <Polygon Fill="#303030" Name="a" Opacity="1.0"
+            Points="11.0,0.0 6.0,5.0 11.0,10.0 41.0,10.0 46.0,5.0 41.0,0.0"
+            Stroke="None" StrokeDashArray="0.0" StrokeWidth="1.0">
+            <Expose ExposedAttribute="Fill" Name="LED Color"/>
+        </Polygon>
+        <Polygon Fill="#303030" Name="b" Opacity="1.0"
+            Points="42.0,11.0 47.0,6.0 52.0,11.0 52.0,41.0 47.0,46.0 42.0,41.0"
+            Stroke="None" StrokeDashArray="0.0" StrokeWidth="1.0">
+            <Expose ExposedAttribute="Fill" Name="LED Color"/>
+        </Polygon>
+        <Polygon Fill="#303030" Name="c" Opacity="1.0"
+            Points="42.0,53.0 47.0,48.0 52.0,53.0 52.0,83.0 47.0,88.0 42.0,83.0"
+            Stroke="None" StrokeDashArray="0.0" StrokeWidth="1.0">
+            <Expose ExposedAttribute="Fill" Name="LED Color"/>
+        </Polygon>
+        <Polygon Fill="#303030" Name="d" Opacity="1.0"
+            Points="11.0,84.0 6.0,89.0 11.0,94.0 41.0,94.0 46.0,89.0 41.0,84.0"
+            Stroke="None" StrokeDashArray="0.0" StrokeWidth="1.0">
+            <Expose ExposedAttribute="Fill" Name="LED Color"/>
+        </Polygon>
+        <Polygon Fill="#303030" Name="e" Opacity="1.0"
+            Points="0.0,53.0 5.0,48.0 10.0,53.0 10.0,83.0 5.0,88.0 0.0,83.0"
+            Stroke="None" StrokeDashArray="0.0" StrokeWidth="1.0">
+            <Expose ExposedAttribute="Fill" Name="LED Color"/>
+        </Polygon>
+        <Polygon Fill="#303030" Name="f" Opacity="1.0"
+            Points="0.0,11.0 5.0,6.0 10.0,11.0 10.0,41.0 5.0,46.0 0.0,41.0"
+            Stroke="None" StrokeDashArray="0.0" StrokeWidth="1.0">
+            <Expose ExposedAttribute="Fill" Name="LED Color"/>
+        </Polygon>
+        <Polygon Fill="#303030" Name="g" Opacity="1.0"
+            Points="11.0,42.0 6.0,47.0 11.0,52.0 41.0,52.0 46.0,47.0 41.0,42.0"
+            Stroke="None" StrokeDashArray="0.0" StrokeWidth="1.0">
+            <Expose ExposedAttribute="Fill" Name="LED Color"/>
+        </Polygon>
+        <Polygon Fill="#303030" Name="h" Opacity="1.0"
+            Points="25.0,84.0 20.0,89.0 25.0,94.0 30.0,89" Stroke="None"
+            StrokeDashArray="0.0" StrokeWidth="1.0">
+            <Expose ExposedAttribute="Fill" Name="LED Color"/>
+        </Polygon>
+    </Component>
+    <Bind Name="Guage">
+        <Expose ExposedAttribute="Name" Name="Needle Bind"/>
+        <Script OnDocumentLoad="onLoad" OnSignalChange="onChange"><![CDATA[var comp;
+var onCol;
+var offCol;
+
+function onLoad(evt)
+{
+	comp=evt.getCurrentTarget().getParentNode();
+	onCol = comp.getAttribute("Fill");
+	offCol = "#10"+onCol.substring(1,7);
+}
+
+function onChange(evt)
+{
+	var valAr = evt.getValue().toString().split('');
+	valAr = valAr.reverse();
+	for(var i=0; i < 6;i++){
+		if (i < valAr.length){
+			setNumber(comp.getChildByName("D"+(i+1)), valAr[i]);
+		}
+		else{
+			setNumber(comp.getChildByName("D"+(i+1)), "z");
+		}
+	}
+	//asd="D2";
+	//setNumber(comp.getChildByName("D"+1), evt.getValue());
+}
+
+function setNumber(tree, val)
+{
+	var bindList = tree.getElementsByTagName("Polygon");
+	for(var i=0; i < bindList.length;i++){
+		bindList.item(i).setAttribute("Fill", offCol);
+		if (i == bindList.length-1) bindList.item(i).setAttribute("Visibility", "Hidden");
+	}
+	var lightUp="";
+	if (val == 0) lightUp="012345";
+	if (val == 1) lightUp="12";
+	if (val == 2) lightUp="01346";
+	if (val == 3) lightUp="01236";
+	if (val == 4) lightUp="1256";
+	if (val == 5) lightUp="02356";
+	if (val == 6) lightUp="23456";
+	if (val == 7) lightUp="012";
+	if (val == 8) lightUp="0123456";
+	if (val == 9) lightUp="01256";
+	if (val.toString() == "."){
+		lightUp="7";
+		bindList.item(7).setAttribute("Visibility", "Visible");
+	}
+	if (val.toString() == "-") lightUp="6";
+	
+	for(var i=0; i < bindList.length;i++){
+		if (lightUp.indexOf(i) >= 0){
+			bindList.item(i).setAttribute("Fill", onCol);
+		}
+	}
+	//if val = 1
+}]]></Script>
+    </Bind>
+</Component>

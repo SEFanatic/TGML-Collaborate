@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<Component Clip="False" ContentHeight="20" ContentWidth="20"
+    Fill="#FFFFFF" Height="20.0" Left="5.0" Name="Valve_2Way_2"
+    Stroke="#000000" Top="0.0" Width="20.0">
+    <Metadata Name="Name" Value="Valve_2Way_2"/>
+    <Metadata Name="Description" Value="2WayValve2"/>
+    <Polygon Points="5.0,0.0 10.0,10.0 15.0,0.0" StrokeDashArray="0.0" StrokeWidth="1.0"/>
+    <Polygon Points="5.0,20.0 10.0,10.0 15.0,20.0" StrokeDashArray="0.0" StrokeWidth="1.0"/>
+</Component>

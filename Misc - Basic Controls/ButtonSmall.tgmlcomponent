@@ -1,0 +1,92 @@
+<?xml version="1.0"?>
+<Component Clip="False" ContentHeight="30.0" ContentWidth="30.0"
+    Fill="#CC001F85" Height="30.0" Left="120.0" Name="ButtonSmall"
+    Push="#3F000000" Stroke="#000000" Top="10.0" Width="30.0">
+    <Script OnMouseClick="" OnMouseDown="down" OnMouseOut="out"
+        OnMouseOver="over" OnMouseUp="up" OnSignalChange=""><![CDATA[function over(evt)
+{
+  var component = evt.getCurrentTarget();
+  component.getChild("Hover").setAttribute("Visibility", "Visible");
+}
+        	
+function out(evt)
+{
+  var component = evt.getCurrentTarget();
+  component.getChild("Hover").setAttribute("Visibility", "Hidden");
+  component.getChild("Edge").setAttribute("Fill", "None");
+}
+
+function down(evt)
+{
+  if(evt.getButton() != 0) return;
+
+  var component = evt.getCurrentTarget();
+  var color = component.getAttribute("Push");
+  component.getChild("Edge").setAttribute("Fill", color);
+}
+        	
+function up(evt)
+{
+  if(evt.getButton() != 0) return;
+
+  var component = evt.getCurrentTarget();
+  component.getChild("Edge").setAttribute("Fill", "None");
+}]]></Script>
+    <Expose ExposedAttribute="Fill" Name="ButtonColor"/>
+    <Expose ExposedAttribute="Stroke" Name="ButtonEdge"/>
+    <Rectangle Height="28.0" Left="1.0" Name="Background" Opacity="1.0"
+        RadiusX="2.0" RadiusY="2.0" Stroke="#FFFFFF"
+        StrokeDashArray="0.0" StrokeWidth="3.0" Top="1.0" Width="28.0"/>
+    <Rectangle Fill="None" Height="30.0" Left="0.0" Name="Hover"
+        Opacity="1.0" RadiusX="3.0" RadiusY="3.0" Stroke="None"
+        StrokeDashArray="0.0" StrokeWidth="1.0" Top="0.0"
+        Visibility="Hidden" Width="30.0">
+        <RadialGradient Attribute="Fill" Center="0.5,0.5"
+            Focus="0.5,1.0" RadiusX="0.7" RadiusY="0.7" SpreadMethod="Pad">
+            <GradientStop Color="#33BBF7" Offset="0.0">
+                <Expose Description="The color of the hover indication."
+                    ExposedAttribute="Color" Name="HoverColor"/>
+            </GradientStop>
+            <GradientStop Color="None" Offset="1.0"/>
+        </RadialGradient>
+    </Rectangle>
+    <Rectangle Fill="None" Height="28.0" Left="1.0" Name="Edge"
+        Opacity="1.0" RadiusX="2.0" RadiusY="2.0" StrokeDashArray="0.0"
+        StrokeWidth="1.0" Top="1.0" Visibility="Visible" Width="28.0"/>
+    <Rectangle Fill="None" Height="26.0" Left="2.0" Name="Light"
+        Opacity="1.0" RadiusX="1.0" RadiusY="1.0" Stroke="None"
+        StrokeDashArray="0.0" StrokeWidth="1.0" Top="2.0"
+        Visibility="Visible" Width="26.0">
+        <LinearGradient EndPoint="0.0,1.0">
+            <GradientStop Color="#B2FFFFFF" Offset="0"/>
+            <GradientStop Color="#19FFFFFF" Offset="0.5"/>
+            <GradientStop Color="#19000000" Offset="0.5"/>
+            <GradientStop Color="None" Offset="0.8"/>
+            <GradientStop Color="#33FFFFFF" Offset="1.0"/>
+        </LinearGradient>
+    </Rectangle>
+    <Text Fill="None" FontFamily="Microsoft Sans Serif" FontSize="16"
+        FontStyle="Normal" FontWeight="Bold" HorizontalAlign="Center"
+        Left="16.0" Name="TextShadow" Opacity="1.0" Stroke="#000000"
+        TextDecoration="None" Top="16.0"
+            VerticalAlign="Middle"><![CDATA[Btn]]><Expose
+            Description="The static button text."
+            ExposedAttribute="Content" Name="ButtonText"/>
+        <Expose ExposedAttribute="FontSize" Name="TextSize"/>
+        <Expose Description="The color of the text shadow."
+            ExposedAttribute="Stroke" Name="ButtonTextShadowColor"/>
+    </Text>
+    <Text Fill="None" FontFamily="Microsoft Sans Serif" FontSize="16"
+        FontStyle="Normal" FontWeight="Bold" HorizontalAlign="Center"
+        Left="15.0" Name="Text" Opacity="1.0" Stroke="#FFFFFF"
+        TextDecoration="None" Top="15.0"
+            VerticalAlign="Middle"><![CDATA[Btn]]><Expose
+            Description="The static button text."
+            ExposedAttribute="Content" Name="ButtonText"/>
+        <Expose ExposedAttribute="FontSize" Name="TextSize"/>
+        <Expose ExposedAttribute="Stroke" Name="ButtonTextColor"/>
+    </Text>
+    <TargetArea Height="30.0" Left="0.0" Top="0.0" Width="30.0"/>
+    <Metadata Name="Name" Value="ButtonSmall"/>
+    <Metadata Name="Description" Value="A generic Button.&#xd;&#xa;&#xd;&#xa;Add a Basic Functions snippet or modify the button script to add custom functionality.&#xd;&#xa;&#xd;&#xa;== Exposed Properties ==&#xd;&#xa;ButtonColor: The button color.&#xd;&#xa;ButtonEdge: The color of the button edge.&#xd;&#xa;HoverColor: Mouse-over indication.&#xd;&#xa;ButtonText: The static button text.&#xd;&#xa;TextSize: The size of the button text.&#xd;&#xa;ButtonTextShadowColor: The color of the text shadow.&#xd;&#xa;ButtonTextColor: The text color."/>
+</Component>

@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<Component Clip="False" ContentHeight="50.0" ContentWidth="20.0"
+    Fill="#FFFFFF" Height="50.0" Left="-0.5" Name="SensGeneral_Flow_1"
+    Stroke="#000000" Top="-0.5" Width="20.0">
+    <Metadata Name="Name" Value="SensGeneral_Flow_1"/>
+    <Metadata Name="Description" Value="FlowSensGeneral1"/>
+    <Line StrokeWidth="1.0" X1="10.0" X2="10.0" Y1="0.0" Y2="29.5"/>
+    <Ellipse Height="20.0" Left="0.0" Top="30.0" Width="20.0"/>
+    <Path Fill="#000000"
+        PathData="M7.01556396484375,44.294921875 L7.01556396484375,35.705078125 12.984435081481934,35.705078125 12.984435081481934,36.71875 8.1863393783569336,36.71875 8.1863393783569336,39.37890625 12.338805198669434,39.37890625 12.338805198669434,40.392578125 8.1863393783569336,40.392578125 8.1863393783569336,44.294921875 z"
+        Stroke="None" StrokeDashArray="0.0" StrokeWidth="1.0"/>
+</Component>

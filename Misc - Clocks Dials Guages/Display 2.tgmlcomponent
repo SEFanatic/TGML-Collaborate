@@ -1,0 +1,102 @@
+<?xml version="1.0"?>
+<Component ContentHeight="50" ContentWidth="100" Height="50.0"
+    Left="10.0" Name="Display 2" Top="10.0" Width="100.0">
+    <Metadata Name="Name" Value="Display 2"/>
+    <Metadata Name="Description" Value="== Bindings ==&#xd;&#xa;Display - Value&#xd;&#xa;&#xd;&#xa;== Exposed Properties ==&#xd;&#xa;&lt;name> - &lt;default value> - &lt;Description>&#xd;&#xa;Display Bind - Value - Value&#xd;&#xa;Display color - #42B4E6 - Background color of display&#xd;&#xa;Text color - #FFFFFF - color of digits&#xd;&#xa;Units - gal - unit text&#xd;&#xa;Decimal places - 1"/>
+    <Rectangle Fill="#CCCCCC" Height="30.0" Left="10.0" Opacity="1.0"
+        RadiusX="3" RadiusY="3" Stroke="#626469" StrokeDashArray="0.0"
+        StrokeWidth="1.0" Top="10.0" Width="80.0"/>
+    <Rectangle Fill="#CCCCCC" Height="30.0" Left="10.0" Opacity="1.0"
+        RadiusX="3" RadiusY="3" Stroke="#626469" StrokeDashArray="0.0"
+        StrokeWidth="1.0" Top="10.0" Width="80.0">
+        <LinearGradient EndPoint="0,.0" SpreadMethod="Pad" StartPoint=".25,1">
+            <GradientStop Color="#30000000" Offset="0"/>
+            <GradientStop Color="#4FFFFFFF" Offset=".5"/>
+            <GradientStop Color="#01FFFFFF" Offset="1"/>
+        </LinearGradient>
+    </Rectangle>
+    <Rectangle Fill="#42B4E6" Height="20.0" Left="15.0" Opacity="1.0"
+        RadiusX="2" RadiusY="2" Stroke="#42B4E6" StrokeDashArray="0.0"
+        StrokeWidth="1.0" Top="15.0" Width="70.0">
+        <Expose ExposedAttribute="Fill" Name="Display Color"/>
+        <Expose ExposedAttribute="Stroke" Name="Display Color"/>
+    </Rectangle>
+    <Text FontFamily="Arial" FontSize="15.0" FontStyle="Normal"
+        FontWeight="Normal" HorizontalAlign="Right"
+        Left="64.536998748779" Name="Display" Opacity="1.0"
+        Stroke="#FFFFFF" TextDecoration="None" Top="17.0" VerticalAlign="Top">
+        <Expose ExposedAttribute="Stroke" Name="Text Color"/>
+    </Text>
+    <Text FontFamily="Arial" FontSize="12" FontStyle="Normal"
+        FontWeight="Normal" HorizontalAlign="Left" Left="65.0"
+        Name="Units" Opacity="1.0" Stroke="#FFFFFF"
+        TextDecoration="None" Top="20.0"
+            VerticalAlign="Top"><![CDATA[gal]]><Expose
+            ExposedAttribute="Content" Name="Units"/>
+        <Expose ExposedAttribute="Stroke" Name="Text Color"/>
+    </Text>
+    <Polygon Fill="#FFFFFF" Opacity="1.0"
+        Points="84.5,15.5 82.0,18.0 18.0,18.0 15.5,15.5" Stroke="None"
+        StrokeDashArray="0.0" StrokeWidth="1.0">
+        <LinearGradient EndPoint="0,1">
+            <GradientStop Color="#50000000" Offset="0"/>
+            <GradientStop Color="None" Offset="1"/>
+        </LinearGradient>
+    </Polygon>
+    <Polygon Fill="#FFFFFF" Opacity="1.0"
+        Points="84.5,34.5 82.0,32.0 18.0,32.0 15.5,34.5" Stroke="None"
+        StrokeDashArray="0.0" StrokeWidth="1.0">
+        <LinearGradient EndPoint="0,0" StartPoint="0.0,1">
+            <GradientStop Color="#50000000" Offset="0"/>
+            <GradientStop Color="None" Offset="1"/>
+        </LinearGradient>
+    </Polygon>
+    <Polygon Fill="#FFFFFF" Opacity="1.0"
+        Points="18.0,18.0 18.0,32.0 15.5,34.5 15.5,15.5" Stroke="None"
+        StrokeDashArray="0.0" StrokeWidth="1.0">
+        <LinearGradient EndPoint="1,0" StartPoint="0,0">
+            <GradientStop Color="#50000000" Offset="0"/>
+            <GradientStop Color="None" Offset="1"/>
+        </LinearGradient>
+    </Polygon>
+    <Polygon Fill="#FFFFFF" Opacity="1.0"
+        Points="82.0,18.0 82.0,32.0 84.5,34.5 84.5,15.5" Stroke="None"
+        StrokeDashArray="0.0" StrokeWidth="1.0">
+        <LinearGradient EndPoint="0,0" StartPoint="1,0">
+            <GradientStop Color="#50000000" Offset="0"/>
+            <GradientStop Color="None" Offset="1"/>
+        </LinearGradient>
+    </Polygon>
+    <Rectangle Fill="None" Height="20.0" Left="15.0" Opacity="1.0"
+        RadiusX="2" RadiusY="2" Stroke="#90000000" StrokeDashArray="0.0"
+        StrokeWidth="1.0" Top="15.0" Width="70.0"/>
+    <Bind Decimals="1" Name="Value">
+        <Script OnDocumentLoad="onLoad" OnSignalChange="onChange"><![CDATA[var comp;
+var decs;
+
+function onLoad(evt){
+	comp = evt.getCurrentTarget().getParentNode();
+	decs = evt.getCurrentTarget().getAttribute("Decimals");
+}
+
+function onChange(evt){
+	val = parseFloat(evt.getValue());
+	comp.getChildByName("Display").setAttribute("Content", getDisplayText(val));
+}
+
+function getDisplayText(value){
+		try{		
+			var str = "...";
+			if(!isNaN(value) && value != Infinity){
+				str = new Number(value).toFixed(decs);
+				//str += " " + units;
+			}
+			return str;
+		}catch(ex){
+			return "...";
+		}
+	}]]></Script>
+        <Expose ExposedAttribute="Decimals" Name="Decimal Places"/>
+        <Expose ExposedAttribute="Name" Name="Display Bind"/>
+    </Bind>
+</Component>

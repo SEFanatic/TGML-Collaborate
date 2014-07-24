@@ -1,0 +1,117 @@
+<?xml version="1.0"?>
+<Component ComponentCounter="5" ContentHeight="220" ContentWidth="125"
+    GridSize="10" Height="220.0" Left="8.0"
+    Name="Electric Calorifier Vertical Secondary Return Right"
+    Top="10.0" Width="125.0">
+    <Metadata Name="Name" Value="Electric Calorifier Vertical Secondary Return Right"/>
+    <Metadata Name="Description" Value=""/>
+    <Rectangle Fill="#CCCCCC" Height="20.0" Left="25.0" Opacity="1.0"
+        RadiusX="0.0" RadiusY="0.0" Stroke="#404040"
+        StrokeDashArray="0.0" StrokeWidth="1.0" Top="190.0" Width="60.0"/>
+    <Curve Closed="True" Fill="#DDDDDD" Opacity="1.0"
+        Points="95.0,33.0 95.0,13.0 15.0,13.0 15.0,33.0 15.0,73.0 15.0,163.0 15.0,183.0 15.0,203.0 95.0,203.0 95.0,183.0"
+        Stroke="#404040" StrokeDashArray="0.0" StrokeWidth="1.0">
+        <Expose ExposedAttribute="Fill" Name="Base Color"/>
+    </Curve>
+    <Curve Fill="#CCCCCC" Opacity="1.0"
+        Points="50.0,10.0 50.0,13.0 50.0,15.0 50.0,18.0 52.0,21.0 58.0,21.0 60.0,18.0 60.0,16.0 60.0,13.0 60.0,10.0"
+        Stroke="#404040" StrokeDashArray="0.0" StrokeWidth="1.0"/>
+    <Rectangle Fill="#DDDDDD" Height="2.0" Left="48.0" Opacity="1.0"
+        RadiusX="0.0" RadiusY="0.0" Stroke="#404040"
+        StrokeDashArray="0.0" StrokeWidth="1.0" Top="10.0" Width="14.0"/>
+    <Rectangle Fill="#DDDDDD" Height="2.0" Left="48.0" Opacity="1.0"
+        RadiusX="0.0" RadiusY="0.0" Stroke="#404040"
+        StrokeDashArray="0.0" StrokeWidth="1.0" Top="12.0" Width="14.0"/>
+    <Ellipse Fill="#DDDDDD" Height="46.0" Left="30.0" Opacity="1.0"
+        Stroke="#404040" StrokeDashArray="0.0" StrokeWidth="1.0"
+        Top="119.0" Width="46.0">
+        <Expose ExposedAttribute="Fill" Name="Base Color"/>
+    </Ellipse>
+    <Group>
+        <Ellipse Fill="#CCCCCC" Height="4.81904787336076"
+            Left="50.590473134177" Opacity="1.0" Stroke="#404040"
+            StrokeDashArray="0.0" StrokeWidth="1.0"
+            Top="123.928569197655" Width="4.81904787336077"/>
+        <Ellipse Fill="#CCCCCC" Height="4.81904787336077"
+            Left="34.545235741138" Opacity="1.0" Stroke="#404040"
+            StrokeDashArray="0.0" StrokeWidth="1.0"
+            Top="139.59047243595" Width="4.81904787336077"/>
+        <Ellipse Fill="#CCCCCC" Height="4.81904787336076"
+            Left="42.759521710872" Opacity="1.0" Stroke="#404040"
+            StrokeDashArray="0.0" StrokeWidth="1.0"
+            Top="126.33809078421" Width="4.81904787336077"/>
+        <Ellipse Fill="#CCCCCC" Height="4.81904787336077"
+            Left="36.735710498265" Opacity="1.0" Stroke="#404040"
+            StrokeDashArray="0.0" StrokeWidth="1.0"
+            Top="131.75951964174" Width="4.81904787336077"/>
+        <Ellipse Fill="#CCCCCC" Height="4.81904787336076"
+            Left="58.421425928388" Opacity="1.0" Stroke="#404040"
+            StrokeDashArray="0.0" StrokeWidth="1.0"
+            Top="126.33809078421" Width="4.81904787336083"/>
+        <Ellipse Fill="#CCCCCC" Height="4.81904787336077"
+            Left="64.445235770089" Opacity="1.0" Stroke="#404040"
+            StrokeDashArray="0.0" StrokeWidth="1.0"
+            Top="131.75951964174" Width="4.81904787336077"/>
+        <Ellipse Fill="#CCCCCC" Height="4.81904787336077"
+            Left="66.635712093966" Opacity="1.0" Stroke="#404040"
+            StrokeDashArray="0.0" StrokeWidth="1.0"
+            Top="139.59047243595" Width="4.81904787336077"/>
+        <Ellipse Fill="#CCCCCC" Height="4.81904787336077"
+            Left="51.192854118347" Opacity="1.0" Stroke="#404040"
+            StrokeDashArray="0.0" StrokeWidth="1.0"
+            Top="155.252378024374" Width="4.81904787336077"/>
+        <Ellipse Fill="#CCCCCC" Height="4.81904787336066"
+            Left="43.361901324136" Opacity="1.0" Stroke="#404040"
+            StrokeDashArray="0.0" StrokeWidth="1.0"
+            Top="152.842854087693" Width="4.81904787336077"/>
+        <Ellipse Fill="#CCCCCC" Height="4.81904787336077"
+            Left="37.338091482435" Opacity="1.0" Stroke="#404040"
+            StrokeDashArray="0.0" StrokeWidth="1.0"
+            Top="147.421425230162" Width="4.81904787336077"/>
+        <Ellipse Fill="#CCCCCC" Height="4.81904787336066"
+            Left="59.023806912557" Opacity="1.0" Stroke="#404040"
+            StrokeDashArray="0.0" StrokeWidth="1.0"
+            Top="152.842854087693" Width="4.81904787336077"/>
+        <Ellipse Fill="#CCCCCC" Height="4.81904787336077"
+            Left="65.047616754259" Opacity="1.0" Stroke="#404040"
+            StrokeDashArray="0.0" StrokeWidth="1.0"
+            Top="147.421425230162" Width="4.81904787336077"/>
+    </Group>
+    <Rectangle Fill="#DDDDDD" Height="32.0" Left="95.0" Opacity="1.0"
+        RadiusX="0.0" RadiusY="0.0" Stroke="#404040"
+        StrokeDashArray="0.0" StrokeWidth="1.0" Top="144.0" Width="3.0"/>
+    <Rectangle Fill="#DDDDDD" Height="20.0" Left="98.0"
+        Name="aaaaaaaaaaa" Opacity="1.0" RadiusX="0.0" RadiusY="0.0"
+        Stroke="#404040" StrokeDashArray="0.0" StrokeWidth="1.0"
+        Top="151.0" Width="15.0"/>
+    <Polyline Fill="#DDDDDD" Opacity="1.0"
+        Points="100.066345214844,156.040802001953 100.0,148.0 111.0,148.0 111.0,156.0"
+        Stroke="#404040" StrokeDashArray="0.0" StrokeWidth="1.0"/>
+    <Path Fill="#DDDDDD"
+        PathData="M98.0,146.0 L100.5,146.0 100.5,149.0 98.0,149.0 z M98.0,151.0 L100.5,151.0 100.5,154.0 98.0,154.0 z M98.0,156.0 L100.5,156.0 100.5,159.0 98.0,159.0 z M98.0,161.0 L100.5,161.0 100.5,164.0 98.0,164.0 z M98.0,166.0 L100.5,166.0 100.5,169.0 98.0,169.0 z M98.0,171.0 L100.5,171.0 100.5,174.0 98.0,174.0 z"
+        Stroke="#404040" StrokeDashArray="0.0" StrokeWidth="1.0"/>
+    <Rectangle Fill="#DDDDDD" Height="43.0" Left="95.0" Opacity="1.0"
+        RadiusX="0.0" RadiusY="0.0" Stroke="#404040"
+        StrokeDashArray="0.0" StrokeWidth="1.0" Top="55.0" Width="10.0"/>
+    <Curve Fill="#707070" Opacity="1.0"
+        Points="104.0,148.0 104.0,145.0 99.0,145.0 99.0,136.0 99.0,134.0 99.0,101.0 99.0,98.0 101.0,98.0 101.0,98.0 102.0,98.0 102.0,101.0 102.0,135.0 102.0,137.0 102.0,144.0 107.0,145.0 107.0,148.0"
+        Stroke="#404040" StrokeDashArray="0.0" StrokeWidth="1.0"/>
+    <Curve Fill="#CCCCCC" Opacity="1.0"
+        Points="8.0,160.0 12.0,160.0 11.0,160.0 15.0,160.0 17.356994628906,162.357022603955 17.356994628906,167.642977396045 15.0,170.0 11.0,170.0 11.0,170.0 8.0,170.0"
+        Stroke="#404040" StrokeDashArray="0.0" StrokeWidth="1.0"/>
+    <Rectangle Fill="#DDDDDD" Height="14.0" Left="10.0" Opacity="1.0"
+        RadiusX="0.0" RadiusY="0.0" Stroke="#404040"
+        StrokeDashArray="0.0" StrokeWidth="1.0" Top="158.0" Width="2.0"/>
+    <Rectangle Fill="#DDDDDD" Height="14.0" Left="8.0" Opacity="1.0"
+        RadiusX="0.0" RadiusY="0.0" Stroke="#404040"
+        StrokeDashArray="0.0" StrokeWidth="1.0" Top="158.0" Width="2.0"/>
+    <Curve Fill="#CCCCCC" Opacity="1.0"
+        Points="101.356994628906,110.0 97.356994628906,110.0 98.356994628906,110.0 94.356994628906,110.0 92.0,112.357022603955 92.0,117.642977396045 94.356994628906,120.0 98.356994628906,120.0 98.356994628906,120.0 101.356994628906,120.0"
+        Stroke="#404040" StrokeDashArray="0.0" StrokeWidth="1.0"/>
+    <Rectangle Fill="#DDDDDD" Height="14.0" Left="97.356994628906"
+        Opacity="1.0" RadiusX="0.0" RadiusY="0.0" Stroke="#404040"
+        StrokeDashArray="0.0" StrokeWidth="1.0" Top="108.0" Width="2.0"/>
+    <Rectangle Fill="#DDDDDD" Height="14.0" Left="99.356994628906"
+        Opacity="1.0" RadiusX="0.0" RadiusY="0.0" Stroke="#404040"
+        StrokeDashArray="0.0" StrokeWidth="1.0" Top="108.0" Width="2.0"/>
+</Component>

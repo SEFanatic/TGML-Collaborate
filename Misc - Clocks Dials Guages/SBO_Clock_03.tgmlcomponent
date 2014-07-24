@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<Component Clip="False" ContentHeight="70.0" ContentWidth="70.0"
+    Height="70.0" Left="450.0" Name="SBO_Clock_03" Top="470.0" Width="70.0">
+    <Ellipse Fill="#FFFFFF" Height="70.0" Left="0.0" Opacity="1.0"
+        Stroke="#808080" StrokeDashArray="0.0" StrokeWidth="3.0"
+        Top="0.0" Width="70.0">
+        <Expose ExposedAttribute="Stroke" Name="ClockLineColor"/>
+        <Expose ExposedAttribute="Fill" Name="ClockFillColor"/>
+    </Ellipse>
+    <Line Name="Second" Opacity="1.0" Stroke="#808080"
+        StrokeDashArray="0.0" StrokeWidth="1.0" X1="35.0" X2="35.0"
+        Y1="35.0" Y2="5.0">
+        <Expose ExposedAttribute="Stroke" Name="ClockLineColor"/>
+        <Expose ExposedAttribute="Visibility" Name="ShowSeconds"/>
+        <Rotate Center="0.5,1.0">
+            <Bind Attribute="Angle" Name="DateTime" PreventDefault="True">
+                <ConvertCustom><![CDATA[function convert(value) {
+	var ss = value.getSeconds();
+	return (ss * 360 / 60);
+}
+]]></ConvertCustom>
+                <Expose ExposedAttribute="Name" Name="BindName"/>
+            </Bind>
+        </Rotate>
+    </Line>
+    <Line Name="Minute" Opacity="1.0" Stroke="#808080"
+        StrokeDashArray="0.0" StrokeWidth="4.0" X1="35.0" X2="35.0"
+        Y1="35.0" Y2="10.0">
+        <Expose ExposedAttribute="Stroke" Name="ClockLineColor"/>
+        <Rotate Center="0.5,1.0">
+            <Bind Attribute="Angle" Name="DateTime" PreventDefault="True">
+                <ConvertCustom><![CDATA[function convert(value) {
+	var sm = value.getMinutes() * 60 + value.getSeconds();
+	return (sm * 360 / (60 * 60));
+}
+]]></ConvertCustom>
+                <Expose ExposedAttribute="Name" Name="BindName"/>
+            </Bind>
+        </Rotate>
+    </Line>
+    <Line Name="Hour" Opacity="1.0" Stroke="#808080"
+        StrokeDashArray="0.0" StrokeWidth="5.0" X1="35.0" X2="35.0"
+        Y1="35.0" Y2="20.0">
+        <Expose ExposedAttribute="Stroke" Name="ClockLineColor"/>
+        <Rotate Center="0.5,1.0">
+            <Bind Attribute="Angle" Name="DateTime" PreventDefault="True">
+                <ConvertCustom><![CDATA[function convert(value) {
+	var sh = (value.getHours() * 3600 + value.getMinutes() * 60 + value.getSeconds());
+	// alert(sh);
+	
+	return (sh * (2 * 360) / (24 * 60 * 60));
+}
+]]></ConvertCustom>
+                <Expose ExposedAttribute="Name" Name="BindName"/>
+            </Bind>
+        </Rotate>
+    </Line>
+    <Metadata Name="Name" Value="SBO_Clock_03"/>
+    <Metadata Name="Description" Value="SBO Clock 03&#xd;&#xa;&#xd;&#xa;Used for showing the time and can be bound to e.g. DateTime of a server or any &quot;DateTime&quot; property e.g. for next event for a schedule.&#xd;&#xa;&#xd;&#xa;== Exposed Properties ==&#xd;&#xa;ClockLineColor: Stroke color of circle. Default: #808080&#xd;&#xa;ClockFillColor: Fill color of circle. Default: #FFFFFF&#xd;&#xa;ShowSeconds: Property to have the seconds hand of the clock visible/hidden. Default: Visbible.&#xd;&#xa;BindName: The name of the binding."/>
+</Component>

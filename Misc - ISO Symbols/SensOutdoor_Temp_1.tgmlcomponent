@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<Component Clip="False" ContentHeight="70.0" ContentWidth="50.0"
+    Fill="#FFFFFF" Height="70.0" Left="-0.5" Name="SensOutdoor_Temp_1"
+    Stroke="#000000" Top="1.85" Width="50.0">
+    <Metadata Name="Name" Value="SensOutdoor_Temp_1"/>
+    <Metadata Name="Description" Value="TempSensOutdoor1"/>
+    <Line StrokeWidth="1.0" X1="4.5" X2="29.5" Y1="35.0" Y2="35.0"/>
+    <Ellipse Height="20.0" Left="30.0" Top="25.0" Width="20.0"/>
+    <Ellipse Height="4.0" Left="0.0" Top="33.0" Width="4.0"/>
+    <Group>
+        <Line Stroke="#000000" StrokeDashArray="0.0" StrokeWidth="1.0"
+            X1="4.59649133682251" X2="15.3452272415161"
+            Y1="2.40350723266602" Y2="13.1526927947998"/>
+        <Line Stroke="#000000" StrokeDashArray="0.0" StrokeWidth="1.0"
+            X1="4.59649133682251" X2="15.3452272415161"
+            Y1="13.1526927947998" Y2="23.9014701843262"/>
+        <Line Stroke="#000000" StrokeDashArray="0.0" StrokeWidth="1.0"
+            X1="4.59649133682251" X2="15.3452272415161"
+            Y1="23.9014701843262" Y2="34.6502838134766"/>
+        <Line Stroke="#000000" StrokeDashArray="0.0" StrokeWidth="1.0"
+            X1="4.59649133682251" X2="15.3452272415161"
+            Y1="34.6502838134766" Y2="45.3990631103516"/>
+        <Line Stroke="#000000" StrokeDashArray="0.0" StrokeWidth="1.0"
+            X1="4.59649133682251" X2="15.3452272415161"
+            Y1="45.3990631103516" Y2="56.1478385925293"/>
+        <Line Stroke="#000000" StrokeDashArray="0.0" StrokeWidth="1.0"
+            X1="4.59649133682251" X2="15.3452272415161"
+            Y1="56.1478385925293" Y2="66.8966522216797"/>
+        <Line Stroke="#000000" StrokeDashArray="0.0" StrokeWidth="1.0"
+            X1="4.59649133682251" X2="4.59649133682251"
+            Y1="2.40350723266602" Y2="56.1478385925293"/>
+    </Group>
+    <Path Fill="#000000"
+        PathData="M39.40838623046875,39.294921875 L39.40838623046875,31.71875 36.493709564208984,31.71875 36.493709564208984,30.705076217651367 43.50628662109375,30.705076217651367 43.50628662109375,31.71875 40.57952880859375,31.71875 40.57952880859375,39.294921875 z"
+        Stroke="None" StrokeDashArray="0.0" StrokeWidth="1.0"/>
+</Component>

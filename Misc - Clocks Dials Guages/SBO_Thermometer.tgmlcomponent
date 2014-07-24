@@ -1,0 +1,226 @@
+<?xml version="1.0"?>
+<Component Clip="False" ContentHeight="100.0" ContentWidth="140.0"
+    Height="100.0" Left="310.0" Name="SBO_Thermometer" Stroke="#A2C73B"
+    Top="240.0" Width="140.0">
+    <Group>
+        <Group>
+            <Rectangle Fill="#FFFFFF" Height="63.42989313752821"
+                Left="43.231388092041016" Opacity="1.0" RadiusX="0.0"
+                RadiusY="0.0" Stroke="None" StrokeDashArray="0.0"
+                StrokeWidth="3.0" Top="12.538111332237605" Width="20.0">
+                <Expose ExposedAttribute="Fill" Name="ThermometerColor"/>
+            </Rectangle>
+            <Arc Center="53.23144111037254,13.809346675872803"
+                Fill="#FFFFFF" Opacity="1.0" RadiusX="10.0"
+                RadiusY="10.0" StartAngle="180.0" Stroke="None"
+                StrokeDashArray="0.0" StrokeWidth="1.0" SweepAngle="180.0">
+                <Expose ExposedAttribute="Fill" Name="ThermometerColor"/>
+            </Arc>
+            <Arc Center="53.419931609284845,84.96203539982733"
+                Fill="#FFFFFF" Opacity="1.0"
+                RadiusX="14.340249001979828"
+                RadiusY="14.357996978651187"
+                StartAngle="225.03543366480343" Stroke="None"
+                StrokeDashArray="0.0" StrokeWidth="1.0" SweepAngle="-270.0708673296069">
+                <Expose ExposedAttribute="Fill" Name="ThermometerColor"/>
+            </Arc>
+            <Line Opacity="1.0" Stroke="None" StrokeDashArray="0.0"
+                StrokeWidth="1.0" X1="43.2314248085022"
+                X2="43.2314248085022" Y1="13.809346675872803" Y2="74.3093466758728">
+                <Expose ExposedAttribute="Fill" Name="ThermometerColor"/>
+            </Line>
+            <Line Opacity="1.0" Stroke="None" StrokeDashArray="0.0"
+                StrokeWidth="1.0" X1="63.2314248085022"
+                X2="63.2314248085022" Y1="13.809346675872803" Y2="74.3093466758728">
+                <Expose ExposedAttribute="Fill" Name="ThermometerColor"/>
+            </Line>
+        </Group>
+        <Path Fill="None"
+            PathData="M53.44542441711426,3.1092185 C58.883424417114256,3.2262185 63.231426217114254,7.6682187 63.231426217114254,13.1072189 M43.27942441711426,74.10722 C37.679424417114255,79.71422 37.679424417114255,88.80522 43.27942441711426,94.41222 48.87942441711426,100.02022 57.959424417114256,100.02022 63.55942621711426,94.41222 69.16042621711426,88.80522 69.16042621711426,79.71422 63.55942621711426,74.10722 63.55942621711426,74.10722 63.55942621711426,74.10722 63.55942621711426,74.10722 M43.231424417114255,13.1072189 L43.231424417114255,73.60722 M63.231426217114254,13.1072189 L63.231426217114254,73.60722 M53.44542441711426,3.1092185 C58.883424417114256,3.2262185 63.231426217114254,7.6682187 63.231426217114254,13.1072189 M43.27942441711426,74.10722 C37.679424417114255,79.71422 37.679424417114255,88.80522 43.27942441711426,94.41222 48.87942441711426,100.02022 57.959424417114256,100.02022 63.55942621711426,94.41222 69.16042621711426,88.80522 69.16042621711426,79.71422 63.55942621711426,74.10722 M43.231424417114255,13.1072189 L43.231424417114255,73.60722 M63.231426217114254,13.1072189 L63.231426217114254,73.60722"
+            Stroke="#808080" StrokeDashArray="0.0" StrokeWidth="3.0">
+            <Expose ExposedAttribute="Stroke" Name="ThermometerScaleColor"/>
+        </Path>
+    </Group>
+    <Expose ExposedAttribute="Fill" Name="ThermometerColor"/>
+    <Expose ExposedAttribute="Stroke" Name="BarColor"/>
+    <Group Name="Scale" Visibility="Visible">
+        <Line Opacity="1.0" Stroke="#808080" StrokeDashArray="0.0"
+            StrokeWidth="1.0" X1="2.0" X2="2.0" Y1="16.0" Y2="76.0">
+            <Expose ExposedAttribute="Stroke" Name="ThermometerScaleColor"/>
+        </Line>
+        <Line Name="Min" Stroke="#808080" StrokeWidth="1.0"
+            Visibility="Visible" X1="3.0" X2="18.0" Y1="76.0" Y2="76.0">
+            <Expose ExposedAttribute="Stroke" Name="ThermometerScaleColor"/>
+        </Line>
+        <Line Name="Mid" Stroke="#808080" StrokeWidth="1.0" X1="3.0"
+            X2="13.0" Y1="46.0" Y2="46.0">
+            <Expose ExposedAttribute="Stroke" Name="ThermometerScaleColor"/>
+        </Line>
+        <Line Name="Max" Stroke="#808080" StrokeWidth="1.0"
+            Visibility="Visible" X1="3.0" X2="18.0" Y1="16.0" Y2="16.0">
+            <Expose ExposedAttribute="Stroke" Name="ThermometerScaleColor"/>
+        </Line>
+        <Text Fill="None" FontFamily="Arial" FontSize="10.0"
+            FontStyle="Normal" FontWeight="Normal"
+            HorizontalAlign="Center" Left="29.0" Name="MinText"
+            Stroke="#808080" TextDecoration="None" Top="75.0"
+                VerticalAlign="Middle"><![CDATA[-50]]><Expose
+                ExposedAttribute="Content" Name="Min"/>
+            <Expose ExposedAttribute="Stroke" Name="ThermometerScaleColor"/>
+        </Text>
+        <Text Fill="None" FontFamily="Arial" FontSize="10.0"
+            FontStyle="Normal" FontWeight="Normal"
+            HorizontalAlign="Center" Left="29.0" Name="MaxText"
+            Stroke="#808080" TextDecoration="None" Top="16.0" VerticalAlign="Middle">
+            <Expose ExposedAttribute="Content"
+                Name="Max"/><![CDATA[50]]><Expose
+                ExposedAttribute="Stroke" Name="ThermometerScaleColor"/>
+        </Text>
+    </Group>
+    <Rectangle Fill="#FFFFFF" Height="20.0" Left="70.0" Name="Display"
+        Opacity="1.0" RadiusX="8.0" RadiusY="8.0" Stroke="#808080"
+        StrokeWidth="1.0" Top="36.0" Width="67.24999708631924">
+        <Expose ExposedAttribute="Stroke" Name="ThermometerScaleColor"/>
+    </Rectangle>
+    <Rectangle Fill="None" Height="20.0" Left="70.0" Name="Status"
+        Opacity="1.0" RadiusX="8.0" RadiusY="8.0" Stroke="None"
+        StrokeWidth="3.0" Top="36.0" Visibility="Visible" Width="67.24999708631924">
+        <Bind Attribute="Stroke" Name="Value" PreventDefault="True">
+            <Expose ExposedAttribute="Name" Name="BindName"/>
+            <ConvertStatus Error="#C00000" Forced="#FFBF00" Stored="#1E90FF"/>
+        </Bind>
+    </Rectangle>
+    <Text Fill="None" FontFamily="Arial" FontSize="12.0"
+        FontWeight="Normal" HorizontalAlign="Right"
+        Left="132.9379997253418" Name="ValueText" Stroke="#404040"
+            Top="39.29699993133545"><![CDATA[value]]><Bind
+            Attribute="FontStyle" Format="Presentation" Name="Value" PreventDefault="True">
+            <Expose ExposedAttribute="Name" Name="BindName"/>
+            <ConvertStatus Error="Normal" Forced="Italic" Stored="Italic">
+                <Expose ExposedAttribute="Error" Name="ErrorFontStyle"/>
+                <Expose ExposedAttribute="Stored" Name="StoredFontStyle"/>
+                <Expose ExposedAttribute="Forced" Name="ForcedFontStyle"/>
+            </ConvertStatus>
+        </Bind>
+        <Expose ExposedAttribute="Stroke" Name="ThermometerValueColor"/>
+        <Bind Attribute="Content" Format="Presentation" Name="Value" PreventDefault="True"/>
+        <Script Decimals="2" Name="NumericPresentationScript"
+            OnSignalChange="onSignalChange" Prefix=""
+            PreventDefault="True"
+                Suffix=""><![CDATA[/**
+ * Using singleton pattern for decimals to avoid onDocumentLoad
+ * initialization and evaluating on every change.
+ *
+ * Script global variable _decimals
+ */
+var _nbr_decimals = null;
+function getNumberOfDecimals(evt) {
+	if (_nbr_decimals == null) {
+		// read the number of decimals from the script element attribute
+		var nbr_decimals = parseInt(getScriptAttribute(evt, "Decimals", ""));
+		// default to 2 decimals if the value was not a number
+		_nbr_decimals = !isNaN(nbr_decimals) ? nbr_decimals : 2;
+	}
+	return _nbr_decimals;
+}
+var _prefix = null;
+function getPrefix(evt) {
+	if (_prefix == null) {
+		var prefix = getScriptAttribute(evt, "Prefix", null);
+		_prefix = prefix != null ? (prefix + " ") : "";
+	}
+	return _prefix;
+}
+var _suffix = null;
+function getSuffix(evt) {
+	if (_suffix == null) {
+		var suffix = getScriptAttribute(evt, "Suffix", null);
+		_suffix = suffix != null ? (" " + suffix) : "";
+	}
+	return _suffix;
+}
+var _unit = null;
+function getUnit(evt) {
+	if (_unit == null) {
+		var show_unit = getScriptAttribute(evt, "PreventDefault", "False") == "True";
+		_unit = show_unit ? (" " + evt.getUnit()) : "";
+	}
+	return _unit;
+}
+
+function getScriptAttribute(evt, attribute, default_value) {
+	var scriptElement = evt.getCurrentTarget().getChild("NumericPresentationScript");
+	var value = scriptElement.getAttribute(attribute);
+	return (value != null || value !== "") ? value : default_value;
+}
+
+function onSignalChange(evt) {
+	// get the number of decimals
+	var nbr_decimals = getNumberOfDecimals(evt);
+	
+	// round the raw number and extract the decimals
+	var value = new Number(evt.getValue());
+	if (isNaN(value)) return;
+	var decimals = value.toFixed(nbr_decimals).toString().match(/[^\.]+$/)
+	
+	// replace the decimal part of the formated value
+	var new_value = new String(evt.getPresentationValue()).replace(/[\d]+$/, decimals);
+	
+	var prefix = getPrefix(evt);
+	var suffix = getSuffix(evt);
+	var unit = getUnit(evt);
+	
+	// set the contents of the parent Text- or TextBox-element
+	evt.getCurrentTarget().setAttribute("Content", prefix + new_value + unit + suffix);
+}]]><Expose
+                Description="The number of decimals to display"
+                ExposedAttribute="Decimals" Name="Decimals"/>
+            <Expose ExposedAttribute="Prefix" Name="Prefix"/>
+            <Expose ExposedAttribute="Suffix" Name="Suffix"/>
+            <Expose ExposedAttribute="PreventDefault" Name="Show Unit"/>
+        </Script>
+    </Text>
+    <Group Name="Bar">
+        <Ellipse Fill="#FFFFFF" Height="8.0" Left="49.41994857788086"
+            Name="Liquid" Opacity="1.0" StrokeDashArray="0.0"
+            StrokeWidth="6.0" Top="81.70094299316406" Width="8.0"/>
+        <Ellipse Fill="None" Height="16.0" Left="45.41994857788086"
+            Name="Bulb" Opacity="1.0" Stroke="None"
+            StrokeDashArray="0.0" StrokeWidth="1.0"
+            Top="77.70094299316406" Visibility="Visible" Width="16.0">
+            <RadialGradient Center="0.5,0.4" Focus="0.5,0.3">
+                <GradientStop Color="#CCFFFFFF" Offset="0"/>
+                <GradientStop Color="#33000000" Offset="1"/>
+            </RadialGradient>
+        </Ellipse>
+        <Line Name="Bar" Opacity="1.0" StrokeDashArray="0.0"
+            StrokeWidth="5.5" X1="53.41994857788086"
+            X2="53.41994857788086" Y1="17.0" Y2="78.0">
+            <Bind Attribute="Y1" Name="Value">
+                <Expose ExposedAttribute="Name" Name="BindName"/>
+                <ConvertValue AttributeValue="76" SignalLessThan="-50">
+                    <Expose ExposedAttribute="SignalLessThan" Name="Min"/>
+                </ConvertValue>
+                <ConvertRange AttributeMaxValue="17"
+                    AttributeMinValue="76" SignalMaxValue="50" SignalMinValue="-50">
+                    <Expose ExposedAttribute="SignalMinValue" Name="Min"/>
+                    <Expose ExposedAttribute="SignalMaxValue" Name="Max"/>
+                </ConvertRange>
+                <ConvertValue AttributeValue="17" SignalMoreThan="50">
+                    <Expose ExposedAttribute="SignalMoreThan" Name="Max"/>
+                </ConvertValue>
+            </Bind>
+        </Line>
+        <Path Fill="None" Name="Tube"
+            PathData="M49.41995,10.7009449 L57.41995,10.7009449 57.41995,81.70095 49.41995,81.70095 z M57.41995,10.7009449 C57.41995,12.909944 55.62895,14.700945 53.41995,14.700945 51.21095,14.700945 49.41995,12.909944 49.41995,10.7009449 49.41995,8.4919435 51.21095,6.7009441 53.41995,6.7009441 55.62895,6.7009441 57.41995,8.4919435 57.41995,10.7009449 z"
+            Stroke="None" StrokeDashArray="0.0" StrokeWidth="1.0">
+            <LinearGradient>
+                <GradientStop Color="#33000000" Offset="0"/>
+                <GradientStop Color="#B2FFFFFF" Offset="0.5"/>
+                <GradientStop Color="#19000000" Offset="1"/>
+            </LinearGradient>
+        </Path>
+    </Group>
+    <Metadata Name="Name" Value="SBO_Thermometer"/>
+    <Metadata Name="Description" Value="SBO Thermometer&#xd;&#xa;&#xd;&#xa;Used for showing a temperature from -50 to 50&#xd;&#xa;&#xd;&#xa;== Exposed Properties ==&#xd;&#xa;ThermometerColor: Fill color of thermometer. Default: #FFFFFF&#xd;&#xa;ThermometerScaleColor: Stroke color of thermometer. Default: #808080&#xd;&#xa;BarColor: Color of the value bar. Default: #A2C73B&#xd;&#xa;Min: Minimum value. Default: -50&#xd;&#xa;Max: Maximum value. Default: 50&#xd;&#xa;BindName: The name of the binding.&#xd;&#xa;ThermometerValueColor: Color of the text for the value. Default: #404040&#xd;&#xa;Decimals: Number of decimals. Default: 2&#xd;&#xa;ErrorFontStyle: Style (Normal or Italic) to indicate Error state. Default: Normal&#xd;&#xa;StoredFontStyle: Style (Normal or Italic) to indicate Error state Default: Italic&#xd;&#xa;ForcedFontStyle: (Normal or Italic) to indicate Error state.Default: Italic&#xd;&#xa;TextColor: The color of the text&#xd;&#xa;Prefix: Text that can preceed the value.&#xd;&#xa;Suffix: Text that can follow the value.&#xd;&#xa;Show Unit: Shows or hides the unit. True or False. Default: True"/>
+</Component>

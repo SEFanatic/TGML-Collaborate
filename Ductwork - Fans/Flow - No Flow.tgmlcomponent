@@ -1,0 +1,126 @@
+<?xml version="1.0"?>
+<Component Clip="False" Color="#F0080E" ComponentCounter="5"
+    ContentHeight="20.0" ContentWidth="70" Fill="#FFD100" GridSize="10"
+    Height="20.0" Left="130.0" Name="Flow - No Flow" OffText="No Flow"
+    OnText="Flow" OnValue="1,on, true" Stroke="#42B4E6" Top="230.0" Width="70.0">
+    <Metadata Name="Name" Value="Flow - No Flow"/>
+    <Metadata Name="Description" Value="== Bindings ==&#xd;&#xa;DigitalValue - Air flow value&#xd;&#xa;&#xd;&#xa;== Exposed Properties ==&#xd;&#xa;&lt;name> - &lt;default value> - &lt;Description>&#xd;&#xa;Flow Bind - DigitalValue&#xd;&#xa;On value - 1,on,true - Air Flow true (commer seperated if multiple)&#xd;&#xa;On Text - Flow - text displayed when bind is on&#xd;&#xa;Off Text - No Flow - Text displayed when bind is off&#xd;&#xa;On Color - #009530 - Border color of display when bind is on&#xd;&#xa;Error, Forced, Database Color - Outline color when point in error, forced or database condition"/>
+    <Expose ExposedAttribute="OnText" Name="On Text"/>
+    <Expose ExposedAttribute="OffText" Name="Off Text"/>
+    <Expose ExposedAttribute="OnValue" Name="On Value"/>
+    <Expose ExposedAttribute="Color" Name="Alarm Color"/>
+    <Expose ExposedAttribute="Fill" Name="Forced Color"/>
+    <Expose ExposedAttribute="Stroke" Name="Database Color"/>
+    <Rectangle Fill="None" Height="20.0" Left="0.0" Name="background"
+        RadiusX="5" RadiusY="5" Stroke="#626469" StrokeDashArray="0.0"
+        StrokeWidth="1.0" Top="0.0" Width="70">
+        <LinearGradient EndPoint="0,1">
+            <GradientStop Color="#FEFEFE" Offset="0"/>
+            <GradientStop Color="#DFE0E2" Offset="1.0"/>
+        </LinearGradient>
+    </Rectangle>
+    <TextBox Fill="None" FontFamily="Arial" FontSize="15.0"
+        FontStyle="Normal" FontWeight="Normal" Height="20.0"
+        HorizontalAlign="Center" Left="5.0" Name="Text" Stroke="#000000"
+        TextDecoration="None" Top="0.0" VerticalAlign="Middle" Width="60"><![CDATA[...]]></TextBox>
+    <Bind Attribute="" Color="#009530" Name="DigitalValue" PreventDefault="True">
+        <Expose ExposedAttribute="Color" Name="On Color"/>
+        <Expose ExposedAttribute="Name" Name="Bind Name"/>
+		<Expose ExposedAttribute="PreventDefault" Name="Prevent Default"/>
+        <Script OnDocumentLoad="onLoad" OnSignalChange="onChange"><![CDATA[var offColor;
+var comp;
+var onColor;
+var onText;
+var offText;
+var onValue;
+var rtnArray = new Array();
+var f;
+var d;
+var a;
+
+function onLoad(evt)
+{
+	comp=evt.getCurrentTarget().getParentNode();
+	offColor=comp.getChildByName("background").getAttribute("Stroke");
+	onColor=evt.getCurrentTarget().getAttribute("Color");
+	onText=comp.getAttribute("OnText");
+	offText=comp.getAttribute("OffText");
+	offValue=comp.getAttribute("OffValue");
+	onValue=buildArray(comp.getAttribute("OnValue").split(','));
+	f=comp.getAttribute("Fill");
+	d=comp.getAttribute("Stroke");
+	a=comp.getAttribute("Color");
+}
+
+function onChange(evt)
+{
+	var value = evt.getValue();
+	var status = parseInt(evt.getStatus());
+	var tempCol = "";
+	var outline = comp.getChildByName("background");
+	if (Bool(value)){
+	
+		comp.getChildByName("Text").setAttribute("Content", onText);
+		tempCol = onColor;
+	}
+	else{
+		comp.getChildByName("Text").setAttribute("Content", offText);
+		tempCol = offColor;
+	}
+	
+	
+	if (status == 2){
+		outline.setAttribute("Stroke", tempCol);
+		outline.setAttribute("StrokeWidth", "1");
+	}
+	else{
+		outline.setAttribute("Stroke", borderCol(status));
+		outline.setAttribute("StrokeWidth", "2");
+	}
+	
+}
+
+function borderCol(status){
+	if(status==3){
+		return f
+	}
+	else{
+		if(status==1){
+			return d
+		}
+		else{
+			return a
+		}
+	}
+}
+
+function Bool(val){
+	for (var i=0;i<onValue.length;i++){
+		if(String(val).toLowerCase() == String(onValue[i]).toLowerCase())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+function buildArray(Array){
+	for (var i=0;i<Array.length;i++){
+		if (Array[i].substring(0,1) == " "){
+			Array[i] = Array[i].substring(1, Array[i].length);
+		}
+		if (isNumber(Array[i]) || Array[i]=="true" || Array[i]=="false" ){
+			rtnArray[i] = Array[i]
+		}
+		else{
+			rtnArray[i] = "'" + Array[i] + "'";
+		}
+	}
+	return rtnArray;
+}
+
+function isNumber (o) {
+  return ! isNaN (o-0) && o != null;
+}]]></Script>
+    </Bind>
+</Component>

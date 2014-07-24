@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<Component Clip="False" ContentHeight="62" ContentWidth="62"
+    Fill="#FFFFFF" Height="62.0" Left="-0.5" Name="Fan, I"
+    Stroke="#000000" Top="-0.5" Width="62.0">
+    <Metadata Name="Name" Value="Fan, I"/>
+    <Metadata Name="Description" Value="Fan"/>
+    <Ellipse Height="62.0" Left="0.0" StrokeWidth="1.0" Top="0.0" Width="62.0"/>
+    <Line StrokeDashArray="0.0" StrokeWidth="1.0" X1="6.5" X2="60.0"
+        Y1="13.5" Y2="19.5"/>
+    <Line StrokeDashArray="0.0" StrokeWidth="1.0" X1="6.5" X2="60.0"
+        Y1="48.5" Y2="42.5"/>
+</Component>

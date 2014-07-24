@@ -1,0 +1,100 @@
+<?xml version="1.0"?>
+<Component ComponentCounter="3" ContentHeight="110" ContentWidth="80"
+    Height="110.0" Left="10.0" Name="Panel Filter Flow Right" Top="5.0" Width="80.0">
+    <Metadata Name="Name" Value="Panel Filter Flow Right"/>
+    <Metadata Name="Description" Value="== Bindings ==&#xd;&#xa;FilPan - Filter State&#xd;&#xa;&#xd;&#xa;== Exposed Properties ==&#xd;&#xa;&lt;name> - &lt;default value> - &lt;Description>&#xd;&#xa;Bind Name - FilPan - Filter state point&#xd;&#xa;Clean - 0 - Clean Value&#xd;&#xa;Dirty - 1 - Dirty Value&#xd;&#xa;Alarm Color - #F0080E - Border color when in dirty state&#xd;&#xa;DP Text - DP - Text displayed in DP box&#xd;&#xa;Error, Forced, Database Color - Outline color when point in error, forced or database condition"/>
+    <Rectangle Fill="#CCCCCC" Height="88.0" Left="30.0" Name="Body"
+        Opacity="1.0" RadiusX="5.0" RadiusY="5.0" Stroke="#404040"
+        StrokeDashArray="0.0" StrokeWidth="1.0" Top="21.0" Width="20.0">
+        <LinearGradient Attribute="Fill" EndPoint="1,0"
+            SpreadMethod="Pad" StartPoint="0.0,0.0">
+            <GradientStop Color="#EFEFEF" Offset="0.0"/>
+            <GradientStop Color="#A1CD53" Offset="1.0">
+                <Bind Attribute="Color" Name="FilPan">
+                    <Expose ExposedAttribute="Name" Name="BindName"/>
+                    <ConvertValue AttributeValue="#A1CD53" SignalLessOrEqualTo="0">
+                        <Expose ExposedAttribute="SignalLessOrEqualTo" Name="Clean = "/>
+                    </ConvertValue>
+                    <ConvertValue AttributeValue="#F0080E" SignalMoreOrEqualTo="1">
+                        <Expose ExposedAttribute="SignalMoreOrEqualTo" Name="Dirty ="/>
+                        <Expose ExposedAttribute="AttributeValue" Name="Alarm Color"/>
+                    </ConvertValue>
+                </Bind>
+            </GradientStop>
+        </LinearGradient>
+    </Rectangle>
+    <Line Stroke="#626469" StrokeDashArray="0.0" StrokeWidth="2.0"
+        X1="10.0" X2="10.0" Y1="21.4999991357327" Y2="50.0"/>
+    <Polyline Opacity="1.0"
+        Points="70.0,19.0 70.0,11.5 10.0,11.5 10.0,19.0"
+        Stroke="#626469" StrokeDashArray="0.0" StrokeWidth="2"/>
+    <Line Stroke="#626469" StrokeDashArray="0.0" StrokeWidth="2.0"
+        X1="70.0" X2="70.0" Y1="21.4999997913837" Y2="50.0"/>
+    <Path Fill="#626469"
+        PathData="M49.131,34.922 C48.913,35.3 44.647000000000006,33.247 39.604,30.335000100000002 34.561000000000007,27.423000000000002 30.650000000000006,24.756 30.867999999999995,24.378 31.086,24.0 35.352000000000004,26.054000000000002 40.394999999999996,28.965000000000003 45.438,31.877000100000004 49.349000000000004,34.544 49.131,34.922 z M49.131,34.367999999999995 C49.349000000000004,34.745999999999995 45.438,37.413 40.394999999999996,40.325 35.352000000000004,43.236000000000004 31.086,45.290000000000006 30.867999999999995,44.912000000000006 30.650000000000006,44.534000000000006 34.561000000000007,41.867000000000004 39.604,38.955 44.647000000000006,36.043000000000006 48.913,33.989000000000004 49.131,34.367999999999995 z M49.131,55.492000000000004 C48.913,55.870000000000005 44.647000000000006,53.816999999999993 39.604,50.905 34.561000000000007,47.992999999999995 30.650000000000006,45.325999999999993 30.867999999999995,44.947999999999993 31.086,44.569999999999993 35.352000000000004,46.623999999999995 40.394999999999996,49.535 45.438,52.447 49.349000000000004,55.114000000000004 49.131,55.492000000000004 z M49.131,54.938 C49.349000000000004,55.316 45.438,57.983000000000004 40.394999999999996,60.894999999999996 35.352000000000004,63.806 31.086,65.86 30.867999999999995,65.482 30.650000000000006,65.104 34.561000000000007,62.437 39.604,59.525000000000006 44.647000000000006,56.613 48.913,54.559 49.131,54.938 z M49.131,76.062 C48.913,76.44 44.647000000000006,74.387 39.604,71.475 34.561000000000007,68.563 30.650000000000006,65.896 30.867999999999995,65.518 31.086,65.14 35.352000000000004,67.194 40.394999999999996,70.105 45.438,73.017 49.349000000000004,75.684 49.131,76.062 z M49.131,75.508 C49.349000000000004,75.886 45.438,78.553 40.394999999999996,81.465 35.352000000000004,84.376 31.086,86.43 30.867999999999995,86.052 30.650000000000006,85.674 34.561000000000007,83.007 39.604,80.095 44.647000000000006,77.183 48.913,75.129 49.131,75.508 z M49.131,96.632 C48.913,97.009999999999991 44.647000000000006,94.957 39.604,92.045001000000013 34.561000000000007,89.13300000000001 30.650000000000006,86.466 30.867999999999995,86.088 31.086,85.71 35.352000000000004,87.764 40.394999999999996,90.675000000000011 45.438,93.586999999999989 49.349000000000004,96.254000999999988 49.131,96.632 z M49.131,96.078 C49.349000000000004,96.456000999999986 45.438,99.12299999999999 40.394999999999996,102.035 35.352000000000004,104.946 31.086,107.0 30.867999999999995,106.62200000000001 30.650000000000006,106.244 34.561000000000007,103.577 39.604,100.66499999999999 44.647000000000006,97.752999999999986 48.913,95.699000000000012 49.131,96.078 z"
+        Stroke="#626469" StrokeDashArray="0.0" StrokeWidth="1.0"/>
+    <Rectangle Fill="#009530" Height="15.0" Left="30.0"
+        Name="Background" RadiusX="2" RadiusY="2" Stroke="#404040"
+        StrokeDashArray="0.0" StrokeWidth="1.0" Top="5.0" Width="20.0"/>
+    <Text FontFamily="Arial" FontSize="10.0" FontStyle="Normal"
+        FontWeight="Normal" HorizontalAlign="Center" Left="40.0"
+        Name="Text" Opacity="1.0" Stroke="#FFFFFF" TextDecoration="None"
+        Top="6.914050102234" VerticalAlign="Top"><![CDATA[DP]]><Expose
+            ExposedAttribute="Content" Name="DP Text"/>
+    </Text>
+    <Bind Color="#F0080E" Fill="#FFD100" Name="FilPan" Stroke="#42B4E6">
+        <Expose ExposedAttribute="Color" Name="Error Color"/>
+        <Expose ExposedAttribute="Fill" Name="Forced Color"/>
+        <Expose ExposedAttribute="Stroke" Name="Database Color"/>
+        <Expose ExposedAttribute="Name" Name="Bind Name"/>
+        <Script OnDocumentLoad="onLoad" OnSignalChange="onChange"><![CDATA[var body;
+var HighLightCol="#404040";
+var originalBodyColor;
+
+function onLoad(evt)
+{
+  comp = evt.getCurrentTarget();
+  body = comp.getParentNode().getChildByName("Body");
+  originalBodyColor=body.getAttribute("Stroke");
+}
+
+function onChange(evt)
+{
+  status = parseInt(evt.getStatus());
+  
+  bgStroke = setColour(status);
+  if (bgStroke=="device"){
+  	body.setAttribute("Stroke", originalBodyColor);
+ 	body.setAttribute("StrokeWidth", "1");
+  }
+  else{
+	  body.setAttribute("Stroke", bgStroke);
+	  body.setAttribute("StrokeWidth", "2");
+  }
+}
+
+function setColour(status){
+var col;
+
+  if(status==2){//Value from Device
+  	return "device";
+  }
+  else{
+  		if(status==3){//Forced Value
+  			return comp.getAttribute("Fill");
+  		}
+  		else{
+  	 		if(status==1){//Database Value
+  	 		return comp.getAttribute("Stroke");
+  			}
+  			else{
+  				if(status==0){
+  					return comp.getAttribute("Color")
+  				}
+  			}
+  		}
+  }
+
+}]]></Script>
+    </Bind>
+</Component>

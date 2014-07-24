@@ -1,0 +1,363 @@
+<?xml version="1.0"?>
+<Component ComponentCounter="14" ContentHeight="220" ContentWidth="220"
+    GridSize="10" Height="220.0" Left="8.0"
+    Name="Steam Calorifier Vertical Secondary Return Left T2 Shaded"
+    Top="9.0" Width="220.0">
+    <Rectangle Fill="#CCCCCC" Height="10.0" Left="128.0" Opacity="1.0"
+        RadiusX="0.0" RadiusY="0.0" Stroke="#CCCCCC"
+        StrokeDashArray="0.0" StrokeWidth="1.0" Top="150.5" Width="61.4900039829732">
+        <Expose ExposedAttribute="Fill" Name="Pipe Color"/>
+        <Expose ExposedAttribute="Stroke" Name="Pipe Color"/>
+    </Rectangle>
+    <Rectangle Height="9.0" Left="128.0" Opacity="1.0" RadiusX="0.0"
+        RadiusY="0.0" Stroke="None" StrokeDashArray="0.0"
+        StrokeWidth="1.0" Top="151.0" Width="62.0">
+        <LinearGradient Attribute="Fill" EndPoint="0.0,1.0"
+            SpreadMethod="Pad" StartPoint="0.0,0.0">
+            <GradientStop Color="#50000000" Offset="0.0"/>
+            <GradientStop Color="#5FFFFFFF" Offset="0.5"/>
+            <GradientStop Color="#50000000" Offset="1"/>
+        </LinearGradient>
+    </Rectangle>
+    <Line Opacity="1.0" Stroke="#5F000000" StrokeDashArray="0.0"
+        StrokeWidth="1.0" X1="189.490001050968" X2="126.0" Y1="150.5" Y2="150.5"/>
+    <Line Opacity="1.0" Stroke="#5F000000" StrokeDashArray="0.0"
+        StrokeWidth="1.0" X1="128.0" X2="189.490002055057" Y1="160.5" Y2="160.5"/>
+    <Metadata Name="Name" Value="Steam Calorifier Vertical Secondary Return Left T2 Shaded"/>
+    <Metadata Name="Description" Value=""/>
+    <Rectangle Fill="#CCCCCC" Height="20.0" Left="25.0" Opacity="1.0"
+        RadiusX="0.0" RadiusY="0.0" Stroke="#404040"
+        StrokeDashArray="0.0" StrokeWidth="1.0" Top="189.0" Width="60.0"/>
+    <Curve Closed="True" Fill="#DDDDDD" Opacity="1.0"
+        Points="15.0,32.0 15.0,12.0 95.0,12.0 95.0,32.0 95.0,72.0 95.0,162.0 95.0,182.0 95.0,202.0 15.0,202.0 15.0,182.0"
+        Stroke="#404040" StrokeDashArray="0.0" StrokeWidth="1.0">
+        <Expose ExposedAttribute="Fill" Name="Base Color"/>
+    </Curve>
+    <Curve Closed="True" Fill="#DDDDDD" Opacity="1.0"
+        Points="15.0,32.0 15.0,12.0 95.0,12.0 95.0,32.0 95.0,72.0 95.0,162.0 95.0,182.0 95.0,202.0 15.0,202.0 15.0,182.0"
+        Stroke="#404040" StrokeDashArray="0.0" StrokeWidth="1.0">
+        <LinearGradient>
+            <GradientStop Color="#50000000" Offset="0"/>
+            <GradientStop Color="#50FFFFFF" Offset=".25"/>
+            <GradientStop Color="#50000000" Offset="1"/>
+        </LinearGradient>
+    </Curve>
+    <Rectangle Fill="#DDDDDD" Height="37.0" Left="95.0" Opacity="1.0"
+        RadiusX="0.0" RadiusY="0.0" Stroke="#404040"
+        StrokeDashArray="0.0" StrokeWidth="1.0" Top="147.0" Width="30.0">
+        <Expose ExposedAttribute="Fill" Name="Base Color"/>
+    </Rectangle>
+    <Rectangle Fill="#DDDDDD" Height="37.0" Left="95.0" Opacity="1.0"
+        RadiusX="0.0" RadiusY="0.0" Stroke="#404040"
+        StrokeDashArray="0.0" StrokeWidth="1.0" Top="147.0" Width="30.0">
+        <LinearGradient EndPoint="0,1">
+            <GradientStop Color="#50000000" Offset="0"/>
+            <GradientStop Color="#50FFFFFF" Offset=".25"/>
+            <GradientStop Color="#50000000" Offset="1"/>
+        </LinearGradient>
+    </Rectangle>
+    <Rectangle Fill="#DDDDDD" Height="47.0" Left="109.0" Opacity="1.0"
+        RadiusX="0.0" RadiusY="0.0" Stroke="#404040"
+        StrokeDashArray="0.0" StrokeWidth="1.0" Top="142.0" Width="3.0">
+        <Expose ExposedAttribute="Fill" Name="Base Color"/>
+    </Rectangle>
+    <Rectangle Fill="#DDDDDD" Height="47.0" Left="112.0" Opacity="1.0"
+        RadiusX="0.0" RadiusY="0.0" Stroke="#404040"
+        StrokeDashArray="0.0" StrokeWidth="1.0" Top="142.0" Width="3.0">
+        <Expose ExposedAttribute="Fill" Name="Base Color"/>
+    </Rectangle>
+    <Path Fill="#FFFFFF"
+        PathData="M109.0,142.0 L112.0,142.0 112.0,189.0 109.0,189.0 z M112.0,142.0 L115.0,142.0 115.0,189.0 112.0,189.0 z"
+        Stroke="#404040" StrokeDashArray="0.0" StrokeWidth="1.0">
+        <LinearGradient EndPoint="0,1">
+            <GradientStop Color="#50000000" Offset="0"/>
+            <GradientStop Color="#50FFFFFF" Offset=".25"/>
+            <GradientStop Color="#50000000" Offset="1"/>
+        </LinearGradient>
+    </Path>
+    <Path Fill="#DDDDDD"
+        PathData="M115.5,144.0 L117.5,144.0 117.5,147.0 115.5,147.0 M115.5,149.0 L117.5,149.0 117.5,152.0 115.5,152.0 M115.5,154.0 L117.5,154.0 117.5,157.0 115.5,157.0 M115.5,159.0 L117.5,159.0 117.5,162.0 115.5,162.0 M115.5,164.0 L117.5,164.0 117.5,167.0 115.5,167.0 M115.5,169.0 L117.5,169.0 117.5,172.0 115.5,172.0 M115.5,174.0 L117.5,174.0 117.5,177.0 115.5,177.0 M115.5,179.0 L117.5,179.0 117.5,182.0 115.5,182.0 M115.5,184.0 L117.5,184.0 117.5,187.0 115.5,187.0"
+        Stroke="#404040" StrokeDashArray="0.0" StrokeWidth="1.0"/>
+    <Path Fill="#DDDDDD"
+        PathData="M108.5,144.0 L106.5,144.0 106.5,147.0 108.5,147.0 M108.5,149.0 L106.5,149.0 106.5,152.0 108.5,152.0 M108.5,154.0 L106.5,154.0 106.5,157.0 108.5,157.0 M108.5,159.0 L106.5,159.0 106.5,162.0 108.5,162.0 M108.5,164.0 L106.5,164.0 106.5,167.0 108.5,167.0 M108.5,169.0 L106.5,169.0 106.5,172.0 108.5,172.0 M108.5,174.0 L106.5,174.0 106.5,177.0 108.5,177.0 M108.5,179.0 L106.5,179.0 106.5,182.0 108.5,182.0 M108.5,184.0 L106.5,184.0 106.5,187.0 108.5,187.0"
+        Stroke="#404040" StrokeDashArray="0.0" StrokeWidth="1.0"/>
+    <Ellipse Fill="#DDDDDD" Height="35.0" Left="37.5" Opacity="1.0"
+        Stroke="#404040" StrokeDashArray="0.0" StrokeWidth="1.0"
+        Top="117.5" Width="35.0">
+        <Expose ExposedAttribute="Fill" Name="Base Color"/>
+    </Ellipse>
+    <Path Fill="#50000000"
+        PathData="M53.0,122.0 C53.0,123.10501 53.8949991,124.0 55.0,124.0 56.104988,124.0 57.0,123.10501 57.0,122.0 57.0,120.895009 56.104988,120.0 55.0,120.0 53.8949991,120.0 53.0,120.895009 53.0,122.0 z M67.0,135.0 C67.0,136.10501 67.8949991,137.0 69.0,137.0 70.104988,137.0 71.0,136.10501 71.0,135.0 71.0,133.895 70.104988,133.0 69.0,133.0 67.8949991,133.0 67.0,133.895 67.0,135.0 z M59.5,124.0 C59.5,125.10501 60.3949991,126.0 61.5,126.0 62.604988,126.0 63.5,125.10501 63.5,124.0 63.5,122.895009 62.604988,122.0 61.5,122.0 60.3949991,122.0 59.5,122.895009 59.5,124.0 z M64.5,128.5 C64.5,129.60501 65.3949991,130.5 66.5,130.5 67.604988,130.5 68.5,129.60501 68.5,128.5 68.5,127.395003 67.604988,126.5 66.5,126.5 65.3949991,126.5 64.5,127.395003 64.5,128.5 z M46.5,124.0 C46.5,125.10501 47.3949991,126.0 48.5,126.0 49.604988,126.0 50.5,125.10501 50.5,124.0 50.5,122.895009 49.604988,122.0 48.5,122.0 47.3949991,122.0 46.5,122.895009 46.5,124.0 z M41.5,128.5 C41.5,129.60501 42.3949991,130.5 43.5,130.5 44.6049801,130.5 45.5,129.60501 45.5,128.5 45.5,127.395003 44.6049801,126.5 43.5,126.5 42.3949991,126.5 41.5,127.395003 41.5,128.5 z M39.0,135.0 C39.0,136.10501 39.8949991,137.0 41.0,137.0 42.1049801,137.0 43.0,136.10501 43.0,135.0 43.0,133.895 42.1049801,133.0 41.0,133.0 39.8949991,133.0 39.0,133.895 39.0,135.0 z M52.5,148.0 C52.5,149.10501 53.3949991,150.0 54.5,150.0 55.604988,150.0 56.5,149.10501 56.5,148.0 56.5,146.895 55.604988,146.0 54.5,146.0 53.3949991,146.0 52.5,146.895 52.5,148.0 z M59.0,146.0 C59.0,147.10501 59.8949991,148.0 61.0,148.0 62.104988,148.0 63.0,147.10501 63.0,146.0 63.0,144.895 62.104988,144.0 61.0,144.0 59.8949991,144.0 59.0,144.895 59.0,146.0 z M64.0,141.5 C64.0,142.60501 64.8949991,143.5 66.0,143.5 67.104988,143.5 68.0,142.60501 68.0,141.5 68.0,140.395 67.104988,139.5 66.0,139.5 64.8949991,139.5 64.0,140.395 64.0,141.5 z M46.0,146.0 C46.0,147.10501 46.8949991,148.0 48.0,148.0 49.104988,148.0 50.0,147.10501 50.0,146.0 50.0,144.895 49.104988,144.0 48.0,144.0 46.8949991,144.0 46.0,144.895 46.0,146.0 z M41.0,141.5 C41.0,142.60501 41.8949991,143.5 43.0,143.5 44.1049801,143.5 45.0,142.60501 45.0,141.5 45.0,140.395 44.1049801,139.5 43.0,139.5 41.8949991,139.5 41.0,140.395 41.0,141.5 z"
+        Stroke="#404040" StrokeDashArray="0.0" StrokeWidth="1.0"/>
+    <Curve Fill="#CCCCCC" Opacity="1.0"
+        Points="8.0,130.0 12.0,130.0 11.0,130.0 15.0,130.0 17.357022603955,132.357022603955 17.357022603955,137.642977396045 15.0,140.0 11.0,140.0 11.0,140.0 8.0,140.0"
+        Stroke="#404040" StrokeDashArray="0.0" StrokeWidth="1.0"/>
+    <Rectangle Fill="#DDDDDD" Height="14.0" Left="10.0" Opacity="1.0"
+        RadiusX="0.0" RadiusY="0.0" Stroke="#404040"
+        StrokeDashArray="0.0" StrokeWidth="1.0" Top="128.0" Width="2.0"/>
+    <Rectangle Fill="#DDDDDD" Height="14.0" Left="8.0" Opacity="1.0"
+        RadiusX="0.0" RadiusY="0.0" Stroke="#404040"
+        StrokeDashArray="0.0" StrokeWidth="1.0" Top="128.0" Width="2.0"/>
+    <Curve Fill="#CCCCCC" Opacity="1.0"
+        Points="60.0,9.0 60.0,12.0 60.0,14.0 60.0,17.0 58.0,20.0 52.0,20.0 50.0,17.0 50.0,15.0 50.0,12.0 50.0,9.0"
+        Stroke="#404040" StrokeDashArray="0.0" StrokeWidth="1.0"/>
+    <Rectangle Fill="#DDDDDD" Height="2.0" Left="48.0" Opacity="1.0"
+        RadiusX="0.0" RadiusY="0.0" Stroke="#404040"
+        StrokeDashArray="0.0" StrokeWidth="1.0" Top="9.0" Width="14.0"/>
+    <Rectangle Fill="#DDDDDD" Height="2.0" Left="48.0" Opacity="1.0"
+        RadiusX="0.0" RadiusY="0.0" Stroke="#404040"
+        StrokeDashArray="0.0" StrokeWidth="1.0" Top="11.0" Width="14.0"/>
+    <Curve Fill="#CCCCCC" Opacity="1.0"
+        Points="132.0,150.0 128.0,150.0 129.0,150.0 125.0,150.0 125.0,154.0 125.0,157.0 125.0,160.0 129.0,160.0 129.0,160.0 132.0,160.0"
+        Stroke="#404040" StrokeDashArray="0.0" StrokeWidth="1.0"/>
+    <Rectangle Fill="#DDDDDD" Height="14.0" Left="128.0" Opacity="1.0"
+        RadiusX="0.0" RadiusY="0.0" Stroke="#404040"
+        StrokeDashArray="0.0" StrokeWidth="1.0" Top="148.0" Width="2.0"/>
+    <Rectangle Fill="#DDDDDD" Height="14.0" Left="130.0" Opacity="1.0"
+        RadiusX="0.0" RadiusY="0.0" Stroke="#404040"
+        StrokeDashArray="0.0" StrokeWidth="1.0" Top="148.0" Width="2.0"/>
+    <Curve Fill="#CCCCCC" Opacity="1.0"
+        Points="132.0,170.0 128.0,170.0 129.0,170.0 125.0,170.0 125.0,174.0 125.0,177.0 125.0,180.0 129.0,180.0 129.0,180.0 132.0,180.0"
+        Stroke="#404040" StrokeDashArray="0.0" StrokeWidth="1.0"/>
+    <Rectangle Fill="#DDDDDD" Height="14.0" Left="128.0" Opacity="1.0"
+        RadiusX="0.0" RadiusY="0.0" Stroke="#404040"
+        StrokeDashArray="0.0" StrokeWidth="1.0" Top="168.0" Width="2.0"/>
+    <Rectangle Fill="#DDDDDD" Height="14.0" Left="130.0" Opacity="1.0"
+        RadiusX="0.0" RadiusY="0.0" Stroke="#404040"
+        StrokeDashArray="0.0" StrokeWidth="1.0" Top="168.0" Width="2.0"/>
+    <Rectangle Fill="#CCCCCC" Height="6.8730985850051" Left="199.5"
+        Opacity="1.0" RadiusX="0.0" RadiusY="0.0" Stroke="#CCCCCC"
+        StrokeDashArray="0.0" StrokeWidth="1.0" Top="139.127443509947" Width="10.0">
+        <Expose ExposedAttribute="Fill" Name="Pipe Color"/>
+        <Expose ExposedAttribute="Stroke" Name="Pipe Color"/>
+    </Rectangle>
+    <Rectangle Height="13.0" Left="200.0" Opacity="1.0" RadiusX="0.0"
+        RadiusY="0.0" Stroke="None" StrokeDashArray="0.0"
+        StrokeWidth="1.0" Top="139.0" Width="9.0">
+        <LinearGradient Attribute="Fill" EndPoint="1,0"
+            SpreadMethod="Pad" StartPoint="0.0,0.0">
+            <GradientStop Color="#50000000" Offset="0.0"/>
+            <GradientStop Color="#5FFFFFFF" Offset="0.5"/>
+            <GradientStop Color="#50000000" Offset="1"/>
+        </LinearGradient>
+    </Rectangle>
+    <Line Opacity="1.0" Stroke="#5F000000" StrokeDashArray="0.0"
+        StrokeWidth="1.0" X1="199.5" X2="199.5" Y1="139.127448633313" Y2="151.872547402978"/>
+    <Line Opacity="1.0" Stroke="#5F000000" StrokeDashArray="0.0"
+        StrokeWidth="1.0" X1="209.5" X2="209.5" Y1="139.127444281968" Y2="145.000542945232"/>
+    <Path Fill="#CCCCCC"
+        PathData="M194.5,120.0 L189.5,120.0 189.5,130.0 194.5,130.0 z M209.5,135.0 L199.5,135.0 199.5,140.0 209.5,140.0 z M199.5,135.0 C199.5,132.0 197.5,130.0 194.5,130.0 194.5,126.0 194.5,125.0 194.5,120.0 204.5,120.0 209.5,127.0 209.5,135.0 205.5,135.0 205.5,135.0 199.5,135.0"
+        Stroke="#CCCCCC" StrokeDashArray="0.0" StrokeWidth="1.0">
+        <Expose ExposedAttribute="Fill" Name="Pipe Color"/>
+        <Expose ExposedAttribute="Stroke" Name="Pipe Color"/>
+    </Path>
+    <Rectangle Height="9.0" Left="189.0" Opacity="1.0" RadiusX="0.0"
+        RadiusY="0.0" Stroke="None" StrokeDashArray="0.0"
+        StrokeWidth="1.0" Top="120.5" Width="4.0">
+        <LinearGradient Attribute="Fill" EndPoint="0.0,1.0"
+            SpreadMethod="Pad" StartPoint="0.0,0.0">
+            <GradientStop Color="#50000000" Offset="0.0"/>
+            <GradientStop Color="#5FFFFFFF" Offset="0.5"/>
+            <GradientStop Color="#50000000" Offset="1"/>
+        </LinearGradient>
+    </Rectangle>
+    <Rectangle Height="5.0" Left="200.0" Opacity="1.0" RadiusX="0.0"
+        RadiusY="0.0" Stroke="None" StrokeDashArray="0.0"
+        StrokeWidth="1.0" Top="135.5" Width="9.0">
+        <LinearGradient Attribute="Fill" EndPoint="1,0"
+            SpreadMethod="Pad" StartPoint="0.0,0.0">
+            <GradientStop Color="#50000000" Offset="0.0"/>
+            <GradientStop Color="#5FFFFFFF" Offset="0.5"/>
+            <GradientStop Color="#50000000" Offset="1"/>
+        </LinearGradient>
+    </Rectangle>
+    <Path Fill="None"
+        PathData="M199.5,135.0 C199.5,133.0 198.5,130.0 194.5,130.0 M199.5,135.0 L199.5,140.0 M189.5,130.0 L194.5,130.0"
+        Stroke="#5F000000" StrokeDashArray="0.0" StrokeWidth="1.0"/>
+    <Path Fill="None"
+        PathData="M209.5,135.0 C209.5,126.0 203.5,120.0 194.5,120.0 M189.5,120.0 L193.5,120.0 M209.5,136.0 L209.5,140.0"
+        Stroke="#5F000000" StrokeDashArray="0.0" StrokeWidth="1.0"/>
+    <Path Fill="#CCCCCC"
+        PathData="M194.5,160.5 L189.5,160.5 189.5,150.5 194.5,150.5 z M209.5,145.5 L199.5,145.5 199.5,140.5 209.5,140.5 z M199.5,145.5 C199.5,148.5 197.5,150.5 194.5,150.5 194.5,154.5 194.5,155.5 194.5,160.5 204.5,160.5 209.5,153.5 209.5,145.5 205.5,145.5 205.5,145.5 199.5,145.5"
+        Stroke="#CCCCCC" StrokeDashArray="0.0" StrokeWidth="1.0">
+        <Expose ExposedAttribute="Fill" Name="Pipe Color"/>
+        <Expose ExposedAttribute="Stroke" Name="Pipe Color"/>
+    </Path>
+    <Rectangle Height="5.0" Left="200.0" Opacity="1.0" RadiusX="0.0"
+        RadiusY="0.0" Stroke="None" StrokeDashArray="0.0"
+        StrokeWidth="1.0" Top="140.0" Width="9.0">
+        <LinearGradient Attribute="Fill" EndPoint="1,0"
+            SpreadMethod="Pad" StartPoint="0.0,0.0">
+            <GradientStop Color="#50000000" Offset="0.0"/>
+            <GradientStop Color="#5FFFFFFF" Offset="0.5"/>
+            <GradientStop Color="#50000000" Offset="1"/>
+        </LinearGradient>
+    </Rectangle>
+    <Path Fill="None"
+        PathData="M199.5,145.5 C199.5,147.5 198.5,150.5 194.5,150.5 M199.5,145.5 L199.5,140.5 M189.5,150.5 L194.5,150.5"
+        Stroke="#5F000000" StrokeDashArray="0.0" StrokeWidth="1.0"/>
+    <Path Fill="None"
+        PathData="M209.5,145.5 C209.5,154.5 203.5,160.5 194.5,160.5 M189.5,160.5 L193.5,160.5 M209.5,144.5 L209.5,140.5"
+        Stroke="#5F000000" StrokeDashArray="0.0" StrokeWidth="1.0"/>
+    <Curve Closed="True" Fill="#E47F00" Opacity="1.0"
+        Points="193.0,151.0 193.0,155.0 193.0,155.0 193.0,160.0 203.082574367523,160.639141082764 209.0,154.556566238403 209.0,145.0 206.0,145.0 203.0,145.0 200.0,145.0 200.0,149.0 197.5,151.5 193.0,151.0"
+        Stroke="None" StrokeDashArray="0.0" StrokeWidth="1.0">
+        <RadialGradient Center="0,0" Focus="0.08,.02" RadiusX="1.02" RadiusY="1">
+            <GradientStop Color="#50000000" Offset=".375"/>
+            <GradientStop Color="#5FFFFFFF" Offset=".67"/>
+            <GradientStop Color="#50000000" Offset=".98"/>
+        </RadialGradient>
+    </Curve>
+    <Rectangle Fill="#CCCCCC" Height="10.0" Left="125.0" Opacity="1.0"
+        RadiusX="0.0" RadiusY="0.0" Stroke="#CCCCCC"
+        StrokeDashArray="0.0" StrokeWidth="1.0" Top="120.0" Width="68.0">
+        <Expose ExposedAttribute="Fill" Name="Pipe Color"/>
+        <Expose ExposedAttribute="Stroke" Name="Pipe Color"/>
+    </Rectangle>
+    <Rectangle Height="9.0" Left="125.0" Opacity="1.0" RadiusX="0.0"
+        RadiusY="0.0" Stroke="None" StrokeDashArray="0.0"
+        StrokeWidth="1.0" Top="120.5" Width="68.0">
+        <LinearGradient Attribute="Fill" EndPoint="0.0,1.0"
+            SpreadMethod="Pad" StartPoint="0.0,0.0">
+            <GradientStop Color="#50000000" Offset="0.0"/>
+            <GradientStop Color="#5FFFFFFF" Offset="0.5"/>
+            <GradientStop Color="#50000000" Offset="1"/>
+        </LinearGradient>
+    </Rectangle>
+    <Line Opacity="1.0" Stroke="#5F000000" StrokeDashArray="0.0"
+        StrokeWidth="1.0" X1="193.0" X2="125.0" Y1="120.0" Y2="120.0"/>
+    <Line Opacity="1.0" Stroke="#5F000000" StrokeDashArray="0.0"
+        StrokeWidth="1.0" X1="125.0" X2="193.0" Y1="130.0" Y2="130.0"/>
+    <Curve Closed="True" Fill="#CCCCCC" Opacity="1.0"
+        Points="180.0,117.0 173.0,117.0 162.0,117.0 155.0,117.0 155.0,119.0 155.0,117.0 155.0,120.0 153.0,120.0 152.0,120.0 150.0,120.0 150.0,118.0 150.0,117.0 150.0,115.0 148.0,115.0 147.0,115.0 145.0,115.0 145.0,119.0 145.0,132.0 145.0,135.0 147.0,135.0 148.0,135.0 150.0,135.0 150.0,133.0 150.0,132.0 150.0,130.0 152.0,130.0 153.0,130.0 155.0,130.0 155.0,132.0 155.0,139.0 155.0,142.0 155.0,146.0 180.0,146.0 180.0,142.0 180.0,139.0 180.0,133.0 180.0,130.0 182.0,130.0 182.0,130.0 185.0,130.0 185.0,132.0 185.0,133.0 185.0,135.0 187.0,135.0 188.0,135.0 190.0,135.0 190.0,130.0 190.0,119.0 190.0,115.0 188.0,115.0 187.0,115.0 185.0,115.0 185.0,117.0 185.0,118.0 185.0,120.0 183.0,120.0 182.0,120.0 180.0,120.0"
+        Stroke="#CCCCCC" StrokeDashArray="0.0" StrokeWidth="1.0">
+        <Expose ExposedAttribute="Fill" Name="Pipe Color"/>
+        <Expose ExposedAttribute="Stroke" Name="Pipe Color"/>
+    </Curve>
+    <Rectangle Height="9.0" Left="180.0" Opacity="1.0" RadiusX="0.0"
+        RadiusY="0.0" Stroke="None" StrokeDashArray="0.0"
+        StrokeWidth="1.0" Top="120.5" Width="4.5">
+        <LinearGradient Attribute="Fill" EndPoint="0.0,1.0"
+            SpreadMethod="Pad" StartPoint="0.0,0.0">
+            <GradientStop Color="#50000000" Offset="0.0"/>
+            <GradientStop Color="#5FFFFFFF" Offset="0.5"/>
+            <GradientStop Color="#50000000" Offset="1"/>
+        </LinearGradient>
+    </Rectangle>
+    <Rectangle Height="9.0" Left="150.5" Opacity="1.0" RadiusX="0.0"
+        RadiusY="0.0" Stroke="None" StrokeDashArray="0.0"
+        StrokeWidth="1.0" Top="120.5" Width="4.5">
+        <LinearGradient Attribute="Fill" EndPoint="0.0,1.0"
+            SpreadMethod="Pad" StartPoint="0.0,0.0">
+            <GradientStop Color="#50000000" Offset="0.0"/>
+            <GradientStop Color="#5FFFFFFF" Offset="0.5"/>
+            <GradientStop Color="#50000000" Offset="1"/>
+        </LinearGradient>
+    </Rectangle>
+    <Rectangle Fill="#C0C000" Height="20.0" Left="185.0" Opacity="1.0"
+        RadiusX="0.0" RadiusY="0.0" Stroke="None" StrokeDashArray="0.0"
+        StrokeWidth="1.0" Top="115.0" Width="5.0">
+        <LinearGradient EndPoint="0,1">
+            <GradientStop Color="#50000000" Offset="0"/>
+            <GradientStop Color="#50FFFFFF" Offset=".25"/>
+            <GradientStop Color="#50000000" Offset="1"/>
+        </LinearGradient>
+    </Rectangle>
+    <Rectangle Fill="#C0C000" Height="20.0" Left="145.0" Opacity="1.0"
+        RadiusX="0.0" RadiusY="0.0" Stroke="None" StrokeDashArray="0.0"
+        StrokeWidth="1.0" Top="115.0" Width="5.0">
+        <LinearGradient EndPoint="0,1">
+            <GradientStop Color="#50000000" Offset="0"/>
+            <GradientStop Color="#50FFFFFF" Offset=".25"/>
+            <GradientStop Color="#50000000" Offset="1"/>
+        </LinearGradient>
+    </Rectangle>
+    <Curve Closed="True" Fill="#C0C000" Opacity="1.0"
+        Points="180.0,117.0 174.0,117.0 161.0,117.0 155.0,117.0 155.0,124.0 155.0,136.0 155.0,142.0 155.0,146.0 180.0,146.0 180.0,142.0"
+        Stroke="None" StrokeDashArray="0.0" StrokeWidth="1.0">
+        <LinearGradient EndPoint="1,0">
+            <GradientStop Color="#50000000" Offset="0"/>
+            <GradientStop Color="#50FFFFFF" Offset=".25"/>
+            <GradientStop Color="#50000000" Offset="1"/>
+        </LinearGradient>
+    </Curve>
+    <Path Fill="None"
+        PathData="M180.0,117.0 C173.0,117.0 162.0,117.0 155.0,117.0 155.0,119.0 155.0,117.0 155.0,120.0 153.0,120.0 152.0,120.0 150.0,120.0 150.0,118.0 150.0,117.0 150.0,115.0 148.0,115.0 147.0,115.0 145.0,115.0 145.0,119.0 145.0,132.0 145.0,135.0 147.0,135.0 148.0,135.0 150.0,135.0 150.0,133.0 150.0,132.0 150.0,130.0 152.0,130.0 153.0,130.0 155.0,130.0 155.0,132.0 155.0,139.0 155.0,142.0 155.0,146.0 180.0,146.0 180.0,142.0 180.0,139.0 180.0,133.0 180.0,130.0 182.0,130.0 182.0,130.0 185.0,130.0 185.0,132.0 185.0,133.0 185.0,135.0 187.0,135.0 188.0,135.0 190.0,135.0 190.0,130.0 190.0,119.0 190.0,115.0 188.0,115.0 187.0,115.0 185.0,115.0 185.0,117.0 185.0,118.0 185.0,120.0 183.0,120.0 182.0,120.0 180.0,120.0 z M155.0,120.0 C156.0,123.0 156.0,127.0 155.0,130.0 M180.0,120.0 C179.0,123.0 179.0,127.0 180.0,130.0 M150.0,120.0 L150.0,130.0 M185.0,120.0 L185.0,130.0"
+        Stroke="#808080" StrokeDashArray="0.0" StrokeWidth="1.0"/>
+    <Rectangle Fill="#DDDDDD" Height="37.0" Left="95.0" Opacity="1.0"
+        RadiusX="0.0" RadiusY="0.0" Stroke="#404040"
+        StrokeDashArray="0.0" StrokeWidth="1.0" Top="97.0" Width="30.0">
+        <Expose ExposedAttribute="Fill" Name="Base Color"/>
+    </Rectangle>
+    <Rectangle Fill="#DDDDDD" Height="37.0" Left="95.0" Opacity="1.0"
+        RadiusX="0.0" RadiusY="0.0" Stroke="#404040"
+        StrokeDashArray="0.0" StrokeWidth="1.0" Top="97.0" Width="30.0">
+        <LinearGradient EndPoint="0,1">
+            <GradientStop Color="#50000000" Offset="0"/>
+            <GradientStop Color="#50FFFFFF" Offset=".25"/>
+            <GradientStop Color="#50000000" Offset="1"/>
+        </LinearGradient>
+    </Rectangle>
+    <Rectangle Fill="#DDDDDD" Height="47.0" Left="109.0" Opacity="1.0"
+        RadiusX="0.0" RadiusY="0.0" Stroke="#404040"
+        StrokeDashArray="0.0" StrokeWidth="1.0" Top="92.0" Width="3.0">
+        <Expose ExposedAttribute="Fill" Name="Base Color"/>
+    </Rectangle>
+    <Rectangle Fill="#DDDDDD" Height="47.0" Left="112.0" Opacity="1.0"
+        RadiusX="0.0" RadiusY="0.0" Stroke="#404040"
+        StrokeDashArray="0.0" StrokeWidth="1.0" Top="92.0" Width="3.0">
+        <Expose ExposedAttribute="Fill" Name="Base Color"/>
+    </Rectangle>
+    <Path Fill="#FFFFFF"
+        PathData="M109.0,92.0 L112.0,92.0 112.0,139.0 109.0,139.0 z M112.0,92.0 L115.0,92.0 115.0,139.0 112.0,139.0 z"
+        Stroke="#404040" StrokeDashArray="0.0" StrokeWidth="1.0">
+        <LinearGradient EndPoint="0,1">
+            <GradientStop Color="#50000000" Offset="0"/>
+            <GradientStop Color="#50FFFFFF" Offset=".25"/>
+            <GradientStop Color="#50000000" Offset="1"/>
+        </LinearGradient>
+    </Path>
+    <Path Fill="#DDDDDD"
+        PathData="M115.5,94.0 L117.5,94.0 117.5,97.0 115.5,97.0 M115.5,99.0 L117.5,99.0 117.5,102.0 115.5,102.0 M115.5,104.0 L117.5,104.0 117.5,107.0 115.5,107.0 M115.5,109.0 L117.5,109.0 117.5,112.0 115.5,112.0 M115.5,114.0 L117.5,114.0 117.5,117.0 115.5,117.0 M115.5,119.0 L117.5,119.0 117.5,122.0 115.5,122.0 M115.5,124.0 L117.5,124.0 117.5,127.0 115.5,127.0 M115.5,129.0 L117.5,129.0 117.5,132.0 115.5,132.0 M115.5,134.0 L117.5,134.0 117.5,137.0 115.5,137.0"
+        Stroke="#404040" StrokeDashArray="0.0" StrokeWidth="1.0"/>
+    <Path Fill="#DDDDDD"
+        PathData="M108.5,94.0 L106.5,94.0 106.5,97.0 108.5,97.0 M108.5,99.0 L106.5,99.0 106.5,102.0 108.5,102.0 M108.5,104.0 L106.5,104.0 106.5,107.0 108.5,107.0 M108.5,109.0 L106.5,109.0 106.5,112.0 108.5,112.0 M108.5,114.0 L106.5,114.0 106.5,117.0 108.5,117.0 M108.5,119.0 L106.5,119.0 106.5,122.0 108.5,122.0 M108.5,124.0 L106.5,124.0 106.5,127.0 108.5,127.0 M108.5,129.0 L106.5,129.0 106.5,132.0 108.5,132.0 M108.5,134.0 L106.5,134.0 106.5,137.0 108.5,137.0"
+        Stroke="#404040" StrokeDashArray="0.0" StrokeWidth="1.0"/>
+    <Curve Fill="#CCCCCC" Opacity="1.0"
+        Points="132.0,100.0 128.0,100.0 129.0,100.0 125.0,100.0 125.0,104.0 125.0,107.0 125.0,110.0 129.0,110.0 129.0,110.0 132.0,110.0"
+        Stroke="#404040" StrokeDashArray="0.0" StrokeWidth="1.0"/>
+    <Rectangle Fill="#DDDDDD" Height="14.0" Left="128.0" Opacity="1.0"
+        RadiusX="0.0" RadiusY="0.0" Stroke="#404040"
+        StrokeDashArray="0.0" StrokeWidth="1.0" Top="98.0" Width="2.0"/>
+    <Rectangle Fill="#DDDDDD" Height="14.0" Left="130.0" Opacity="1.0"
+        RadiusX="0.0" RadiusY="0.0" Stroke="#404040"
+        StrokeDashArray="0.0" StrokeWidth="1.0" Top="98.0" Width="2.0"/>
+    <Curve Fill="#CCCCCC" Opacity="1.0"
+        Points="132.0,120.0 128.0,120.0 129.0,120.0 125.0,120.0 125.0,124.0 125.0,127.0 125.0,130.0 129.0,130.0 129.0,130.0 132.0,130.0"
+        Stroke="#404040" StrokeDashArray="0.0" StrokeWidth="1.0"/>
+    <Rectangle Fill="#DDDDDD" Height="14.0" Left="128.0" Opacity="1.0"
+        RadiusX="0.0" RadiusY="0.0" Stroke="#404040"
+        StrokeDashArray="0.0" StrokeWidth="1.0" Top="118.0" Width="2.0"/>
+    <Rectangle Fill="#DDDDDD" Height="14.0" Left="130.0" Opacity="1.0"
+        RadiusX="0.0" RadiusY="0.0" Stroke="#404040"
+        StrokeDashArray="0.0" StrokeWidth="1.0" Top="118.0" Width="2.0"/>
+    <Curve Fill="#E47F00" Opacity="1.0"
+        Points="193.0,129.5 193.0,125.5 193.0,125.5 193.0,120.5 203.5,120.0 209.0,126.5 209.0,135.5 206.0,135.5 203.0,135.5 200.0,135.5 200.0,131.5 197.5,129.0 193.0,129.5"
+        Stroke="None" StrokeDashArray="0.0" StrokeWidth="1.0">
+        <RadialGradient Center=".02,1" Focus=".1,1" RadiusX="1.02" RadiusY="1">
+            <GradientStop Color="#50000000" Offset=".375"/>
+            <GradientStop Color="#5FFFFFFF" Offset=".67"/>
+            <GradientStop Color="#50000000" Offset=".98"/>
+        </RadialGradient>
+    </Curve>
+    <Rectangle Height="9.0" Left="189.0" Opacity="1.0" RadiusX="0.0"
+        RadiusY="0.0" Stroke="None" StrokeDashArray="0.0"
+        StrokeWidth="1.0" Top="151.0" Width="4.0">
+        <LinearGradient Attribute="Fill" EndPoint="0.0,1.0"
+            SpreadMethod="Pad" StartPoint="0.0,0.0">
+            <GradientStop Color="#50000000" Offset="0.0"/>
+            <GradientStop Color="#5FFFFFFF" Offset="0.5"/>
+            <GradientStop Color="#50000000" Offset="1"/>
+        </LinearGradient>
+    </Rectangle>
+</Component>

@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<Component ComponentCounter="2" ContentHeight="140" ContentWidth="130"
+    Height="140.0" Left="10.0" Name="Corner Top Right" Top="10.0" Width="130.0">
+    <Metadata Name="Name" Value="Corner Top Right"/>
+    <Metadata Name="Description" Value=""/>
+    <Metadata Name="Version" Value="1.0"/>
+    <Polygon Fill="#C6C9CD" Opacity="1.0"
+        Points="120.0,100.0 120.0,110.0 110.0,100.0" Stroke="#C6C9CD"
+        StrokeDashArray="0.0" StrokeWidth="1.0"/>
+    <Curve Fill="#C6C9CD" Opacity="1.0"
+        Points="30.0,110.0 30.0,99.5 20.0,99.5 20.0,99.5 40.5,99.5 20.0,99.5 40.5,99.5 40.5,99.5 30.0,110.0 30.0,110.0"
+        Stroke="#C6C9CD" StrokeDashArray="0.0" StrokeWidth="1.0"/>
+    <Path Fill="#FFFFFF"
+        PathData="M120.0,20.0 L120.0,100.0 10.0,100.0 10.0,10.0 110.0,10.0 M110.0,10.0 C115.523,10.0 120.0,14.4770005 120.0,20.0"
+        Stroke="None" StrokeDashArray="0.0" StrokeWidth="1.0">
+        <LinearGradient Attribute="Fill" EndPoint="0,1"
+            SpreadMethod="Pad" StartPoint="0.0,0.0">
+            <GradientStop Color="#FEFEFE" Offset="0.0"/>
+            <GradientStop Color="#C6C9CD" Offset="1.0"/>
+        </LinearGradient>
+    </Path>
+    <Polygon Fill="#FFFFFF" Opacity="1.0"
+        Points="30.0,110.0 50.0,90.0 100.0,90.0 120.0,110.0 120.0,130.0 30.0,130.0"
+        Stroke="None" StrokeDashArray="0.0" StrokeWidth="1.0">
+        <LinearGradient Attribute="Fill" EndPoint="1,0"
+            SpreadMethod="Pad" StartPoint="0.0,0.0">
+            <GradientStop Color="#C6C9CD" Offset="0"/>
+            <GradientStop Color="#EFEFEF" Offset="0.5"/>
+            <GradientStop Color="#C6C9CD" Offset="0.9"/>
+        </LinearGradient>
+    </Polygon>
+    <Path Fill="None"
+        PathData="M20.0,100.0 C25.523,100.0 30.0,104.477 30.0,110.0 M30.0,130.0 L30.0,110.0 M20.0,100.0 L10.0,100.0 M120.0,20.0 L120.0,130.0 M110.0,10.0 C115.523,10.0 120.0,14.4770005 120.0,20.0 M10.0,10.0 L110.0,10.0"
+        Stroke="#009530" StrokeDashArray="0.0" StrokeWidth="1.0"/>
+</Component>

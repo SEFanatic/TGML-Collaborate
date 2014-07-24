@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<Component Clip="False" ContentHeight="50.0" ContentWidth="20.0"
+    Fill="#FFFFFF" Height="50.0" Left="0.0" Name="SensGeneral_Temp_1"
+    Stroke="#000000" Top="30.0" Width="20.0">
+    <Metadata Name="Name" Value="SensGeneral_Temp_1"/>
+    <Metadata Name="Description" Value="SensGen"/>
+    <Line StrokeWidth="1.0" X1="10.0" X2="10.0" Y1="0.0" Y2="29.5"/>
+    <Ellipse Height="20.0" Left="0.0" Top="30.0" Width="20.0"/>
+    <Path Fill="#000000"
+        PathData="M9.4083890914917,44.294921875 L9.4083890914917,36.718746185302734 6.4937129020690918,36.718746185302734 6.4937129020690918,35.705074310302734 13.50628662109375,35.705074310302734 13.50628662109375,36.718746185302734 10.579530715942383,36.718746185302734 10.579530715942383,44.294921875 z"
+        Stroke="None" StrokeDashArray="0.0" StrokeWidth="1.0"/>
+</Component>

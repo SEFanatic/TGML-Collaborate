@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<Component ContentHeight="65" ContentWidth="70" Height="65.0"
+    Left="10.0" Name="Sunny Intervals" Top="10.0" Width="70.0">
+    <Metadata Name="Name" Value="Sunny Intervals"/>
+    <Metadata Name="Description" Value=""/>
+    <Rectangle Fill="#FFFFFF" Height="46.0" Left="10.0" Opacity="1.0"
+        RadiusX="5" RadiusY="5" Stroke="#009530" StrokeDashArray="0.0"
+        StrokeWidth="1.0" Top="10.0" Width="49.0"/>
+    <Group>
+        <Curve Closed="True" Fill="#808080" Opacity="1.0"
+            Points="26.5,49.0 18.5,49.0 18.5,34.0 29.5,38.0 29.5,31.0 40.5,32.0 40.5,38.0 51.5,34.0 51.5,49.0 43.5,49.0"
+            Stroke="None" StrokeDashArray="0.0" StrokeWidth="1.0"/>
+        <Curve Closed="False" Opacity="1.0"
+            Points="20.5,42.0 12.5,42.0 12.5,27.0 23.5,31.0 23.5,27.0 27.5,26.0 29.5,26.0"
+            Stroke="#9FA0A4" StrokeDashArray="0.0" StrokeWidth="1.0"/>
+        <Curve Closed="True" Opacity="1.0"
+            Points="26.5,49.0 18.5,49.0 18.5,34.0 29.5,38.0 29.5,31.0 40.5,32.0 40.5,38.0 51.5,34.0 51.5,49.0 43.5,49.0"
+            Stroke="#626469" StrokeDashArray="0.0" StrokeWidth="1.0">
+            <RadialGradient Attribute="Fill" Focus="0.3,0.25"
+                RadiusX="1.8" RadiusY="1.5" SpreadMethod="Pad">
+                <GradientStop Color="#40FFFFFF" Offset=".2"/>
+                <GradientStop Color="#40000000" Offset=".4"/>
+            </RadialGradient>
+        </Curve>
+        <Ellipse Height="12.75" Left="38.5" Opacity="1.0" Stroke="None"
+            StrokeDashArray="0.0" StrokeWidth="1.0" Top="23.0" Width="12.75">
+            <RadialGradient Attribute="Fill" Focus="0.35,0.35"
+                RadiusX="0.5" RadiusY="0.5" SpreadMethod="Pad">
+                <GradientStop Color="#FFD100" Offset="0.0"/>
+                <GradientStop Color="#E47F00" Offset="1.0"/>
+            </RadialGradient>
+        </Ellipse>
+        <Ellipse Height="11.25" Left="39.25" Opacity="1.0" Stroke="None"
+            StrokeDashArray="0.0" StrokeWidth="1.0" Top="23.75" Width="11.25">
+            <RadialGradient Attribute="Fill" Focus="0.5,0.35"
+                RadiusX=".9" RadiusY="0.5" SpreadMethod="Pad">
+                <GradientStop Color="#FFD100" Offset=".3"/>
+                <GradientStop Color="#01FFFFFF" Offset=".8"/>
+            </RadialGradient>
+        </Ellipse>
+        <Line Opacity="1.0" Stroke="#E47F00" StrokeDashArray="0.0"
+            StrokeWidth="1.0" X1="53.5" X2="56.5" Y1="29.0" Y2="29.0"/>
+        <Line Opacity="1.0" Stroke="#E47F00" StrokeDashArray="0.0"
+            StrokeWidth="1.0" X1="51.25" X2="53.5" Y1="23.0" Y2="20.75"/>
+        <Line Opacity="1.0" Stroke="#E47F00" StrokeDashArray="0.0"
+            StrokeWidth="1.0" X1="44.5" X2="44.5" Y1="20.75" Y2="17.0"/>
+        <Line Opacity="1.0" Stroke="#E47F00" StrokeDashArray="0.0"
+            StrokeWidth="1.0" X1="36.25" X2="32.5" Y1="29.75" Y2="29.75"/>
+        <Line Opacity="1.0" Stroke="#E47F00" StrokeDashArray="0.0"
+            StrokeWidth="1.0" X1="50.5" X2="52.75" Y1="35.0" Y2="37.25"/>
+        <Line Opacity="1.0" Stroke="#E47F00" StrokeDashArray="0.0"
+            StrokeWidth="1.0" X1="38.5" X2="36.25" Y1="23.0" Y2="20.75"/>
+        <Line Opacity="1.0" Stroke="#E47F00" StrokeDashArray="0.0"
+            StrokeWidth="1.0" X1="39.989623069763" X2="41.367526054382"
+            Y1="18.006419181824" Y2="21.248540401459"/>
+        <Line Opacity="1.0" Stroke="#E47F00" StrokeDashArray="0.0"
+            StrokeWidth="1.0" X1="36.828556060791" X2="33.424329280853"
+            Y1="26.192775726319" Y2="24.652767181396"/>
+        <Line Opacity="1.0" Stroke="#E47F00" StrokeDashArray="0.0"
+            StrokeWidth="1.0" X1="51.904421806335" X2="55.227597236634"
+            Y1="32.514912605286" Y2="34.298079490662"/>
+        <Line Opacity="1.0" Stroke="#E47F00" StrokeDashArray="0.0"
+            StrokeWidth="1.0" X1="47.68966293335" X2="49.229671478271"
+            Y1="21.491700172424" Y2="18.249577522278"/>
+        <Line Opacity="1.0" Stroke="#E47F00" StrokeDashArray="0.0"
+            StrokeWidth="1.0" X1="52.390738487244" X2="55.551808357238"
+            Y1="26.111722946167" Y2="24.895928382874"/>
+    </Group>
+</Component>

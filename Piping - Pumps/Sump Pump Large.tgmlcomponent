@@ -1,0 +1,190 @@
+<?xml version="1.0"?>
+<Component ContentHeight="120" ContentWidth="80" GridSize="10"
+    Height="120.0" Left="5.0" Name="Sump Pump Large" Top="0.0" Width="80.0">
+    <Metadata Name="Name" Value="Sump Pump Large"/>
+    <Metadata Name="Description" Value="== Bindings ==&#xd;&#xa;P#Cmd - Pump Command&#xd;&#xa;P#Fbk - Pump Command&#xd;&#xa;&#xd;&#xa;== Exposed Properties ==&#xd;&#xa;Command Bind - P#Cmd - Pump command point&#xd;&#xa;Feedback Bind - P#Fbk - Pump feedback point&#xd;&#xa;Command on color - #87d300 - pump color when command is true&#xd;&#xa;Pump color - #cccccc - pump color when command is false&#xd;&#xa;Error, Forced, Database Color - Outline color when point in error, forced or database condition"/>
+    <Rectangle Fill="#FFFFFF" Height="55.0" Left="40.0" Opacity="1.0"
+        RadiusX="0.0" RadiusY="0.0" Stroke="None" StrokeDashArray="0.0"
+        StrokeWidth="1.0" Top="0.0" Width="10.0">
+        <LinearGradient Attribute="Fill" EndPoint="0,1"
+            SpreadMethod="Pad" StartPoint="0.0,0.0">
+            <GradientStop Color="#01FFFFFF" Offset=".8">
+                <Animate Animation="Stop" Attribute="Offset"
+                    CalcMode="Linear" Duration="1" From=".7" To="0">
+                    <Bind Attribute="Animation" Name="P#Fbk" PreventDefault="True">
+                        <Expose ExposedAttribute="Name" Name="Feedback Bind"/>
+						<Expose ExposedAttribute="PreventDefault" Name="Prevent Default"/>
+                        <ConvertValue AttributeValue="Start"
+                            SignalMoreOrEqualTo="1" SignalMoreThan="">
+                            <Expose
+                                ExposedAttribute="SignalMoreOrEqualTo" Name="Feedback On="/>
+                        </ConvertValue>
+                        <ConvertValue AttributeValue="Stop" SignalLessOrEqualTo="0">
+                            <Expose
+                                ExposedAttribute="SignalLessOrEqualTo" Name="Feedback Off="/>
+                        </ConvertValue>
+                    </Bind>
+                </Animate>
+            </GradientStop>
+            <GradientStop Color="#FFFFFF" Offset=".9">
+                <Animate Animation="Stop" Attribute="Offset"
+                    CalcMode="Linear" Duration="1" From=".9" To=".1">
+                    <Bind Attribute="Animation" Name="P#Fbk" PreventDefault="True">
+						<Expose ExposedAttribute="PreventDefault" Name="Prevent Default"/>
+                        <Expose ExposedAttribute="Name" Name="Feedback Bind"/>
+                        <ConvertValue AttributeValue="Start"
+                            SignalMoreOrEqualTo="1" SignalMoreThan="">
+                            <Expose
+                                ExposedAttribute="SignalMoreOrEqualTo" Name="Feedback On="/>
+                        </ConvertValue>
+                        <ConvertValue AttributeValue="Stop" SignalLessOrEqualTo="0">
+                            <Expose
+                                ExposedAttribute="SignalLessOrEqualTo" Name="Feedback Off="/>
+                        </ConvertValue>
+                    </Bind>
+                </Animate>
+            </GradientStop>
+            <GradientStop Color="#01FFFFFF" Offset="1">
+                <Animate Animation="Stop" Attribute="Offset"
+                    CalcMode="Linear" Duration="1" From="1" To=".3">
+                    <Bind Attribute="Animation" Name="P#Fbk" PreventDefault="True">
+                        <Expose ExposedAttribute="Name" Name="Feedback Bind"/>
+						<Expose ExposedAttribute="PreventDefault" Name="Prevent Default"/>
+                        <ConvertValue AttributeValue="Start"
+                            SignalMoreOrEqualTo="1" SignalMoreThan="">
+                            <Expose
+                                ExposedAttribute="SignalMoreOrEqualTo" Name="Feedback On="/>
+                        </ConvertValue>
+                        <ConvertValue AttributeValue="Stop" SignalLessOrEqualTo="0">
+                            <Expose
+                                ExposedAttribute="SignalLessOrEqualTo" Name="Feedback Off="/>
+                        </ConvertValue>
+                    </Bind>
+                </Animate>
+            </GradientStop>
+        </LinearGradient>
+        <Animate Animation="Stop" Attribute="Opacity" CalcMode="Linear"
+            Duration="1" From="1" To="0">
+            <Bind Attribute="Animation" Name="P#Fbk" PreventDefault="True">
+                <Expose ExposedAttribute="Name" Name="Feedback Bind"/>
+				<Expose ExposedAttribute="PreventDefault" Name="Prevent Default"/>
+                <ConvertValue AttributeValue="Start"
+                    SignalMoreOrEqualTo="1" SignalMoreThan="">
+                    <Expose ExposedAttribute="SignalMoreOrEqualTo" Name="Feedback On="/>
+                </ConvertValue>
+                <ConvertValue AttributeValue="Stop" SignalLessOrEqualTo="0">
+                    <Expose ExposedAttribute="SignalLessOrEqualTo" Name="Feedback Off="/>
+                </ConvertValue>
+            </Bind>
+        </Animate>
+    </Rectangle>
+    <Group CommandOnColour="#4FA600" SignalLessOrEqualTo="0" SignalMoreOrEqualTo="1">
+        <Polygon Fill="#505050" Opacity="1.0"
+            Points="32.0,40.0 32.0,37.0 30.0,37.0 30.0,39.0 28.0,39.0 28.0,29.0 30.0,29.0 30.0,31.0 37.0,31.0 37.0,40.0"
+            Stroke="#404040" StrokeDashArray="0.0" StrokeWidth="1.0"/>
+        <Rectangle Fill="#505050" Height="66.0" Left="6.0" Opacity="1.0"
+            RadiusX="0.0" RadiusY="0.0" Stroke="#404040"
+            StrokeDashArray="0.0" StrokeWidth="1.0" Top="42.0" Width="11.0"/>
+        <Polygon Fill="#516368" Opacity="1.0"
+            Points="28.0,38.0 18.0,38.0 18.0,42.0 5.0,42.0 5.0,36.0 12.0,30.0 28.0,30.0"
+            Stroke="#404040" StrokeDashArray="0.0" StrokeWidth="1.0"/>
+        <Path Fill="#CCCCCC" Name="Background"
+            PathData="M19.5,45.0 C19.5,40.0 24.5,40.0 29.5,40.0 39.5,40.0 50.5,40.0 60.5,40.0 65.5,40.0 70.5,40.0 70.5,45.0 70.5,65.0 70.5,80.0 70.5,85.0 50.5,85.0 39.5,85.0 19.5,85.0 19.5,80.0 19.5,65.0 19.5,45.0 M17.5,86.0 C17.5,85.4480002 17.9480052,85.0 18.5,85.0 L71.5,85.0 C72.052,85.0 72.5,85.4480002 72.5,86.0 72.5,86.0 72.5,86.0 72.5,86.0 L72.5,88.0 C72.5,88.552002 72.052,89.0 71.5,89.0 L18.5,89.0 C17.9480052,89.0 17.5,88.552002 17.5,88.0 z M19.5,89.0 L70.5,89.0 70.5,110.0 19.5,110.0 z M22.5,95.0 C22.5,93.895002 23.395005,93.0 24.5,93.0 L25.5,93.0 C26.605007,93.0 27.5,93.895002 27.5,95.0 27.5,95.0 27.5,95.0 27.5,95.0 L27.5,105.0 C27.5,106.105002 26.605007,107.0 25.5,107.0 L24.5,107.0 C23.395005,107.0 22.5,106.105002 22.5,105.0 z M32.5,95.0 C32.5,93.895002 33.395006,93.0 34.5,93.0 L35.5,93.0 C36.605008,93.0 37.5,93.895002 37.5,95.0 37.5,95.0 37.5,95.0 37.5,95.0 L37.5,105.0 C37.5,106.105002 36.605008,107.0 35.5,107.0 L34.5,107.0 C33.395006,107.0 32.5,106.105002 32.5,105.0 z M42.5,95.0 C42.5,93.895002 43.3950003,93.0 44.5,93.0 L45.5,93.0 C46.6050002,93.0 47.5,93.895002 47.5,95.0 47.5,95.0 47.5,95.0 47.5,95.0 L47.5,105.0 C47.5,106.105002 46.6050002,107.0 45.5,107.0 L44.5,107.0 C43.3950003,107.0 42.5,106.105002 42.5,105.0 z M52.5,95.0 C52.5,93.895002 53.3950003,93.0 54.5,93.0 L55.5,93.0 C56.6050001,93.0 57.5,93.895002 57.5,95.0 57.5,95.0 57.5,95.0 57.5,95.0 L57.5,105.0 C57.5,106.105002 56.6050001,107.0 55.5,107.0 L54.5,107.0 C53.3950003,107.0 52.5,106.105002 52.5,105.0 z M62.5,95.0 C62.5,93.895002 63.3950021,93.0 64.5,93.0 L65.5,93.0 C66.605,93.0 67.5,93.895002 67.5,95.0 67.5,95.0 67.5,95.0 67.5,95.0 L67.5,105.0 C67.5,106.105002 66.605,107.0 65.5,107.0 L64.5,107.0 C63.3950021,107.0 62.5,106.105002 62.5,105.0 z M22.5,95.0 C22.5,93.895002 23.395005,93.0 24.5,93.0 L25.5,93.0 C26.605007,93.0 27.5,93.895002 27.5,95.0 L27.5,105.0 C27.5,106.105002 26.605007,107.0 25.5,107.0 L24.5,107.0 C23.395005,107.0 22.5,106.105002 22.5,105.0 z M32.5,95.0 C32.5,93.895002 33.395006,93.0 34.5,93.0 L35.5,93.0 C36.605008,93.0 37.5,93.895002 37.5,95.0 L37.5,105.0 C37.5,106.105002 36.605008,107.0 35.5,107.0 L34.5,107.0 C33.395006,107.0 32.5,106.105002 32.5,105.0 z M42.5,95.0 C42.5,93.895002 43.3950003,93.0 44.5,93.0 L45.5,93.0 C46.6050002,93.0 47.5,93.895002 47.5,95.0 L47.5,105.0 C47.5,106.105002 46.6050002,107.0 45.5,107.0 L44.5,107.0 C43.3950003,107.0 42.5,106.105002 42.5,105.0 z M52.5,95.0 C52.5,93.895002 53.3950003,93.0 54.5,93.0 L55.5,93.0 C56.6050001,93.0 57.5,93.895002 57.5,95.0 L57.5,105.0 C57.5,106.105002 56.6050001,107.0 55.5,107.0 L54.5,107.0 C53.3950003,107.0 52.5,106.105002 52.5,105.0 z M62.5,95.0 C62.5,93.895002 63.3950021,93.0 64.5,93.0 L65.5,93.0 C66.605,93.0 67.5,93.895002 67.5,95.0 L67.5,105.0 C67.5,106.105002 66.605,107.0 65.5,107.0 L64.5,107.0 C63.3950021,107.0 62.5,106.105002 62.5,105.0 z"
+            Stroke="#CCCCCC" StrokeDashArray="0.0" StrokeWidth="1.0">
+            <Expose ExposedAttribute="Stroke" Name="PumpCastingColour"/>
+            <Expose ExposedAttribute="Fill" Name="PumpCastingColour"/>
+        </Path>
+        <Path Fill="None"
+            PathData="M19.5,45.0 C19.5,40.0 24.5,40.0 29.5,40.0 39.5,40.0 50.5,40.0 60.5,40.0 65.5,40.0 70.5,40.0 70.5,45.0 70.5,65.0 70.5,80.0 70.5,85.0 50.5,85.0 39.5,85.0 19.5,85.0 19.5,80.0 19.5,65.0 19.5,45.0 M17.5,86.0 C17.5,85.4480002 17.9480052,85.0 18.5,85.0 L71.5,85.0 C72.052,85.0 72.5,85.4480002 72.5,86.0 72.5,86.0 72.5,86.0 72.5,86.0 L72.5,88.0 C72.5,88.552002 72.052,89.0 71.5,89.0 L18.5,89.0 C17.9480052,89.0 17.5,88.552002 17.5,88.0 z M19.5,89.0 L70.5,89.0 70.5,110.0 19.5,110.0 z M22.5,95.0 C22.5,93.895002 23.395005,93.0 24.5,93.0 L25.5,93.0 C26.60501,93.0 27.5,93.895002 27.5,95.0 27.5,95.0 27.5,95.0 27.5,95.0 L27.5,105.0 C27.5,106.105002 26.60501,107.0 25.5,107.0 L24.5,107.0 C23.395005,107.0 22.5,106.105002 22.5,105.0 z M32.5,95.0 C32.5,93.895002 33.395006,93.0 34.5,93.0 L35.5,93.0 C36.60501,93.0 37.5,93.895002 37.5,95.0 37.5,95.0 37.5,95.0 37.5,95.0 L37.5,105.0 C37.5,106.105002 36.60501,107.0 35.5,107.0 L34.5,107.0 C33.395006,107.0 32.5,106.105002 32.5,105.0 z M42.5,95.0 C42.5,93.895002 43.3950003,93.0 44.5,93.0 L45.5,93.0 C46.6050002,93.0 47.5,93.895002 47.5,95.0 47.5,95.0 47.5,95.0 47.5,95.0 L47.5,105.0 C47.5,106.105002 46.6050002,107.0 45.5,107.0 L44.5,107.0 C43.3950003,107.0 42.5,106.105002 42.5,105.0 z M52.5,95.0 C52.5,93.895002 53.3950003,93.0 54.5,93.0 L55.5,93.0 C56.6050001,93.0 57.5,93.895002 57.5,95.0 57.5,95.0 57.5,95.0 57.5,95.0 L57.5,105.0 C57.5,106.105002 56.6050001,107.0 55.5,107.0 L54.5,107.0 C53.3950003,107.0 52.5,106.105002 52.5,105.0 z M62.5,95.0 C62.5,93.895002 63.3950021,93.0 64.5,93.0 L65.5,93.0 C66.605,93.0 67.5,93.895002 67.5,95.0 67.5,95.0 67.5,95.0 67.5,95.0 L67.5,105.0 C67.5,106.105002 66.605,107.0 65.5,107.0 L64.5,107.0 C63.3950021,107.0 62.5,106.105002 62.5,105.0 z M22.5,95.0 C22.5,93.895002 23.395005,93.0 24.5,93.0 L25.5,93.0 C26.60501,93.0 27.5,93.895002 27.5,95.0 L27.5,105.0 C27.5,106.105002 26.60501,107.0 25.5,107.0 L24.5,107.0 C23.395005,107.0 22.5,106.105002 22.5,105.0 z M32.5,95.0 C32.5,93.895002 33.395006,93.0 34.5,93.0 L35.5,93.0 C36.60501,93.0 37.5,93.895002 37.5,95.0 L37.5,105.0 C37.5,106.105002 36.60501,107.0 35.5,107.0 L34.5,107.0 C33.395006,107.0 32.5,106.105002 32.5,105.0 z M42.5,95.0 C42.5,93.895002 43.3950003,93.0 44.5,93.0 L45.5,93.0 C46.6050002,93.0 47.5,93.895002 47.5,95.0 L47.5,105.0 C47.5,106.105002 46.6050002,107.0 45.5,107.0 L44.5,107.0 C43.3950003,107.0 42.5,106.105002 42.5,105.0 z M52.5,95.0 C52.5,93.895002 53.3950003,93.0 54.5,93.0 L55.5,93.0 C56.6050001,93.0 57.5,93.895002 57.5,95.0 L57.5,105.0 C57.5,106.105002 56.6050001,107.0 55.5,107.0 L54.5,107.0 C53.3950003,107.0 52.5,106.105002 52.5,105.0 z M62.5,95.0 C62.5,93.895002 63.3950021,93.0 64.5,93.0 L65.5,93.0 C66.605,93.0 67.5,93.895002 67.5,95.0 L67.5,105.0 C67.5,106.105002 66.605,107.0 65.5,107.0 L64.5,107.0 C63.3950021,107.0 62.5,106.105002 62.5,105.0 z"
+            Stroke="#5F000000" StrokeDashArray="0.0" StrokeWidth="1.0"/>
+        <Path Fill="#90000000"
+            PathData="M22.5,95.0 C22.5,93.895002 23.395005,93.0 24.5,93.0 L25.5,93.0 C26.60501,93.0 27.5,93.895002 27.5,95.0 27.5,95.0 27.5,95.0 27.5,95.0 L27.5,105.0 C27.5,106.105002 26.60501,107.0 25.5,107.0 L24.5,107.0 C23.395005,107.0 22.5,106.105002 22.5,105.0 z M32.5,95.0 C32.5,93.895002 33.395006,93.0 34.5,93.0 L35.5,93.0 C36.60501,93.0 37.5,93.895002 37.5,95.0 37.5,95.0 37.5,95.0 37.5,95.0 L37.5,105.0 C37.5,106.105002 36.60501,107.0 35.5,107.0 L34.5,107.0 C33.395006,107.0 32.5,106.105002 32.5,105.0 z M42.5,95.0 C42.5,93.895002 43.3950003,93.0 44.5,93.0 L45.5,93.0 C46.6050002,93.0 47.5,93.895002 47.5,95.0 47.5,95.0 47.5,95.0 47.5,95.0 L47.5,105.0 C47.5,106.105002 46.6050002,107.0 45.5,107.0 L44.5,107.0 C43.3950003,107.0 42.5,106.105002 42.5,105.0 z M52.5,95.0 C52.5,93.895002 53.3950003,93.0 54.5,93.0 L55.5,93.0 C56.6050001,93.0 57.5,93.895002 57.5,95.0 57.5,95.0 57.5,95.0 57.5,95.0 L57.5,105.0 C57.5,106.105002 56.6050001,107.0 55.5,107.0 L54.5,107.0 C53.3950003,107.0 52.5,106.105002 52.5,105.0 z M62.5,95.0 C62.5,93.895002 63.3950021,93.0 64.5,93.0 L65.5,93.0 C66.605,93.0 67.5,93.895002 67.5,95.0 67.5,95.0 67.5,95.0 67.5,95.0 L67.5,105.0 C67.5,106.105002 66.605,107.0 65.5,107.0 L64.5,107.0 C63.3950021,107.0 62.5,106.105002 62.5,105.0 z M22.5,95.0 C22.5,93.895002 23.395005,93.0 24.5,93.0 L25.5,93.0 C26.60501,93.0 27.5,93.895002 27.5,95.0 L27.5,105.0 C27.5,106.105002 26.60501,107.0 25.5,107.0 L24.5,107.0 C23.395005,107.0 22.5,106.105002 22.5,105.0 z M32.5,95.0 C32.5,93.895002 33.395006,93.0 34.5,93.0 L35.5,93.0 C36.60501,93.0 37.5,93.895002 37.5,95.0 L37.5,105.0 C37.5,106.105002 36.60501,107.0 35.5,107.0 L34.5,107.0 C33.395006,107.0 32.5,106.105002 32.5,105.0 z M42.5,95.0 C42.5,93.895002 43.3950003,93.0 44.5,93.0 L45.5,93.0 C46.6050002,93.0 47.5,93.895002 47.5,95.0 L47.5,105.0 C47.5,106.105002 46.6050002,107.0 45.5,107.0 L44.5,107.0 C43.3950003,107.0 42.5,106.105002 42.5,105.0 z M52.5,95.0 C52.5,93.895002 53.3950003,93.0 54.5,93.0 L55.5,93.0 C56.6050001,93.0 57.5,93.895002 57.5,95.0 L57.5,105.0 C57.5,106.105002 56.6050001,107.0 55.5,107.0 L54.5,107.0 C53.3950003,107.0 52.5,106.105002 52.5,105.0 z M62.5,95.0 C62.5,93.895002 63.3950021,93.0 64.5,93.0 L65.5,93.0 C66.605,93.0 67.5,93.895002 67.5,95.0 L67.5,105.0 C67.5,106.105002 66.605,107.0 65.5,107.0 L64.5,107.0 C63.3950021,107.0 62.5,106.105002 62.5,105.0 z"
+            Stroke="#000000" StrokeDashArray="0.0" StrokeWidth="0"/>
+        <Bind Attribute="" Name="P#Cmd" PreventDefault="True">
+            <Expose ExposedAttribute="Name" Name="Command Bind"/>
+			<Expose ExposedAttribute="PreventDefault" Name="Prevent Default"/>
+            <Script OnDocumentLoad="onLoad" OnSignalChange="onChange"><![CDATA[var comp;
+var currentColour;
+var offValue;
+
+function onLoad(evt)
+{
+comp = evt.getCurrentTarget().getParentNode();
+currentColour = comp.getChildByName("Background").getAttribute("Fill");
+offValue = parseInt(comp.getAttribute("SignalLessOrEqualTo"));
+}
+
+function onChange(evt)
+{
+var val = evt.getValue();
+var col = currentColour;
+if(val > offValue) col = comp.getAttribute("CommandOnColour");
+colourChange(comp.getChildByName("Background"), col);
+}
+
+function colourChange(part, col){
+part.setAttribute("Fill", col);
+part.setAttribute("Stroke", col);
+}]]></Script>
+        </Bind>
+        <Path Fill="None"
+            PathData="M19.5,45.0 L19.5,85.0 L18.5,85.0 M18.5,89.0 L19.5,89.0 L19.5,110.0 L70.5,110.0 L70.5,89.0 L72.5,89.0 M72.5,85.0 L70.5,85.0 L70.5,45.0 M19.5,45.0 C19.5,42.0 21.5,40.0 24.5,40.0 C36.5,40.0 52.587,40.025 64.5,40.0 C68.5,40.0 70.5,42.0 70.5,45.0 M17.5,85.0 L17.5,89.0 M72.5,85.0 L72.5,89.0"
+            Stroke="#FFD100" StrokeDashArray="0.0" StrokeWidth="2" Visibility="Hidden">
+            <Bind Color="#F0080E" Fill="#FFD100" Name="P#Cmd" Stroke="#42B4E6" PreventDefault="True">
+                <Expose ExposedAttribute="Color" Name="Error Color"/>
+                <Expose ExposedAttribute="Fill" Name="Forced Color"/>
+                <Expose ExposedAttribute="Stroke" Name="Database Color"/>
+                <Expose ExposedAttribute="Name" Name="Command Bind"/>
+				<Expose ExposedAttribute="PreventDefault" Name="Prevent Default"/>
+                <Script OnDocumentLoad="onLoad" OnSignalChange="onChange"><![CDATA[var body;
+var HighLightCol="#404040";
+var originalBodyColor;
+
+function onLoad(evt)
+{
+  comp = evt.getCurrentTarget();
+  body = comp.getParentNode();
+  originalBodyColor=body.getAttribute("Stroke");
+}
+
+function onChange(evt)
+{
+  status = parseInt(evt.getStatus());
+  
+  bgStroke = setColour(status);
+  if (bgStroke=="device"){
+  	body.setAttribute("Visibility", "Hidden");
+  }
+  else{
+	  body.setAttribute("Stroke", bgStroke);
+	  body.setAttribute("Visibility", "Visible");
+  }
+}
+
+function setColour(status){
+var col;
+
+  if(status==2){//Value from Device
+  	return "device";
+  }
+  else{
+  		if(status==3){//Forced Value
+  			return comp.getAttribute("Fill");
+  		}
+  		else{
+  	 		if(status==1){//Database Value
+  	 		return comp.getAttribute("Stroke");
+  			}
+  			else{
+  				if(status==0){
+  					return comp.getAttribute("Color")
+  				}
+  			}
+  		}
+  }
+
+}]]></Script>
+            </Bind>
+        </Path>
+    </Group>
+</Component>

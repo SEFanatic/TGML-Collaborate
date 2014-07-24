@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<Component Clip="False" ContentHeight="80" ContentWidth="40"
+    Fill="#FFFFFF" Height="80.0" Left="-0.5"
+    Name="Heating Coil, Electric" Stroke="#000000" Top="-0.5" Width="40.0">
+    <Metadata Name="Name" Value="Heating Coil, Electric"/>
+    <Metadata Name="Description" Value="Heating Coil, Electric"/>
+    <Rectangle Height="80" Width="40"/>
+    <Polyline Fill="None"
+        Points="31.0,51.1111068725586 21.0,64.1269760131836 34.9682502746582,60.9523773193359 25.1269798278809,74.1269760131836"
+        StrokeDashArray="0.0" StrokeWidth="1.0"/>
+    <Polyline Fill="None"
+        Points="24.9682502746582,70.0 24.9682502746582,74.1269760131836 31.0,71.9047546386719"
+        StrokeDashArray="0.0" StrokeWidth="1.0"/>
+    <Line X1="40.0" X2="0.0" Y1="0.0" Y2="80.0"/>
+</Component>

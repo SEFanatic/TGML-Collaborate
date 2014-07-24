@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<Component Clip="False" ComponentCounter="4" ContentHeight="20"
+    ContentWidth="20" GridSize="5" Height="20.0" Left="5.0"
+    Name="GasRTU" Top="5.0" Width="20.0">
+    <Metadata Name="Name" Value="ChwRTU"/>
+    <Metadata Name="Description" Value=""/>
+    <Metadata Name="Version" Value="1.0"/>
+    <Polygon Fill="#A78900" Opacity="1.0"
+        Points="20.0,15.0 5.0,15.0 5.0,10.0 10.0,10.0 10.0,5.0 15.0,5.0 15.0,10.0 20.0,10.0"
+        Stroke="#A78900" StrokeDashArray="0.0" StrokeWidth="1.0">
+        <Expose ExposedAttribute="Fill" Name="GasRColour"/>
+        <Expose ExposedAttribute="Stroke" Name="GasRColour"/>
+    </Polygon>
+    <Polyline Opacity="1.0" Points="10.0,5.0 10,10 5.0,10.0"
+        Stroke="#5F000000" StrokeDashArray="0.0" StrokeWidth="1.0"/>
+    <Polyline Opacity="1.0" Points="15.0,5.0 15.0,10.0 20.0,10.0"
+        Stroke="#5F000000" StrokeDashArray="0.0" StrokeWidth="1.0"/>
+    <Line Opacity="1.0" Stroke="#5F000000" StrokeDashArray="0.0"
+        StrokeWidth="1.0" X1="5.0" X2="20.0" Y1="15.0" Y2="15.0"/>
+</Component>
