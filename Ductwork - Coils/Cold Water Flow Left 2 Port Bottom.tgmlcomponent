@@ -91,7 +91,8 @@
         <Bind Name="ChwVlvPos" PreventDefault="True">
             <Expose ExposedAttribute="Name" Name="Bind Name"/>
 			<Expose ExposedAttribute="PreventDefault" Name="Prevent Default"/>
-            <Script OnDocumentLoad="onLoad" OnSignalChange="onChange"><![CDATA[var comp;
+            <Script OnDocumentLoad="onLoad" OnSignalChange="onChange"><![CDATA[
+var comp;
 var topScale;
 var bottomScale;
 var scaleFactor;
