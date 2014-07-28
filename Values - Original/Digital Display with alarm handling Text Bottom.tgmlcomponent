@@ -1,0 +1,315 @@
+<?xml version="1.0"?>
+<Component Clip="False" ComponentCounter="4" ContentHeight="40.0"
+    ContentWidth="100.0" Height="40.0" Left="0.0"
+    Name="Digital Display with alarm handling Text Bottom" OpenValue=""
+    Top="0.0" Width="100.0">
+    <Metadata Name="Name" Value="Digital Display with alarm handling Text Bottom"/>
+    <Metadata Name="Description" Value="== Bindings ==&#xd;&#xa;DprCmd - Damper Command&#xd;&#xa;DprAlm - Damper Alarm&#xd;&#xa;&#xd;&#xa;== Exposed Properties ==&#xd;&#xa;Open Value - &#xd;&#xa;Value Bind - DprCmd - Damper command point&#xd;&#xa;Alarm Bind - DprAlm - Damper alarm point&#xd;&#xa;Text Content - ... - Label text&#xd;&#xa;State 0 - Closed - text to display when 0&#xd;&#xa;State 1 - Open - text to display then 1&#xd;&#xa;Alarm, Forced Color - Outline color when point in error or forced condition&#xd;&#xa;Point Content - ... - Text displayed befor value is retrieved"/>
+    <Expose ExposedAttribute="OpenValue" Name="OpenValue"/>
+    <Group Name="binds">
+        <Bind Description="ValueBind" Name="DprCmd" PreventDefault="True">
+		<Expose ExposedAttribute="PreventDefault" Name="Prevent Default"/>
+            <Expose ExposedAttribute="Name" Name="ValueBind"/>
+        </Bind>
+        <Bind Description="AlarmBind" Name="DprAlm" PreventDefault="True">
+		<Expose ExposedAttribute="PreventDefault" Name="Prevent Default"/>
+            <Expose ExposedAttribute="Name" Name="AlarmBind"/>
+        </Bind>
+    </Group>
+    <Group Name="display">
+        <Component Clip="False" ContentHeight="20.0"
+            ContentWidth="100.0" Height="20.0" Left="0.0" Name="Text"
+            Top="20" Width="100.0">
+            <Group Name="display">
+                <Rectangle Fill="#01FFFFFF" Height="20.0" Left="0.0"
+                    Name="background" RadiusX="0.0" RadiusY="0.0"
+                    Stroke="None" StrokeDashArray="0.0"
+                    StrokeWidth="1.0" Top="0.0" Width="100.0"/>
+                <TextBox FontFamily="Arial" FontSize="15.0"
+                    FontStyle="Normal" FontWeight="Normal" Height="20.0"
+                    HorizontalAlign="Center" Left="0.0"
+                    Name="foreground" Stroke="#000000"
+                    TextDecoration="None" Top="0.0"
+                    VerticalAlign="Middle"
+                        Width="100.0"><![CDATA[...]]><Expose
+                        ExposedAttribute="Content" Name="Text Content"/>
+                </TextBox>
+            </Group>
+        </Component>
+        <Component AlarmColor="#EB5B25" Clip="False"
+            ContentHeight="20.0" ContentWidth="100.0" Fill="#F0080E"
+            ForcedColor="#FFD100" Height="20.0" Left="0.0"
+            Name="BinaryPoint" State0="Closed" State1="Open"
+            Stroke="#FFD100" Top="0" Width="100.0">
+            <Expose ExposedAttribute="State0" Name="State0"/>
+            <Expose ExposedAttribute="State1" Name="State1"/>
+            <Expose ExposedAttribute="Fill" Name="AlarmColor"/>
+            <Expose ExposedAttribute="Stroke" Name="ForcedColor"/>
+            <Group Name="display">
+                <Rectangle Fill="None" Height="20.0" Left="10"
+                    Name="background" RadiusX="5" RadiusY="5"
+                    Stroke="#626469" StrokeDashArray="0.0"
+                    StrokeWidth="1.0" Top="0.0" Width="80">
+                    <LinearGradient EndPoint="0,1">
+                        <GradientStop Color="#FEFEFE" Offset="0"/>
+                        <GradientStop Color="#DFE0E2" Offset="1.0"/>
+                    </LinearGradient>
+                </Rectangle>
+                <TextBox Fill="None" FontFamily="Arial" FontSize="15.0"
+                    FontStyle="Normal" FontWeight="Normal" Height="20.0"
+                    HorizontalAlign="Center" Left="0.0"
+                    Name="foreground" Stroke="#000000"
+                    TextDecoration="None" Top="0" VerticalAlign="Middle"
+                        Width="100.0"><![CDATA[...]]><Expose
+                        ExposedAttribute="Content" Name="Point Content"/>
+                </TextBox>
+                <Component Clip="False" ContentHeight="20"
+                    ContentWidth="20" Height="20.0" Left="12"
+                    Name="DatabaseImage" Top="0" Visibility="Hidden" Width="20.0">
+                    <Curve Fill="#FEE883" Opacity="1.0"
+                        Points="14.0,4.111048219022 12.888560208279,4.66658357372 10.666418789487,5.22211892841801 9.0,5.22211892841801 7.33320666129899,5.22211892841801 5.11106524250701,4.66658357372 4.0,4.111048219022 4.0,7.44426034720999 4.0,11.333007830095 4.0,13.555149248887 4.0,15.221767187119 7.33320666129899,15.221767187119 9.0,15.221767187119 10.666418789487,15.221767187119 14.0,15.221767187119 14.0,13.555149248887 14.0,11.333007830095 14.0,7.44426034720999 14.0,4.111048219022"
+                        Stroke="#86632A" StrokeDashArray="0.0" StrokeWidth=".5">
+                        <LinearGradient Attribute="Fill"
+                            EndPoint="1.0,0.0" SpreadMethod="Pad" StartPoint="0.0,0.0">
+                            <GradientStop Color="#E9C962" Offset="0.0"/>
+                            <GradientStop Color="#FCF8EC" Offset=".4"/>
+                            <GradientStop Color="#EDD79B" Offset=".6"/>
+                            <GradientStop Color="#E9C962" Offset="1.0"/>
+                        </LinearGradient>
+                    </Curve>
+                    <Ellipse Fill="#FFFFFF" Height="2.22214141879181"
+                        Left="4.0" Opacity="1.0" Stroke="#86632A"
+                        StrokeDashArray="0.0" StrokeWidth=".5" Top="3.0" Width="10.0">
+                        <LinearGradient Attribute="Fill"
+                            EndPoint="1.0,0.0" SpreadMethod="Pad" StartPoint="0.0,0.0">
+                            <GradientStop Color="#F4E9CE" Offset="0.0"/>
+                            <GradientStop Color="#F0DEAC" Offset=".5"/>
+                            <GradientStop Color="#F4E9CE" Offset="1.0"/>
+                        </LinearGradient>
+                    </Ellipse>
+                    <Curve Fill="None" Opacity="1.0"
+                        Points="4.0,7.44426034720999 4.0,8.0 6.222135951903,8.55533105660601 9.0,8.55533105660601 11.777489498883,8.55533105660601 14.0,8.0 14.0,7.44426034720999"
+                        Stroke="#86632A" StrokeDashArray="0.0" StrokeWidth=".5"/>
+                    <Curve Fill="None" Opacity="1.0"
+                        Points="4.0,10.777472475397 4.0,11.333007830095 6.222135951903,11.888543184793 9.0,11.888543184793 11.777489498883,11.888543184793 14.0,11.333007830095 14.0,10.777472475397"
+                        Stroke="#86632A" StrokeDashArray="0.0" StrokeWidth=".5"/>
+                </Component>
+                <Component Clip="False" ContentHeight="20"
+                    ContentWidth="20" Height="20.0" Left="8"
+                    Name="ForcedImage" Top="0" Visibility="Hidden" Width="20.0">
+                    <Component Clip="False" ContentHeight="10.1"
+                        ContentWidth="15.0" Height="10.1" Left="4"
+                        Top="5" Width="15.0">
+                        <Path Fill="#E3BC67" Name="B1"
+                            PathData="M11.25,10.096130000000017 C12.980770399999997,10.096130000000017 12.6923101,8.0769000000000233 11.25,8.0769000000000233 11.826920000000001,8.0769000000000233 11.826920000000001,8.0769000000000233 12.403849399999999,8.0769000000000233 13.846150000000002,8.0769000000000233 13.846150000000002,6.0576710000000276 12.403849399999999,6.0576710000000276 12.980770399999997,6.0576710000000276 12.980770399999997,6.0576710000000276 13.557690399999999,6.0576710000000276 15.0,6.0576710000000276 15.0,4.0384409999999775 13.557690399999999,4.0384409999999775 12.980770399999997,4.0384409999999775 12.6923101,4.0384409999999775 12.115386999999998,4.0384409999999775 13.557690399999999,4.0384409999999775 13.557690399999999,2.0192109999999843 12.115386999999998,2.0192109999999843 9.51923,2.0192109999999843 9.51923,2.0192109999999843 7.2115399999999994,2.0192109999999843 8.6538473000000025,2.0192109999999843 8.6538473000000025,-1.900000000887303E-5 7.2115399999999994,-1.900000000887303E-5 5.76923,-1.900000000887303E-5 4.6153800000000018,-1.900000000887303E-5 3.4615399999999994,0.28844099999997752 2.3809600000000017,0.58771999999999025 2.0376899999999978,1.040600999999981 1.1538473000000025,1.7307500000000005 0.725049300000002,2.0655100000000175 0.20812709999999868,2.382092 0.0,2.8845900000000029 0.0,5.1922799999999825 0.0,7.2115099999999757 0.0,9.5192109999999843 0.33908739999999682,10.067859999999996 1.1538473000000025,10.096130000000017 1.7307703999999973,10.096130000000017 4.9038473000000025,10.096130000000017 8.6538473000000025,10.096130000000017 11.25,10.096130000000017 M7.2115399999999994,2.0192109999999843 L5.4807703999999973,2.0192109999999843 M12.115386999999998,4.0384409999999775 L8.3653800000000018,4.0384409999999775 M12.403849399999999,6.0576710000000276 L8.3653800000000018,6.0576710000000276 M11.25,8.0769000000000233 L8.3653800000000018,8.0769000000000233"
+                            Stroke="#505050" StrokeDashArray="0.0" StrokeWidth=".5"/>
+                        <Path Fill="#FFFFFF"
+                            PathData="M11.25,10.096130000000017 C12.9807706,10.096130000000017 12.692310200000001,8.0769000000000233 11.25,8.0769000000000233 11.826920000000001,8.0769000000000233 11.826920000000001,8.0769000000000233 12.403849600000001,8.0769000000000233 13.846150000000002,8.0769000000000233 13.846150000000002,6.0576730000000225 12.403849600000001,6.0576730000000225 12.9807706,6.0576730000000225 12.9807706,6.0576730000000225 13.5576906,6.0576730000000225 15.0,6.0576730000000225 15.0,4.0384429999999725 13.5576906,4.0384429999999725 12.9807706,4.0384429999999725 12.692310200000001,4.0384429999999725 12.115388000000003,4.0384429999999725 13.5576906,4.0384429999999725 13.5576906,2.0192129999999793 12.115388000000003,2.0192129999999793 9.51923,2.0192129999999793 9.51923,2.0192129999999793 7.2115399999999994,2.0192129999999793 8.6538474999999977,2.0192129999999793 8.6538474999999977,-1.7000000013922545E-5 7.2115399999999994,-1.7000000013922545E-5 5.76923,-1.7000000013922545E-5 4.6153800000000018,-1.7000000013922545E-5 3.4615399999999994,0.28844299999997247 2.3809600000000017,0.58771999999999025 2.0376899999999978,1.040602999999976 1.1538474999999977,1.7307500000000005 0.72504949999999724,2.0655100000000175 0.20812730000000101,2.382093999999995 0.0,2.8845900000000029 0.0,5.1922799999999825 0.0,7.2115099999999757 0.0,9.51921299999998 0.33908759999999916,10.067859999999996 1.1538474999999977,10.096130000000017 1.7307705999999996,10.096130000000017 4.9038474999999977,10.096130000000017 8.6538474999999977,10.096130000000017 11.25,10.096130000000017 M7.2115399999999994,2.0192129999999793 L5.4807706,2.0192129999999793 M12.115388000000003,4.0384429999999725 L8.3653800000000018,4.0384429999999725 M12.403849600000001,6.0576730000000225 L8.3653800000000018,6.0576730000000225 M11.25,8.0769000000000233 L8.3653800000000018,8.0769000000000233"
+                            Stroke="#505050" StrokeDashArray="0.0" StrokeWidth=".5">
+                            <LinearGradient Attribute="Fill"
+                                EndPoint="1.0,0.0" SpreadMethod="Pad" StartPoint="0.0,0.0">
+                                <GradientStop Color="#ABFFFFFF" Offset="0.0"/>
+                                <GradientStop Color="#01FFFFFF" Offset="0.5"/>
+                                <GradientStop Color="#60000000" Offset="1.0"/>
+                            </LinearGradient>
+                        </Path>
+                    </Component>
+                </Component>
+                <Component Clip="False" ContentHeight="20"
+                    ContentWidth="20" Height="20.0" Left="10"
+                    Name="AlarmImage" Top="0" Visibility="Hidden" Width="20.0">
+                    <Path Fill="#FFD100" Name="B1"
+                        PathData="M11.8,15.15 C11.8,15.5640001 10.994,15.9 10.0,15.9 9.006,15.9 8.20000001,15.5640001 8.20000001,15.15 8.20000001,14.736 9.006,14.4 10.0,14.4 10.994,14.4 11.8,14.736 11.8,15.15 z M11.0,3.75 C11.0,4.164 10.55200001,4.5 10.0,4.5 9.448,4.5 9.0,4.164 9.0,3.75 9.0,3.336000001 9.448,3.0 10.0,3.0 10.55200001,3.0 11.0,3.336000001 11.0,3.75 z"
+                        Stroke="#FFD100" StrokeDashArray="0.0" StrokeWidth=".5"/>
+                    <Ellipse Fill="None" Height="1.50002274259486"
+                        Left="8.199998259544" Opacity="1.0"
+                        Stroke="#4B000000" StrokeDashArray="0.0"
+                        StrokeWidth=".5" Top="14.399997115135" Width="3.60000014305115"/>
+                    <Ellipse Fill="None" Height="1.50002274259486"
+                        Left="9.0" Opacity="1.0" Stroke="#4B000000"
+                        StrokeDashArray="0.0" StrokeWidth=".5" Top="3.0" Width="2.0"/>
+                    <Curve Fill="#FFD100" Name="B2" Opacity="1.0"
+                        Points="10.0,15.0 11.500100146817,15.0 15.100154729045,15.0 16.0,14.399997115135 16.0,13.799997091293 16.0,13.500148719784 15.399998545647,12.59999704361 14.500145632008,11.70012142867 14.500145632008,11.100112331632 14.199998497963,9.59999692439999 13.900136534969,7.79999685287498 13.30012743793,5.700030458291 11.799998402596,4.19999670982401 11.500100146817,3.90000316717698 10.632542525376,3.59999668598198 10.0,3.59999668598198 9.367612283068,3.59999668598198 8.500054661628,3.90000316717698 8.199998259544,4.19999670982401 6.70002737051399,5.39999675750698 6.100018273475,7.79999685287498 5.799998164177,9.59999692439999 5.500009176437,11.100112331632 5.500009176437,11.70012142867 4.599998116493,12.59999704361 4.0,13.500148719784 4.0,13.799997091293 4.0,14.399997115135 5.199998140335,15.0 8.500054661628,15.0 10.0,15.0"
+                        Stroke="#FFD100" StrokeDashArray="0.0" StrokeWidth=".5"/>
+                    <Curve Opacity="1.0"
+                        Points="10.0,15.0 11.500100146817,15.0 15.100154729045,15.0 16.0,14.399997115135 16.0,13.799997091293 16.0,13.500148719784 15.399998545647,12.59999704361 14.500145632008,11.70012142867 14.500145632008,11.100112331632 14.199998497963,9.59999692439999 13.900136534969,7.79999685287498 13.30012743793,5.700030458291 11.799998402596,4.19999670982401 11.500100146817,3.90000316717698 10.632542525376,3.59999668598198 10.0,3.59999668598198 9.367612283068,3.59999668598198 8.500054661628,3.90000316717698 8.199998259544,4.19999670982401 6.70002737051399,5.39999675750698 6.100018273475,7.79999685287498 5.799998164177,9.59999692439999 5.500009176437,11.100112331632 5.500009176437,11.70012142867 4.599998116493,12.59999704361 4.0,13.500148719784 4.0,13.799997091293 4.0,14.399997115135 5.199998140335,15.0 8.500054661628,15.0 10.0,15.0"
+                        Stroke="#5F000000" StrokeDashArray="0.0" StrokeWidth=".5">
+                        <LinearGradient Attribute="Fill"
+                            EndPoint="1.0,0.0" SpreadMethod="Pad" StartPoint="0.0,0.0">
+                            <GradientStop Color="#ABFFFFFF" Offset="0.0"/>
+                            <GradientStop Color="#01FFFFFF" Offset="0.5"/>
+                            <GradientStop Color="#60000000" Offset="1.0"/>
+                        </LinearGradient>
+                    </Curve>
+                </Component>
+            </Group>
+        </Component>
+    </Group>
+    <Script OnDocumentLoad="onLoad" OnMouseClick="" OnSignalChange="onChange"><![CDATA[var comp;
+var myValue = new valueObject;
+
+function onLoad(evt){
+	comp = evt.getCurrentTarget();
+	myValue.init();	
+}
+
+function onChange(evt){
+	var val = evt.getValue();
+	var sts = parseInt(evt.getStatus());
+	var fbn = evt.getTarget().getFullBindName();	
+	myValue.changeValue(val,fbn,sts);
+}
+
+function valueObject(){
+	var node;
+	var valueBind;
+	var alarmBind;
+	var forced = false;
+	var value = false;
+	var alarm = false;
+	var text;
+	var on;
+	var off;
+	var alarmColor;
+	var forcedColor;
+	var forcedImage;
+	var alarmImage;
+	var bg;
+	var normalColor;
+	var onText;
+	
+	this.init = function(){
+		node = comp;
+		onText = node.getAttribute("OpenValue");
+		if (onText=="") onText="1";
+		 
+		//get binds
+		var bindGroup = node.getChildByName("binds");		
+		if(bindGroup != null){
+			var bindList = bindGroup.getElementsByTagName("Bind");
+			for(var i=0;i<bindList.length;i++){
+				if(bindList.item(i).getAttribute("Description") == "ValueBind"){
+					valueBind = bindList.item(i).getFullBindName();
+				}
+				if(bindList.item(i).getAttribute("Description") == "AlarmBind"){
+					alarmBind = bindList.item(i).getFullBindName();
+				}
+			}
+		}
+		
+		//get display objects
+		var displayGroup = node.getChildByName("display");
+		if(displayGroup != null){
+			var point = displayGroup.getChildByName("BinaryPoint");
+			if(point != null){
+				on = point.getAttribute("State1");
+				off = point.getAttribute("State0");
+				alarmColor = point.getAttribute("Fill");
+				forcedColor = point.getAttribute("Stroke");
+				var display = point.getChildByName("display");			
+				if(display != null){
+					text = display.getChildByName("foreground");			
+					forcedImage = display.getChildByName("ForcedImage");
+					alarmImage = display.getChildByName("AlarmImage");
+					bg = display.getChildByName("background");
+					if(bg != null){
+						normalColor = point.getAttribute("Stroke");
+					}
+				}
+			}
+		}		
+	}
+	
+	this.changeValue = function(val,fbn,sts){
+		if(fbn === valueBind){
+			value = getBool(val);
+			
+			if(sts === 3){
+				forced = true;
+			}else{
+				forced = false;
+			}
+		}
+		
+		if(fbn === alarmBind){	
+			alarm = getBool(val);				
+		}
+		
+		renderPoint();		
+	}
+	
+	var renderPoint = function(){
+		if(text != null){
+			text.setAttribute("Content",getDisplayText());
+		}
+		
+		if(forcedImage != null){
+			forcedImage.setAttribute("Visibility",getForced());
+		}
+		
+		if(alarmImage != null){
+			alarmImage.setAttribute("Visibility",getAlarm());
+		}
+		
+		if(bg != null){
+			bg.setAttribute("Stroke", getBgStroke());
+			bg.setAttribute("StrokeWidth", getBgStrokeWidth());
+		}
+	}
+	
+	var getDisplayText = function(){
+		try{		
+			var str = "...";
+			if(value === true){
+				str = on;
+			}else{
+				str = off;
+			}
+			return str;
+		}catch(ex){
+			return "...";
+		}
+	}
+	
+	var getForced = function(){
+		if(forced){
+			return "Visible";
+		}
+		return "Hidden";
+	}
+	
+	var getAlarm = function(){
+		if(alarm && !forced){
+			return "Visible";
+		}
+		return "Hidden";
+	}
+	
+	var getBgStroke = function(){
+		if(forced){
+			return forcedColor;
+		}
+		if(alarm){
+			return alarmColor;
+		}
+		return "#636469";
+	}
+	
+	var getBgStrokeWidth = function(){
+		if(alarm || forced){
+			return "2";
+		}
+		return "1";
+	}
+	
+	var getBool = function(val){
+		var trueEnum = ["1","true","active","on","enabled","enable","open",1,true,onText];
+		for(var i=0;i<trueEnum.length;i++){
+			if(String(val).toLowerCase() == trueEnum[i]){
+		  		return true;
+			}
+  		}
+  	return false;				
+	}
+}]]></Script>
+</Component>

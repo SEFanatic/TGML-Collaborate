@@ -1,0 +1,426 @@
+<?xml version="1.0"?>
+<Component Clip="False" ContentHeight="40.0" ContentWidth="100.0"
+    Height="40.0" Left="0.0" Name="Digital Setpoint" Top="0.0" Width="100.0">
+    <Group Name="binds">
+        <Bind Description="ValueBind" Name="#Ena" PreventDefault="True">
+            <Expose ExposedAttribute="Name" Name="SptBind"/>
+			<Expose ExposedAttribute="PreventDefault" Name="Prevent Default"/>
+        </Bind>
+    </Group>
+    <Group Name="display">
+        <Group Name="menu" Visibility="Hidden">
+            <Group Name="display">
+                <Rectangle Fill="#F7F7F6" Height="40" Left="0"
+                    Name="bgd" Opacity="1.0" RadiusX="5" RadiusY="5"
+                    Stroke="#9FA0A4" StrokeDashArray="0.0"
+                    StrokeWidth="1.0" Top="20" Width="100.0"/>
+            </Group>
+            <Component ContentHeight="20" ContentWidth="100" Height="20"
+                Name="Item0" Width="100">
+                <Group Name="display">
+                    <Rectangle Fill="#01FFFFFF" Height="20.0" Left="0"
+                        Name="background" RadiusX="5" RadiusY="5"
+                        Stroke="None" StrokeDashArray="0.0"
+                        StrokeWidth="1.0" Top="0" Width="100.0"/>
+                    <TextBox FontFamily="Arial" FontSize="15.0"
+                        FontStyle="Normal" FontWeight="Normal"
+                        Height="20.0" HorizontalAlign="Left" Left="5"
+                        Name="foreground" Stroke="#000000"
+                        TextDecoration="None" Top="0"
+                        VerticalAlign="Middle"
+                            Width="90"><![CDATA[Disable]]><Expose
+                            ExposedAttribute="Content" Name="State0"/>
+                    </TextBox>
+                </Group>
+                <Script OnMouseClick="" OnMouseOut="onOut" OnMouseOver="onOver"><![CDATA[function onOver(evt){
+	var node = evt.getCurrentTarget();
+	var display = node.getChildByName("display");
+	if(display != null){
+		var bgd = display.getChildByName("background");
+		if(bgd != null){
+			bgd.setAttribute("Fill","#9FA0A4");
+		}
+	}	
+}
+
+function onOut(evt){
+	var node = evt.getCurrentTarget();
+	var display = node.getChildByName("display");
+	if(display != null){
+		var bgd = display.getChildByName("background");
+		if(bgd != null){
+			bgd.setAttribute("Fill","#01FFFFFF");
+		}
+	}
+}]]></Script>
+            </Component>
+            <Component ContentHeight="20" ContentWidth="100" Height="20"
+                Left="0" Name="Item1" Top="0" Width="100">
+                <Group Name="display">
+                    <Rectangle Fill="#01FFFFFF" Height="20.0" Left="0"
+                        Name="background" RadiusX="5" RadiusY="5"
+                        Stroke="None" StrokeDashArray="0.0"
+                        StrokeWidth="1.0" Top="0" Width="100.0"/>
+                    <TextBox FontFamily="Arial" FontSize="15.0"
+                        FontStyle="Normal" FontWeight="Normal"
+                        Height="20.0" HorizontalAlign="Left" Left="5"
+                        Name="foreground" Stroke="#000000"
+                        TextDecoration="None" Top="0"
+                        VerticalAlign="Middle"
+                            Width="90"><![CDATA[Enable]]><Expose
+                            ExposedAttribute="Content" Name="State1"/>
+                    </TextBox>
+                </Group>
+                <Script OnMouseClick="" OnMouseOut="onOut" OnMouseOver="onOver"><![CDATA[function onOver(evt){
+	var node = evt.getCurrentTarget();
+	var display = node.getChildByName("display");
+	if(display != null){
+		var bgd = display.getChildByName("background");
+		if(bgd != null){
+			bgd.setAttribute("Fill","#9FA0A4");
+		}
+	}	
+}
+
+function onOut(evt){
+	var node = evt.getCurrentTarget();
+	var display = node.getChildByName("display");
+	if(display != null){
+		var bgd = display.getChildByName("background");
+		if(bgd != null){
+			bgd.setAttribute("Fill","#01FFFFFF");
+		}
+	}
+}]]></Script>
+            </Component>
+        </Group>
+        <Component Clip="False" ContentHeight="20.0"
+            ContentWidth="100.0" Height="20.0" Left="0.0" Name="Text"
+            Top="0.0" Width="100.0">
+            <Group Name="display">
+                <Rectangle Fill="#01FFFFFF" Height="20.0" Left="0.0"
+                    Name="background" RadiusX="0.0" RadiusY="0.0"
+                    Stroke="None" StrokeDashArray="0.0"
+                    StrokeWidth="1.0" Top="0.0" Width="100.0"/>
+                <TextBox FontFamily="Arial" FontSize="15.0"
+                    FontStyle="Normal" FontWeight="Normal" Height="20.0"
+                    HorizontalAlign="Center" Left="0.0"
+                    Name="foreground" Stroke="#000000"
+                    TextDecoration="None" Top="0.0"
+                    VerticalAlign="Middle" Width="100.0">
+                    <Expose ExposedAttribute="Content" Name="Text Content"/>
+                </TextBox>
+            </Group>
+        </Component>
+        <Component Clip="False" ContentHeight="20.0"
+            ContentWidth="100.0" Height="20.0" Left="0.0"
+            Name="MultiPoint" State0="Disable" State1="Enable"
+            Top="20.0" Width="100.0">
+            <Expose ExposedAttribute="State0" Name="State0"/>
+            <Expose ExposedAttribute="State1" Name="State1"/>
+            <Group Name="display">
+                <Rectangle Fill="#F7F7F6" Height="20.0" Left="0"
+                    Opacity="1.0" RadiusX="5" RadiusY="5"
+                    Stroke="#9FA0A4" StrokeDashArray="0.0"
+                    StrokeWidth="1.0" Top="0" Width="100">
+                    <LinearGradient EndPoint="0,1">
+                        <GradientStop Color="#CECFD2" Offset="0"/>
+                        <GradientStop Color="#F7F7F6" Offset=".4"/>
+                        <GradientStop Color="#F7F7F6" Offset="1.0"/>
+                    </LinearGradient>
+                </Rectangle>
+                <Path Name="menuButton"
+                    PathData="M80.0,0.0 C85.0,0.0 90.0,0.0 95.0,0.0 98.0,0.0 100.0,2.0 100.0,5.0 100.0,8.0 100.0,12.0 100.0,15.0 100.0,18.0 97.965,19.93 95.0,20.0 90.0,20.0 85.0,20.0 80.0,20.0 80.0,15.0 80.0,5.0 80.0,0.0"
+                    Stroke="#626469" StrokeDashArray="0.0" StrokeWidth="1.0">
+                    <LinearGradient Attribute="Fill" EndPoint="0,1"
+                        SpreadMethod="Pad" StartPoint="0.0,0.0">
+                        <GradientStop Color="#FCFCFC" Offset="0.0"/>
+                        <GradientStop Color="#DEDFE0" Offset="1.0"/>
+                    </LinearGradient>
+                </Path>
+                <Path Fill="#626469" Name="arrow"
+                    PathData="M86,8 L94,8 90,12" Stroke="None"
+                    StrokeDashArray="0.0" StrokeWidth="2"/>
+                <TextBox Fill="None" FontFamily="Arial" FontSize="15.0"
+                    FontStyle="Normal" FontWeight="Normal" Height="20.0"
+                    HorizontalAlign="Center" Left="0.0"
+                    Name="foreground" Stroke="#000000"
+                    TextDecoration="None" Top="0.0"
+                    VerticalAlign="Middle"
+                        Width="80.0"><![CDATA[...]]><Expose
+                        ExposedAttribute="Content" Name="Point Content"/>
+                </TextBox>
+            </Group>
+        </Component>
+    </Group>
+    <Script OnDocumentLoad="onLoad" OnMouseClick="onClick"
+        OnMouseDown="onDown" OnMouseOut="" OnMouseUp="" OnSignalChange="onChange"><![CDATA[//var comp;
+var myValue = new valueObject;
+
+function onLoad(evt){
+	comp = evt.getCurrentTarget();
+	myValue.init(comp);	
+}
+
+function onChange(evt){
+	var val = evt.getValue();
+	var	fbn = evt.getTarget().getFullBindName();
+	myValue.changeValue(val,fbn);
+}
+
+function onClick(evt){
+	var btn = parseInt(evt.getButton());
+	if(btn === 0){
+		evt.preventDefault();
+		var xPos = evt.getCurrentTargetX();
+		var yPos = evt.getCurrentTargetY();
+		myValue.clicked(btn,xPos,yPos);
+	}
+}
+
+function onDown(evt){
+	var btn = parseInt(evt.getButton());
+	if(btn === 0){
+		var xPos = evt.getCurrentTargetX();
+		var yPos = evt.getCurrentTargetY();	
+		myValue.down(btn,xPos,yPos);
+	}
+}
+
+function valueObject(){
+	var node;
+	var valueBind;
+	var value;
+	var text;
+	var valueList = [];
+	var menuButton;
+	var arrow;
+	var menuGroup;
+	var myMenu = new menuObject;
+		
+	this.init = function(){
+		node = comp;
+		
+		//get binds
+		var bindGroup = node.getChildByName("binds");		
+		if(bindGroup != null){
+			var bindList = bindGroup.getElementsByTagName("Bind").item(0);
+			if(bindList != null){
+				valueBind = bindList.getFullBindName();
+			}
+		}
+		
+		//get display objects
+		var displayGroup = node.getChildByName("display");
+		if(displayGroup != null){
+			var point = displayGroup.getChildByName("MultiPoint");
+			if(point != null){
+				var i=0;
+				while(point.hasAttribute("State"+i)){
+					valueList[i] = point.getAttribute("State" + i);
+					i++;
+				}
+				var display = point.getChildByName("display");
+				if(display != null){
+					menuButton = display.getChildByName("menuButton");
+					arrow = display.getChildByName("arrow");				
+					text = display.getChildByName("foreground");			
+				}
+			}
+			
+			//get menu items
+			menuGroup =displayGroup.getChildByName("menu");
+			if(menuGroup != null){
+				myMenu.init(menuGroup);			
+			}
+		}
+		setSize();				
+	}
+	
+	this.changeValue = function(val,fbn){
+		if(fbn === valueBind){
+			value = getBool(val);
+		}		
+		renderPoint();		
+	}
+	
+	this.clicked = function(btn, xPos,yPos){
+		if(btn === 0){
+			if(xPos < 80 && (yPos >= 20 && yPos < 40)){
+				if(valueBind != null){
+					invoke(valueBind,"EditProperties");
+				}
+			}
+			if(yPos > 40){
+				var val = myMenu.click(yPos);
+				if(val != -99){
+					value = val
+				}
+				closeMenu();
+								
+				if(valueBind != null){
+					setValue(valueBind,value);
+				}
+				
+				renderPoint();				
+			}
+		}
+	}
+	
+	this.down = function(btn,xPos,yPos){
+		if(btn === 0){
+			if(xPos >= 80 && (yPos >= 20 && yPos < 40)){
+				if(menuGroup != null){
+					if(menuGroup.getAttribute("Visibility") == "Visible"){
+						closeMenu();
+					}else{
+						openMenu();
+					}
+				}
+			}
+		}
+	}
+	
+	var openMenu = function(){
+		myMenu.open();
+		if(menuButton != null){
+			var lg = menuButton.getElementsByTagName("LinearGradient").item(0);
+			if(lg != null){
+				var gs0 = lg.getElementsByTagName("GradientStop").item(0);
+				var gs1 = lg.getElementsByTagName("GradientStop").item(1);
+				if(gs0 != null){
+					gs0.setAttribute("Color","#626469");
+				}
+				if(gs1 != null){
+					gs1.setAttribute("Color","#626469");
+				}
+			}
+		}
+		if(arrow != null){
+			arrow.setAttribute("Fill","#FFFFFF");
+		}
+	}	
+	
+	var setSize = function(){
+		node.setAttribute("Height",myMenu.height);
+		node.setAttribute("ContentHeight",myMenu.height);
+	}
+	
+	var closeMenu = function(){
+		myMenu.close();
+		if(menuButton != null){
+			var lg = menuButton.getElementsByTagName("LinearGradient").item(0);
+			if(lg != null){
+				var gs0 = lg.getElementsByTagName("GradientStop").item(0);
+				var gs1 = lg.getElementsByTagName("GradientStop").item(1);
+				if(gs0 != null){
+					gs0.setAttribute("Color","#FCFCFC");
+				}
+				if(gs1 != null){
+					gs1.setAttribute("Color","#DEDFE0");
+				}
+			}
+		}
+		if(arrow != null){
+			arrow.setAttribute("Fill","#626469");
+		}
+	}
+	
+	var renderPoint = function(){
+		if(text != null){
+			text.setAttribute("Content",getDisplayText());
+		}
+	}
+	
+	var getDisplayText = function(){
+		try{		
+			var str = "...";
+			if(!isNaN(value) && value != Infinity){
+				for(var i=0;i<valueList.length;i++){
+					if(value === i){
+						str = valueList[i];
+					}
+				}
+			}
+			return str;
+		}catch(ex){
+			return "...";
+		}
+	}
+	
+	var getBool = function(val){
+		var trueEnum = ["1","true","True","Active","active",1,true];
+		for(var i=0;i<trueEnum.length;i++){
+			if(val == trueEnum[i]){
+				return 1;
+			}
+		}
+		return 0;		
+	}
+}
+
+function menuObject(){
+	//public properties
+	this.height;
+
+	//private properties
+	var node;
+	var menuItems = [];
+	var bgd;
+	
+	this.init = function(comp){
+		node = comp;
+		
+		var menuDisplay = node.getChildByName("display");
+		if(menuDisplay != null){
+			bgd = menuDisplay.getChildByName("bgd");
+		}
+		
+		var menuList = node.getElementsByTagName("Component");
+		if(menuList != null){
+			for(var i=0;i<menuList.length;i++){
+				menuItems[i] = new menuItemObject;
+				menuItems[i].init(menuList.item(i),i);					
+			}
+		}		
+		
+		//set size of menu
+		this.height = (menuList.length+1)*20;
+		if(bgd != null){		
+			bgd.setAttribute("Height",this.height);	
+		}
+	}
+	
+	this.open = function(){
+		node.setAttribute("Visibility","Visible");
+	}
+	
+	this.close = function(){
+		node.setAttribute("Visibility","Hidden");
+	}
+	
+	this.click = function(yPos){
+		for(var i=0;i<menuItems.length;i++){
+			if(yPos >= (i+2)*20 && yPos < (i+3)*20){
+				return i;
+			}
+		}
+		return -99;
+	}
+}
+
+function menuItemObject(){
+	var node;
+	var index;	
+	
+	this.init =function(comp,i){
+		node = comp;
+		index = i;	
+		
+		node.setAttribute("Top",(index+2)*20);
+		node.setAttribute("Left",0);
+	}
+}]]></Script>
+    <Metadata Name="Name" Value="Digital Setpoint"/>
+    <Metadata Name="Description" Value=""/>
+</Component>

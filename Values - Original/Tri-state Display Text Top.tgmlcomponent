@@ -1,0 +1,155 @@
+<?xml version="1.0"?>
+<Component Color="#F0080E" ContentHeight="40" ContentWidth="100.0"
+    Fill="#FFD100" GridSize="10" Height="40.0" Left="0.0"
+    MOnText="Closing" MOnValue="3" Name="Tri-state Display Text Top"
+    OffText="Stationary" OnText="Opening" OnValue="2" Stroke="#42B4E6"
+    Top="0.0" Width="100.0">
+    <Metadata Name="Name" Value="Tri-state Display Text Top"/>
+    <Metadata Name="Description" Value="== Bindings ==&#xd;&#xa;DprCmd - Damper Command tri state&#xd;&#xa;&#xd;&#xa;== Exposed Properties ==&#xd;&#xa;Bind Name - DprCmd&#xd;&#xa;+On Text - Opening - Text to display when value +on&#xd;&#xa;-On Text - Closing - Text to display when value -on&#xd;&#xa;Off Text - Stationary -  - Text to display when value not +on or -on&#xd;&#xa;+On Value - 2&#xd;&#xa;-On Value - 3&#xd;&#xa;Label Text - ... - Label text&#xd;&#xa;Error, Forced, Database Colors - Outline color when point in error, forced or database condition"/>
+    <Expose ExposedAttribute="OnText" Name="+On Text"/>
+    <Expose ExposedAttribute="MOnText" Name="-On Text"/>
+    <Expose ExposedAttribute="OffText" Name="Off Text"/>
+    <Expose ExposedAttribute="OnValue" Name="+On Value"/>
+    <Expose ExposedAttribute="MOnValue" Name="-On Value"/>
+    <Expose ExposedAttribute="Color" Name="Alarm Color"/>
+    <Expose ExposedAttribute="Fill" Name="Forced Color"/>
+    <Expose ExposedAttribute="Stroke" Name="Database Color"/>
+    <Rectangle Fill="None" Height="20.0" Left="0.0" Name="background"
+        RadiusX="5" RadiusY="5" Stroke="#626469" StrokeDashArray="0.0"
+        StrokeWidth="1.0" Top="20.0" Width="100.0">
+        <LinearGradient EndPoint="0,1">
+            <GradientStop Color="#FEFEFE" Offset="0"/>
+            <GradientStop Color="#DFE0E2" Offset="1.0"/>
+        </LinearGradient>
+    </Rectangle>
+    <TextBox Fill="None" FontFamily="Arial" FontSize="15.0"
+        FontStyle="Normal" FontWeight="Normal" Height="20.0"
+        HorizontalAlign="Center" Left="5.0" Name="Text" Stroke="#000000"
+        TextDecoration="None" Top="20.0" VerticalAlign="Middle" Width="90.0"><![CDATA[...]]></TextBox>
+    <TextBox Fill="None" FontFamily="Arial" FontSize="15.0"
+        FontStyle="Normal" FontWeight="Normal" Height="20.0"
+        HorizontalAlign="Center" Left="5.0" Name="" Stroke="#000000"
+        TextDecoration="None" Top="0.0" VerticalAlign="Middle"
+            Width="90.0"><![CDATA[...]]><Expose
+            ExposedAttribute="Content" Name="Label Text"/>
+    </TextBox>
+    <Bind Attribute="" Color="#009530" Name="DprCmd" PreventDefault="True">
+        <Expose ExposedAttribute="Color" Name="On Color"/>
+        <Expose ExposedAttribute="Name" Name="Bind Name"/>
+		<Expose ExposedAttribute="PreventDefault" Name="Prevent Default"/>
+        <Script OnDocumentLoad="onLoad" OnSignalChange="onChange"><![CDATA[var offColor;
+var comp;
+var onColor;
+var onText;
+var mOnText;
+var offText;
+var onValue;
+var mOnValue;
+var rtnArray = new Array();
+var f;
+var d;
+var a;
+
+function onLoad(evt)
+{
+	comp=evt.getCurrentTarget().getParentNode();
+	offColor=comp.getChildByName("background").getAttribute("Stroke");
+	onColor=evt.getCurrentTarget().getAttribute("Color");
+	onText=comp.getAttribute("OnText");
+	mOnText=comp.getAttribute("MOnText");
+	offText=comp.getAttribute("OffText");
+	offValue=comp.getAttribute("OffValue");
+	onValue=buildArray(comp.getAttribute("OnValue").split(','));
+	mOnValue=buildArray(comp.getAttribute("MOnValue").split(','));
+	f=comp.getAttribute("Fill");
+	d=comp.getAttribute("Stroke");
+	a=comp.getAttribute("Color");
+}
+
+function onChange(evt)
+{
+
+	var value = evt.getValue();
+	var status = parseInt(evt.getStatus());
+	var tempCol = "";
+	var outline = comp.getChildByName("background");
+	if (Bool(onValue, value)){
+		comp.getChildByName("Text").setAttribute("Content", onText);
+		tempCol = onColor;
+	}
+	else{
+		if (Bool(mOnValue, value)){
+			comp.getChildByName("Text").setAttribute("Content", mOnText);
+			tempCol = onColor;
+		}
+		else{
+			comp.getChildByName("Text").setAttribute("Content", offText);
+			tempCol = offColor;
+		}
+	}
+	
+	if (status == 2){
+		outline.setAttribute("Stroke", tempCol);
+		outline.setAttribute("StrokeWidth", "1");
+	}
+	else{
+		outline.setAttribute("Stroke", borderCol(status));
+		outline.setAttribute("StrokeWidth", "2");
+	}
+	
+}
+
+function borderCol(status){
+	if(status==3){
+		return f
+	}
+	else{
+		if(status==1){
+			return d
+		}
+		else{
+			return a
+		}
+	}
+}
+
+function Bool(arr, val){
+	for (var i=0;i<arr.length;i++){
+		if (val == true || val == false){
+		val = val.toString();
+		}
+		else{
+			if (isNumber(val)){
+				val = Math.round(parseFloat(val));
+				val = val.toString();
+			}
+		}
+		if(String(val).toLowerCase() == String(arr[i]).toLowerCase())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+function buildArray(Array){
+rtnArray=[];
+	for (var i=0;i<Array.length;i++){
+		if (Array[i].substring(0,1) == " "){
+			Array[i] = Array[i].substring(1, Array[i].length);
+		}
+		if (isNumber(Array[i]) || Array[i]=="true" || Array[i]=="false" ){
+			rtnArray[i] = Array[i]
+		}
+		else{
+			rtnArray[i] = "'" + Array[i] + "'";
+		}
+	}
+	return rtnArray;
+}
+
+function isNumber (o) {
+  return ! isNaN (o-0) && o != null;
+}]]></Script>
+    </Bind>
+</Component>
