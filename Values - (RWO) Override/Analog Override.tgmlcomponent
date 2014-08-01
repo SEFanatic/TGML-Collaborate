@@ -1,0 +1,127 @@
+<?xml version="1.0"?>
+<Component ContentHeight="20" ContentWidth="100" Decimals="1"
+    Description="" Desription="" Fill="#FFD100" GridSize="5"
+    Height="20.0" Left="268.0" Name="Analog Override" Top="140.0"
+    Units="°F" Width="100.0">
+    <Rectangle Fill="None" Height="20.0" Left="0" Name="background"
+        RadiusX="5" RadiusY="5" Stroke="#626469" StrokeDashArray="0.0"
+        StrokeWidth="1.0" Top="0" Width="100">
+        <LinearGradient EndPoint="0,1">
+            <GradientStop Color="#FEFEFE" Offset="0"/>
+            <GradientStop Color="#DFE0E2" Offset="1.0"/>
+        </LinearGradient>
+        <Expose ExposedAttribute="Stroke" Name="Normal Color"/>
+        <Expose ExposedAttribute="Width" Name="Component Width"/>
+    </Rectangle>
+    <Expose ExposedAttribute="Fill" Name="Forced Color"/>
+    <Expose ExposedAttribute="Decimals" Name="Decimals"/>
+    <Expose ExposedAttribute="Units" Name="Units"/>
+    <TextBox Fill="None" FontFamily="Arial" FontSize="15.0"
+        FontStyle="Normal" FontWeight="Normal" Height="20.0"
+        HorizontalAlign="Center" Left="-5" Name="Text" Stroke="#000000"
+        TextDecoration="None" Top="0" VerticalAlign="Middle"
+            Width="100"><![CDATA[...]]><Expose ExposedAttribute="Width" Name="Component Width"/>
+    </TextBox>
+    <Bind Attribute="" Name="Spt" PreventDefault="False">
+        <Expose ExposedAttribute="Name" Name="Bind Name"/>
+        <Script OnDocumentLoad="onLoad" OnSignalChange="onChange"><![CDATA[var comp;
+var dec;
+var units;
+var offColor;
+var onColor;																// Variables that are declared globally so they can be used in all the functions
+var f;
+var d;
+var a;
+
+function onLoad(evt)
+{
+	comp=evt.getCurrentTarget().getParentNode();
+	offColor=comp.getChildByName("background").getAttribute("Stroke");
+	onColor=evt.getCurrentTarget().getAttribute("Color");
+	f=comp.getAttribute("Fill");											// Short cuts that are made to improve readability and to cut down on typing. 
+	d=comp.getAttribute("Stroke");
+	a=comp.getAttribute("Color");
+	dec = comp.getAttribute("Decimals");
+	units = comp.getAttribute("Units");
+}
+
+function onChange(evt)														// Function that handles what happens when one of bind values changes. 
+{
+	var value = evt.getValue();
+	var status = parseInt(evt.getStatus());
+	var tempCol = "";
+	var outline = comp.getChildByName("background");
+	
+	comp.getChildByName("Text").setAttribute("Content", getDisplayText(evt.getValue()));	// Sets the content of a the text box to the value that is returned by the getDisplayText() function.
+		
+	if (status == 2){																		// If statement that handles what happens when the bind status is normal. 
+		outline.setAttribute("Stroke", offColor);
+		outline.setAttribute("StrokeWidth", "1");
+	}
+	else{
+		outline.setAttribute("Stroke", borderCol(status));									// Handles what happens whenever this is any other kind of signal. Calls the borderCol() function to determine the color 
+		outline.setAttribute("StrokeWidth", "2");											// of the border. 
+	}
+	
+}
+
+function borderCol(status){																	// Function that determines what the color of the border is based off of the status. 
+	if(status==3){
+		return f
+	}
+	else{
+		if(status==1){
+			return d
+		}
+		else{
+			return a
+		}
+	}
+}
+
+function Bool(val){																			//  Function that checks whether the value received matches any of the On values that are gathered from
+	for (var i=0;i<onValue.length;i++){														//  from the exposed value called On Values.
+		if(String(val).toLowerCase() == String(onValue[i]).toLowerCase())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+function getDisplayText(value){																//	Function that handles what the display text is going to look like. Adds formatting and the units.
+		try{		
+			var str = "...";
+			if(!isNaN(value) && value != Infinity){
+			
+				str = new Number(parseFloat(value)).toFixed(dec);
+				str += " " + units;
+			}
+			return str;
+		}
+		catch(ex){
+		
+			return "...";
+		}
+	}
+	
+	function debug(str){
+	alert(str);
+	}]]></Script>
+        <Expose ExposedAttribute="PreventDefault" Name="Prevent Default"/>
+    </Bind>
+    <Component Clip="False" ContentHeight="20.0" ContentWidth="15"
+        Height="20.0" Left="85" Name="OvrArrow" Top="0" Width="15.0">
+        <Path Fill="#009530" Name="Box"
+            PathData="M0.0,0.0 C5.0,0.0 5,0 10,0 12,0 15,2 15,5 15,10 15,15 15,15 15,18 12,20 9,20 4,20 5.0,20.0 0.0,20.0 0.0,15.0 0.0,5.0 0.0,0.0"
+            Stroke="#004000" StrokeDashArray="0.0" StrokeWidth="1.0"/>
+        <Polygon Fill="#FFFFFF" Name="Arrow"
+            Points="9.83830081246947,3.812333812258316 2.670400857925415,9.837342605211944 9.83830081246947,15.862351398165572"
+            Stroke="None" StrokeDashArray="0.0" StrokeWidth="0"/>
+        <Expose ExposedAttribute="Left" Name="Override Notification Position"/>
+    </Component>
+    <Expose ExposedAttribute="Width" Name="Component Width"/>
+    <Expose ExposedAttribute="ContentWidth" Name="Component Width"/>
+    <Metadata Name="Name" Value="Analog Override"/>
+    <Metadata Name="Description" Value=""/>
+</Component>
