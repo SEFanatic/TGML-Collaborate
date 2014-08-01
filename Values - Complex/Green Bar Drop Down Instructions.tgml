@@ -1,0 +1,1797 @@
+<?xml version="1.0"?>
+
+<!--[DocumentInformation]
+Created: 2014-03-20 08:43
+Modified: 2014-06-19 10:33
+-->
+<?tgml version="1.21"?><Tgml ComponentCounter="2" GridSize="2"
+    Height="1000.0" Width="1200.0">
+    <Text FontFamily="Arial" FontSize="15.0" FontStyle="Normal"
+        FontWeight="Bold" HorizontalAlign="Left"
+        Left="10.920914205962617" Opacity="1.0" Stroke="#000000"
+        TextDecoration="None" Top="11.439452089338374" VerticalAlign="Top"><![CDATA[Green Bar Drop Down Component]]></Text>
+    <Text FontFamily="Arial" FontSize="15.0" FontStyle="Normal"
+        FontWeight="Normal" HorizontalAlign="Left"
+        Left="10.920875549316406" Opacity="1.0" Stroke="#000000"
+        TextDecoration="None" Top="45.18960666656494" VerticalAlign="Top"><![CDATA[I. Use when you want to hide multiple points under a common function.]]></Text>
+    <Text FontFamily="Arial" FontSize="15.0" FontStyle="Normal"
+        FontWeight="Normal" HorizontalAlign="Left"
+        Left="10.920936584472656" Opacity="1.0" Stroke="#000000"
+        TextDecoration="None" Top="70.58466715365648" VerticalAlign="Top"><![CDATA[II. The Component is comprised of a header and body.]]></Text>
+    <Text FontFamily="Arial" FontSize="15.0" FontStyle="Normal"
+        FontWeight="Normal" HorizontalAlign="Left"
+        Left="84.78455352783203" Opacity="1.0" Stroke="#000000"
+        TextDecoration="None" Top="95.97977720201015" VerticalAlign="Top"><![CDATA[1. The header title can be edited from 'Matrix Title'.]]></Text>
+    <Text FontFamily="Arial" FontSize="15.0" FontStyle="Normal"
+        FontWeight="Normal" HorizontalAlign="Left"
+        Left="84.78446960449219" Opacity="1.0" Stroke="#000000"
+        TextDecoration="None" Top="121.37482619285583" VerticalAlign="Top"><![CDATA[2. The body components can be edited from within their group.]]></Text>
+    <Text FontFamily="Arial" FontSize="15.0" FontStyle="Normal"
+        FontWeight="Normal" HorizontalAlign="Left"
+        Left="176.7931365966797" Opacity="1.0" Stroke="#000000"
+        TextDecoration="None" Top="197.5599872469902" VerticalAlign="Top"><![CDATA[c) The components within a body can be grouped together (for simultaneous highlighting, etc.) by editing 'Custom>Group']]></Text>
+    <Text FontFamily="Arial" FontSize="15.0" FontStyle="Normal"
+        FontWeight="Normal" HorizontalAlign="Left"
+        Left="283.7900695800781" Opacity="1.0" Stroke="#000000"
+        TextDecoration="None" Top="222.95499050617218" VerticalAlign="Top"><![CDATA[Set the groups as the same number for simultaneous highlighting when selected.]]></Text>
+    <Text FontFamily="Arial" FontSize="15.0" FontStyle="Normal"
+        FontWeight="Normal" HorizontalAlign="Left"
+        Left="283.79010009765625" Opacity="1.0" Stroke="#000000"
+        TextDecoration="None" Top="248.35011565685272" VerticalAlign="Top"><![CDATA[Set the groups as different numbers for independent highlighting when selected.]]></Text>
+    <Text FontFamily="Arial" FontSize="15.0" FontStyle="Normal"
+        FontWeight="Normal" HorizontalAlign="Left"
+        Left="176.7930908203125" Opacity="1.0" Stroke="#000000"
+        TextDecoration="None" Top="146.76983296871185" VerticalAlign="Top"><![CDATA[a) To add additional components, simply copy (rather than scratch-build) the desired component type and paste under the correct Group.]]></Text>
+    <Text FontFamily="Arial" FontSize="15.0" FontStyle="Normal"
+        FontWeight="Normal" HorizontalAlign="Left"
+        Left="176.79306030273438" Opacity="1.0" Stroke="#000000"
+        TextDecoration="None" Top="172.16490322351456" VerticalAlign="Top"><![CDATA[b) To remove components, right click>delete the component from under the Group.]]></Text>
+    <Text FontFamily="Arial" FontSize="15.0" FontStyle="Normal"
+        FontWeight="Normal" HorizontalAlign="Left"
+        Left="174.27926635742188" Opacity="1.0" Stroke="#000000"
+        TextDecoration="None" Top="476.9057022333145" VerticalAlign="Top"><![CDATA[e) To make components overridable, the 'Custom' attributes have to be set.]]></Text>
+    <Text FontFamily="Arial" FontSize="15.0" FontStyle="Normal"
+        FontWeight="Normal" HorizontalAlign="Left"
+        Left="283.79010009765625" Opacity="1.0" Stroke="#000000"
+        TextDecoration="None" Top="502.3007129430771" VerticalAlign="Top"><![CDATA[Change 'Custom>Override' to 'Yes' to allow a point to be overriden or 'No' to remove the ability to override.]]></Text>
+    <Text FontFamily="Arial" FontSize="15.0" FontStyle="Normal"
+        FontWeight="Normal" HorizontalAlign="Left"
+        Left="283.7900695800781" Opacity="1.0" Stroke="#000000"
+        TextDecoration="None" Top="527.6958312988281" VerticalAlign="Top"><![CDATA[If the desired Custom attributes do not exist, you can add them to the component by right click>Add, and setting the Attribute and Value.]]></Text>
+    <Line Opacity="1.0" Stroke="#000000" StrokeDashArray="0.0"
+        StrokeWidth="2.0" X1="272.2955627441406" X2="280.2955627441406"
+        Y1="231.0" Y2="231.0"/>
+    <Line Opacity="1.0" Stroke="#000000" StrokeDashArray="0.0"
+        StrokeWidth="2.0" X1="272.2955627441406" X2="280.2955627441406"
+        Y1="257.0" Y2="257.0"/>
+    <Line Opacity="1.0" Stroke="#000000" StrokeDashArray="0.0"
+        StrokeWidth="2.0" X1="272.2955627441406" X2="280.2955627441406"
+        Y1="510.5052795410156" Y2="510.5052795410156"/>
+    <Line Opacity="1.0" Stroke="#000000" StrokeDashArray="0.0"
+        StrokeWidth="2.0" X1="272.2955627441406" X2="280.2955627441406"
+        Y1="535.5052795410156" Y2="535.5052795410156"/>
+    <Text FontFamily="Arial" FontSize="15.0" FontStyle="Normal"
+        FontWeight="Normal" HorizontalAlign="Left"
+        Left="283.7901306152344" Opacity="1.0" Stroke="#000000"
+        TextDecoration="None" Top="299.1403019428253" VerticalAlign="Top"><![CDATA[Component Objets (ID) can be Analog, Digital, Multi, or Alarm.]]></Text>
+    <Text FontFamily="Arial" FontSize="15.0" FontStyle="Normal"
+        FontWeight="Normal" HorizontalAlign="Left"
+        Left="283.7900695800781" Opacity="1.0" Stroke="#000000"
+        TextDecoration="None" Top="324.53530490398407" VerticalAlign="Top"><![CDATA[Binds used for Components can be ValueBind, AlarmBind, PriBind, and OOSBind.]]></Text>
+    <Line Opacity="1.0" Stroke="#000000" StrokeDashArray="0.0"
+        StrokeWidth="2.0" X1="272.2955627441406" X2="280.2955627441406"
+        Y1="308.2655029296875" Y2="308.2655029296875"/>
+    <Line Opacity="1.0" Stroke="#000000" StrokeDashArray="0.0"
+        StrokeWidth="2.0" X1="272.2955627441406" X2="280.2955627441406"
+        Y1="332.2655029296875" Y2="332.2655029296875"/>
+    <Text FontFamily="Arial" FontSize="15.0" FontStyle="Normal"
+        FontWeight="Normal" HorizontalAlign="Left"
+        Left="283.79010009765625" Opacity="1.0" Stroke="#000000"
+        TextDecoration="None" Top="349.930336356163" VerticalAlign="Top"><![CDATA[Custom>Type can be set to Input, Normal, Alarm, Setpoint, Value, or Output.]]></Text>
+    <Text FontFamily="Arial" FontSize="15.0" FontStyle="Normal"
+        FontWeight="Normal" HorizontalAlign="Left"
+        Left="361.3211669921875" Opacity="1.0" Stroke="#000000"
+        TextDecoration="None" Top="375.3253997564316" VerticalAlign="Top"><![CDATA[Normal and Alarm utilize valueBind and priBind.]]></Text>
+    <Text FontFamily="Arial" FontSize="15.0" FontStyle="Normal"
+        FontWeight="Normal" HorizontalAlign="Left"
+        Left="361.3211669921875" Opacity="1.0" Stroke="#000000"
+        TextDecoration="None" Top="400.720462679863" VerticalAlign="Top"><![CDATA[Input utilizes oosBind.]]></Text>
+    <Text FontFamily="Arial" FontSize="15.0" FontStyle="Normal"
+        FontWeight="Normal" HorizontalAlign="Left"
+        Left="361.3211669921875" Opacity="1.0" Stroke="#000000"
+        TextDecoration="None" Top="426.11552608013153" VerticalAlign="Top"><![CDATA[Setpoint utilizes priBind.]]></Text>
+    <Text FontFamily="Arial" FontSize="15.0" FontStyle="Normal"
+        FontWeight="Normal" HorizontalAlign="Left"
+        Left="361.3211669921875" Opacity="1.0" Stroke="#000000"
+        TextDecoration="None" Top="451.51068049669266" VerticalAlign="Top"><![CDATA[Input, Value, and Output utilize a timeout and delay to allow time to write values.]]></Text>
+    <Text FontFamily="Arial" FontSize="15.0" FontStyle="Normal"
+        FontWeight="Normal" HorizontalAlign="Left"
+        Left="176.7931365966797" Opacity="1.0" Stroke="#000000"
+        TextDecoration="None" Top="273.7451918721199" VerticalAlign="Top"><![CDATA[d) The components within a body can have their attributes edited to affect how the component performs as per the component script.]]></Text>
+    <Line Opacity="1.0" Stroke="#000000" StrokeDashArray="0.0"
+        StrokeWidth="2.0" X1="272.2955627441406" X2="280.2955627441406"
+        Y1="358.2655029296875" Y2="358.2655029296875"/>
+    <Ellipse Fill="#000000" Height="2.569610595703125"
+        Left="353.7472839355469" Opacity="1.0" Stroke="#000000"
+        StrokeDashArray="0.0" StrokeWidth="2.0" Top="382.1562805175781" Width="3.4261474609375"/>
+    <Ellipse Fill="#000000" Height="2.569610595703125"
+        Left="353.7472839355469" Opacity="1.0" Stroke="#000000"
+        StrokeDashArray="0.0" StrokeWidth="2.0" Top="408.1562805175781" Width="3.4261474609375"/>
+    <Ellipse Fill="#000000" Height="2.569610595703125"
+        Left="353.7472839355469" Opacity="1.0" Stroke="#000000"
+        StrokeDashArray="0.0" StrokeWidth="2.0" Top="433.1562805175781" Width="3.4261474609375"/>
+    <Ellipse Fill="#000000" Height="2.569610595703125"
+        Left="353.7472839355469" Opacity="1.0" Stroke="#000000"
+        StrokeDashArray="0.0" StrokeWidth="2.0" Top="459.1562805175781" Width="3.4261474609375"/>
+    <Text FontFamily="Arial" FontSize="15.0" FontStyle="Normal"
+        FontWeight="Normal" HorizontalAlign="Left"
+        Left="174.27926635742188" Opacity="1.0" Stroke="#000000"
+        TextDecoration="None" Top="553.9057022333145" VerticalAlign="Top"><![CDATA[f) Components can be initially expanded/ hidden by changing the Component Custom attribute 'Initially Expanded' to 'y'(expanded) or 'n'(hidden). ]]></Text>
+    <Component Clip="False" ContentHeight="100" ContentWidth="300"
+        Height="100.0" Left="77.0" Name="Green_Drop_Down_FINAL_001"
+        Top="674.0" Version="2.0" Width="300.0">
+        <Expose ExposedAttribute="ContentWidth" Name="Width"/>
+        <Expose ExposedAttribute="Width" Name="Width"/>
+        <Component Clip="False" ContentHeight="40" ContentWidth="300"
+            Height="40" Left="0.0" Top="0.0" Width="300" initiallyExpanded="n">
+            <Expose ExposedAttribute="ContentWidth" Name="Width"/>
+            <Expose ExposedAttribute="Width" Name="Width"/>
+            <Expose ExposedAttribute="Width" Name="Width"/>
+            <Rectangle Fill="#FFFFFF" Height="80.0" Left="0.0"
+                Name="bgd" Opacity="1.0" RadiusX="5" RadiusY="5"
+                Stroke="#626469" StrokeDashArray="0.0" StrokeWidth="1.0"
+                Top="0.0" Visibility="Hidden" Width="300">
+                <Expose ExposedAttribute="Width" Name="Width"/>
+            </Rectangle>
+            <Group Name="header">
+                <Rectangle Fill="#009530" Height="40.0" Left="0.0"
+                    Opacity="1.0" RadiusX="5" RadiusY="5" Stroke="None"
+                    StrokeDashArray="0.0" StrokeWidth="1.0" Top="0.0" Width="300">
+                    <Expose ExposedAttribute="Fill" Name="Main Component Color"/>
+                    <Expose ExposedAttribute="Width" Name="Width"/>
+                </Rectangle>
+                <Text FontFamily="Arial" FontSize="20"
+                    FontStyle="Normal" FontWeight="Bold"
+                    HorizontalAlign="Left" Left="10.0" Opacity="1.0"
+                    Stroke="#FFFFFF" TextDecoration="None" Top="10.0"
+                        VerticalAlign="Top"><![CDATA[Green Drop Down]]><Expose
+                        ExposedAttribute="Content" Name="Matrix Title"/>
+                </Text>
+                <Component Clip="False" ContentHeight="10.0"
+                    ContentWidth="20.0" Height="10.0" Left="270"
+                    Name="arrow" Top="15.0" Width="20.0">
+                    <Polygon Fill="#FFFFFF"
+                        Points="0.0,0.0 20.0,0.0 10.0,10.0" Stroke="None"/>
+                    <Rotate Angle="180"/>
+                    <Expose ExposedAttribute="Left" Name="Arrow Position"/>
+                </Component>
+            </Group>
+            <Group Name="body" Visibility="Hidden">
+                <Component Clip="False" ContentHeight="20"
+                    ContentWidth="300" Group="21" Height="20.0"
+                    Id="Digital" Left="30.0" Name="" Override="Yes"
+                    Prompt="No" Top="100.0" Type="Normal"
+                    Visibility="Visible" Width="300">
+                    <Expose ExposedAttribute="Width" Name="Width"/>
+                    <Expose ExposedAttribute="ContentWidth" Name="Width"/>
+                    <Group Name="binds">
+                        <Bind Description="ValueBind"
+                            DynamicUpdates="Enable" Name="OptStartEna"
+                            PreventDefault="False" Width="150">
+                            <Expose ExposedAttribute="Name" Name="ValueBind"/>
+                        </Bind>
+                        <Bind Description="AlarmBind"
+                            DynamicUpdates="Disable" Name="" PreventDefault="True">
+                            <Expose ExposedAttribute="Name" Name="AlarmBind"/>
+                        </Bind>
+                    </Group>
+                    <Group Name="display">
+                        <Group Name="background" Width="300">
+                            <Expose ExposedAttribute="Width" Name="Width"/>
+                            <Line Name="VLine" Stroke="#626469" X1="150"
+                                X2="150" Y1="0.0" Y2="20.0">
+                                <Expose ExposedAttribute="X2" Name="Vertical Line Position"/>
+                                <Expose ExposedAttribute="X1" Name="Vertical Line Position"/>
+                            </Line>
+                            <Line Name="Hline" Stroke="#626469" X1="0.0"
+                                X2="300" Y1="20.0" Y2="20.0">
+                                <Expose ExposedAttribute="X2" Name="Width"/>
+                            </Line>
+                            <Rectangle Fill="#01FFFFFF" Height="20.0"
+                                Left="0" Name="bgd" RadiusX="5"
+                                RadiusY="5" Stroke="None" Top="0" Width="300">
+                                <Expose ExposedAttribute="Width" Name="Width"/>
+                            </Rectangle>
+                        </Group>
+                        <Component Clip="False" ContentHeight="20.0"
+                            ContentWidth="200" Height="20.0" Left="0.0"
+                            Name="Text" Top="0.0" Width="200">
+                            <Group Name="display">
+                                <Rectangle Fill="#01FFFFFF"
+                                    Height="20.0" Left="0.0"
+                                    Name="background" RadiusX="0.0"
+                                    RadiusY="0.0" Stroke="None"
+                                    StrokeDashArray="0.0"
+                                    StrokeWidth="1.0" Top="0.0" Width="100.0"/>
+                                <TextBox FontFamily="Arial"
+                                    FontSize="15.0" FontStyle="Normal"
+                                    FontWeight="Normal" Height="20.0"
+                                    HorizontalAlign="Left" Left="5"
+                                    Name="foreground" Stroke="#000000"
+                                    TextDecoration="None" Top="0.0"
+                                    VerticalAlign="Middle"
+                                    Width="195"><![CDATA[Optimum]]><Expose
+                                    ExposedAttribute="Content" Name="Text Content"/>
+                                </TextBox>
+                            </Group>
+                        </Component>
+                        <Component AlarmColor="#EB5B25" Clip="False"
+                            ContentHeight="20.0" ContentWidth="100.0"
+                            ForcedColor="#FFD100" Height="20.0"
+                            Left="200" Name="Point" State0="Disable"
+                            State1="Enable" Top="0" Width="100">
+                            <Expose ExposedAttribute="State0" Name="State0"/>
+                            <Expose ExposedAttribute="State1" Name="State1"/>
+                            <Group Name="display">
+                                <Rectangle Fill="None" Height="20.0"
+                                    Left="0.0" Name="background"
+                                    RadiusX="5" RadiusY="5"
+                                    Stroke="None" StrokeDashArray="0.0"
+                                    StrokeWidth="1.0" Top="0.0" Width="100.0"/>
+                                <TextBox Fill="None" FontFamily="Arial"
+                                    FontSize="15.0" FontStyle="Normal"
+                                    FontWeight="Normal" Height="20.0"
+                                    HorizontalAlign="Right" Left="0"
+                                    Name="foreground" Stroke="#000000"
+                                    TextDecoration="None" Top="0.0"
+                                    VerticalAlign="Middle"
+                                    Width="95"><![CDATA[...]]><Expose
+                                    ExposedAttribute="Content" Name="Point Content"/>
+                                </TextBox>
+                                <Component Clip="False"
+                                    ContentHeight="20" ContentWidth="20"
+                                    Height="20.0" Left="0"
+                                    Name="AlarmImage" Top="0"
+                                    Visibility="Hidden" Width="20.0">
+                                    <Rectangle Fill="#F0080E"
+                                    Height="20" Stroke="None" Width="20">
+                                    <Expose ExposedAttribute="Fill" Name="AlarmColor"/>
+                                    <Animate Animation="Stop"
+                                    Attribute="Visibility"
+                                    AutoReverse="False"
+                                    Duration="1" From="Hidden" To="Visible"/>
+                                    </Rectangle>
+                                    <Component Clip="False"
+                                    ContentHeight="12.9"
+                                    ContentWidth="12.0"
+                                    Height="12.899999999999999"
+                                    Left="4" Top="3.6" Width="12.0">
+                                    <Path Fill="#FFD100" Name="B1"
+                                    PathData="M7.800000000000001,12.15 C7.800000000000001,12.5640002 6.994,12.9 6.0,12.9 5.006,12.9 4.200000019999999,12.5640002 4.200000019999999,12.15 4.200000019999999,11.736 5.006,11.4 6.0,11.4 6.994,11.4 7.800000000000001,11.736 7.800000000000001,12.15 z M7.0,0.75 C7.0,1.1639999999999997 6.552000100000001,1.5 6.0,1.5 5.448,1.5 5.0,1.1639999999999997 5.0,0.75 5.0,0.3360000099999998 5.448,0.0 6.0,0.0 6.552000100000001,0.0 7.0,0.3360000099999998 7.0,0.75 z"
+                                    Stroke="#FFD100"
+                                    StrokeDashArray="0.0" StrokeWidth=".5"/>
+                                    <Ellipse Fill="None"
+                                    Height="1.50002274259486"
+                                    Left="4.199998259544"
+                                    Opacity="1.0"
+                                    Stroke="#4B000000"
+                                    StrokeDashArray="0.0"
+                                    StrokeWidth=".5"
+                                    Top="11.399997115135" Width="3.600000143051151"/>
+                                    <Ellipse Fill="None"
+                                    Height="1.50002274259486"
+                                    Left="5.0" Opacity="1.0"
+                                    Stroke="#4B000000"
+                                    StrokeDashArray="0.0"
+                                    StrokeWidth=".5" Top="0.0" Width="2.0"/>
+                                    <Curve Fill="#FFD100" Name="B2"
+                                    Opacity="1.0"
+                                    Points="6.0,12.0 7.500100146816999,12.0 11.100154729045,12.0 12.0,11.399997115135 12.0,10.799997091293 12.0,10.500148719784 11.399998545647,9.59999704361 10.500145632008,8.70012142867 10.500145632008,8.100112331632 10.199998497963,6.59999692439999 9.900136534969,4.79999685287498 9.30012743793,2.700030458291 7.799998402596,1.19999670982401 7.500100146816999,0.90000316717698 6.632542525376,0.59999668598198 6.0,0.59999668598198 5.367612283068,0.59999668598198 4.500054661628001,0.90000316717698 4.199998259544,1.19999670982401 2.70002737051399,2.39999675750698 2.100018273475,4.79999685287498 1.799998164177,6.59999692439999 1.500009176437,8.100112331632 1.500009176437,8.70012142867 0.599998116493,9.59999704361 0.0,10.500148719784 0.0,10.799997091293 0.0,11.399997115135 1.199998140335,12.0 4.500054661628001,12.0 6.0,12.0"
+                                    Stroke="#FFD100"
+                                    StrokeDashArray="0.0" StrokeWidth=".5"/>
+                                    <Curve Opacity="1.0"
+                                    Points="6.0,12.0 7.500100146816999,12.0 11.100154729045,12.0 12.0,11.399997115135 12.0,10.799997091293 12.0,10.500148719784 11.399998545647,9.59999704361 10.500145632008,8.70012142867 10.500145632008,8.100112331632 10.199998497963,6.59999692439999 9.900136534969,4.79999685287498 9.30012743793,2.700030458291 7.799998402596,1.19999670982401 7.500100146816999,0.90000316717698 6.632542525376,0.59999668598198 6.0,0.59999668598198 5.367612283068,0.59999668598198 4.500054661628001,0.90000316717698 4.199998259544,1.19999670982401 2.70002737051399,2.39999675750698 2.100018273475,4.79999685287498 1.799998164177,6.59999692439999 1.500009176437,8.100112331632 1.500009176437,8.70012142867 0.599998116493,9.59999704361 0.0,10.500148719784 0.0,10.799997091293 0.0,11.399997115135 1.199998140335,12.0 4.500054661628001,12.0 6.0,12.0"
+                                    Stroke="#5F000000"
+                                    StrokeDashArray="0.0" StrokeWidth=".5">
+                                    <LinearGradient
+                                    Attribute="Fill"
+                                    EndPoint="1.0,0.0"
+                                    SpreadMethod="Pad" StartPoint="0.0,0.0">
+                                    <GradientStop
+                                    Color="#ABFFFFFF" Offset="0.0"/>
+                                    <GradientStop
+                                    Color="#01FFFFFF" Offset="0.5"/>
+                                    <GradientStop
+                                    Color="#60000000" Offset="1.0"/>
+                                    </LinearGradient>
+                                    </Curve>
+                                    </Component>
+                                </Component>
+                                <Component Clip="False"
+                                    ContentHeight="20" ContentWidth="20"
+                                    Height="20.0" Left="0"
+                                    Name="ForcedImage" Top="0"
+                                    Visibility="Hidden" Width="20.0">
+                                    <Rectangle Fill="#FFD100"
+                                    Height="20" Left="0"
+                                    Stroke="None" Top="0" Width="20">
+                                    <Expose ExposedAttribute="Fill" Name="ForcedColor"/>
+                                    <Animate Animation="Stop"
+                                    Attribute="Visibility"
+                                    AutoReverse="False"
+                                    Duration="1" From="Hidden" To="Visible"/>
+                                    </Rectangle>
+                                    <Component Clip="False"
+                                    ContentHeight="10.1"
+                                    ContentWidth="15.0"
+                                    Height="10.100000000000001"
+                                    Left="2.5" Top="5" Width="15.0">
+                                    <Path Fill="#E3BC67" Name="B1"
+                                    PathData="M11.25,10.096130000000017 C12.980770399999997,10.096130000000017 12.6923101,8.0769000000000233 11.25,8.0769000000000233 11.826920000000001,8.0769000000000233 11.826920000000001,8.0769000000000233 12.403849399999999,8.0769000000000233 13.846150000000002,8.0769000000000233 13.846150000000002,6.0576710000000276 12.403849399999999,6.0576710000000276 12.980770399999997,6.0576710000000276 12.980770399999997,6.0576710000000276 13.557690399999999,6.0576710000000276 15.0,6.0576710000000276 15.0,4.0384409999999775 13.557690399999999,4.0384409999999775 12.980770399999997,4.0384409999999775 12.6923101,4.0384409999999775 12.115386999999998,4.0384409999999775 13.557690399999999,4.0384409999999775 13.557690399999999,2.0192109999999843 12.115386999999998,2.0192109999999843 9.51923,2.0192109999999843 9.51923,2.0192109999999843 7.2115399999999994,2.0192109999999843 8.6538473000000025,2.0192109999999843 8.6538473000000025,-1.900000000887303E-5 7.2115399999999994,-1.900000000887303E-5 5.76923,-1.900000000887303E-5 4.6153800000000018,-1.900000000887303E-5 3.4615399999999994,0.28844099999997752 2.3809600000000017,0.58771999999999025 2.0376899999999978,1.040600999999981 1.1538473000000025,1.7307500000000005 0.725049300000002,2.0655100000000175 0.20812709999999868,2.382092 0.0,2.8845900000000029 0.0,5.1922799999999825 0.0,7.2115099999999757 0.0,9.5192109999999843 0.33908739999999682,10.067859999999996 1.1538473000000025,10.096130000000017 1.7307703999999973,10.096130000000017 4.9038473000000025,10.096130000000017 8.6538473000000025,10.096130000000017 11.25,10.096130000000017 M7.2115399999999994,2.0192109999999843 L5.4807703999999973,2.0192109999999843 M12.115386999999998,4.0384409999999775 L8.3653800000000018,4.0384409999999775 M12.403849399999999,6.0576710000000276 L8.3653800000000018,6.0576710000000276 M11.25,8.0769000000000233 L8.3653800000000018,8.0769000000000233"
+                                    Stroke="#505050"
+                                    StrokeDashArray="0.0" StrokeWidth=".5"/>
+                                    <Path Fill="#FFFFFF"
+                                    PathData="M11.25,10.096130000000017 C12.9807706,10.096130000000017 12.692310200000001,8.0769000000000233 11.25,8.0769000000000233 11.826920000000001,8.0769000000000233 11.826920000000001,8.0769000000000233 12.403849600000001,8.0769000000000233 13.846150000000002,8.0769000000000233 13.846150000000002,6.0576730000000225 12.403849600000001,6.0576730000000225 12.9807706,6.0576730000000225 12.9807706,6.0576730000000225 13.5576906,6.0576730000000225 15.0,6.0576730000000225 15.0,4.0384429999999725 13.5576906,4.0384429999999725 12.9807706,4.0384429999999725 12.692310200000001,4.0384429999999725 12.115388000000003,4.0384429999999725 13.5576906,4.0384429999999725 13.5576906,2.0192129999999793 12.115388000000003,2.0192129999999793 9.51923,2.0192129999999793 9.51923,2.0192129999999793 7.2115399999999994,2.0192129999999793 8.6538474999999977,2.0192129999999793 8.6538474999999977,-1.7000000013922545E-5 7.2115399999999994,-1.7000000013922545E-5 5.76923,-1.7000000013922545E-5 4.6153800000000018,-1.7000000013922545E-5 3.4615399999999994,0.28844299999997247 2.3809600000000017,0.58771999999999025 2.0376899999999978,1.040602999999976 1.1538474999999977,1.7307500000000005 0.72504949999999724,2.0655100000000175 0.20812730000000101,2.382093999999995 0.0,2.8845900000000029 0.0,5.1922799999999825 0.0,7.2115099999999757 0.0,9.51921299999998 0.33908759999999916,10.067859999999996 1.1538474999999977,10.096130000000017 1.7307705999999996,10.096130000000017 4.9038474999999977,10.096130000000017 8.6538474999999977,10.096130000000017 11.25,10.096130000000017 M7.2115399999999994,2.0192129999999793 L5.4807706,2.0192129999999793 M12.115388000000003,4.0384429999999725 L8.3653800000000018,4.0384429999999725 M12.403849600000001,6.0576730000000225 L8.3653800000000018,6.0576730000000225 M11.25,8.0769000000000233 L8.3653800000000018,8.0769000000000233"
+                                    Stroke="#505050"
+                                    StrokeDashArray="0.0" StrokeWidth=".5">
+                                    <LinearGradient
+                                    Attribute="Fill"
+                                    EndPoint="1.0,0.0"
+                                    SpreadMethod="Pad" StartPoint="0.0,0.0">
+                                    <GradientStop
+                                    Color="#ABFFFFFF" Offset="0.0"/>
+                                    <GradientStop
+                                    Color="#01FFFFFF" Offset="0.5"/>
+                                    <GradientStop
+                                    Color="#60000000" Offset="1.0"/>
+                                    </LinearGradient>
+                                    </Path>
+                                    </Component>
+                                </Component>
+                            </Group>
+                            <Expose ExposedAttribute="Left" Name="Point Display Position"/>
+                        </Component>
+                    </Group>
+                </Component>
+                <Component Clip="False" ContentHeight="20"
+                    ContentWidth="300" Group="22" Height="20.0"
+                    Id="Digital" Left="30.0" Name="" Override="No"
+                    Prompt="No" Top="100.0" Type="Normal"
+                    Visibility="Visible" Width="300">
+                    <Expose ExposedAttribute="Width" Name="Width"/>
+                    <Expose ExposedAttribute="ContentWidth" Name="Width"/>
+                    <Group Name="binds">
+                        <Bind Description="ValueBind"
+                            DynamicUpdates="Enable" Name="OptCDM" PreventDefault="True">
+                            <Expose ExposedAttribute="Name" Name="ValueBind"/>
+                        </Bind>
+                        <Bind Description="AlarmBind"
+                            DynamicUpdates="Disable" Name="" PreventDefault="True">
+                            <Expose ExposedAttribute="Name" Name="AlarmBind"/>
+                        </Bind>
+                    </Group>
+                    <Group Name="display">
+                        <Group Name="background" Width="300">
+                            <Line Name="VLine" Stroke="#626469" X1="150"
+                                X2="150" Y1="0.0" Y2="20.0">
+                                <Expose ExposedAttribute="X1" Name="Vertical Line Position"/>
+                                <Expose ExposedAttribute="X2" Name="Vertical Line Position"/>
+                            </Line>
+                            <Line Name="Hline" Stroke="#626469" X1="0.0"
+                                X2="300" Y1="20.0" Y2="20.0">
+                                <Expose ExposedAttribute="X2" Name="Width"/>
+                            </Line>
+                            <Rectangle Fill="#01FFFFFF" Height="20.0"
+                                Left="0" Name="bgd" RadiusX="5"
+                                RadiusY="5" Stroke="None" Top="0" Width="300">
+                                <Expose ExposedAttribute="Width" Name="Width"/>
+                            </Rectangle>
+                            <Expose ExposedAttribute="Width" Name="Width"/>
+                        </Group>
+                        <Component Clip="False" ContentHeight="20.0"
+                            ContentWidth="200" Height="20.0" Left="0.0"
+                            Name="Text" Top="0.0" Width="200">
+                            <Group Name="display">
+                                <Rectangle Fill="#01FFFFFF"
+                                    Height="20.0" Left="0.0"
+                                    Name="background" RadiusX="0.0"
+                                    RadiusY="0.0" Stroke="None"
+                                    StrokeDashArray="0.0"
+                                    StrokeWidth="1.0" Top="0.0" Width="100.0"/>
+                                <TextBox FontFamily="Arial"
+                                    FontSize="15.0" FontStyle="Normal"
+                                    FontWeight="Normal" Height="20.0"
+                                    HorizontalAlign="Left" Left="5"
+                                    Name="foreground" Stroke="#000000"
+                                    TextDecoration="None" Top="0.0"
+                                    VerticalAlign="Middle"
+                                    Width="195"><![CDATA[Cooling Mode]]><Expose
+                                    ExposedAttribute="Content" Name="Text Content"/>
+                                </TextBox>
+                            </Group>
+                        </Component>
+                        <Component AlarmColor="#EB5B25" Clip="False"
+                            ContentHeight="20.0" ContentWidth="100.0"
+                            ForcedColor="#FFD100" Height="20.0"
+                            Left="200" Name="Point" State0="Disabled"
+                            State1="Enabled" Top="0" Width="100.0">
+                            <Expose ExposedAttribute="State0" Name="State0"/>
+                            <Expose ExposedAttribute="State1" Name="State1"/>
+                            <Group Name="display">
+                                <Rectangle Fill="None" Height="20.0"
+                                    Left="0.0" Name="background"
+                                    RadiusX="5" RadiusY="5"
+                                    Stroke="None" StrokeDashArray="0.0"
+                                    StrokeWidth="1.0" Top="0.0" Width="100.0"/>
+                                <TextBox Fill="None" FontFamily="Arial"
+                                    FontSize="15.0" FontStyle="Normal"
+                                    FontWeight="Normal" Height="20.0"
+                                    HorizontalAlign="Right" Left="0"
+                                    Name="foreground" Stroke="#000000"
+                                    TextDecoration="None" Top="0.0"
+                                    VerticalAlign="Middle"
+                                    Width="95"><![CDATA[...]]><Expose
+                                    ExposedAttribute="Content" Name="Point Content"/>
+                                </TextBox>
+                                <Component Clip="False"
+                                    ContentHeight="20" ContentWidth="20"
+                                    Height="20.0" Left="0"
+                                    Name="AlarmImage" Top="0"
+                                    Visibility="Hidden" Width="20.0">
+                                    <Rectangle Fill="#F0080E"
+                                    Height="20" Stroke="None" Width="20">
+                                    <Expose ExposedAttribute="Fill" Name="AlarmColor"/>
+                                    <Animate Animation="Stop"
+                                    Attribute="Visibility"
+                                    AutoReverse="False"
+                                    Duration="1" From="Hidden" To="Visible"/>
+                                    </Rectangle>
+                                    <Component Clip="False"
+                                    ContentHeight="12.9"
+                                    ContentWidth="12.0"
+                                    Height="12.899999999999999"
+                                    Left="4" Top="3.6" Width="12.0">
+                                    <Path Fill="#FFD100" Name="B1"
+                                    PathData="M7.800000000000001,12.15 C7.800000000000001,12.5640002 6.994,12.9 6.0,12.9 5.006,12.9 4.200000019999999,12.5640002 4.200000019999999,12.15 4.200000019999999,11.736 5.006,11.4 6.0,11.4 6.994,11.4 7.800000000000001,11.736 7.800000000000001,12.15 z M7.0,0.75 C7.0,1.1639999999999997 6.552000100000001,1.5 6.0,1.5 5.448,1.5 5.0,1.1639999999999997 5.0,0.75 5.0,0.3360000099999998 5.448,0.0 6.0,0.0 6.552000100000001,0.0 7.0,0.3360000099999998 7.0,0.75 z"
+                                    Stroke="#FFD100"
+                                    StrokeDashArray="0.0" StrokeWidth=".5"/>
+                                    <Ellipse Fill="None"
+                                    Height="1.50002274259486"
+                                    Left="4.199998259544"
+                                    Opacity="1.0"
+                                    Stroke="#4B000000"
+                                    StrokeDashArray="0.0"
+                                    StrokeWidth=".5"
+                                    Top="11.399997115135" Width="3.600000143051151"/>
+                                    <Ellipse Fill="None"
+                                    Height="1.50002274259486"
+                                    Left="5.0" Opacity="1.0"
+                                    Stroke="#4B000000"
+                                    StrokeDashArray="0.0"
+                                    StrokeWidth=".5" Top="0.0" Width="2.0"/>
+                                    <Curve Fill="#FFD100" Name="B2"
+                                    Opacity="1.0"
+                                    Points="6.0,12.0 7.500100146816999,12.0 11.100154729045,12.0 12.0,11.399997115135 12.0,10.799997091293 12.0,10.500148719784 11.399998545647,9.59999704361 10.500145632008,8.70012142867 10.500145632008,8.100112331632 10.199998497963,6.59999692439999 9.900136534969,4.79999685287498 9.30012743793,2.700030458291 7.799998402596,1.19999670982401 7.500100146816999,0.90000316717698 6.632542525376,0.59999668598198 6.0,0.59999668598198 5.367612283068,0.59999668598198 4.500054661628001,0.90000316717698 4.199998259544,1.19999670982401 2.70002737051399,2.39999675750698 2.100018273475,4.79999685287498 1.799998164177,6.59999692439999 1.500009176437,8.100112331632 1.500009176437,8.70012142867 0.599998116493,9.59999704361 0.0,10.500148719784 0.0,10.799997091293 0.0,11.399997115135 1.199998140335,12.0 4.500054661628001,12.0 6.0,12.0"
+                                    Stroke="#FFD100"
+                                    StrokeDashArray="0.0" StrokeWidth=".5"/>
+                                    <Curve Opacity="1.0"
+                                    Points="6.0,12.0 7.500100146816999,12.0 11.100154729045,12.0 12.0,11.399997115135 12.0,10.799997091293 12.0,10.500148719784 11.399998545647,9.59999704361 10.500145632008,8.70012142867 10.500145632008,8.100112331632 10.199998497963,6.59999692439999 9.900136534969,4.79999685287498 9.30012743793,2.700030458291 7.799998402596,1.19999670982401 7.500100146816999,0.90000316717698 6.632542525376,0.59999668598198 6.0,0.59999668598198 5.367612283068,0.59999668598198 4.500054661628001,0.90000316717698 4.199998259544,1.19999670982401 2.70002737051399,2.39999675750698 2.100018273475,4.79999685287498 1.799998164177,6.59999692439999 1.500009176437,8.100112331632 1.500009176437,8.70012142867 0.599998116493,9.59999704361 0.0,10.500148719784 0.0,10.799997091293 0.0,11.399997115135 1.199998140335,12.0 4.500054661628001,12.0 6.0,12.0"
+                                    Stroke="#5F000000"
+                                    StrokeDashArray="0.0" StrokeWidth=".5">
+                                    <LinearGradient
+                                    Attribute="Fill"
+                                    EndPoint="1.0,0.0"
+                                    SpreadMethod="Pad" StartPoint="0.0,0.0">
+                                    <GradientStop
+                                    Color="#ABFFFFFF" Offset="0.0"/>
+                                    <GradientStop
+                                    Color="#01FFFFFF" Offset="0.5"/>
+                                    <GradientStop
+                                    Color="#60000000" Offset="1.0"/>
+                                    </LinearGradient>
+                                    </Curve>
+                                    </Component>
+                                </Component>
+                                <Component Clip="False"
+                                    ContentHeight="20" ContentWidth="20"
+                                    Height="20.0" Left="0"
+                                    Name="ForcedImage" Top="0"
+                                    Visibility="Hidden" Width="20.0">
+                                    <Rectangle Fill="#FFD100"
+                                    Height="20" Left="0"
+                                    Stroke="None" Top="0" Width="20">
+                                    <Expose ExposedAttribute="Fill" Name="ForcedColor"/>
+                                    <Animate Animation="Stop"
+                                    Attribute="Visibility"
+                                    AutoReverse="False"
+                                    Duration="1" From="Hidden" To="Visible"/>
+                                    </Rectangle>
+                                    <Component Clip="False"
+                                    ContentHeight="10.1"
+                                    ContentWidth="15.0"
+                                    Height="10.100000000000001"
+                                    Left="2.5" Top="5" Width="15.0">
+                                    <Path Fill="#E3BC67" Name="B1"
+                                    PathData="M11.25,10.096130000000017 C12.980770399999997,10.096130000000017 12.6923101,8.0769000000000233 11.25,8.0769000000000233 11.826920000000001,8.0769000000000233 11.826920000000001,8.0769000000000233 12.403849399999999,8.0769000000000233 13.846150000000002,8.0769000000000233 13.846150000000002,6.0576710000000276 12.403849399999999,6.0576710000000276 12.980770399999997,6.0576710000000276 12.980770399999997,6.0576710000000276 13.557690399999999,6.0576710000000276 15.0,6.0576710000000276 15.0,4.0384409999999775 13.557690399999999,4.0384409999999775 12.980770399999997,4.0384409999999775 12.6923101,4.0384409999999775 12.115386999999998,4.0384409999999775 13.557690399999999,4.0384409999999775 13.557690399999999,2.0192109999999843 12.115386999999998,2.0192109999999843 9.51923,2.0192109999999843 9.51923,2.0192109999999843 7.2115399999999994,2.0192109999999843 8.6538473000000025,2.0192109999999843 8.6538473000000025,-1.900000000887303E-5 7.2115399999999994,-1.900000000887303E-5 5.76923,-1.900000000887303E-5 4.6153800000000018,-1.900000000887303E-5 3.4615399999999994,0.28844099999997752 2.3809600000000017,0.58771999999999025 2.0376899999999978,1.040600999999981 1.1538473000000025,1.7307500000000005 0.725049300000002,2.0655100000000175 0.20812709999999868,2.382092 0.0,2.8845900000000029 0.0,5.1922799999999825 0.0,7.2115099999999757 0.0,9.5192109999999843 0.33908739999999682,10.067859999999996 1.1538473000000025,10.096130000000017 1.7307703999999973,10.096130000000017 4.9038473000000025,10.096130000000017 8.6538473000000025,10.096130000000017 11.25,10.096130000000017 M7.2115399999999994,2.0192109999999843 L5.4807703999999973,2.0192109999999843 M12.115386999999998,4.0384409999999775 L8.3653800000000018,4.0384409999999775 M12.403849399999999,6.0576710000000276 L8.3653800000000018,6.0576710000000276 M11.25,8.0769000000000233 L8.3653800000000018,8.0769000000000233"
+                                    Stroke="#505050"
+                                    StrokeDashArray="0.0" StrokeWidth=".5"/>
+                                    <Path Fill="#FFFFFF"
+                                    PathData="M11.25,10.096130000000017 C12.9807706,10.096130000000017 12.692310200000001,8.0769000000000233 11.25,8.0769000000000233 11.826920000000001,8.0769000000000233 11.826920000000001,8.0769000000000233 12.403849600000001,8.0769000000000233 13.846150000000002,8.0769000000000233 13.846150000000002,6.0576730000000225 12.403849600000001,6.0576730000000225 12.9807706,6.0576730000000225 12.9807706,6.0576730000000225 13.5576906,6.0576730000000225 15.0,6.0576730000000225 15.0,4.0384429999999725 13.5576906,4.0384429999999725 12.9807706,4.0384429999999725 12.692310200000001,4.0384429999999725 12.115388000000003,4.0384429999999725 13.5576906,4.0384429999999725 13.5576906,2.0192129999999793 12.115388000000003,2.0192129999999793 9.51923,2.0192129999999793 9.51923,2.0192129999999793 7.2115399999999994,2.0192129999999793 8.6538474999999977,2.0192129999999793 8.6538474999999977,-1.7000000013922545E-5 7.2115399999999994,-1.7000000013922545E-5 5.76923,-1.7000000013922545E-5 4.6153800000000018,-1.7000000013922545E-5 3.4615399999999994,0.28844299999997247 2.3809600000000017,0.58771999999999025 2.0376899999999978,1.040602999999976 1.1538474999999977,1.7307500000000005 0.72504949999999724,2.0655100000000175 0.20812730000000101,2.382093999999995 0.0,2.8845900000000029 0.0,5.1922799999999825 0.0,7.2115099999999757 0.0,9.51921299999998 0.33908759999999916,10.067859999999996 1.1538474999999977,10.096130000000017 1.7307705999999996,10.096130000000017 4.9038474999999977,10.096130000000017 8.6538474999999977,10.096130000000017 11.25,10.096130000000017 M7.2115399999999994,2.0192129999999793 L5.4807706,2.0192129999999793 M12.115388000000003,4.0384429999999725 L8.3653800000000018,4.0384429999999725 M12.403849600000001,6.0576730000000225 L8.3653800000000018,6.0576730000000225 M11.25,8.0769000000000233 L8.3653800000000018,8.0769000000000233"
+                                    Stroke="#505050"
+                                    StrokeDashArray="0.0" StrokeWidth=".5">
+                                    <LinearGradient
+                                    Attribute="Fill"
+                                    EndPoint="1.0,0.0"
+                                    SpreadMethod="Pad" StartPoint="0.0,0.0">
+                                    <GradientStop
+                                    Color="#ABFFFFFF" Offset="0.0"/>
+                                    <GradientStop
+                                    Color="#01FFFFFF" Offset="0.5"/>
+                                    <GradientStop
+                                    Color="#60000000" Offset="1.0"/>
+                                    </LinearGradient>
+                                    </Path>
+                                    </Component>
+                                </Component>
+                            </Group>
+                            <Expose ExposedAttribute="Left" Name="Point Display Position"/>
+                        </Component>
+                    </Group>
+                </Component>
+                <Component Clip="False" ContentHeight="20"
+                    ContentWidth="300" Group="23" Height="20.0"
+                    Id="Digital" Left="40.0" Name="" Override="No"
+                    Prompt="No" Top="110.0" Type="Normal"
+                    Visibility="Visible" Width="300">
+                    <Expose ExposedAttribute="Width" Name="Width"/>
+                    <Expose ExposedAttribute="ContentWidth" Name="Width"/>
+                    <Group Name="binds">
+                        <Bind Description="ValueBind"
+                            DynamicUpdates="Enable" Name="OptMWU" PreventDefault="True">
+                            <Expose ExposedAttribute="Name" Name="ValueBind"/>
+                        </Bind>
+                        <Bind Description="AlarmBind"
+                            DynamicUpdates="Disable" Name="" PreventDefault="True">
+                            <Expose ExposedAttribute="Name" Name="AlarmBind"/>
+                        </Bind>
+                    </Group>
+                    <Group Name="display">
+                        <Group Name="background" Width="300">
+                            <Line Name="VLine" Stroke="#626469" X1="150"
+                                X2="150" Y1="0.0" Y2="20.0">
+                                <Expose ExposedAttribute="X1" Name="Vertical Line Position"/>
+                                <Expose Description=""
+                                    ExposedAttribute="X2" Name="Vertical Line Position"/>
+                            </Line>
+                            <Line Name="Hline" Stroke="#626469" X1="0.0"
+                                X2="300" Y1="20.0" Y2="20.0">
+                                <Expose ExposedAttribute="X2" Name="Width"/>
+                            </Line>
+                            <Rectangle Fill="#01FFFFFF" Height="20.0"
+                                Left="0" Name="bgd" RadiusX="5"
+                                RadiusY="5" Stroke="None" Top="0" Width="300">
+                                <Expose ExposedAttribute="Width" Name="Width"/>
+                            </Rectangle>
+                            <Expose ExposedAttribute="Width" Name="Width"/>
+                        </Group>
+                        <Component Clip="False" ContentHeight="20.0"
+                            ContentWidth="200" Height="20.0" Left="0.0"
+                            Name="Text" Top="0.0" Width="200">
+                            <Group Name="display">
+                                <Rectangle Fill="#01FFFFFF"
+                                    Height="20.0" Left="0.0"
+                                    Name="background" RadiusX="0.0"
+                                    RadiusY="0.0" Stroke="None"
+                                    StrokeDashArray="0.0"
+                                    StrokeWidth="1.0" Top="0.0" Width="100.0"/>
+                                <TextBox FontFamily="Arial"
+                                    FontSize="15.0" FontStyle="Normal"
+                                    FontWeight="Normal" Height="20.0"
+                                    HorizontalAlign="Left" Left="5"
+                                    Name="foreground" Stroke="#000000"
+                                    TextDecoration="None" Top="0.0"
+                                    VerticalAlign="Middle"
+                                    Width="195"><![CDATA[Morning Warmup]]><Expose
+                                    ExposedAttribute="Content" Name="Text Content"/>
+                                </TextBox>
+                            </Group>
+                        </Component>
+                        <Component AlarmColor="#EB5B25" Clip="False"
+                            ContentHeight="20.0" ContentWidth="100.0"
+                            ForcedColor="#FFD100" Height="20.0"
+                            Left="200" Name="Point" State0="Disabled"
+                            State1="Enabled" Top="0" Width="100.0">
+                            <Expose ExposedAttribute="State0" Name="State0"/>
+                            <Expose ExposedAttribute="State1" Name="State1"/>
+                            <Group Name="display">
+                                <Rectangle Fill="None" Height="20.0"
+                                    Left="0.0" Name="background"
+                                    RadiusX="5" RadiusY="5"
+                                    Stroke="None" StrokeDashArray="0.0"
+                                    StrokeWidth="1.0" Top="0.0" Width="100.0"/>
+                                <TextBox Fill="None" FontFamily="Arial"
+                                    FontSize="15.0" FontStyle="Normal"
+                                    FontWeight="Normal" Height="20.0"
+                                    HorizontalAlign="Right" Left="0"
+                                    Name="foreground" Stroke="#000000"
+                                    TextDecoration="None" Top="0.0"
+                                    VerticalAlign="Middle"
+                                    Width="95"><![CDATA[...]]><Expose
+                                    ExposedAttribute="Content" Name="Point Content"/>
+                                </TextBox>
+                                <Component Clip="False"
+                                    ContentHeight="20" ContentWidth="20"
+                                    Height="20.0" Left="0"
+                                    Name="AlarmImage" Top="0"
+                                    Visibility="Hidden" Width="20.0">
+                                    <Rectangle Fill="#F0080E"
+                                    Height="20" Stroke="None" Width="20">
+                                    <Expose ExposedAttribute="Fill" Name="AlarmColor"/>
+                                    <Animate Animation="Stop"
+                                    Attribute="Visibility"
+                                    AutoReverse="False"
+                                    Duration="1" From="Hidden" To="Visible"/>
+                                    </Rectangle>
+                                    <Component Clip="False"
+                                    ContentHeight="12.9"
+                                    ContentWidth="12.0"
+                                    Height="12.899999999999999"
+                                    Left="4" Top="3.6" Width="12.0">
+                                    <Path Fill="#FFD100" Name="B1"
+                                    PathData="M7.800000000000001,12.15 C7.800000000000001,12.5640002 6.994,12.9 6.0,12.9 5.006,12.9 4.200000019999999,12.5640002 4.200000019999999,12.15 4.200000019999999,11.736 5.006,11.4 6.0,11.4 6.994,11.4 7.800000000000001,11.736 7.800000000000001,12.15 z M7.0,0.75 C7.0,1.1639999999999997 6.552000100000001,1.5 6.0,1.5 5.448,1.5 5.0,1.1639999999999997 5.0,0.75 5.0,0.3360000099999998 5.448,0.0 6.0,0.0 6.552000100000001,0.0 7.0,0.3360000099999998 7.0,0.75 z"
+                                    Stroke="#FFD100"
+                                    StrokeDashArray="0.0" StrokeWidth=".5"/>
+                                    <Ellipse Fill="None"
+                                    Height="1.50002274259486"
+                                    Left="4.199998259544"
+                                    Opacity="1.0"
+                                    Stroke="#4B000000"
+                                    StrokeDashArray="0.0"
+                                    StrokeWidth=".5"
+                                    Top="11.399997115135" Width="3.600000143051151"/>
+                                    <Ellipse Fill="None"
+                                    Height="1.50002274259486"
+                                    Left="5.0" Opacity="1.0"
+                                    Stroke="#4B000000"
+                                    StrokeDashArray="0.0"
+                                    StrokeWidth=".5" Top="0.0" Width="2.0"/>
+                                    <Curve Fill="#FFD100" Name="B2"
+                                    Opacity="1.0"
+                                    Points="6.0,12.0 7.500100146816999,12.0 11.100154729045,12.0 12.0,11.399997115135 12.0,10.799997091293 12.0,10.500148719784 11.399998545647,9.59999704361 10.500145632008,8.70012142867 10.500145632008,8.100112331632 10.199998497963,6.59999692439999 9.900136534969,4.79999685287498 9.30012743793,2.700030458291 7.799998402596,1.19999670982401 7.500100146816999,0.90000316717698 6.632542525376,0.59999668598198 6.0,0.59999668598198 5.367612283068,0.59999668598198 4.500054661628001,0.90000316717698 4.199998259544,1.19999670982401 2.70002737051399,2.39999675750698 2.100018273475,4.79999685287498 1.799998164177,6.59999692439999 1.500009176437,8.100112331632 1.500009176437,8.70012142867 0.599998116493,9.59999704361 0.0,10.500148719784 0.0,10.799997091293 0.0,11.399997115135 1.199998140335,12.0 4.500054661628001,12.0 6.0,12.0"
+                                    Stroke="#FFD100"
+                                    StrokeDashArray="0.0" StrokeWidth=".5"/>
+                                    <Curve Opacity="1.0"
+                                    Points="6.0,12.0 7.500100146816999,12.0 11.100154729045,12.0 12.0,11.399997115135 12.0,10.799997091293 12.0,10.500148719784 11.399998545647,9.59999704361 10.500145632008,8.70012142867 10.500145632008,8.100112331632 10.199998497963,6.59999692439999 9.900136534969,4.79999685287498 9.30012743793,2.700030458291 7.799998402596,1.19999670982401 7.500100146816999,0.90000316717698 6.632542525376,0.59999668598198 6.0,0.59999668598198 5.367612283068,0.59999668598198 4.500054661628001,0.90000316717698 4.199998259544,1.19999670982401 2.70002737051399,2.39999675750698 2.100018273475,4.79999685287498 1.799998164177,6.59999692439999 1.500009176437,8.100112331632 1.500009176437,8.70012142867 0.599998116493,9.59999704361 0.0,10.500148719784 0.0,10.799997091293 0.0,11.399997115135 1.199998140335,12.0 4.500054661628001,12.0 6.0,12.0"
+                                    Stroke="#5F000000"
+                                    StrokeDashArray="0.0" StrokeWidth=".5">
+                                    <LinearGradient
+                                    Attribute="Fill"
+                                    EndPoint="1.0,0.0"
+                                    SpreadMethod="Pad" StartPoint="0.0,0.0">
+                                    <GradientStop
+                                    Color="#ABFFFFFF" Offset="0.0"/>
+                                    <GradientStop
+                                    Color="#01FFFFFF" Offset="0.5"/>
+                                    <GradientStop
+                                    Color="#60000000" Offset="1.0"/>
+                                    </LinearGradient>
+                                    </Curve>
+                                    </Component>
+                                </Component>
+                                <Component Clip="False"
+                                    ContentHeight="20" ContentWidth="20"
+                                    Height="20.0" Left="0"
+                                    Name="ForcedImage" Top="0"
+                                    Visibility="Hidden" Width="20.0">
+                                    <Rectangle Fill="#FFD100"
+                                    Height="20" Left="0"
+                                    Stroke="None" Top="0" Width="20">
+                                    <Expose ExposedAttribute="Fill" Name="ForcedColor"/>
+                                    <Animate Animation="Stop"
+                                    Attribute="Visibility"
+                                    AutoReverse="False"
+                                    Duration="1" From="Hidden" To="Visible"/>
+                                    </Rectangle>
+                                    <Component Clip="False"
+                                    ContentHeight="10.1"
+                                    ContentWidth="15.0"
+                                    Height="10.100000000000001"
+                                    Left="2.5" Top="5" Width="15.0">
+                                    <Path Fill="#E3BC67" Name="B1"
+                                    PathData="M11.25,10.096130000000017 C12.980770399999997,10.096130000000017 12.6923101,8.0769000000000233 11.25,8.0769000000000233 11.826920000000001,8.0769000000000233 11.826920000000001,8.0769000000000233 12.403849399999999,8.0769000000000233 13.846150000000002,8.0769000000000233 13.846150000000002,6.0576710000000276 12.403849399999999,6.0576710000000276 12.980770399999997,6.0576710000000276 12.980770399999997,6.0576710000000276 13.557690399999999,6.0576710000000276 15.0,6.0576710000000276 15.0,4.0384409999999775 13.557690399999999,4.0384409999999775 12.980770399999997,4.0384409999999775 12.6923101,4.0384409999999775 12.115386999999998,4.0384409999999775 13.557690399999999,4.0384409999999775 13.557690399999999,2.0192109999999843 12.115386999999998,2.0192109999999843 9.51923,2.0192109999999843 9.51923,2.0192109999999843 7.2115399999999994,2.0192109999999843 8.6538473000000025,2.0192109999999843 8.6538473000000025,-1.900000000887303E-5 7.2115399999999994,-1.900000000887303E-5 5.76923,-1.900000000887303E-5 4.6153800000000018,-1.900000000887303E-5 3.4615399999999994,0.28844099999997752 2.3809600000000017,0.58771999999999025 2.0376899999999978,1.040600999999981 1.1538473000000025,1.7307500000000005 0.725049300000002,2.0655100000000175 0.20812709999999868,2.382092 0.0,2.8845900000000029 0.0,5.1922799999999825 0.0,7.2115099999999757 0.0,9.5192109999999843 0.33908739999999682,10.067859999999996 1.1538473000000025,10.096130000000017 1.7307703999999973,10.096130000000017 4.9038473000000025,10.096130000000017 8.6538473000000025,10.096130000000017 11.25,10.096130000000017 M7.2115399999999994,2.0192109999999843 L5.4807703999999973,2.0192109999999843 M12.115386999999998,4.0384409999999775 L8.3653800000000018,4.0384409999999775 M12.403849399999999,6.0576710000000276 L8.3653800000000018,6.0576710000000276 M11.25,8.0769000000000233 L8.3653800000000018,8.0769000000000233"
+                                    Stroke="#505050"
+                                    StrokeDashArray="0.0" StrokeWidth=".5"/>
+                                    <Path Fill="#FFFFFF"
+                                    PathData="M11.25,10.096130000000017 C12.9807706,10.096130000000017 12.692310200000001,8.0769000000000233 11.25,8.0769000000000233 11.826920000000001,8.0769000000000233 11.826920000000001,8.0769000000000233 12.403849600000001,8.0769000000000233 13.846150000000002,8.0769000000000233 13.846150000000002,6.0576730000000225 12.403849600000001,6.0576730000000225 12.9807706,6.0576730000000225 12.9807706,6.0576730000000225 13.5576906,6.0576730000000225 15.0,6.0576730000000225 15.0,4.0384429999999725 13.5576906,4.0384429999999725 12.9807706,4.0384429999999725 12.692310200000001,4.0384429999999725 12.115388000000003,4.0384429999999725 13.5576906,4.0384429999999725 13.5576906,2.0192129999999793 12.115388000000003,2.0192129999999793 9.51923,2.0192129999999793 9.51923,2.0192129999999793 7.2115399999999994,2.0192129999999793 8.6538474999999977,2.0192129999999793 8.6538474999999977,-1.7000000013922545E-5 7.2115399999999994,-1.7000000013922545E-5 5.76923,-1.7000000013922545E-5 4.6153800000000018,-1.7000000013922545E-5 3.4615399999999994,0.28844299999997247 2.3809600000000017,0.58771999999999025 2.0376899999999978,1.040602999999976 1.1538474999999977,1.7307500000000005 0.72504949999999724,2.0655100000000175 0.20812730000000101,2.382093999999995 0.0,2.8845900000000029 0.0,5.1922799999999825 0.0,7.2115099999999757 0.0,9.51921299999998 0.33908759999999916,10.067859999999996 1.1538474999999977,10.096130000000017 1.7307705999999996,10.096130000000017 4.9038474999999977,10.096130000000017 8.6538474999999977,10.096130000000017 11.25,10.096130000000017 M7.2115399999999994,2.0192129999999793 L5.4807706,2.0192129999999793 M12.115388000000003,4.0384429999999725 L8.3653800000000018,4.0384429999999725 M12.403849600000001,6.0576730000000225 L8.3653800000000018,6.0576730000000225 M11.25,8.0769000000000233 L8.3653800000000018,8.0769000000000233"
+                                    Stroke="#505050"
+                                    StrokeDashArray="0.0" StrokeWidth=".5">
+                                    <LinearGradient
+                                    Attribute="Fill"
+                                    EndPoint="1.0,0.0"
+                                    SpreadMethod="Pad" StartPoint="0.0,0.0">
+                                    <GradientStop
+                                    Color="#ABFFFFFF" Offset="0.0"/>
+                                    <GradientStop
+                                    Color="#01FFFFFF" Offset="0.5"/>
+                                    <GradientStop
+                                    Color="#60000000" Offset="1.0"/>
+                                    </LinearGradient>
+                                    </Path>
+                                    </Component>
+                                </Component>
+                            </Group>
+                            <Expose ExposedAttribute="Left" Name="Point Display Position"/>
+                        </Component>
+                    </Group>
+                </Component>
+                <Component Clip="False" ContentHeight="20"
+                    ContentWidth="300" Group="24" Height="20.0"
+                    Id="Analog" Left="60.0" Name="" Override="Yes"
+                    Prompt="No" Top="100.0" Type="Normal"
+                    Visibility="Visible" Width="300">
+                    <Expose ExposedAttribute="Width" Name="Width"/>
+                    <Expose ExposedAttribute="ContentWidth" Name="Width"/>
+                    <Group Name="binds">
+                        <Bind Description="ValueBind"
+                            DynamicUpdates="Enable" Name="StartTmm" PreventDefault="False">
+                            <Expose ExposedAttribute="Name" Name="ValueBind"/>
+                        </Bind>
+                        <Bind Description="AlarmBind"
+                            DynamicUpdates="Disable" Name="" PreventDefault="True">
+                            <Expose ExposedAttribute="Name" Name="AlarmBind"/>
+                        </Bind>
+                        <Bind Description="PriBind"
+                            DynamicUpdates="Disable" Name="" PreventDefault="True">
+                            <Expose ExposedAttribute="Name" Name="PriBind"/>
+                        </Bind>
+                    </Group>
+                    <Group Name="display">
+                        <Group Name="background" Width="300" X2="300">
+                            <Line Name="VLine" Stroke="#626469" X1="150"
+                                X2="150" Y2="20">
+                                <Expose Description=""
+                                    ExposedAttribute="X1" Name="Vertical Line Position"/>
+                                <Expose ExposedAttribute="X2" Name="Vertical Line Position"/>
+                            </Line>
+                            <Line Name="Hline" Stroke="#626469" X1="0"
+                                X2="300" Y1="20" Y2="20">
+                                <Expose ExposedAttribute="X2" Name="Width"/>
+                            </Line>
+                            <Expose ExposedAttribute="X2" Name="Width"/>
+                            <Rectangle Fill="#01FFFFFF" Height="20"
+                                Name="bgd" RadiusX="5" RadiusY="5"
+                                Stroke="None" Width="300">
+                                <Expose ExposedAttribute="Width" Name="Width"/>
+                            </Rectangle>
+                            <Expose ExposedAttribute="Width" Name="Width"/>
+                        </Group>
+                        <Component Clip="False" ContentHeight="20.0"
+                            ContentWidth="200" Height="20.0" Left="0"
+                            Name="Text" Top="0.0" Width="200">
+                            <Group Name="display">
+                                <Rectangle Fill="#01FFFFFF"
+                                    Height="20.0" Left="0.0"
+                                    Name="background" RadiusX="0.0"
+                                    RadiusY="0.0" Stroke="None"
+                                    StrokeDashArray="0.0"
+                                    StrokeWidth="1.0" Top="0.0" Width="100.0"/>
+                                <TextBox FontFamily="Arial"
+                                    FontSize="15.0" FontStyle="Normal"
+                                    FontWeight="Normal" Height="20.0"
+                                    HorizontalAlign="Left" Left="5"
+                                    Name="foreground" Stroke="#000000"
+                                    TextDecoration="None" Top="0.0"
+                                    VerticalAlign="Middle"
+                                    Width="195"><![CDATA[Start Time]]><Expose
+                                    ExposedAttribute="Content" Name="Text Content"/>
+                                </TextBox>
+                            </Group>
+                        </Component>
+                        <Component AlarmColor="#EB5B25" Clip="False"
+                            ContentHeight="20.0" ContentWidth="100.0"
+                            Decimals="0" ForcedColor="#FFD100"
+                            Height="20.0" Left="200" Name="Point"
+                            Top="0" Units="hrs" Width="100.0">
+                            <Expose ExposedAttribute="Decimals" Name="Decimals"/>
+                            <Expose ExposedAttribute="Units" Name="Units"/>
+                            <Group Name="display">
+                                <Rectangle Fill="None" Height="20.0"
+                                    Left="0.0" Name="background"
+                                    RadiusX="5" RadiusY="5"
+                                    Stroke="None" StrokeDashArray="0.0"
+                                    StrokeWidth="1.0" Top="0.0" Width="100.0"/>
+                                <TextBox Fill="None" FontFamily="Arial"
+                                    FontSize="15.0" FontStyle="Normal"
+                                    FontWeight="Normal" Height="20.0"
+                                    HorizontalAlign="Right" Left="0"
+                                    Name="foreground" Stroke="#000000"
+                                    TextDecoration="None" Top="0.0"
+                                    VerticalAlign="Middle"
+                                    Width="95"><![CDATA[...]]><Expose
+                                    ExposedAttribute="Content" Name="Point Content"/>
+                                </TextBox>
+                                <Component Clip="False"
+                                    ContentHeight="20" ContentWidth="20"
+                                    Height="20.0" Left="0"
+                                    Name="AlarmImage" Top="0"
+                                    Visibility="Hidden" Width="20.0">
+                                    <Rectangle Fill="#F0080E"
+                                    Height="20" Stroke="None" Width="20">
+                                    <Expose ExposedAttribute="Fill" Name="AlarmColor"/>
+                                    <Animate Animation="Stop"
+                                    Attribute="Visibility"
+                                    AutoReverse="False"
+                                    Duration="1" From="Hidden" To="Visible"/>
+                                    </Rectangle>
+                                    <Component Clip="False"
+                                    ContentHeight="12.9"
+                                    ContentWidth="12.0"
+                                    Height="12.899999999999999"
+                                    Left="4" Top="3.6" Width="12.0">
+                                    <Path Fill="#FFD100" Name="B1"
+                                    PathData="M7.800000000000001,12.15 C7.800000000000001,12.5640002 6.994,12.9 6.0,12.9 5.006,12.9 4.200000019999999,12.5640002 4.200000019999999,12.15 4.200000019999999,11.736 5.006,11.4 6.0,11.4 6.994,11.4 7.800000000000001,11.736 7.800000000000001,12.15 z M7.0,0.75 C7.0,1.1639999999999997 6.552000100000001,1.5 6.0,1.5 5.448,1.5 5.0,1.1639999999999997 5.0,0.75 5.0,0.3360000099999998 5.448,0.0 6.0,0.0 6.552000100000001,0.0 7.0,0.3360000099999998 7.0,0.75 z"
+                                    Stroke="#FFD100"
+                                    StrokeDashArray="0.0" StrokeWidth=".5"/>
+                                    <Ellipse Fill="None"
+                                    Height="1.50002274259486"
+                                    Left="4.199998259544"
+                                    Opacity="1.0"
+                                    Stroke="#4B000000"
+                                    StrokeDashArray="0.0"
+                                    StrokeWidth=".5"
+                                    Top="11.399997115135" Width="3.600000143051151"/>
+                                    <Ellipse Fill="None"
+                                    Height="1.50002274259486"
+                                    Left="5.0" Opacity="1.0"
+                                    Stroke="#4B000000"
+                                    StrokeDashArray="0.0"
+                                    StrokeWidth=".5" Top="0.0" Width="2.0"/>
+                                    <Curve Fill="#FFD100" Name="B2"
+                                    Opacity="1.0"
+                                    Points="6.0,12.0 7.500100146816999,12.0 11.100154729045,12.0 12.0,11.399997115135 12.0,10.799997091293 12.0,10.500148719784 11.399998545647,9.59999704361 10.500145632008,8.70012142867 10.500145632008,8.100112331632 10.199998497963,6.59999692439999 9.900136534969,4.79999685287498 9.30012743793,2.700030458291 7.799998402596,1.19999670982401 7.500100146816999,0.90000316717698 6.632542525376,0.59999668598198 6.0,0.59999668598198 5.367612283068,0.59999668598198 4.500054661628001,0.90000316717698 4.199998259544,1.19999670982401 2.70002737051399,2.39999675750698 2.100018273475,4.79999685287498 1.799998164177,6.59999692439999 1.500009176437,8.100112331632 1.500009176437,8.70012142867 0.599998116493,9.59999704361 0.0,10.500148719784 0.0,10.799997091293 0.0,11.399997115135 1.199998140335,12.0 4.500054661628001,12.0 6.0,12.0"
+                                    Stroke="#FFD100"
+                                    StrokeDashArray="0.0" StrokeWidth=".5"/>
+                                    <Curve Opacity="1.0"
+                                    Points="6.0,12.0 7.500100146816999,12.0 11.100154729045,12.0 12.0,11.399997115135 12.0,10.799997091293 12.0,10.500148719784 11.399998545647,9.59999704361 10.500145632008,8.70012142867 10.500145632008,8.100112331632 10.199998497963,6.59999692439999 9.900136534969,4.79999685287498 9.30012743793,2.700030458291 7.799998402596,1.19999670982401 7.500100146816999,0.90000316717698 6.632542525376,0.59999668598198 6.0,0.59999668598198 5.367612283068,0.59999668598198 4.500054661628001,0.90000316717698 4.199998259544,1.19999670982401 2.70002737051399,2.39999675750698 2.100018273475,4.79999685287498 1.799998164177,6.59999692439999 1.500009176437,8.100112331632 1.500009176437,8.70012142867 0.599998116493,9.59999704361 0.0,10.500148719784 0.0,10.799997091293 0.0,11.399997115135 1.199998140335,12.0 4.500054661628001,12.0 6.0,12.0"
+                                    Stroke="#5F000000"
+                                    StrokeDashArray="0.0" StrokeWidth=".5">
+                                    <LinearGradient
+                                    Attribute="Fill"
+                                    EndPoint="1.0,0.0"
+                                    SpreadMethod="Pad" StartPoint="0.0,0.0">
+                                    <GradientStop
+                                    Color="#ABFFFFFF" Offset="0.0"/>
+                                    <GradientStop
+                                    Color="#01FFFFFF" Offset="0.5"/>
+                                    <GradientStop
+                                    Color="#60000000" Offset="1.0"/>
+                                    </LinearGradient>
+                                    </Curve>
+                                    </Component>
+                                </Component>
+                                <Component Clip="False"
+                                    ContentHeight="20" ContentWidth="20"
+                                    Height="20.0" Left="0"
+                                    Name="ForcedImage" Top="0"
+                                    Visibility="Hidden" Width="20.0">
+                                    <Rectangle Fill="#FFD100"
+                                    Height="20" Left="0"
+                                    Stroke="None" Top="0" Width="20">
+                                    <Expose ExposedAttribute="Fill" Name="ForcedColor"/>
+                                    <Animate Animation="Stop"
+                                    Attribute="Visibility"
+                                    AutoReverse="False"
+                                    Duration="1" From="Hidden" To="Visible"/>
+                                    </Rectangle>
+                                    <Component Clip="False"
+                                    ContentHeight="10.1"
+                                    ContentWidth="15.0"
+                                    Height="10.100000000000001"
+                                    Left="2.5" Top="5" Width="15.0">
+                                    <Path Fill="#E3BC67" Name="B1"
+                                    PathData="M11.25,10.096130000000017 C12.980770399999997,10.096130000000017 12.6923101,8.0769000000000233 11.25,8.0769000000000233 11.826920000000001,8.0769000000000233 11.826920000000001,8.0769000000000233 12.403849399999999,8.0769000000000233 13.846150000000002,8.0769000000000233 13.846150000000002,6.0576710000000276 12.403849399999999,6.0576710000000276 12.980770399999997,6.0576710000000276 12.980770399999997,6.0576710000000276 13.557690399999999,6.0576710000000276 15.0,6.0576710000000276 15.0,4.0384409999999775 13.557690399999999,4.0384409999999775 12.980770399999997,4.0384409999999775 12.6923101,4.0384409999999775 12.115386999999998,4.0384409999999775 13.557690399999999,4.0384409999999775 13.557690399999999,2.0192109999999843 12.115386999999998,2.0192109999999843 9.51923,2.0192109999999843 9.51923,2.0192109999999843 7.2115399999999994,2.0192109999999843 8.6538473000000025,2.0192109999999843 8.6538473000000025,-1.900000000887303E-5 7.2115399999999994,-1.900000000887303E-5 5.76923,-1.900000000887303E-5 4.6153800000000018,-1.900000000887303E-5 3.4615399999999994,0.28844099999997752 2.3809600000000017,0.58771999999999025 2.0376899999999978,1.040600999999981 1.1538473000000025,1.7307500000000005 0.725049300000002,2.0655100000000175 0.20812709999999868,2.382092 0.0,2.8845900000000029 0.0,5.1922799999999825 0.0,7.2115099999999757 0.0,9.5192109999999843 0.33908739999999682,10.067859999999996 1.1538473000000025,10.096130000000017 1.7307703999999973,10.096130000000017 4.9038473000000025,10.096130000000017 8.6538473000000025,10.096130000000017 11.25,10.096130000000017 M7.2115399999999994,2.0192109999999843 L5.4807703999999973,2.0192109999999843 M12.115386999999998,4.0384409999999775 L8.3653800000000018,4.0384409999999775 M12.403849399999999,6.0576710000000276 L8.3653800000000018,6.0576710000000276 M11.25,8.0769000000000233 L8.3653800000000018,8.0769000000000233"
+                                    Stroke="#505050"
+                                    StrokeDashArray="0.0" StrokeWidth=".5"/>
+                                    <Path Fill="#FFFFFF"
+                                    PathData="M11.25,10.096130000000017 C12.9807706,10.096130000000017 12.692310200000001,8.0769000000000233 11.25,8.0769000000000233 11.826920000000001,8.0769000000000233 11.826920000000001,8.0769000000000233 12.403849600000001,8.0769000000000233 13.846150000000002,8.0769000000000233 13.846150000000002,6.0576730000000225 12.403849600000001,6.0576730000000225 12.9807706,6.0576730000000225 12.9807706,6.0576730000000225 13.5576906,6.0576730000000225 15.0,6.0576730000000225 15.0,4.0384429999999725 13.5576906,4.0384429999999725 12.9807706,4.0384429999999725 12.692310200000001,4.0384429999999725 12.115388000000003,4.0384429999999725 13.5576906,4.0384429999999725 13.5576906,2.0192129999999793 12.115388000000003,2.0192129999999793 9.51923,2.0192129999999793 9.51923,2.0192129999999793 7.2115399999999994,2.0192129999999793 8.6538474999999977,2.0192129999999793 8.6538474999999977,-1.7000000013922545E-5 7.2115399999999994,-1.7000000013922545E-5 5.76923,-1.7000000013922545E-5 4.6153800000000018,-1.7000000013922545E-5 3.4615399999999994,0.28844299999997247 2.3809600000000017,0.58771999999999025 2.0376899999999978,1.040602999999976 1.1538474999999977,1.7307500000000005 0.72504949999999724,2.0655100000000175 0.20812730000000101,2.382093999999995 0.0,2.8845900000000029 0.0,5.1922799999999825 0.0,7.2115099999999757 0.0,9.51921299999998 0.33908759999999916,10.067859999999996 1.1538474999999977,10.096130000000017 1.7307705999999996,10.096130000000017 4.9038474999999977,10.096130000000017 8.6538474999999977,10.096130000000017 11.25,10.096130000000017 M7.2115399999999994,2.0192129999999793 L5.4807706,2.0192129999999793 M12.115388000000003,4.0384429999999725 L8.3653800000000018,4.0384429999999725 M12.403849600000001,6.0576730000000225 L8.3653800000000018,6.0576730000000225 M11.25,8.0769000000000233 L8.3653800000000018,8.0769000000000233"
+                                    Stroke="#505050"
+                                    StrokeDashArray="0.0" StrokeWidth=".5">
+                                    <LinearGradient
+                                    Attribute="Fill"
+                                    EndPoint="1.0,0.0"
+                                    SpreadMethod="Pad" StartPoint="0.0,0.0">
+                                    <GradientStop
+                                    Color="#ABFFFFFF" Offset="0.0"/>
+                                    <GradientStop
+                                    Color="#01FFFFFF" Offset="0.5"/>
+                                    <GradientStop
+                                    Color="#60000000" Offset="1.0"/>
+                                    </LinearGradient>
+                                    </Path>
+                                    </Component>
+                                </Component>
+                            </Group>
+                            <Expose ExposedAttribute="Left" Name="Point Display Position"/>
+                        </Component>
+                    </Group>
+                </Component>
+            </Group>
+        </Component>
+        <Script OnDocumentLoad="onLoad" OnMouseClick="onClick"
+            OnMouseMove="onMove" OnMouseOut="onOut" OnMouseOver="onOver" OnSignalChange="onChange"><![CDATA[var aMain;
+
+// The XML above handles the default values/format of the component. Every instance of this component is based off of this. 
+		
+var that;
+var xPos = 0;
+var x = 0;
+var y = 0 ;
+var over = false; 
+
+// onClick handles events that happen when something is clicked and in this component it is the actual drop down. 
+function onClick(evt) //
+{	
+	evt.preventDefault(); // PreventDefault is activated off the event. 
+	aMain.updateMouse({click: true, button: +evt.getButton()});	// Activates the drop down menu. 
+}
+
+function onOut(evt)
+{
+	aMain.updateMouse({over: false}); // Sets the over value to false when the mouse leaves from something. This is for turning off the menu bar highlighting when the mouse leaves. 
+}
+
+function onOver(evt) // Function that updates the sets the values of where the mouse is. When it goes over something it sets is to true. This is for the menu bar highlighting. 
+{
+	var xPos = +evt.getCurrentTargetX();
+	var yPos = +evt.getCurrentTargetY();
+	alert(xPos);
+	aMain.updateMouse({x: xPos, y: yPos, over: true}); // This activates the menu bar highlight. 
+}
+
+function onMove(evt) // Updates the position of the mouse.
+{
+	var xPos = +evt.getCurrentTargetX();
+	var yPos = +evt.getCurrentTargetY();
+	aMain.updateMouse({x: xPos, y: yPos});  // Sends the update of the mouse. 
+}
+
+function onChange(evt) // Function that happens when the component has a value changed while load time. 
+{
+	var value = evt.getValue();										   // Sets the variable value to a function. This returns the values of the bound signal Think of this as a short cut so you don't have to write the whole thing every time.
+	var fullBindName = evt.getTarget().getFullBindName(); 			   // Sets the variable fullBindName to a function. Gets the full bind name of the point. 
+	var status = evt.getStatus();									   // Sets the variable status to a function. This returns the value of the status whether it is bad, good or forced. 
+	aMain.updateValue({val: value, fbn: fullBindName, stat: status});  // Uses function from main object to update values that have changed. 
+}
+
+function onLoad(evt) // Function that happens when the component is loaded. 
+{
+	var comp = evt.getCurrentTarget();    // Sets the variable comp to a function. The function gets the current target based on an event.
+	aMain = Object.construct(Main, comp); // Creates an instance of the "Main" object that is right below this. Main object has all the functionality /settings 
+}
+// The main is created Onload. The main mostly handles the mouse commands and creates an instance of Matrix which is where most of the functionality is. 
+Main = 
+{
+	initialize: function(node) {
+		this.mouse = {	x: 0,
+						y: 0,							// Default values that the mouse has and gets updated by other functions like mouseover and mouseone
+						over: false,
+						click: false,
+						button: null};
+						
+		this.myMatrix = Object.construct(Matrix, node); // Creates an instance of the "Matrix" object. The Matrix Object has all the settings for the menu. 
+	},
+	updateValue: function(newValue) {
+		this.myMatrix.updateValue(newValue);			// Updates the values of the matrix. 
+	},
+	updateMouse: function(mouse) {
+		if(mouse.x != null) {
+			this.mouse.x = mouse.x;
+		}
+		if(mouse.y != null) {
+			this.mouse.y = mouse.y;							// This sets what the mouse value is. It gives the position, and whether it has been clicked on. 
+		}
+		if(mouse.over != null) {
+			this.mouse.over = mouse.over;
+		}
+		if(mouse.click != null) {
+			this.mouse.click = mouse.click;
+		}
+		if(mouse.button != null) {
+			this.mouse.button = mouse.button;
+		}
+		
+		this.myMatrix.updateMouse(this.mouse);				// Sets what the mouse did or position it is at. 
+		
+		this.mouse.click = false;
+	}
+}
+
+//Matrix Updates all the matrices values for the whole component at load. 
+Matrix = {
+	initialize: function(node) {
+		this.node = node;
+		
+		this.matrices = [];
+		var children = this.node.getChildNodes();								// Sets the length of the matrix. Basically how many rows to make based on how many are found from the attributes. 
+		for(var i = 0, l = children.length; i < l; i += 1) {					// Uses the number of components inside the group named body.
+			if(children.item(i).getTagName() == "Component") {
+				this.matrices.push(Object.construct(MatrixGroup, children.item(i)));  // Actually creates the matrix group that is used for the rows in the dropdown menu. 
+			}
+		}
+		
+		this.updateMatrices();										
+	},
+	updateValue: function(newValue) {
+		for(var i = 0, l = this.matrices.length; i < l; i += 1) {		// Updates the matrices with new values from the binds.
+			this.matrices[i].updateValue(newValue);
+		}
+	},
+	updateMouse: function(mouse) {
+		this.activeGroup = "None";
+		for(var i = 0, l = this.matrices.length; i < l; i += 1) {		// Updates the position of the mouse. 
+			this.matrices[i].updateMouse(mouse);
+			if(this.matrices[i].currentGroup !== "None") {
+				this.activeGroup = this.matrices[i].currentGroup;
+			}
+		}		
+		
+		for(var i = 0, l = this.matrices.length; i < l; i += 1) {
+			this.matrices[i].updateGroup(this.activeGroup);
+		}
+		
+		this.updateMatrices();	 				// Calls function that changes the values of the matrices. 
+	},
+	updateMatrices: function() {
+		var totalHeight = 0;
+		for(var i = 0, l = this.matrices.length; i < l; i += 1) {
+			this.matrices[i].top = totalHeight;					// Sets the height number  of the matrices based on how many rows there are. 
+			this.matrices[i].render();
+			totalHeight += this.matrices[i].height + 20;			
+		}
+		 
+		this.node.setAttribute("Height",totalHeight);				// Applies the calculated height from the previous loop.
+		this.node.setAttribute("ContentHeight",totalHeight);
+	}
+}
+
+MatrixGroup = {
+	initialize: function(node) {
+		this.node = node;
+		
+		this.top = +this.node.getAttribute("Top");		// Get attribute of how tall the object. It is set to 0 for the rows because there is no space between them and then sets it to this.top.
+		this.height = +this.node.getAttribute("Height"); // Gets attribute for the height for the section and sets it to this.height. 
+		
+		this.expanded = getBool(this.node.getAttribute("initiallyExpanded")); // Sets the default of initiallyExpanded to a variable. The initial value is n because it is not expanded. 
+		
+		this.myHeader = Object.construct(Header, this.node.getChild("header")); // Creates the header when the header is made at load and sets that to myHeader. 
+		this.myBody = Object.construct(Body, this.node.getChild("body"));	// Creates the body when the body is made at load and sets that to myBody.
+	},
+	updateValue: function(newValue) {
+		this.myBody.updateValue(newValue);
+	},
+	updateMouse: function(mouse) {
+		if((mouse.y > this.top) && (mouse.y < (this.top + this.myHeader.height)) && (mouse.click === true))  // If statement that checks whether x pos is above the point and the y point is over the header  
+		{																									 // and  click is true so it executes the statement inside the if statement which expands things.
+			this.expanded = !this.expanded;
+			this.myHeader.updateExpansion(this.expanded);						// Expands the Menu when clicked.
+			this.myBody.updateExpansion(this.expanded);
+		}
+		this.myBody.updateMouse({x: mouse.x, y: mouse.y - this.top, click: mouse.click, over: mouse.over, button: mouse.button}); // Updates the mouse position/actions.
+		this.currentGroup = "None";																		
+		if(this.myBody.currentGroup !== "None") {
+			this.currentGroup = this.myBody.currentGroup;			
+		}
+	},
+	updateGroup: function(active) {
+		this.myBody.updateGroup(active);							// Updates values. 
+	},
+	render: function() {
+		this.node.setAttribute("Top", this.top);
+		this.myHeader.updateExpansion(this.expanded);
+		this.myBody.updateExpansion(this.expanded);									//Expands all the components of the greenbar drop down.
+		this.height = this.myBody.height + this.myHeader.height;
+	}	
+}
+
+
+// Handles all the header functions like expanding and creating the arrow on top of it. 
+Header = {
+	initialize: function(node) {		
+		this.myArrow = Object.construct(Arrow, node.getChild("arrow"));
+		this.height = +node.getElementsByTagName("Rectangle").item(0).getAttribute("Height");		// Creates the arrow and the height of the rectangle. 
+	},
+	updateExpansion: function(expanded) {					// Updates the arrow when stuff is expanded. This basically turns the arrow.
+		this.myArrow.update(expanded);
+	}
+}
+
+
+// "Arrow" controls the white arrow and what behaviours it has.
+Arrow = {
+	initialize: function(node) {
+		this.rotate = node.getElementsByTagName("Rotate").item(0);
+	},
+	update: function(expanded) {
+		this.expanded = expanded;										// Function that is called expand that calls the function render that changes arrow position.
+		this.render();
+	},
+	render: function() {
+		this.rotate.setAttribute("Angle",this.expanded ? 0 : 180);  	// Changes the arrow buy setting an attribute when updated. 
+	}
+}
+
+Body = {
+	initialize: function(node) {
+		this.node = node;												// Sets this.node to the node inside this function. 
+		this.expanded = false;											// Defaults set to the variables that are going to be used for this node. 
+		this.height = 0;												// Sets default height to zero while referencing height in this function.
+		
+		this.rows = [];
+		var children = this.node.getChildNodes();
+		for(var i = 0, l = children.length; i < l; i += 1) {			// Actually creates the rows that are for the body. 
+			if(children.item(i).getTagName() == "Component") {
+				this.rows.push(Object.construct(Row, children.item(i), i));
+			}
+		}
+		
+		this.rows[this.rows.length - 1].setLast(true);					// Makes the last row based of the number on the number of rows made minus 1 because arrays have zero based counting. 
+		
+		this.maxHeight = this.rows.length * 20;
+		this.myBodyBgd = Object.construct(BodyBGD, this.node.getParentNode().getChild("bgd"), this.maxHeight);	// Makes the overall background of the body that appears when expanded.
+		
+		this.currentGroup = "None";
+	},
+	updateValue: function(newValue) {
+		for(var i = 0, l = this.rows.length; i < l; i += 1) {
+			this.rows[i].updateValue(newValue);							// Updates the values of the rows. 
+		}
+	},
+	updateMouse: function(mouse) {										// Handles the update of the mouse.
+		this.currentGroup = "None";
+		for(var i = 0, l = this.rows.length; i < l; i += 1) {
+			this.rows[i].updateMouse(mouse);							// Sets the position of the mouse within the rows. Used for the highlighting of the rows. 
+			if(this.rows[i].currentGroup !== "None") {
+				this.currentGroup = this.rows[i].currentGroup;				
+			}
+		}
+	},
+	updateExpansion: function(expanded) {						// Function that handles expansion. 
+		this.expanded = expanded;
+		this.height = this.expanded ? this.maxHeight : 0;		// Expression that sets the total height of the component when expanded.
+		this.myBodyBgd.update(this.expanded);					// Expands the body but is called lower down in the function. 
+		this.render();
+		
+		for(var i = 0, l = this.rows.length; i < l; i += 1) {		// Updates the binds list. 
+			this.rows[i].updateBinds(this.expanded);
+		}
+	},
+	updateGroup: function(active) {									// Makes group active. Which means that it can update values like the background. 
+		for(var i = 0, l = this.rows.length; i < l; i += 1) {
+			this.rows[i].updateGroup(active);
+		}		
+	},
+	render: function() {
+		this.node.setAttribute("Visibility", this.expanded ? "Visible" : "Hidden");			// Actually brings the up the body. Makes it visible when expanded. 
+	}
+}
+
+BodyBGD = {
+	initialize: function(node, maxHeight) {							
+		this.node = node;												// Sets this.node to the node inside this function. 
+		this.expanded = false;											// Defaults set to the variables that are going to be used for this node. 
+		this.height = 0;												// Sets default height to zero while referencing height in this function.
+		this.height = 0;
+		this.visibility = false;
+		this.maxHeight = maxHeight + 40;
+	},
+	update: function(expanded) {
+		this.visibility = expanded;										// Sets the BG to visible. 
+		this.height = expanded ? this.maxHeight : 0;					// Expands the height of the background to a calculated height. 
+		this.render();													// Calls the render function that sets the height and visibility. 	
+	},
+	render: function() {
+		this.node.setAttribute("Visibility",this.visibility ? "Visible" : "Hidden");
+		this.node.setAttribute("Height",this.height);
+	}
+}
+// "Row" has all the functions that control the rows within the drop down menu. This sets the name of the rows , the values of the points and the default settings of the rows. 
+Row = {
+	initialize: function(node, i) {
+		this.node = node;
+		this.last = false;
+		var display = this.node.getChild("display");								
+		var bgd = display.getChild("background");						// Sets up the default values for variables that are going to be used in the function. 
+		var hLine = bgd.getChild("Hline");
+		this.myLine = Object.construct(RowLine, hLine);					// This line constructs the RowLine that runs through the component.
+
+		this.left = 0;
+		this.height = 20;
+		this.top = 20*i + 40;											// Sets up default values of variables that are going to be used in the function.
+		this.render();
+		
+		this.group = String(this.node.getAttribute("Group"));			// Gets attribute group for use later in the function. 
+		this.currentGroup = "None";
+		
+		this.bgd = Object.construct(RowBGD, bgd.getChild("bgd"));			// Constructs the row background. 
+		
+		var bindList = this.node.getChild("binds").getElementsByTagName("Bind");	// Creates the bind list to use for the binds later in the function. 
+		
+		var forceConfirm = true;			  		// Declaring the variables for use in binds.
+		var override = true;
+		
+		if(this.node.hasAttribute("Prompt")) {							 
+			forceConfirm = getBool(this.node.getAttribute("Prompt"));	
+		}
+		if(this.node.hasAttribute("Override")) {					// Statement that changes the force confirm and override variables that were just set to
+			override = getBool(this.node.getAttribute("Override"));	// to bool.
+		}
+		
+		this.myPoint = Object.construct(Point, display.getChild("Point"), String(this.node.getAttribute("Id")), String(this.node.getAttribute("Type")), forceConfirm, override, bindList); // makes a variable for points to made. 
+		
+		this.expanded = false; 					// Sets default expanded to false it stays hidden at load. 
+	},
+	setLast: function(isLast) {
+		this.myLine.update(isLast);				// Function to determine the last line. 
+	},
+	updateMouse: function(mouse) {				// Handles the functions of the mouse. 
+		this.currentGroup = "None";
+		if(mouse.y > this.top && mouse.y < (this.top + this.height) && mouse.over && this.expanded) {
+			this.currentGroup = this.group;			
+			if(mouse.click) {
+				this.myPoint.click(mouse.button);
+			}
+		}
+	},
+	updateGroup: function(active) {
+		this.bgd.update(active == this.group);			// Updates this group's background.
+	},
+	updateBinds: function(expanded) {
+		this.expanded = expanded;						// Updates binds when the component becomes expanded. 
+		this.myPoint.updateBinds(this.expanded);		// Updates the binds on THIS point. 
+	},
+	updateValue: function(newValue) {					// Updates binds when the component becomes expanded.
+		this.myPoint.update(newValue);					// Updates the values on THIS point. 
+	},
+	render: function() {
+		this.node.setAttribute("Left", this.left);		// Sets the position of the row when this is called. Left and top are position values. 
+		this.node.setAttribute("Top", this.top);		
+	}
+}
+// RowBGD controls the background color of the rows. 
+RowBGD = {
+	initialize: function(node) {
+		this.node = node;									// Sets up the default values for variables that are going to be used in the function. 
+		this.fill = "#01FFFFFF";							
+	},
+	update: function(active) {
+		this.fill = active ? "#7F9FA0A4" : "#01FFFFFF";		// Sets the values for fill when something is activated. 
+		this.render();											
+	},
+	render: function() {
+		this.node.setAttribute("Fill", this.fill); 			// When this is called the colours specified fills the space it needs. 
+	}
+}
+// RowLine controls the visibility of the rows when it is clicked open. 
+RowLine = {
+	initialize: function(node) {
+		this.node = node;																	
+		this.visibility = true;																// Sets defaults for the values that are used for this function. 
+	},
+	update: function(isLast) {
+		this.visibility = !isLast;															// Stops making lines when there is no more lines available. 
+		this.render();
+	},
+	render: function() {		
+		this.node.setAttribute("Visibility", this.visibility ? "Visible" : "Hidden"); 		 // Sets the rows visible when clicked. 
+	}
+}
+// Point handles the building of the points. 
+Point = {
+	initialize: function(node, type, commandType, forceConfirm, override, bindList) {
+		this.node = node;
+		this.type = type;
+		this.commandType = commandType
+		this.forced = false;
+		this.override = override;													// Sets up the default values for variables that are going to be used in the function. 
+		this.forceConfirm = forceConfirm;
+		this.getEnvironment();
+		
+		var displayGroup = this.node.getChildByName("display");						// Variable that has the value of the display groups that handles what kind of point.
+		
+		if(displayGroup) {			
+			switch(this.type) {
+			case "Analog":
+				this.text = Object.construct(Analog, this.node);
+				break;
+			case "Digital":
+				this.text = Object.construct(Digital, this.node);
+				break;
+			case "Multi":
+				this.text = Object.construct(Multi, this.node);						// If Statement that searches through the displayGroup to see if what kind of point this is going to be. 
+				break;																// If the if statement does find a value then it constructs an object to assign a point to it. 
+			case "Alarm":															// All of the objects that referenced in the if statement are towards the end. 
+				this.text = Object.construct(Alarm, this.node);						// This happens whenever a point is made. 
+				break;
+			default:
+				this.text = Object.construct(Text, this.node);
+				break;				
+			}
+		}
+		
+		this.binds = [];
+		for(var i = 0, l = bindList.length; i < l; i += 1) {			
+			var child = bindList.item(i);
+			var desc = String(child.getAttribute("Description"));
+			//this.binds.push(Object.construct(PointBind, bindList.item(i)));
+			if(desc === "ValueBind") {
+				this.valueBind = (Object.construct(PointBind, child));
+			} else if(desc === "AlarmBind") {
+				this.alarmBind = (Object.construct(PointBind, child));					// These if statement gets the description of the binds that are set in Struxureware. 
+			} else if(desc === "PriBind") {												// Then assign the binds to objects created in the if statements. 
+				this.priBind = (Object.construct(PointBind, child));	
+			} else if(desc === "OOSBind") {
+				this.oosBind = (Object.construct(PointBind, child));	
+			}
+		}
+		
+		if(this.commandType === "Input") {
+			this.indicationBind = this.OOSBind;											// Sets these binds to be able to accept input. Reads from command type from the binds made above. 
+		} else {
+			this.indicationBind = this.priBind;
+		}
+		
+		this.myAlarm = Object.construct(StatusIcon, displayGroup.getChild("AlarmImage"));		// Sets up an object that has an alarm and a forced image that can be used by the binds made. 
+		this.myForce = Object.construct(StatusIcon, displayGroup.getChild("ForcedImage"));
+		
+		if(this.environment !==2) {																// Handles if there is no java environment in the environment. 
+			if(this.alarmBind) {
+				// store object reference globally for broken callback
+				that = this;
+				this.intervalId = setInterval("that.checkBind(this.alarmBind)", 30000);				
+			}
+			if(this.commandType === "Alarm") {
+				that = this;
+				this.intervalId = setInterval("that.checkBind(this.valueBind)", 30000);
+			}
+		}
+	},
+	update: function(newValue) {											// Sets Up the values of the binds. It searches through all of the kind of binds that are available because this is used for any point made.
+		if(newValue.fbn === this.valueBind.fbn) {										
+			if(+newValue.stat === 3) {
+				this.forced = true;
+			} else {														// Sets Up a value that says whether something is forced or not. 
+				this.forced = false;
+			}
+			this.text.update(newValue.val);
+			if(this.override && this.environment !== 2) {
+				this.toggleUpdate();
+			}
+			if(this.commandType ==="Alarm") {
+				this.valueBind.disable();
+			}
+		}
+		
+		if(this.alarmBind) {
+			if(newValue.fbn === this.alarmBind.fbn){	
+				if(+newValue.val === 0) {
+					this.myAlarm.update(false);
+				} else {													// Sets Up the alarm bind value. 
+					this.myAlarm.update(true);
+				}
+				this.alarmBind.disable();
+			}			
+		}
+		
+		if(this.priBind) {
+			if(newValue.fbn === this.priBind.fbn) {
+				if(this.commandType === "Value" || this.commandType === "Output") {				// Sets Up the priority bind. 
+					if(newValue.val === null) {
+						this.forced = false;
+					} else {
+						this.forced = true;
+					}		
+				}
+				this.priBind.disable();
+			}
+		}
+		
+		if(this.oosBind) {
+			if(newValue.fbn === this.oosBind.fbn) {
+				if(this.commandType === "Input") {
+					if(getBool(newValue.val) === false) {			// Sets Up the OOS bind.
+						this.forced = false;
+					} else {
+						this.forced = true;
+					}
+				}
+				this.oosBind.disable();
+			}			
+		}			
+		this.myForce.update(this.forced);
+	},
+	updateBinds: function(enable) {									// Updates the Value, and Alarm Binds.
+		if(this.environment !==2 ) {
+			if(enable) {
+				this.valueBind.enable();
+				if(this.alarmBind) {								// Enables both kind of binds. It kind of sets ups alarm binds within the value binds because alarm binds only have 2 values. 
+					this.alarmBind.enable();
+				}
+			} else {
+				this.valueBind.disable();
+				if(this.alarmBind) {								// Disables both kind of binds.
+					this.alarmBind.disable();
+				}
+			}			
+		}
+	},					// Below is a big if statement that sets up the kind of bind something is. It checks to see if the point is one of the 
+						// kinds of points that are available. 
+	
+	
+	click: function(btn) {				// Function that happens when there is a button clicked. Here it is going to be used for an override and an OOS. 
+		if(this.override) {
+			if(btn === 0) {	
+				if(this.commandType === "Input" || this.commandType === "Value" || this.commandType === "Output") {			// Nested If Statements to determine which function will be used.
+					if(!this.forced) {
+						var response = true;								 
+						if(this.forceConfirm) {
+							response = confirm("Do you want to force this point?")
+						}
+						if(response) {											
+							this.forced = true;							
+							if(this.commandType === "Input") {
+								if(this.oosBind) {
+									this.oosBind.write(true);
+								}
+								this.valueBind.showProperties();
+							} else {
+								if(this.priBind) {
+									this.priBind.showProperties();
+								}
+							}
+						}
+					} else {
+						if(this.commandType === "Input") {
+							if(this.oosBind) {
+								this.oosBind.write(true);
+							}
+							this.valueBind.showProperties();
+						} else {
+							if(this.priBind) {
+								this.priBind.showProperties();
+							}
+						}					
+					}
+					if(this.environment !== 2 || this.commandType !== "Input") {
+						that = this;
+						var timeoutId = setTimeout("that.toggleUpdate()", 1000);
+					}					
+				} else {
+					if(this.commandType === "Normal" || this.commandType === "Alarm") {				
+						this.valueBind.showProperties();
+					} else {
+						this.priBind.showProperties();
+					}
+				}			
+			}		
+		
+			if(btn === 2) {
+				if(this.commandType === "Input") {
+					if(this.oosBind) {
+						this.oosBind.write(false);
+					}
+				} else {
+					if(this.commandType !== "Setpoint") {
+						if(this.priBind) {
+							this.priBind.write(null);
+						}
+					}
+				}
+				this.forced = false;							
+				if(this.environment !== 2 && (this.commandType === "Input" || this.commandType === "Value" || this.commandType === "Output")) {
+					that = this;
+					var timeoutId = setTimeout("that.toggleUpdate()", 1000);		
+				}
+			}
+		
+			this.myForce.update(this.forced);
+		}
+	},
+	toggleUpdate: function() {
+		if(this.indicationBind) {
+			this.indicationBind.enable();											// A function that is called with a delay timer.
+			that = this;
+			var disableID = setTimeout("that.indicationBind.disable()",1500);
+		}
+	},
+	checkBind: function(bind) {
+		bind.enable();
+		that = this;
+		var disableID = setTimeout("bind.disable()",1500);
+	},
+	getEnvironment: function() {								// Checks to see if the environment is running Java. Checking so that things run smoothly. 
+		var browser = Packages.java.lang.System.getProperty("browser");
+		var runtime = Packages.java.lang.System.getProperty("java.runtime.name");
+		this.environment = 0;
+		
+		if(browser != null) {
+			if(browser == "sun.plugin") {							// Sets the environment variable to 2 depending on whether the browser has the java plug in.  
+				this.environment = 2;
+			}
+		}
+		
+		if(runtime != null) {
+			if(runtime == "Java(TM) SE Runtime Environment") {		// Checks to see if the Java Runtime Env is installed. Basically just making sure that there is a java plug in. 
+				this.environment = 2;								// Sets the variable environment to 2 when it detects the JAVA SE RE. 	
+			} else if(runtime == "IKVM.NET") {						
+				this.environment = 1;
+			}
+		}
+	}
+}
+// Binds the points to the bindings already built. 
+PointBind = {
+	initialize: function(node) {
+		this.node = node;
+		this.fbn = this.node.getFullBindName();
+		this.desc = String(this.node.getAttribute("Description"));
+		this.startFlag = false;
+	},
+	update: function(enable) {
+		if(this.startFlag) {
+			if(this.node) {
+				//this.node.setAttribute("DynamicUpdates", enable ? "Enable" : "Disable");
+			}
+		}
+		//alert(this.node.getAttribute("Name") + ": " + this.node.getAttribute("DynamicUpdates"));
+	},
+	enable: function() {
+		try{
+			if(this.node) {
+				this.node.setAttribute("DynamicUpdates", "Enable");			// Sets up a function that changes the settings of DynamicUpdates to be enabled. 
+			}
+		}
+		catch(err){
+		}
+	},
+	disable: function() {
+		try{
+			if(this.node.fbn) {
+				this.node.setAttribute("DynamicUpdates", "Disable");	// Sets up a function that changes the settings of DynamicUpdates to be disabled. 
+			}
+		}
+		catch(err){
+		}
+	},
+	showProperties: function() {				// Displays bind values. 
+		if(this.fbn) {
+			invoke(this.fbn,"EditProperties");
+		}
+	},
+	write: function(val) {
+		if(this.fbn) {
+			setValue(this.fbn, val);			// Makes changes bind values to whatever val equals. 
+		}
+	}
+}
+// Below are the objects that are used to make points that handle the functions that are needed to make the points work. 
+/**==========================================================================================
+ * Analog Object. Controls how the Analog object handles the formatting it needs to do like units , Decimals and the actual content of the point. 
+ 
+ */
+Analog = {
+	initialize: function(node) {
+		this.decs = 0;
+		this.units = "";
+				
+		if(node) {															// If statements that starts when node  == true. 
+			this.text = node.getElementsByTagName("TextBox").item(0);		// Sets the textbox of the the node that it is called to to text.
+						
+			if(node.hasAttribute("Decimals")) {								// Gets attribute of the Decimals IF the node has decimals when called. 
+				this.decs = +node.getAttribute("Decimals");					// Sets the variable decs to the value of decimals for use later in the variable. 
+			}			
+			if(node.hasAttribute("Units")) {								// Gets attribute of the Units IF the node has decimals when called. 
+				this.units = String(node.getAttribute("Units"));
+			}
+		}
+		
+		this.content = "--- " + this.units;									//  Sets content to --- plus the kind of units that are going to be used. 
+	},
+	update: function(val) {													// Handles the updating of the output.
+		var value = +val;													// Sets the value variable to val which is given through the bind. 
+		this.content = value.toFixed(this.decs) + " " + this.units;			// Changes the value of content to the value from the bind plus the units. 
+		this.render();
+	},
+	render: function() {
+		if(this.text) {		
+			this.text.setAttribute("Content", this.content);				// Outputs the final text to the point. 
+		}
+	}
+};
+
+/**==========================================================================================
+ * Digital Object		 Handles the functions and the formatting of digital objects that are made. 
+ */
+Digital = {
+	initialize: function(node) {
+		this.states = [];												// Declares an array of an unknown size to store the kind of states that are going to be used. 
+		this.content = "---";											// Declares content and sets it to the default text ---. 
+		
+		if(node) {	
+			this.text = node.getElementsByTagName("TextBox").item(0);		// Sets the textbox of the the node that it is called to to text.
+						
+			i = 2;
+			while(i--) {
+				this.states[i] = String(node.getAttribute("State" + i));	// Gets the 2 states that are going to be used. They can be named anything. 
+			}
+		}
+	},
+	update: function(val) {													
+		this.content = getBool(val) ? this.states[1] : this.states[0];		// Sets the content  to the bool value received from the bind. 
+		this.render();														
+	},
+	render: function() {
+		if(this.text) {		
+			this.text.setAttribute("Content", this.content);			 // Outputs the final text to the point. 
+		}
+	}
+};
+
+/**==========================================================================================
+ * Multi Object
+ */
+Multi = {
+	initialize: function(node) {										
+		this.states = [];								// Declares an array of an unknown size to store the kind of states that are going to be used. 
+		this.content = "---";							// Declares content and sets it to the default text ---. 
+	
+		if(node) {	
+			this.text = node.getElementsByTagName("TextBox").item(0); 		// Sets the textbox of the the node that it is called to to text.
+						
+			i = 0;
+			while(node.hasAttribute("State" + i)) {
+				this.states[i] = String(node.getAttribute("State" + i));	// Sets the state and the value of it to an array. The array will continue while there are still values. 
+				i += 1;
+			}
+		}		
+	},
+	update: function(val) {		
+		this.content = this.states[Math.round(+val)];					// Sets the content to the numeric value received from the bind. 
+		this.render();
+	},
+	render: function() {												// Outputs the final text to the point.
+		if(this.text) {		
+			this.text.setAttribute("Content", this.content);
+		}
+	}
+};
+
+/**==========================================================================================
+ * Alarm Object
+ */
+Alarm = {
+	initialize: function(node) {							
+		this.states = [];									// Declares an array of an unknown size to store the kind of states that are going to be used.
+		this.content = "---";								// Declares content and sets it to the default text ---. 
+				
+		if(node) {		
+			this.text = node.getElementsByTagName("TextBox").item(0);		 // Sets the textbox of the the node that it is called to to text.
+					
+			i = 2;
+			while(i--) {
+				this.states[i] = String(node.getAttribute("State" + i));		// An array that gets what the kind of states are going to be used for the kind of alarms. 
+			}
+			//alert(this.states.length);
+		}
+	},
+	update: function(val) {	
+		this.content = +val === 0 ? this.states[0] : this.states[1];			// Updates the content with the state and the has the final output. 
+		this.render();
+	},
+	render: function() {														// Outputs the final text to the point.
+		if(this.text) {							
+			this.text.setAttribute("Content", this.content);
+		}
+	}
+};
+
+/**==========================================================================================
+ * Text Object
+ */
+Text = {
+	initialize: function(node) {
+		this.content = "---";									// Declares content and sets it to the default text ---.
+		
+		if(this.node) {		
+			this.text = node.getElementsByTagName("TextBox").item(0);	// Sets the textbox of the the node that it is called to to text.
+		}
+	},
+	update: function(val) {
+		this.content = val;											// Assign the variable content to the value coming from the bind. 
+		this.render();
+	},
+	render: function() {												// Outputs the final text to the point.
+		if(this.text) {		
+			this.text.setAttribute("Content", this.content);
+		}
+	}
+};
+
+StatusIcon = {											// Controls the way that alarm and forced work. 
+	initialize: function(node) {
+		this.node = node;											// Variables that are going to be used in this function. 
+		this.visibility = "Hidden";										
+		this.animation = "Stop";
+		this.animate = this.node.getElementsByTagName("Rectangle").item(0).getElementsByTagName("Animate").item(0);
+	},
+	update: function(enable) {										// Handles turning off and on. 
+		this.visibility = enable ? "Visible" : "Hidden";			 
+		this.animation = enable ? "Start" : "Stop";				// These 2 are shortened if statements that handle the on/off functions.
+		this.render();												
+	},
+	render: function() {
+		this.node.setAttribute("Visibility", this.visibility);	// Sets the string values of the status. 
+		this.animate.setAttribute("Animation", this.animation);
+	}
+}
+
+getBool = function(val) {		// Function that converts string values to a boolean. 
+	var trueEnums = ["true", "active", "1", "y", "Y", "t", "T", "1", "yes", "Yes", "true", "True", "YES", "TRUE", "on", "ON", "On"];
+	for(var i = 0, l = trueEnums.length; i < l; i += 1) {
+		if(trueEnums[i] == val) {
+			return true;
+		}
+	}
+	
+	return false;
+}
+
+getPresentationText = function(value, units, decs) {				// Unused function that can be implemented. Returns a string value when it is called and uses a value , units and decimals 
+	try{		
+		var str = "...";
+		if(!isNaN(value) && value != Infinity){
+			str = new Number(value).toFixed(decs);
+			str += " " + units;
+		}
+		return str;
+	}catch(ex){
+		return "...";
+	}
+}
+
+if (!Object.create) {							// If statement that is used when the function Object.create  does not work. 
+	Object.create = function(base) {
+		function F () {};
+		F.prototype = base;
+		return new F();
+	};
+}
+
+if (!Object.construct) {						// If statement that is used when the function construct does not work. 
+	Object.construct = function(base) {
+		var instance = Object.create(base);
+		if (instance.initialize) {
+			instance.initialize.apply(instance, [].slice.call(arguments, 1));
+		}
+		return instance;
+	};
+}
+// Commented/Edited by Jarred Nolasco Email : JarredNolasco@gmail.com
+// Last Updated June 12th, 2014
+]]></Script>
+    </Component>
+    <TextBox FontFamily="Arial" FontSize="15.0" FontStyle="Normal"
+        FontWeight="Normal" Height="379.0" HorizontalAlign="Left"
+        Left="483.0" Opacity="1.0" Stroke="#000000"
+        TextDecoration="None" Top="602.0" VerticalAlign="Top" Width="547.0"><![CDATA[Changes Made To Green Bar Drop Down:
+
+Width contorls how wide the whole component is. This means every width except for the arrow position , Vertical Line Posistion , and the Point Display Position.
+
+The Arrow Posisition controls the position of the arrow. The rule of thumb is that the arrow position should always be 
+30 pixels less than the width. This positions the arrow in a place that looks proportionate.
+
+The Vertical Line Position contorls where the vertical line that divides the point display and point name is. The best default value for it
+is half the width which puts it right in the middle of the component. This is customizable because in some cases you might want the bar somewhere else
+in the component. 
+
+The Point Display controls where the point is going to be dispaled. The best default value for it is 100 less than the width. This is customizable beacuse of the fact that you can have a display point that is very long and you will be able to give enough space to dispaly the point. ]]></TextBox>
+</Tgml>
