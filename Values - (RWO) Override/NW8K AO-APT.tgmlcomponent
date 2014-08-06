@@ -1,0 +1,259 @@
+<?xml version="1.0"?>
+<Component Clip="False" ComponentCounter="2" ContentHeight="20"
+    ContentWidth="100" GridSize="10" Height="20.0" Left="243.0"
+    Name="NW8K AO-APT" Top="109.0" Width="100.0">
+    <Component Clip="False" ContentHeight="40.0" ContentWidth="100"
+        Height="40.0" Left="0" Name="NW8K AO-APT" Top="0" Width="100">
+        <Group Name="binds">
+            <Bind Description="ValueBind" Name="AV">
+                <Expose ExposedAttribute="Name" Name="ValueBind"/>
+                <Expose ExposedAttribute="PreventDefault" Name="Prevent Default"/>
+            </Bind>
+            <Bind Description="AlarmBind" Name="Alarm">
+                <Expose ExposedAttribute="Name" Name="AlarmBind"/>
+                <Expose ExposedAttribute="PreventDefault" Name="Prevent Default"/>
+            </Bind>
+            <Bind Description="OvTimBind" Name="OvTim">
+                <Expose ExposedAttribute="Name" Name="OvTim"/>
+                <Expose ExposedAttribute="PreventDefault" Name="Prevent Default"/>
+            </Bind>
+        </Group>
+        <Group Name="display">
+            <Component AlarmColor="#EB5B25" Clip="False"
+                ContentHeight="20.0" ContentWidth="100.0" Decimals="1"
+                ForcedColor="#800080" Height="20.0" Left="0.0"
+                Name="AnalogPoint" Top="20.0" Units="°F" Width="100.0">
+                <Expose ExposedAttribute="Decimals" Name="Decimals"/>
+                <Expose ExposedAttribute="Units" Name="Units"/>
+                <Expose ExposedAttribute="AlarmColor" Name="AlarmColor"/>
+                <Expose ExposedAttribute="ForcedColor" Name="ForcedColor"/>
+                <Group Name="display">
+                    <Rectangle Fill="None" Height="20.0" Left="0.0"
+                        Name="background" RadiusX="5" RadiusY="5"
+                        Stroke="#626469" StrokeDashArray="0.0"
+                        StrokeWidth="1.0" Top="-20" Width="100">
+                        <LinearGradient EndPoint="0,1">
+                            <GradientStop Color="#FEFEFE" Offset="0"/>
+                            <GradientStop Color="#DFE0E2" Offset="1.0"/>
+                        </LinearGradient>
+                        <Expose ExposedAttribute="Width" Name="Component Width"/>
+                    </Rectangle>
+                    <TextBox Fill="None" FontFamily="Arial"
+                        FontSize="15.0" FontStyle="Normal"
+                        FontWeight="Normal" Height="20.0"
+                        HorizontalAlign="Center" Left="-8"
+                        Name="foreground" Stroke="#000000"
+                        TextDecoration="None" Top="-20"
+                        VerticalAlign="Top"
+                            Width="100"><![CDATA[...]]><Expose
+                            ExposedAttribute="Content" Name="Point Content"/>
+                        <Expose ExposedAttribute="Width" Name="Component Width"/>
+                    </TextBox>
+                    <Component Clip="False" ContentHeight="20"
+                        ContentWidth="20" Height="20.0" Left="4"
+                        Name="ForcedImage" Top="-20" Visibility="Hidden" Width="20.0">
+                        <Image Height="11.0" Left="3" Opacity="1.0"
+                            Top="4.5" Width="14.0"><![CDATA[iVBORw0KGgoAAAANSUhEUgAAAA4AAAALCAYAAABPhbxiAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAActJREFUeNpskl+IzFEUxz/3/n5rbJtmjW1+uxqWnZ3kxS6RUiTLE1JYkz954QGFJ+VReWGR2nhQnkXkRbI2pYRkScIWtcraBxpLWs3OzL2/e9zZyaZmTt3OeTjnfs/3+z1KRPg/Prx7I9ZanBNa56dY2tWtaBDhv+LZ0ydy984NtJmkeQ5IbJn4pTlzdkA6l2TrhlUV8eLAOXn1fJht6zMsjhK8//SV4p8pbj78zNadB+lZ0Yvzfel0xIaNfTOfqOvXrsjjoVucOryJjgVNFAoFbj94zY/J31TKJYJA0AhxHDP6pcLJ0+fZteeA0mNjH9ne18uihSm0VqRTLRzNr+T4vh6WdyXJZZrJdgRk2wOSiQqPhodqHMNAo3Q9eWMdE9+LiKv4Z3A2pjM9l7cv7nN18JKEWlVXlrrBwKO3zvMqeXUl9qtaReGnIdUWEUXt6DiWRmpTdcl6VGMF43uqeXS8yLJVW9id369CGztEGg0KJeM8omO6ZBn/ZsjkVtOf31vjmO3Occ+r6kzJe1PGxSW/2jSmXKQtmfA1TAUWlWhhR/8h1qxdp2Z9HLx8QUZGXvrVDMrzrV2Tm8nOI4Zhk/dvM0eOnZg9hL8CDACZfM3GReCGtAAAAABJRU5ErkJggg==]]></Image>
+                    </Component>
+                    <Component Clip="False" ContentHeight="20"
+                        ContentWidth="20" Height="20.0" Left="0"
+                        Name="AlarmImage" Top="-20" Visibility="Hidden" Width="20.0">
+                        <Image Height="14.0" Left="4" Opacity="1.0"
+                            Top="3" Width="12.0"><![CDATA[iVBORw0KGgoAAAANSUhEUgAAAAwAAAAOCAYAAAAbvf3sAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAZdJREFUeNp0UjlLA1EQ/nZjNpcXJksSTxBELUSUaJXS3kIEKyvt/QVaWGgjVhaClU3wthOxsfUOBkxAEAxR1jvBmKyJ2XGyCzFrdGDeG+Z938zHzAMR4bdfh0J0ubhIf70JxaPcInPTlI6eQcu8Q3J7MbC8IZS/mwiR+Rlq71ThausALlahpVWcHhIGd05KJLGcrb3dwtXVzxEX+VIhigIctrxJgYlQyH5wRjIIUrWekz0anvbWqYKQjMVI7pANcFGmrUbPuxtdUA72KjskdlfRFOzT8UYHl5632iws9b6SIObfINb6fzo43CWQ1/6MxM6aXqqqeBxPTVBgnKtbuWpeNVBOjyErp8LXWoOrzSUodQ1kGXEQ9Y52w+IP8GQ+mZBl0IfhVia8KjwNEXK9hNjWPksqqLg5SjEuZ8gpOZu9FvC066ESTyKjPBiLS0XDFN8O8aJeIWgqhHwGQiELLcdfQZD4LsA7NAzf2KRg2vRLOEzZeATNznPg8Q6RaAt6Zhf+/xpFi66s0Fc6rce+YBByIGAifAswACS2yfnMzP6mAAAAAElFTkSuQmCC]]></Image>
+                    </Component>
+                </Group>
+            </Component>
+        </Group>
+        <Script OnDocumentLoad="onLoad" OnMouseClick="" OnSignalChange="onChange"><![CDATA[
+		
+var comp;
+var myValue = new valueObject;					// Global variables are declared to be used in the whole script. 
+
+function onLoad(evt){							// Function that handles what happens when the component is loaded. 
+	comp = evt.getCurrentTarget();
+	myValue.init();								// Calls the init() function that is part of the valueObject.
+}
+
+function onChange(evt){							// Function that handles what happens when there is a change to the values that are bound. 
+	var val = evt.getPresentationValue();
+	var sts = parseInt(evt.getStatus());
+	var fbn = evt.getTarget().getFullBindName();	// Variables that are being declared to be used in the changeValue() of the valueObject. 
+	myValue.changeValue(val,fbn,sts);
+}
+
+function valueObject(){
+	var node;
+	var valueBind;
+	var alarmBind;
+	var forced = false;
+	var value = false;
+	var alarm = false;								// Variables that are declared to be used in the valueObject()object.
+	var text;
+	var units;
+	var decs;
+	var alarmColor;
+	var forcedColor;
+	var forcedImage;
+	var alarmImage;
+	var bg;
+	var normalColor;
+	var fg;
+	
+	this.init = function(){							// Init() function that is short for initialization which sets up what is going to be needed.
+		node = comp;
+		
+		var bindGroup = node.getChild("binds");		// The following code sets up the two bind for the component. 
+		if(bindGroup != null){
+			var bindList = bindGroup.getElementsByTagName("Bind");
+			for(var i=0;i<bindList.length;i++){
+				if(bindList.item(i).getAttribute("Description") == "ValueBind"){		// Sets up the ValueBind based off of the description.
+					valueBind = bindList.item(i).getFullBindName();
+				}
+				if(bindList.item(i).getAttribute("Description") == "AlarmBind"){		// Sets up the AlarmBind based off of the description.
+					alarmBind = bindList.item(i).getFullBindName();
+				}
+			}
+		}
+		
+		
+		var displayGroup = node.getChild("display");
+		if(displayGroup != null){
+			var point = displayGroup.getChild("AnalogPoint");
+			if(point != null){
+				units = point.getAttribute("Units");
+				decs = point.getAttribute("Decimals");								// Creates short cuts that will be used later for other functions within this object.
+				alarmColor = point.getAttribute("AlarmColor");
+				forcedColor = point.getAttribute("ForcedColor");
+				var display = point.getChild("display");			
+				if(display != null){
+					text = display.getChild("foreground");			
+					forcedImage = display.getChild("ForcedImage");
+					alarmImage = display.getChild("AlarmImage");					// Creates more short cuts.
+					bg = display.getChild("background");
+					if(bg != null){
+						normalColor = point.getAttribute("Stroke");
+					fg = display.getChild("foreground");
+					}
+				}
+			}
+		}		
+	}
+	
+	this.changeValue = function(val,fbn,sts){									  // Function that takes in the value, the full bind name and the status number. 
+		if(fbn == valueBind){
+			value = parseFloat(val);
+			
+			if(sts == 3){													   	 // Gets the status of the bind and then sets a variable named forced to either true or false. 
+				forced = true;
+			}else{
+				forced = false;
+			}
+		}
+		
+		if(fbn == alarmBind){													// Sets alarm to true or false based off of the result of getBool(val).
+			alarm = getBool(val);
+		}
+		
+		renderPoint();		
+	}
+	
+	var renderPoint = function(){												// Function that sets the visuals to values that are based off of other functions.
+		if(text != null){
+			text.setAttribute("Content",getDisplayText());
+		}
+		
+		if(forcedImage != null){												// Sets location of forced icon. 
+			forcedImage.setAttribute("Visibility",getForced());
+		}
+		
+		if(alarmImage != null){													// Sets whether or not an alarm is on. 
+			alarmImage.setAttribute("Visibility",getAlarm());
+		}
+			
+			if(bg != null){														// Changes the width of the stroke based off of whether something is in alarm or not. 
+			bg.setAttribute("Stroke", getBgStroke());
+			bg.setAttribute("StrokeWidth", getBgStrokeWidth());
+		}
+	}
+	
+	var getDisplayText = function()												// Function that handles putting final outputted string 
+	{
+		var str = "Error";
+		try
+		{		
+			if(!isNaN(value) && value != Infinity)								// IF value is a number and it does not equal Infinity it will make the final output strings. 
+			{
+				str = new Number(value).toFixed(decs);
+				str += " " + units;
+			}
+			else
+			{
+				str = "Null";
+			}
+		}
+		catch(ex)
+		{
+		}
+    	return str;
+	}
+	
+	var getForced = function(){								// Function that handles whether or not to show the forced icon. 
+		if(forced){
+			text.setAttribute("Left" , "0");
+			return "Visible";
+		}else{
+			text.setAttribute("Left" , "-8");
+		}
+		return "Hidden";
+	}
+	
+	var getAlarm = function(){								// Function that handles whether or not should be turned on. 
+		if(alarm && !forced){
+			text.setAttribute("Left" , "0");
+			return "Visible";
+		}
+		return "Hidden";
+	}
+	
+	var getBgStroke = function(){							// Function that check to either set the background stroke to the alarm color or the forced color. 
+		if(forced){
+			return forcedColor;
+		}
+		if(alarm){
+			return alarmColor;
+		}
+		return "#636469";
+	}
+	
+	var getBgStrokeWidth = function(){						// Function that handles what the width of the background stroke. If either in alarm or forced it will be 2 or otherwise it will be 1.
+		if(alarm || forced){
+			return "2";
+		}
+		return "1";
+	}
+	
+	var getBool = function(val){							// Function that will return a boolean value. Its take different kinds of varaible types and then checks them and returns true or false.
+		if(val == "1" || val == "true" || val == 1 || val == true){
+			return true;
+		}
+		return false;		
+	}
+}]]></Script>
+        <Expose ExposedAttribute="Width" Name="Component Width"/>
+        <Expose ExposedAttribute="ContentWidth" Name="Component Width"/>
+    </Component>
+    <Expose ExposedAttribute="Width" Name="Component Width"/>
+    <Expose ExposedAttribute="ContentWidth" Name="Component Width"/>
+    <Component Clip="False" ContentHeight="20.0" ContentWidth="15"
+        Height="20.0" Left="85" Name="OvrArrow" Top="0" Width="15.0">
+        <Path Fill="#009530" Name="Box"
+            PathData="M0.0,0.0 C5.0,0.0 5,0 10,0 12,0 15,2 15,5 15,10 15,15 15,15 15,18 12,20 9,20 4,20 5.0,20.0 0.0,20.0 0.0,15.0 0.0,5.0 0.0,0.0"
+            Stroke="#004000" StrokeDashArray="0.0" StrokeWidth="1.0"/>
+        <Polygon Fill="#FFFFFF" Name="Arrow"
+            Points="9.83830081246947,3.812333812258316 2.670400857925415,9.837342605211944 9.83830081246947,15.862351398165572"
+            Stroke="None" StrokeDashArray="0.0" StrokeWidth="0"/>
+        <Expose ExposedAttribute="Left" Name="Override Notification Position"/>
+    </Component>
+    <Metadata Name="Name" Value="AO-APT Cmd"/>
+    <Metadata Name="Description" Value=""/>
+</Component>
