@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Component Clip="False" ComponentCounter="2" ContentHeight="20"
-    ContentWidth="100" GridSize="10" Height="20.0" Left="364.0"
-    Name="NW8K DO-DPT" Top="108.0" Width="100.0">
+    ContentWidth="100" GridSize="10" Height="20.0" Left="167.0"
+    Name="NW8K DO-DPT" Top="153.0" Width="100.0">
     <Component Clip="False" ContentHeight="20.0" ContentWidth="100.0"
         Height="20.0" Left="0" Name="NW8K DO-DPT" Top="0" Width="100.0">
         <Group Name="binds">
@@ -23,9 +23,10 @@
             <Component AlarmColor="#EB5B25" Clip="False"
                 ContentHeight="20.0" ContentWidth="100.0"
                 ForcedColor="#800080" Height="20.0" Left="0.0"
-                Name="BinaryPoint" State0="Off" State1="On" Top="20.0" Width="100.0">
-                <Expose ExposedAttribute="State0" Name="State0"/>
-                <Expose ExposedAttribute="State1" Name="State1"/>
+                Name="BinaryPoint" State0="Something 1 " State1="Test"
+                Top="20.0" Width="100.0">
+                <Expose ExposedAttribute="State0" Name="Off State"/>
+                <Expose ExposedAttribute="State1" Name="On State"/>
                 <Expose ExposedAttribute="AlarmColor" Name="AlarmColor"/>
                 <Expose ExposedAttribute="ForcedColor" Name="ForcedColor"/>
                 <Group Name="display">
@@ -164,12 +165,12 @@ function valueObject(){
 		}
 		
 		if(bg != null){
-			bg.setAttribute("Stroke", getBgStroke());			 // Changes the width of the stroke based off of whether something is in alarm or not. 
+			bg.setAttribute("Stroke", getBgStroke());			 	// Changes the width of the stroke based off of whether something is in alarm or not. 
 			bg.setAttribute("StrokeWidth", getBgStrokeWidth());
 		}
 	}
 	
-	var getOutput = function(val){
+	var getOutput = function(val){									// Function that handles what the value of the content of the text box. Returns whether the point is on or not. 
 	if (val == false)
 	{
 	return off;
@@ -234,6 +235,6 @@ function valueObject(){
             Stroke="None" StrokeDashArray="0.0" StrokeWidth="0"/>
         <Expose ExposedAttribute="Left" Name="Override Notification Position"/>
     </Component>
-    <Metadata Name="Name" Value="DO-DPT Cmd"/>
+    <Metadata Name="Name" Value="NW8K DO-DPT"/>
     <Metadata Name="Description" Value=""/>
 </Component>
