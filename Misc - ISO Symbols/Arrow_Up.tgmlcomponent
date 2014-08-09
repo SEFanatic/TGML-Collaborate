@@ -1,8 +1,0 @@
-<?xml version="1.0"?>
-<Component Clip="False" ContentHeight="20" ContentWidth="20"
-    Fill="#000000" Height="20.0" Left="5.0" Name="Arrow_Up"
-    Stroke="#000000" Top="0.0" Width="20.0">
-    <Metadata Name="Name" Value="Arrow_Up"/>
-    <Metadata Name="Description" Value="Up arrow"/>
-    <Polygon Points="5.0,20.0 10.0,0.0 15.0,20.0" StrokeDashArray="0.0" StrokeWidth="1.0"/>
-</Component>
