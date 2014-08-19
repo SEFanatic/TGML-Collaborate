@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Component ContentHeight="20" ContentWidth="100"
     Description="BACnet Binary Override 80" Fill="#FFD100" Height="20.0"
-    Left="190.0" Name="BACnet Binary Override" OffText="Off" OnText="On"
+    Left="190.0" Name="BACnet Digital Override" OffText="Off" OnText="On"
     OnValue="1,on,true" Top="168.0" Width="100.0">
     <Script OnDocumentLoad="onLoad" OnSignalChange="onChange"><![CDATA[var comp;
 var onText;
@@ -202,6 +202,6 @@ function isNumber (o)															// Function that checks if something is a nu
     </Component>
     <Expose ExposedAttribute="ContentWidth" Name="Component Width"/>
     <Expose ExposedAttribute="Width" Name="Component Width"/>
-    <Metadata Name="Name" Value="BACnet Binary Override"/>
+    <Metadata Name="Name" Value="BACnet Digital Override"/>
     <Metadata Name="Description" Value=""/>
 </Component>
