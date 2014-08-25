@@ -1,0 +1,207 @@
+<?xml version="1.0"?>
+<Component ContentHeight="20" ContentWidth="100"
+    Description="BACnet Binary Override 80" Fill="#FFD100" Height="20.0"
+    Left="190.0" Name="BACnet Digital Override" OffText="Off" OnText="On"
+    OnValue="1,on,true" Top="168.0" Width="100.0">
+    <Script OnDocumentLoad="onLoad" OnSignalChange="onChange"><![CDATA[var comp;
+var onText;
+var offText;
+var onValue;
+var rtnArray = new Array();
+var borderColor;							// Variables that are declared globally so they can be used in all the functions.
+var forceColor;
+var valueBind;
+var ovrBind;
+var priBind;
+var forcedState;
+
+function onLoad(evt)
+{
+	comp=evt.getCurrentTarget();			
+
+	borderColor=comp.getChildByName("background").getAttribute("Stroke");
+	forceColor=comp.getAttribute("Fill");
+	onText=comp.getAttribute("OnText");										// Short cuts that are made to improve readability and to cut down on typing. 
+	offText=comp.getAttribute("OffText");									// These short cuts are going to be used in the rest of the component. 
+	onValue=buildArray(comp.getAttribute("OnValue").split(','));
+	forcedState = false;
+	
+	var bindGroup = comp.getChildByName("Binds");
+	if(bindGroup)															// If statement that handles setting up the binds that the component is going to use. 
+	{																		// This cycles through all the elements with the named bind and finds the corresponding. 
+		var bindList = bindGroup.getElementsByTagName("Bind");				// binds by looking at the description of the bind. 
+		var i = bindList.length;
+		while(i--)
+		{
+			var child = bindList.item(i);
+			var description = String(child.getAttribute("Description"));
+
+			
+
+			if(description.equals("ValueBind"))									
+			{
+
+				valueBind = child;									
+			}
+			if(description.equals("OverrideBind"))
+			{
+				
+				ovrBind = child;
+			}
+			if(description.equals("PriorityBind"))
+			{
+				
+				priBind = child;
+			}
+		}
+	}
+	else
+	{
+		alert("Not bindGroup");											// Alerts the user if there isnt a bind group. 
+	}
+}
+
+function onChange(evt)													// Function that handles what happens when one of bind values changes. 
+{
+
+	if(evt.getTarget().getFullBindName() == valueBind.getFullBindName())		// If statement that handles updating the value of the component. 
+	{																			// In this case the component reads the value and then converts it to a boolean value. So it is either on or off.
+		var value = evt.getValue();		
+
+		if (isNumber(value))													// Takes the value that was assigned to the value bind makes sure that its a number and then 
+		{																		// and then does a boolean check on it and changes the content of the textbox based on the boolean. 
+			value = Math.round(value);												
+		}
+
+		if (Bool(value))
+		{
+			comp.getChildByName("Text").setAttribute("Content", onText);		
+		}
+		else
+		{
+			comp.getChildByName("Text").setAttribute("Content", offText);
+		}
+	}
+
+	
+	if(evt.getTarget().getFullBindName() == priBind.getFullBindName())			// If statement that does nothing when the priority bind is given a value. 
+	{
+		return; 
+	}
+
+	
+	if(evt.getTarget().getFullBindName() == ovrBind.getFullBindName())			// If statement that handles when a value is assigned to the override bind. 
+	{
+		var ovrValue = evt.getValue();
+		var status = parseInt(evt.getStatus());									// Checks the status of the value that was assigned to the override bind.
+		var outline = comp.getChildByName("background");
+
+		if(status == 3)															// If statement that executes when the value has a forced status. 
+		{
+			forcedState = true;
+
+			setValue(priBind.getFullBindName(), ovrValue);						// Sets the priority bind to the value that was assigned to the override bind basically just transfering the values. 
+
+			outline.setAttribute("Stroke", forceColor);							// Changes the outline to the forced setting. Changes the color and the stroke width. 
+			outline.setAttribute("StrokeWidth", "2");
+		}
+		else																	
+		{
+			setValue(priBind.getFullBindName(), null);							// The Else part of the if statment executes whenever the point is not in override. 
+																				// So when the point is in normal mode nothing happens and sets the priority bind to 0. 
+			forcedState = false;
+
+			outline.setAttribute("Stroke", borderColor);
+			outline.setAttribute("StrokeWidth", "1");
+		}
+	}
+}
+
+function Bool(val)																//  Function that checks whether the value received matches any of the On values that are gathered from
+{																				//  from the exposed value called On Values.
+	for (var i=0;i<onValue.length;i++)										
+	{
+		if(String(val).toLowerCase() == String(onValue[i]).toLowerCase())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+function buildArray(Array)														// Function that builds the array that contains all of the On value strings.
+{																				// This array is used in the Bool(val) function. 
+	for (var i=0;i<Array.length;i++)						
+	{
+		if (Array[i].substring(0,1) == " ")
+		{
+			Array[i] = Array[i].substring(1, Array[i].length);
+		}
+		if (isNumber(Array[i]) || Array[i]=="true" || Array[i]=="false" )
+		{
+			rtnArray[i] = Array[i]
+		}
+		else
+		{
+			rtnArray[i] = "'" + Array[i] + "'";
+		}
+	}
+	return rtnArray;
+}
+
+function isNumber (o)															// Function that checks if something is a number. 
+{
+	return ! isNaN (o-0) && o != null;
+}]]></Script>
+    <Expose ExposedAttribute="OnText" Name="On Text"/>
+    <Expose ExposedAttribute="OffText" Name="Off Text"/>
+    <Expose ExposedAttribute="OnValue" Name="On Value"/>
+    <Expose ExposedAttribute="Fill" Name="Forced Color"/>
+    <Rectangle Fill="None" Height="20.0" Left="0" Name="background"
+        RadiusX="5" RadiusY="5" Stroke="#004000" StrokeDashArray="0.0"
+        StrokeWidth="1.0" Top="0" Width="100">
+        <LinearGradient EndPoint="0,1">
+            <GradientStop Color="#FEFEFE" Offset="0"/>
+            <GradientStop Color="#DFE0E2" Offset="1.0"/>
+        </LinearGradient>
+        <Expose ExposedAttribute="Stroke" Name="Border Color"/>
+        <Expose ExposedAttribute="Width" Name="Component Width"/>
+    </Rectangle>
+    <TextBox Fill="None" FontFamily="Arial" FontSize="15.0"
+        FontStyle="Normal" FontWeight="Normal" Height="20.0"
+        HorizontalAlign="Center" Left="-5" Name="Text" Stroke="#000000"
+        TextDecoration="None" Top="0" VerticalAlign="Middle"
+            Width="100"><![CDATA[...]]><Expose ExposedAttribute="Width" Name="Component Width"/>
+    </TextBox>
+    <Group Name="Binds">
+        <Bind Attribute="" Color="#009530" Description="ValueBind" Id=""
+            Name="Value" PreventDefault="False">
+            <Expose ExposedAttribute="Name" Name="Value Bind"/>
+            <Expose ExposedAttribute="PreventDefault" Name="Prevent Default"/>
+        </Bind>
+        <Bind Description="PriorityBind" Id="" Name="Pri" PreventDefault="False">
+            <Expose ExposedAttribute="Name" Name="Priority Bind"/>
+            <Expose ExposedAttribute="PreventDefault" Name="Prevent Default"/>
+        </Bind>
+        <Bind Description="OverrideBind" Name="Ovr" PreventDefault="False">
+            <Expose ExposedAttribute="Name" Name="Override Bind"/>
+            <Expose ExposedAttribute="PreventDefault" Name="Prevent Default"/>
+        </Bind>
+    </Group>
+    <Component Clip="False" ContentHeight="20.0" ContentWidth="15"
+        Height="20.0" Left="85" Name="OvrArrow" Top="0" Width="15">
+        <Path Fill="#009530" Name="OvrBox"
+            PathData="M0.0,0.0 C5.0,0.0 5,0 10,0 12,0 15,2 15,5 15,10 15,15 15,15 15,18 12,20 9,20 4,20 5.0,20.0 0.0,20.0 0.0,15.0 0.0,5.0 0.0,0.0"
+            Stroke="#004000" StrokeDashArray="0.0" StrokeWidth="1.0">
+            <Expose ExposedAttribute="Stroke" Name="Border Color"/>
+        </Path>
+        <Polygon Fill="#FFFFFF" Name="OvrArrow"
+            Points="9.83830081246947,3.812333812258316 2.670400857925415,9.837342605211944 9.83830081246947,15.862351398165572"
+            Stroke="None" StrokeDashArray="0.0" StrokeWidth="0"/>
+        <Expose ExposedAttribute="Left" Name="Ovr Icon Pos"/>
+    </Component>
+    <Expose ExposedAttribute="ContentWidth" Name="Component Width"/>
+    <Expose ExposedAttribute="Width" Name="Component Width"/>
+    <Metadata Name="Name" Value="BACnet Digital Override"/>
+    <Metadata Name="Description" Value=""/>
+</Component>
