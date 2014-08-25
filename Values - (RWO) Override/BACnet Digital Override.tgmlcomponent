@@ -1,11 +1,7 @@
 <?xml version="1.0"?>
 <Component ContentHeight="20" ContentWidth="100"
     Description="BACnet Binary Override 80" Fill="#FFD100" Height="20.0"
-<<<<<<< HEAD
     Left="190.0" Name="BACnet Digital Override" OffText="Off" OnText="On"
-=======
-    Left="190.0" Name="BACnet Binary Override" OffText="Off" OnText="On"
->>>>>>> parent of 7253c4c... Blanked Dev-Charlotte so it would only contain new/changed components.
     OnValue="1,on,true" Top="168.0" Width="100.0">
     <Script OnDocumentLoad="onLoad" OnSignalChange="onChange"><![CDATA[var comp;
 var onText;
