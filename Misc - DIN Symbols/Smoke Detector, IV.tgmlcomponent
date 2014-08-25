@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<Component Clip="False" ContentHeight="20" ContentWidth="40"
+    Fill="#FFFFFF" Height="20.0" Left="20.0" Name="Smoke Detector, IV"
+    Stroke="#000000" Top="0.0" Width="40.0">
+    <Metadata Name="Name" Value="Smoke Detector, IV"/>
+    <Metadata Name="Description" Value="Smoke Detector"/>
+    <Line StrokeWidth="2.0" X1="0.0" X2="20.0" Y1="10.0" Y2="10.0"/>
+    <Rectangle Height="20.0" Left="20.0" RadiusX="0.0" RadiusY="0.0"
+        StrokeDashArray="0.0" StrokeWidth="1.0" Top="0.0" Width="20.0"/>
+    <Rectangle Height="6.0" Left="22.5" RadiusX="0.0" RadiusY="0.0"
+        StrokeDashArray="0.0" StrokeWidth="1.0" Top="7.0" Width="15.0"/>
+    <Ellipse Height="4.0" Left="28.0" StrokeWidth="1.0" Top="8.0" Width="4.0"/>
+</Component>

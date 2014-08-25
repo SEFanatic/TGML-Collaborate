@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<Component Clip="False" ContentHeight="20" ContentWidth="20"
+    Fill="#FFFFFF" Height="20.0" Left="3.0" Name="LightOnOff"
+    Stroke="#000000" Top="3.0" Width="20.0">
+    <Metadata Name="Name" Value="LightOnOff"/>
+    <Metadata Name="Description" Value="OnOffLight"/>
+    <Ellipse Height="14.0" Left="3.0" StrokeDashArray="0.0"
+        StrokeWidth="1.0" Top="3.0" Width="14.0"/>
+    <Line StrokeDashArray="0.0" StrokeWidth="1.0" X1="5.5" X2="14.5"
+        Y1="5.5" Y2="14.5"/>
+    <Line StrokeDashArray="0.0" StrokeWidth="1.0" X1="5.5" X2="14.5"
+        Y1="14.5" Y2="5.5"/>
+</Component>

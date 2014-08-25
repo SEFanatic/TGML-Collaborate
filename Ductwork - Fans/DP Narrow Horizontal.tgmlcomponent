@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<Component ComponentCounter="5" ContentHeight="70" ContentWidth="80"
+    GridSize="1" Height="70.0" Left="5.0" Name="DP Narrow Horizontal"
+    Top="13.5" Width="80.0">
+    <Metadata Name="Name" Value="DP Narrow Horizontal"/>
+    <Metadata Name="Description" Value=""/>
+    <Line Stroke="#626469" StrokeDashArray="0.0" StrokeWidth="2.0"
+        X1="5.0" X2="5.0" Y1="31.5" Y2="60.0"/>
+    <Polyline Opacity="1.0"
+        Points="76.0,28.5 76.0,21.0 5.0,21.0 5.0,28.5" Stroke="#626469"
+        StrokeDashArray="0.0" StrokeWidth="2"/>
+    <Line Stroke="#626469" StrokeDashArray="0.0" StrokeWidth="2.0"
+        X1="76.0" X2="76.0" Y1="31.5" Y2="60.0"/>
+    <Rectangle Fill="#009530" Height="15.0" Left="30.0" RadiusX="2"
+        RadiusY="2" Stroke="#404040" StrokeDashArray="0.0"
+        StrokeWidth="1.0" Top="13.5" Width="20.0"/>
+    <Text FontFamily="Arial" FontSize="10.0" FontStyle="Normal"
+        FontWeight="Normal" HorizontalAlign="Center" Left="40.0"
+        Opacity="1.0" Stroke="#FFFFFF" TextDecoration="None"
+        Top="15.414019584656" VerticalAlign="Top"><![CDATA[DP]]></Text>
+</Component>

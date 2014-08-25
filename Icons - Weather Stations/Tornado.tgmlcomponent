@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<Component ContentHeight="65" ContentWidth="70" Height="65.0"
+    Left="10.0" Name="Tornado" Top="10.0" Width="70.0">
+    <Rectangle Fill="#FFFFFF" Height="46.0" Left="10.0" Opacity="1.0"
+        RadiusX="5" RadiusY="5" Stroke="#009530" StrokeDashArray="0.0"
+        StrokeWidth="1.0" Top="10.0" Width="49.0"/>
+    <Group>
+        <Curve Fill="#9FA0A4" Opacity="1.0"
+            Points="21.0,27.5 21.0,34.5 38.0,36.5 35.0,51.5 43.0,52.5 44.0,30.5 46.0,20.5"
+            Stroke="None" StrokeDashArray="0.0" StrokeWidth="1.0"/>
+        <Curve Opacity="1.0"
+            Points="21.0,27.5 21.0,34.5 38.0,36.5 35.0,51.5 43.0,52.5 44.0,30.5 46.0,20.5"
+            Stroke="#626469" StrokeDashArray="0.0" StrokeWidth="1.0">
+            <RadialGradient Attribute="Fill" Focus="0.3,0.25"
+                RadiusX="1.8" RadiusY="1.5" SpreadMethod="Pad">
+                <GradientStop Color="#40FFFFFF" Offset=".2"/>
+                <GradientStop Color="#40000000" Offset=".4"/>
+            </RadialGradient>
+        </Curve>
+        <Curve Fill="#808080" Opacity="1.0"
+            Points="21.0,27.5 18.0,19.5 40.0,13.5 45.0,18.5 51.0,25.5 24.0,33.5 21.0,27.5"
+            Stroke="#626469" StrokeDashArray="0.0" StrokeWidth="1.0"/>
+        <Curve Opacity="1.0"
+            Points="31.0,18.5 34.0,17.5 40.0,17.5 39.0,20.5"
+            Stroke="#404040" StrokeDashArray="0.0" StrokeWidth="1.0"/>
+        <Curve Opacity="1.0"
+            Points="33.0,28.5 29.0,28.5 20.0,26.5 27.0,23.5"
+            Stroke="#404040" StrokeDashArray="0.0" StrokeWidth="1.0"/>
+        <Curve Fill="#808080" Opacity="1.0"
+            Points="21.0,27.5 18.0,19.5 40.0,13.5 45.0,18.5 51.0,25.5 24.0,33.5 21.0,27.5"
+            Stroke="#626469" StrokeDashArray="0.0" StrokeWidth="1.0">
+            <RadialGradient Attribute="Fill" Focus="0.3,0.25"
+                RadiusX="1.8" RadiusY="1.5" SpreadMethod="Pad">
+                <GradientStop Color="#40FFFFFF" Offset=".1"/>
+                <GradientStop Color="#AA000000" Offset=".4"/>
+            </RadialGradient>
+        </Curve>
+    </Group>
+</Component>

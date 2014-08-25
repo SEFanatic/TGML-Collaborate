@@ -1,0 +1,95 @@
+<?xml version="1.0"?>
+<Component ContentHeight="30" ContentWidth="100" Height="30.0"
+    Left="10.0" Name="Air Movement Left" OnValue="1,on,open,true"
+    Top="10.0" Width="100.0">
+    <Metadata Name="Name" Value="Air Movement Left"/>
+    <Metadata Name="Description" Value="== Bindings ==&#xd;&#xa;AirFl - Air flow value&#xd;&#xa;&#xd;&#xa;== Exposed Properties ==&#xd;&#xa;&lt;name> - &lt;default value> - &lt;Description>&#xd;&#xa;Air Flow Bind - AirFl&#xd;&#xa;On value - 1,on,open,true - Air Flow true (commer seperated if multiple)&#xd;&#xa;Air Color - #7F4FA600 - Color of display&#xd;&#xa;Flow Thinkness - 2 - Thickness of display line"/>
+    <Expose ExposedAttribute="OnValue" Name="On Value"/>
+    <Path Fill="None"
+        PathData="M20.0,15.0 C20.0,17.7610023 17.7609951,20.0 15.0,20.0 12.2389991,20.0 10.0,17.7610023 10.0,15.0 M30.0,15.0 C30.0,12.2390023 27.7609971,10.0 25.0,10.0 22.2389991,10.0 20.0,12.2390023 20.0,15.0 20.0,15.0 20.0,15.0 20.0,15.0 M50.0,15.0 C50.0,12.2390023 47.760989,10.0 45.0,10.0 42.2389991,10.0 40.0,12.2390023 40.0,15.0 40.0,15.0 40.0,15.0 40.0,15.0 M40.0,15.0 C40.0,17.7610023 37.760997,20.0 35.0,20.0 32.2389991,20.0 30.0,17.7610023 30.0,15.0 M70.0,15.0 C70.0,12.2390023 67.760998,10.0 65.0,10.0 62.2389991,10.0 60.0,12.2390023 60.0,15.0 60.0,15.0 60.0,15.0 60.0,15.0 M60.0,15.0 C60.0,17.7610023 57.760997,20.0 55.0,20.0 52.2389991,20.0 50.0,17.7610023 50.0,15.0 M90.0,15.0 C90.0,12.2390023 87.760998,10.0 85.0,10.0 82.23899,10.0 80.0,12.2390023 80.0,15.0 80.0,15.0 80.0,15.0 80.0,15.0 M80.0,15.0 C80.0,17.7610023 77.760998,20.0 75.0,20.0 72.239,20.0 70.0,17.7610023 70.0,15.0"
+        Stroke="#626469" StrokeDashArray="0.0" StrokeWidth="2">
+        <Expose ExposedAttribute="StrokeWidth" Name="Flow Thickness"/>
+        <LinearGradient Attribute="Stroke" EndPoint="1.0,0.0"
+            SpreadMethod="Pad" StartPoint="0.0,0.0">
+            <GradientStop Color="#01FFFFFF" Offset=".7">
+                <Animate Animation="Stop" Attribute="Offset"
+                    CalcMode="Linear" Duration="1" From=".7" To="0">
+                    <Expose ExposedAttribute="Duration" Name="Speed in Seconds"/>
+                </Animate>
+            </GradientStop>
+            <GradientStop Color="#7F4FA600" Offset=".9">
+                <Animate Animation="Stop" Attribute="Offset"
+                    CalcMode="Linear" Duration="1" From=".9" To=".1">
+                    <Expose ExposedAttribute="Duration" Name="Speed in Seconds"/>
+                </Animate>
+                <Expose ExposedAttribute="Color" Name="AirColour"/>
+            </GradientStop>
+            <GradientStop Color="#01FFFFFF" Offset="1">
+                <Animate Animation="Stop" Attribute="Offset"
+                    CalcMode="Linear" Duration="1" From="1" To=".3">
+                    <Expose ExposedAttribute="Duration" Name="Speed in Seconds"/>
+                </Animate>
+            </GradientStop>
+        </LinearGradient>
+        <Animate Animation="Stop" Attribute="Opacity" CalcMode="Linear"
+            Duration="1" From="1" To="0">
+            <Expose ExposedAttribute="Duration" Name="Speed in Seconds"/>
+        </Animate>
+    </Path>
+    <Bind Id="" Name="AirFl" PreventDefault="True">
+        <Expose ExposedAttribute="Name" Name="Air Flow Bind"/>
+		<Expose ExposedAttribute="PreventDefault" Name="Prevent Default"/>
+        <Script OnDocumentLoad="onLoad" OnSignalChange="onChange"><![CDATA[var comp;
+var onValue;
+
+function onLoad(evt)
+{
+comp = evt.getCurrentTarget().getParentNode();
+onValue=comp.getAttribute("OnValue").split(',');
+}
+
+function onChange(evt)
+{
+	val = evt.getValue();
+	if(getBool(val)){
+		moneySpider(comp, "Start");
+		comp.setAttribute("Visibility", "Visible");
+	}
+	else{
+		moneySpider(comp, "Stop");
+		comp.setAttribute("Visibility", "Hidden");
+	}
+}
+
+function moneySpider(tree, value){
+var bindList = tree.getElementsByTagName("Animate");
+	for(var i=0; i < bindList.length;i++){
+		bindList.item(i).setAttribute("Animation", value);
+	}
+}
+
+function getBool(val){
+	for (var i=0;i<onValue.length;i++){
+		if (val == true || val == false){
+		val = val.toString();
+		}
+		else{
+			if (isNumber(val)){
+				val = Math.round(parseFloat(val));
+				val = val.toString();
+			}
+		}
+		if(String(val).toLowerCase() == String(onValue[i]).toLowerCase())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+function isNumber (o) {
+  return ! isNaN (o-0) && o != null;
+}
+]]></Script>
+    </Bind>
+</Component>

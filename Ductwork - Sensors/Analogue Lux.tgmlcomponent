@@ -1,0 +1,102 @@
+<?xml version="1.0"?>
+<Component Clip="False" Color="#F0080E" ComponentCounter="5"
+    ContentHeight="20" ContentWidth="100" Decimals="1" Fill="#FFD100"
+    GridSize="10" Height="20.0" Left="0.0" Name="Analogue Lux"
+    Stroke="#42B4E6" Top="0.0" Units="Lux" Width="100.0">
+    <Metadata Name="Name" Value="Analogue Lux"/>
+    <Metadata Name="Description" Value="Digital Display&#xd;&#xa;&#xd;&#xa;== Exposed Properties ==&#xd;&#xa;Bind Name - Name of binding point&#xd;&#xa;&#xd;&#xa;Outline properties&#xd;&#xa;Alarm Color - Color of outline when in state = Alarm&#xd;&#xa;Forced Color - Color of outline when in state = Forced&#xd;&#xa;DatabaseColor - Color of outline when in state = Database"/>
+    <Expose ExposedAttribute="Color" Name="Alarm Color"/>
+    <Expose ExposedAttribute="Fill" Name="Forced Color"/>
+    <Expose ExposedAttribute="Stroke" Name="Database Color"/>
+    <Expose ExposedAttribute="Decimals" Name="Decimals"/>
+    <Expose ExposedAttribute="Units" Name="Units"/>
+    <Rectangle Fill="None" Height="20.0" Left="0.0" Name="background"
+        RadiusX="5" RadiusY="5" Stroke="#626469" StrokeDashArray="0.0"
+        StrokeWidth="1.0" Top="0.0" Width="100">
+        <LinearGradient EndPoint="0,1">
+            <GradientStop Color="#FEFEFE" Offset="0"/>
+            <GradientStop Color="#DFE0E2" Offset="1.0"/>
+        </LinearGradient>
+    </Rectangle>
+    <TextBox Fill="None" FontFamily="Arial" FontSize="15.0"
+        FontStyle="Normal" FontWeight="Normal" Height="20.0"
+        HorizontalAlign="Center" Left="2.5" Name="Text" Stroke="#000000"
+        TextDecoration="None" Top="0.0" VerticalAlign="Middle" Width="95"><![CDATA[...]]></TextBox>
+    <Bind Attribute="" Color="#009530" Name="AnalogueValue">
+        <Expose ExposedAttribute="Color" Name="On Color"/>
+        <Expose ExposedAttribute="Name" Name="Bind Name"/>
+        <Script OnDocumentLoad="onLoad" OnSignalChange="onChange"><![CDATA[var comp;
+var dec;
+var units;
+var offColor;
+var onColor;
+var f;
+var d;
+var a;
+
+function onLoad(evt)
+{
+	comp=evt.getCurrentTarget().getParentNode();
+	offColor=comp.getChildByName("background").getAttribute("Stroke");
+	onColor=evt.getCurrentTarget().getAttribute("Color");
+	f=comp.getAttribute("Fill");
+	d=comp.getAttribute("Stroke");
+	a=comp.getAttribute("Color");
+	dec = comp.getAttribute("Decimals");
+	units = comp.getAttribute("Units");
+}
+
+function onChange(evt)
+{
+	var value = evt.getValue();
+	var status = parseInt(evt.getStatus());
+	var tempCol = "";
+	var outline = comp.getChildByName("background");
+	
+	comp.getChildByName("Text").setAttribute("Content", getDisplayText(parseFloat(value)));
+		
+	if (status == 2){
+		outline.setAttribute("Stroke", offColor);
+		outline.setAttribute("StrokeWidth", "1");
+	}
+	else{
+		outline.setAttribute("Stroke", borderCol(status));
+		outline.setAttribute("StrokeWidth", "2");
+	}
+	
+}
+
+function borderCol(status){
+	if(status==3){
+		return f
+	}
+	else{
+		if(status==1){
+			return d
+		}
+		else{
+			return a
+		}
+	}
+}
+
+function getDisplayText(value){
+		try{		
+			var str = "...";
+			if(!isNaN(value) && value != Infinity){
+				str = new Number(value).toFixed(dec);
+				str += " " + units;
+			}
+			return str;
+		}
+		catch(ex){
+			return "... " + units;
+		}
+
+}
+	
+function debug(str){
+	alert(str);
+	}]]></Script>
+    </Bind>
+</Component>

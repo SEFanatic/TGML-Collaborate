@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<Component Clip="False" ContentHeight="60" ContentWidth="60"
+    Fill="#FFFFFF" Height="60.0" Left="3.0" Name="Window"
+    Stroke="#000000" Top="3.0" Width="60.0">
+    <Metadata Name="Name" Value="Window"/>
+    <Metadata Name="Description" Value="Window"/>
+    <Rectangle Height="54.0" Left="11.0" RadiusX="0.0" RadiusY="0.0"
+        StrokeDashArray="0.0" StrokeWidth="1.0" Top="3.0" Width="46.0"/>
+    <Rectangle Height="50.0" Left="13.0" RadiusX="0.0" RadiusY="0.0"
+        StrokeDashArray="0.0" StrokeWidth="1.0" Top="5.0" Width="42.0"/>
+    <Polygon Fill="None" Points="3.0,11.0 47.0,11.0 55.0,55.0 13.0,55.0"
+        StrokeDashArray="0.0" StrokeWidth="1.0"/>
+    <Line StrokeDashArray="0.0" StrokeWidth="1.0" X1="34.0" X2="23.0"
+        Y1="5.0" Y2="11.0"/>
+</Component>

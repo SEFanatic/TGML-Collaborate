@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<Component ComponentCounter="2" ContentHeight="110" ContentWidth="110"
+    Height="110.0" Left="10.0" Name="End Bottom Fat" Top="10.0" Width="110.0">
+    <Metadata Name="Name" Value="End Bottom Fat"/>
+    <Metadata Name="Description" Value=""/>
+    <Metadata Name="Version" Value="1.0"/>
+    <Polygon Fill="None" Opacity="1.0"
+        Points="100.0,10.0 100.0,100.0 10.0,20.0 10.0,10.0"
+        Stroke="None" StrokeDashArray="0.0" StrokeWidth="1.0">
+        <LinearGradient Attribute="Fill" EndPoint="1,0"
+            SpreadMethod="Pad" StartPoint="0.0,0.0">
+            <GradientStop Color="#C6C9CD" Offset="0"/>
+            <GradientStop Color="#EFEFEF" Offset="0.5"/>
+            <GradientStop Color="#C6C9CD" Offset="0.9"/>
+        </LinearGradient>
+    </Polygon>
+    <Line Opacity="1.0" Stroke="#009530" StrokeDashArray="0.0"
+        StrokeWidth="1.0" X1="100.0" X2="100.0" Y1="10.0" Y2="100.0"/>
+    <Line Opacity="1.0" Stroke="#009530" StrokeDashArray="0.0"
+        StrokeWidth="1.0" X1="10.0" X2="10.0" Y1="20.0" Y2="10.0"/>
+</Component>

@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<Component ComponentCounter="2" ContentHeight="40" ContentWidth="110"
+    Height="40.0" Left="0.0" Name="Vertical Join Top" Top="0.0" Width="110.0">
+    <Metadata Name="Name" Value="Vertical Join Top"/>
+    <Metadata Name="Description" Value=""/>
+    <Metadata Name="Version" Value="1.0"/>
+    <Curve Fill="#FEFEFE" Opacity="1.0"
+        Points="10.0,20.0 10.0,30.5 0.0,30.5 0.0,30.5 20.5,30.5 0.0,30.5 20.5,30.5 20.5,30.5 10.0,20.0 10.0,20.0"
+        Stroke="#FEFEFE" StrokeDashArray="0.0" StrokeWidth="1.0"/>
+    <Curve Fill="#FEFEFE" Opacity="1.0"
+        Points="100.0,20.0 100.0,20.0 100.0,30.0 110.0,30.0 100.0,30.0 100.0,30.0 89.0,30.0 89.0,30.0 89.0,30.0 100.0,20.0"
+        Stroke="#FEFEFE" StrokeDashArray="0.0" StrokeWidth="1.0"/>
+    <Polygon Fill="#FFFFFF" Opacity="1.0"
+        Points="10.0,20.0 30.0,40.0 80.0,40.0 100.0,20.0 100.0,0.0 10.0,0.0"
+        Stroke="None" StrokeDashArray="0.0" StrokeWidth="1.0">
+        <LinearGradient Attribute="Fill" EndPoint="1,0"
+            SpreadMethod="Pad" StartPoint="0.0,0.0">
+            <GradientStop Color="#C6C9CD" Offset="0"/>
+            <GradientStop Color="#EFEFEF" Offset="0.5"/>
+            <GradientStop Color="#C6C9CD" Offset="0.9"/>
+        </LinearGradient>
+    </Polygon>
+    <Path Fill="None"
+        PathData="M10.0,20.0 C10.0,25.523 5.523,30.0 0.0,30.0 M10.0,0.0 L10.0,20.0"
+        Stroke="#009530" StrokeDashArray="0.0" StrokeWidth="1.0"/>
+    <Path Fill="None"
+        PathData="M110.0,30.0 C104.477,30.0 100.0,25.523 100.0,20.0 M100.0,20.0 L100.0,0.0"
+        Stroke="#009530" StrokeDashArray="0.0" StrokeWidth="1.0"/>
+</Component>

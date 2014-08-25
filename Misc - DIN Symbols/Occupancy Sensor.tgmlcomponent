@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<Component Clip="False" ContentHeight="50" ContentWidth="40"
+    Fill="#FFFFFF" Height="50.0" Left="1.0" Name="Occupancy Sensor"
+    Stroke="#000000" Top="4.0" Width="40.0">
+    <Metadata Name="Name" Value="Occupancy Sensor"/>
+    <Metadata Name="Description" Value="Occupancy Sensor"/>
+    <Rectangle Height="42.0" Left="1.0" RadiusX="0.0" RadiusY="0.0"
+        StrokeDashArray="0.0" StrokeWidth="1.0" Top="4.0" Width="38.0"/>
+    <Rectangle Height="38.0" Left="3.0" RadiusX="0.0" RadiusY="0.0"
+        StrokeDashArray="0.0" StrokeWidth="1.0" Top="6.0" Width="34.0"/>
+    <Polygon Fill="None"
+        Points="22.3593711853027,16.4275951385498 24.9024353027344,22.073169708252 32.9870376586914,20.0537261962891 26.8536567687988,25.0 29.1528205871582,33.0845947265625 21.9073829650879,31.8292655944824 14.8700294494629,32.9771423339844 19.9203472137451,27.0552597045898 16.8536567687988,18.7267589569092 19.9527530670166,22.073169708252"
+        StrokeDashArray="0.0" StrokeWidth="1.0"/>
+    <Polyline Fill="None"
+        Points="12.0,41.3622055053711 12.0,33.0 6.0,20.0"
+        StrokeDashArray="0.0" StrokeWidth="1.0"/>
+    <Line StrokeDashArray="0.0" StrokeWidth="1.0" X1="12.0" X2="12.0"
+        Y1="8.0" Y2="20.0"/>
+</Component>

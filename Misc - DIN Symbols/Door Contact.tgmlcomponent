@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<Component Clip="False" ContentHeight="70" ContentWidth="60"
+    Fill="#FFFFFF" Height="70.0" Left="3.0" Name="Door Contact"
+    Stroke="#000000" Top="0.0" Width="60.0">
+    <Metadata Name="Name" Value="Door Contact"/>
+    <Metadata Name="Description" Value="Door Contact"/>
+    <Rectangle Height="56.0" Left="13.0" RadiusX="0.0" RadiusY="0.0"
+        StrokeDashArray="0.0" StrokeWidth="1.0" Top="0.0" Width="44.0"/>
+    <Rectangle Fill="None" Height="54.0" Left="15.0" RadiusX="0.0"
+        RadiusY="0.0" StrokeDashArray="0.0" StrokeWidth="1.0" Top="2.0" Width="40.0"/>
+    <Polygon Points="19.0,70.0 55.0,56.0 55.0,2.0 19.0,12.0"
+        StrokeDashArray="0.0" StrokeWidth="1.0"/>
+    <Polyline Fill="None"
+        Points="24.3784027099609,41.2648468017578 24.3784027099609,38.145580291748 32.4517936706543,36.1272354125977"
+        StrokeDashArray="0.0" StrokeWidth="1.0"/>
+    <Polyline Fill="None"
+        Points="9.0,45.3622055053711 9.0,37.0 3.0,24.0"
+        StrokeDashArray="0.0" StrokeWidth="1.0"/>
+    <Line StrokeDashArray="0.0" StrokeWidth="1.0" X1="9.0" X2="9.0"
+        Y1="12.0" Y2="24.0"/>
+</Component>

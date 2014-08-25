@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<Component Clip="False" ComponentCounter="2" ContentHeight="20"
+    ContentWidth="20" GridSize="10" Height="20.0" Left="0.0"
+    Name="CwFlBendTR" Top="0.0" Width="20.0">
+    <Metadata Name="Name" Value="CwFlBendTR"/>
+    <Metadata Name="Description" Value="== Exposed Properties ==&#xd;&#xa;&lt;name> - &lt;default value> - &lt;Description>&#xd;&#xa;CwFlColour  - #87D300 - Base color of pipe"/>
+    <Metadata Name="Version" Value="1.0"/>
+    <Path Fill="#87D300"
+        PathData="M5.0,0.0 L0.0,0.0 0.0,10.0 5.0,10.0 z M20.0,15.0 L10.0,15.0 10.0,20.0 20.0,20.0 z M10.0,15.0 C10.0,12.0 8.0,10.0 5.0,10.0 5.0,6.0 5.0,5.0 5.0,0.0 15.0,0.0 20.0,7.0 20.0,15.0 16.0,15.0 16.0,15.0 10.0,15.0"
+        Stroke="#87D300" StrokeDashArray="0.0" StrokeWidth="1.0">
+        <Expose ExposedAttribute="Fill" Name="CwFlColour"/>
+        <Expose ExposedAttribute="Stroke" Name="CwFlColour"/>
+    </Path>
+    <Path Fill="None"
+        PathData="M10.0,15.0 C10.0,13.0 9.0,10.0 5.0,10.0 M10.0,15.0 L10.0,20.0 M0.0,10.0 L5.0,10.0"
+        Stroke="#5F000000" StrokeDashArray="0.0" StrokeWidth="1.0"/>
+    <Path Fill="None"
+        PathData="M20.0,15.0 C20.0,6.0 14.0,0.0 5.0,0.0 M0.0,0.0 L4.0,0.0 M20.0,16.0 L20.0,20.0"
+        Stroke="#5F000000" StrokeDashArray="0.0" StrokeWidth="1.0"/>
+</Component>

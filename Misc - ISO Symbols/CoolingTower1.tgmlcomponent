@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<Component Clip="False" ContentHeight="180.0" ContentWidth="120.0"
+    Fill="#FFFFFF" Height="180.0" Left="0.0" Name="CoolingTower1"
+    Stroke="#000000" Top="0.0" Width="120.0">
+    <Metadata Name="Name" Value="CoolingTower1"/>
+    <Metadata Name="Description" Value="Cooling Tower"/>
+    <Polygon
+        Points="0.0,180.0 0.0,130.0 27.6922912597656,0.0 92.3076782226563,0.0 120.0,130.0 120.0,180.0"
+        StrokeDashArray="0.0" StrokeWidth="1.0"/>
+    <Line StrokeDashArray="0.0" StrokeWidth="1.0" X1="0.0" X2="120.0"
+        Y1="130.0" Y2="130.0"/>
+</Component>

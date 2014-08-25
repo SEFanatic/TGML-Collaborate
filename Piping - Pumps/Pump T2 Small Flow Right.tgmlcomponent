@@ -1,0 +1,389 @@
+<?xml version="1.0"?>
+<Component ComponentCounter="7" ContentHeight="50" ContentWidth="80"
+    GridSize="10" Height="50.0" Left="9.0"
+    Name="Pump T2 Small Flow Right" Top="1.26" Width="80.0">
+    <Metadata Name="Name" Value="Pump T2 Small Flow Right"/>
+    <Metadata Name="Description" Value="== Bindings ==&#xd;&#xa;P#Cmd - Pump Command&#xd;&#xa;P#Fbk - Pump Command&#xd;&#xa;&#xd;&#xa;== Exposed Properties ==&#xd;&#xa;Command Bind - P#Cmd - Pump command point&#xd;&#xa;Feedback Bind - P#Fbk - Pump feedback point&#xd;&#xa;Command on color - #87d300 - pump color when command is true&#xd;&#xa;Pump color - #cccccc - pump color when command is false&#xd;&#xa;Error, Forced, Database Color - Outline color when point in error, forced or database condition"/>
+    <Group Color="#4FA600" Name="Motor" SignalLessOrEqualTo="0" SignalMoreOrEqualTo="1">
+        <Expose ExposedAttribute="Color" Name="Command On Colour"/>
+        <Expose ExposedAttribute="SignalMoreOrEqualTo" Name="Command On="/>
+        <Expose ExposedAttribute="SignalLessOrEqualTo" Name="Command Off="/>
+        <Rectangle Fill="#CCCCCC" Height="2.08001309606814"
+            Left="36.5597151724387" Opacity="1.0" RadiusX="0.0"
+            RadiusY="0.0" Stroke="#404040" StrokeDashArray="0.0"
+            StrokeWidth="1.0" Top="31.4225665198829" Width="18.2001145905963"/>
+        <Path Fill="#CCCCCC" Name="Background"
+            PathData="M36.559713,23.102516 L37.599719,23.102516 37.599719,41.822633 36.559713,41.822633 z M46.439775,30.382562 L48.5197883,30.382562 48.5197883,34.542588 46.439775,34.542588 z M48.5197883,29.342555 L50.079799,29.342555 50.079799,35.582595 48.5197883,35.582595 z M50.079799,29.342555 L51.639808,29.342555 51.639808,35.582595 50.079799,35.582595 z M51.639808,30.382562 L53.71982,30.382562 53.71982,34.542588 51.639808,34.542588 z M54.759827,25.702532 L57.359843,25.702532 57.359843,39.222617 54.759827,39.222617 z M72.43994,24.662526 C75.039959,24.662526 73.99995,24.662526 75.5599605,24.662526 78.159978,26.222535 78.159978,38.702614 75.5599605,40.262623 73.479949,40.262623 74.519955,40.262623 72.43994,40.262623 72.43994,36.622601 72.43994,27.782545 72.43994,24.662526 M43.319755,35.062591 L43.319755,37.662607 45.399768,37.662607 45.399768,27.262543 37.599719,27.262543 37.599719,37.662607 41.2397423,37.662607 41.2397423,34.542588 41.2397423,42.86264 43.319755,42.86264 43.319755,37.662607 M70.87993,37.662607 L70.87993,40.262623 72.43994,40.262623 72.43994,24.662526 57.359843,24.662526 57.359843,40.262623 58.919853,40.262623 58.919853,37.662607 58.919853,42.86264 70.87993,42.86264 70.87993,40.262623"
+            Stroke="#CCCCCC" StrokeDashArray="0.0" StrokeWidth="1.0">
+            <Expose ExposedAttribute="Stroke" Name="PumpMotorColour"/>
+            <Expose ExposedAttribute="Fill" Name="PumpMotorColour"/>
+            <Bind Attribute="Fill" Name="P#Cmd" PreventDefault="True">
+                <Expose ExposedAttribute="Name" Name="Command Bind"/>
+				<Expose ExposedAttribute="PreventDefault" Name="Prevent Default"/>
+                <ConvertValue AttributeValue="#598A00"
+                    SignalMoreOrEqualTo="1" SignalMoreThan="">
+                    <Expose ExposedAttribute="SignalMoreOrEqualTo" Name="Command On="/>
+                </ConvertValue>
+            </Bind>
+            <Bind Attribute="Stroke" Name="P#Cmd" PreventDefault="True">
+                <Expose ExposedAttribute="Name" Name="Command Bind"/>
+				<Expose ExposedAttribute="PreventDefault" Name="Prevent Default"/>
+                <ConvertValue AttributeValue="#598A00"
+                    SignalMoreOrEqualTo="1" SignalMoreThan="">
+                    <Expose ExposedAttribute="SignalMoreOrEqualTo" Name="Command On="/>
+                </ConvertValue>
+            </Bind>
+        </Path>
+        <Path Fill="None"
+            PathData="M36.559713,23.102516 L37.599719,23.102516 37.599719,41.822633 36.559713,41.822633 z M46.439775,30.382562 L48.5197883,30.382562 48.5197883,34.542588 46.439775,34.542588 z M48.5197883,29.342555 L50.079799,29.342555 50.079799,35.582595 48.5197883,35.582595 z M50.079799,29.342555 L51.639808,29.342555 51.639808,35.582595 50.079799,35.582595 z M51.639808,30.382562 L53.71982,30.382562 53.71982,34.542588 51.639808,34.542588 z M54.759827,25.702532 L57.359843,25.702532 57.359843,39.222617 54.759827,39.222617 z M72.43994,24.662526 C75.039959,24.662526 73.99995,24.662526 75.5599605,24.662526 78.159978,26.222535 78.159978,38.702614 75.5599605,40.262623 73.479949,40.262623 74.519955,40.262623 72.43994,40.262623 72.43994,36.622601 72.43994,27.782545 72.43994,24.662526 M43.319755,35.062591 L43.319755,37.662607 45.399768,37.662607 45.399768,27.262543 37.599719,27.262543 37.599719,37.662607 41.2397423,37.662607 41.2397423,34.542588 41.2397423,42.86264 43.319755,42.86264 43.319755,37.662607 M70.87993,37.662607 L70.87993,40.262623 72.43994,40.262623 72.43994,24.662526 57.359843,24.662526 57.359843,40.262623 58.919853,40.262623 58.919853,37.662607 58.919853,42.86264 70.87993,42.86264 70.87993,40.262623"
+            Stroke="#5F000000" StrokeDashArray="0.0" StrokeWidth="1.0"/>
+        <Path Fill="None"
+            PathData="M57.879847,34.542588 L71.919936,34.542588 M57.879847,32.462575 L71.919936,32.462575 M58.39985,38.182611 L57.879847,38.182611 M57.879847,29.862558 L71.919936,29.862558 M57.879847,28.302548 L71.919936,28.302548 M57.879847,25.702532 L71.919936,25.702532 M57.879847,26.742539 L71.919936,26.742539 M57.879847,36.622601 L71.919936,36.622601 M58.39985,39.222617 L57.879847,39.222617 M71.919936,39.222617 L71.399932,39.222617 M71.919936,38.182611 L71.399932,38.182611"
+            Stroke="#5F000000" StrokeDashArray="0.0" StrokeWidth="1.0"/>
+        <Bind Attribute="" Name="P#Cmd" PreventDefault="True">
+            <Expose ExposedAttribute="Name" Name="Command Bind"/>
+			<Expose ExposedAttribute="PreventDefault" Name="Prevent Default"/>
+            <Script OnDocumentLoad="onLoad" OnSignalChange="onChange"><![CDATA[var comp;
+var currentColour;
+var offValue;
+
+function onLoad(evt)
+{
+comp = evt.getCurrentTarget().getParentNode();
+currentColour = comp.getChildByName("Background").getAttribute("Fill");
+offValue = parseInt(comp.getAttribute("SignalLessOrEqualTo"));
+}
+
+function onChange(evt)
+{
+var val = evt.getValue();
+var col = currentColour;
+if(val > offValue) col = comp.getAttribute("Color");
+colourChange(comp.getChildByName("Background"), col);
+}
+
+function colourChange(part, col){
+part.setAttribute("Fill", col);
+part.setAttribute("Stroke", col);
+}]]></Script>
+        </Bind>
+        <Path Fill="None"
+            PathData="M36.741561000000004,22.999671 L37.77341,22.999671 37.77341,27.210125 45.512281,27.210125 45.512281,37.736271200000004 43.448581,37.736271200000004 43.448581,42.999341 41.384880100000004,42.999341 41.384880100000004,37.736271200000004 37.77341,37.736271200000004 37.77341,41.94672 36.741561000000004,41.94672 M46.54413,30.367967 L48.607821,30.367967 48.607821,29.315359 51.70338,29.315359 51.70338,30.367967 53.767071,30.367967 53.767071,34.578429 51.70338,34.578429 51.70338,35.63104 48.607821,35.63104 48.607821,34.578429 46.54413,34.578429 46.54413,30.367967 M75.43591,40.3678112 C76.43319,40.3678112 77.24165,36.83313 77.24165,32.473197 77.24165,28.113281 76.43319,24.578592 75.43591,24.578592 M75.43591,24.578592 L57.378551,24.578592 57.378551,25.631204 54.798926,25.631204 54.798926,39.31519 57.378551,39.31519 57.378551,40.3678112 58.926321,40.3678112 58.926321,42.999341 70.7925901,42.999341 70.7925901,40.3678112 75.43591,40.3678112"
+            Stroke="#FFD100" StrokeDashArray="0.0" StrokeWidth="2" Visibility="Hidden">
+            <Bind Color="#F0080E" Fill="#FFD100" Name="P#Cmd" Stroke="#42B4E6" PreventDefault="True">
+                <Expose ExposedAttribute="Color" Name="Error Color"/>
+                <Expose ExposedAttribute="Fill" Name="Forced Color"/>
+                <Expose ExposedAttribute="Stroke" Name="Database Color"/>
+                <Expose ExposedAttribute="Name" Name="Command Bind"/>
+				<Expose ExposedAttribute="PreventDefault" Name="Prevent Default"/>
+                <Script OnDocumentLoad="onLoad" OnSignalChange="onChange"><![CDATA[var body;
+var HighLightCol="#404040";
+var originalBodyColor;
+
+function onLoad(evt)
+{
+  comp = evt.getCurrentTarget();
+  body = comp.getParentNode();
+  originalBodyColor=body.getAttribute("Stroke");
+}
+
+function onChange(evt)
+{
+  status = parseInt(evt.getStatus());
+  
+  bgStroke = setColour(status);
+  if (bgStroke=="device"){
+  	body.setAttribute("Visibility", "Hidden");
+  }
+  else{
+	  body.setAttribute("Stroke", bgStroke);
+	  body.setAttribute("Visibility", "Visible");
+  }
+}
+
+function setColour(status){
+var col;
+
+  if(status==2){//Value from Device
+  	return "device";
+  }
+  else{
+  		if(status==3){//Forced Value
+  			return comp.getAttribute("Fill");
+  		}
+  		else{
+  	 		if(status==1){//Database Value
+  	 		return comp.getAttribute("Stroke");
+  			}
+  			else{
+  				if(status==0){
+  					return comp.getAttribute("Color")
+  				}
+  			}
+  		}
+  }
+
+}]]></Script>
+            </Bind>
+        </Path>
+    </Group>
+    <Group Color="#4FA600" Name="Casting" SignalLessOrEqualTo="0" SignalMoreOrEqualTo="1">
+        <Expose ExposedAttribute="Color" Name="Feedback On Colour"/>
+        <Expose ExposedAttribute="SignalMoreOrEqualTo" Name="Feedback On="/>
+        <Expose ExposedAttribute="SignalLessOrEqualTo" Name="Feedback Off="/>
+        <Rectangle Fill="#FFFFFF" Height="5.20003282872639" Left="9.0"
+            Opacity="1.0" RadiusX="0.0" RadiusY="0.0" Stroke="None"
+            StrokeDashArray="0.0" StrokeWidth="1.0"
+            Top="29.8625566978317" Width="20.8001313149055">
+            <LinearGradient Attribute="Fill" EndPoint="1.0,0.0"
+                SpreadMethod="Pad" StartPoint="0.0,0.0">
+                <GradientStop Color="#01FFFFFF" Offset=".8">
+                    <Animate Animation="Stop" Attribute="Offset"
+                        CalcMode="Linear" Duration="1" From="0" To=".8">
+                        <Bind Attribute="Animation" Name="P#Fbk" PreventDefault="True">
+                            <Expose ExposedAttribute="Name" Name="Feedback Bind"/>
+							<Expose ExposedAttribute="PreventDefault" Name="Prevent Default"/>
+                            <ConvertValue AttributeValue="Start"
+                                SignalMoreOrEqualTo="1" SignalMoreThan="">
+                                <Expose
+                                    ExposedAttribute="SignalMoreOrEqualTo" Name="Feedback On="/>
+                            </ConvertValue>
+                            <ConvertValue AttributeValue="Stop" SignalLessOrEqualTo="0">
+                                <Expose
+                                    ExposedAttribute="SignalLessOrEqualTo" Name="Feedback Off="/>
+                            </ConvertValue>
+                        </Bind>
+                    </Animate>
+                </GradientStop>
+                <GradientStop Color="#FFFFFF" Offset=".9">
+                    <Animate Animation="Stop" Attribute="Offset"
+                        CalcMode="Linear" Duration="1" From=".1" To=".9">
+                        <Bind Attribute="Animation" Name="P#Fbk" PreventDefault="True">
+                            <Expose ExposedAttribute="Name" Name="Feedback Bind"/>
+							<Expose ExposedAttribute="PreventDefault" Name="Prevent Default"/>
+                            <ConvertValue AttributeValue="Start"
+                                SignalMoreOrEqualTo="1" SignalMoreThan="">
+                                <Expose
+                                    ExposedAttribute="SignalMoreOrEqualTo" Name="Feedback On="/>
+                            </ConvertValue>
+                            <ConvertValue AttributeValue="Stop" SignalLessOrEqualTo="0">
+                                <Expose
+                                    ExposedAttribute="SignalLessOrEqualTo" Name="Feedback Off="/>
+                            </ConvertValue>
+                        </Bind>
+                    </Animate>
+                </GradientStop>
+                <GradientStop Color="#01FFFFFF" Offset="1">
+                    <Animate Animation="Stop" Attribute="Offset"
+                        CalcMode="Linear" Duration="1" From=".3" To="1">
+                        <Bind Attribute="Animation" Name="P#Fbk" PreventDefault="True">
+                            <Expose ExposedAttribute="Name" Name="Feedback Bind"/>
+							<Expose ExposedAttribute="PreventDefault" Name="Prevent Default"/>
+                            <ConvertValue AttributeValue="Start"
+                                SignalMoreOrEqualTo="1" SignalMoreThan="">
+                                <Expose
+                                    ExposedAttribute="SignalMoreOrEqualTo" Name="Feedback On="/>
+                            </ConvertValue>
+                            <ConvertValue AttributeValue="Stop" SignalLessOrEqualTo="0">
+                                <Expose
+                                    ExposedAttribute="SignalLessOrEqualTo" Name="Feedback Off="/>
+                            </ConvertValue>
+                        </Bind>
+                    </Animate>
+                </GradientStop>
+            </LinearGradient>
+            <Animate Animation="Stop" Attribute="Opacity"
+                CalcMode="Linear" Duration="1" From="0" To="1">
+                <Bind Attribute="Animation" Name="P#Fbk" PreventDefault="True">
+                    <Expose ExposedAttribute="Name" Name="Feedback Bind"/>
+					<Expose ExposedAttribute="PreventDefault" Name="Prevent Default"/>
+                    <ConvertValue AttributeValue="Start"
+                        SignalMoreOrEqualTo="1" SignalMoreThan="">
+                        <Expose ExposedAttribute="SignalMoreOrEqualTo" Name="Feedback On="/>
+                    </ConvertValue>
+                    <ConvertValue AttributeValue="Stop" SignalLessOrEqualTo="0">
+                        <Expose ExposedAttribute="SignalLessOrEqualTo" Name="Feedback Off="/>
+                    </ConvertValue>
+                </Bind>
+            </Animate>
+        </Rectangle>
+        <Rectangle Fill="#FFFFFF" Height="23.4001473307667"
+            Left="29.7999671712736" Opacity="1.0" RadiusX="0.0"
+            RadiusY="0.0" Stroke="None" StrokeDashArray="0.0"
+            StrokeWidth="1.0" Top="1.2623766268949" Width="5.20003282872639">
+            <LinearGradient Attribute="Fill" EndPoint="0,1"
+                SpreadMethod="Pad" StartPoint="0.0,0.0">
+                <GradientStop Color="#01FFFFFF" Offset=".8">
+                    <Animate Animation="Stop" Attribute="Offset"
+                        CalcMode="Linear" Duration="1" From=".7" To="0">
+                        <Bind Attribute="Animation" Name="P#Fbk" PreventDefault="True">
+                            <Expose ExposedAttribute="Name" Name="Feedback Bind"/>
+							<Expose ExposedAttribute="PreventDefault" Name="Prevent Default"/>
+                            <ConvertValue AttributeValue="Start"
+                                SignalMoreOrEqualTo="1" SignalMoreThan="">
+                                <Expose
+                                    ExposedAttribute="SignalMoreOrEqualTo" Name="Feedback On="/>
+                            </ConvertValue>
+                            <ConvertValue AttributeValue="Stop" SignalLessOrEqualTo="0">
+                                <Expose
+                                    ExposedAttribute="SignalLessOrEqualTo" Name="Feedback Off="/>
+                            </ConvertValue>
+                        </Bind>
+                    </Animate>
+                </GradientStop>
+                <GradientStop Color="#FFFFFF" Offset=".9">
+                    <Animate Animation="Stop" Attribute="Offset"
+                        CalcMode="Linear" Duration="1" From=".9" To=".1">
+                        <Bind Attribute="Animation" Name="P#Fbk" PreventDefault="True">
+                            <Expose ExposedAttribute="Name" Name="Feedback Bind"/>
+							<Expose ExposedAttribute="PreventDefault" Name="Prevent Default"/>
+                            <ConvertValue AttributeValue="Start"
+                                SignalMoreOrEqualTo="1" SignalMoreThan="">
+                                <Expose
+                                    ExposedAttribute="SignalMoreOrEqualTo" Name="Feedback On="/>
+                            </ConvertValue>
+                            <ConvertValue AttributeValue="Stop" SignalLessOrEqualTo="0">
+                                <Expose
+                                    ExposedAttribute="SignalLessOrEqualTo" Name="Feedback Off="/>
+                            </ConvertValue>
+                        </Bind>
+                    </Animate>
+                </GradientStop>
+                <GradientStop Color="#01FFFFFF" Offset="1">
+                    <Animate Animation="Stop" Attribute="Offset"
+                        CalcMode="Linear" Duration="1" From="1" To=".3">
+                        <Bind Attribute="Animation" Name="P#Fbk" PreventDefault="True">
+                            <Expose ExposedAttribute="Name" Name="Feedback Bind"/>
+							<Expose ExposedAttribute="PreventDefault" Name="Prevent Default"/>
+                            <ConvertValue AttributeValue="Start"
+                                SignalMoreOrEqualTo="1" SignalMoreThan="">
+                                <Expose
+                                    ExposedAttribute="SignalMoreOrEqualTo" Name="Feedback On="/>
+                            </ConvertValue>
+                            <ConvertValue AttributeValue="Stop" SignalLessOrEqualTo="0">
+                                <Expose
+                                    ExposedAttribute="SignalLessOrEqualTo" Name="Feedback Off="/>
+                            </ConvertValue>
+                        </Bind>
+                    </Animate>
+                </GradientStop>
+            </LinearGradient>
+            <Animate Animation="Stop" Attribute="Opacity"
+                CalcMode="Linear" Duration="1" From="1" To="0">
+                <Bind Attribute="Animation" Name="P#Fbk" PreventDefault="True">
+                    <Expose ExposedAttribute="Name" Name="Feedback Bind"/>
+					<Expose ExposedAttribute="PreventDefault" Name="Prevent Default"/>
+                    <ConvertValue AttributeValue="Start"
+                        SignalMoreOrEqualTo="1" SignalMoreThan="">
+                        <Expose ExposedAttribute="SignalMoreOrEqualTo" Name="Feedback On="/>
+                    </ConvertValue>
+                    <ConvertValue AttributeValue="Stop" SignalLessOrEqualTo="0">
+                        <Expose ExposedAttribute="SignalLessOrEqualTo" Name="Feedback Off="/>
+                    </ConvertValue>
+                </Bind>
+            </Animate>
+        </Rectangle>
+        <Path Fill="#CCCCCC" Name="Background"
+            PathData="M24.599637,26.742539 L26.6796503,26.742539 26.6796503,37.662607 24.599637,37.662607 z M26.6796503,29.342555 L28.23966,29.342555 28.23966,35.582595 26.6796503,35.582595 z M28.23966,23.102516 C28.23966,22.527912 28.705063,22.062509 29.279667,22.062509 L35.519706299999996,22.062509 C36.094310300000004,22.062509 36.559713,22.527912 36.559713,23.102516 36.559713,23.102516 36.559713,23.102516 36.559713,23.102516 L36.559713,41.822633 C36.559713,42.397238 36.094310300000004,42.86264 35.519706299999996,42.86264 L29.279667,42.86264 C28.705063,42.86264 28.23966,42.397238 28.23966,41.822633 z M29.279667,18.942489 L35.519706299999996,18.942489 35.519706299999996,22.062509 29.279667,22.062509 z M27.7196573,16.862476 L37.0797163,16.862476 37.0797163,18.942489 27.7196573,18.942489 z"
+            Stroke="#CCCCCC" StrokeDashArray="0.0" StrokeWidth="1.0">
+            <Expose ExposedAttribute="Stroke" Name="PumpCastingColour"/>
+            <Expose ExposedAttribute="Fill" Name="PumpCastingColour"/>
+        </Path>
+        <Path Fill="None"
+            PathData="M24.599637,26.742539 L26.6796503,26.742539 26.6796503,37.662607 24.599637,37.662607 z M26.6796503,29.342555 L28.23966,29.342555 28.23966,35.582595 26.6796503,35.582595 z M28.23966,23.102516 C28.23966,22.527912 28.705063,22.062509 29.279667,22.062509 L35.519706299999996,22.062509 C36.094310300000004,22.062509 36.559713,22.527912 36.559713,23.102516 36.559713,23.102516 36.559713,23.102516 36.559713,23.102516 L36.559713,41.822633 C36.559713,42.397238 36.094310300000004,42.86264 35.519706299999996,42.86264 L29.279667,42.86264 C28.705063,42.86264 28.23966,42.397238 28.23966,41.822633 z M29.279667,18.942489 L35.519706299999996,18.942489 35.519706299999996,22.062509 29.279667,22.062509 z M27.7196573,16.862476 L37.0797163,16.862476 37.0797163,18.942489 27.7196573,18.942489 z"
+            Stroke="#5F000000" StrokeDashArray="0.0" StrokeWidth="1.0"/>
+        <Polyline Fill="None" Opacity="1.0"
+            Points="31.359682432268,38.7026123561214 31.359682432268,42.8626385482576 33.439695528337,42.8626385482576 33.439695528337,38.7026123561214"
+            Stroke="#5F000000" StrokeDashArray="0.0" StrokeWidth="1.0"/>
+        <Bind Attribute="" Name="P#Fbk" PreventDefault="True">
+            <Expose ExposedAttribute="Name" Name="Feedback Bind"/>
+			<Expose ExposedAttribute="PreventDefault" Name="Prevent Default"/>
+            <Script OnDocumentLoad="onLoad" OnSignalChange="onChange"><![CDATA[var comp;
+var currentColour;
+var offValue;
+
+function onLoad(evt)
+{
+comp = evt.getCurrentTarget().getParentNode();
+currentColour = comp.getChildByName("Background").getAttribute("Fill");
+offValue = parseInt(comp.getAttribute("SignalLessOrEqualTo"));
+}
+
+function onChange(evt)
+{
+var val = evt.getValue();
+var col = currentColour;
+if(val > offValue) col = comp.getAttribute("Color");
+colourChange(comp.getChildByName("Background"), col);
+}
+
+function colourChange(part, col){
+part.setAttribute("Fill", col);
+part.setAttribute("Stroke", col);
+}]]></Script>
+        </Bind>
+        <Path Fill="None"
+            PathData="M35.4399811,22.2000022 L35.4399811,19.080002 36.99998,19.080002 36.99998,17.0 27.63998,17.0 27.63998,19.080002 29.19998,19.080002 29.19998,22.2000022 M28.1599818,23.2400032 L28.1599818,29.480001 26.59997,29.480001 26.59997,26.880001 24.51997,26.880001 24.51997,37.8 26.59997,37.8 26.59997,35.72 28.1599818,35.72 28.1599818,41.96 M36.47998,23.2400032 L36.47998,41.96 M35.4399811,43.0 L29.19998,43.0 M29.19998,22.2000022 C28.625381,22.2000022 28.1599818,22.665406 28.1599818,23.2400032 28.1599818,23.2400032 28.1599818,23.2400032 28.1599818,23.2400032 M35.4399811,22.2000022 C36.0145801,22.2000022 36.47998,22.665406 36.47998,23.2400032 M35.4399811,43.0 C36.0145801,43.0 36.47998,42.53461 36.47998,41.96 M29.19998,43.0 C28.625381,43.0 28.1599818,42.53461 28.1599818,41.96"
+            Stroke="#FFD100" StrokeDashArray="0.0" StrokeWidth="2" Visibility="Hidden">
+            <Bind Color="#F0080E" Fill="#FFD100" Name="P#Fbk" Stroke="#42B4E6" PreventDefault="True">
+                <Expose ExposedAttribute="Color" Name="Error Color"/>
+                <Expose ExposedAttribute="Fill" Name="Forced Color"/>
+                <Expose ExposedAttribute="Stroke" Name="Database Color"/>
+                <Expose ExposedAttribute="Name" Name="Feedback Bind"/>
+				<Expose ExposedAttribute="PreventDefault" Name="Prevent Default"/>
+                <Script OnDocumentLoad="onLoad" OnSignalChange="onChange"><![CDATA[var body;
+var HighLightCol="#404040";
+var originalBodyColor;
+
+function onLoad(evt)
+{
+  comp = evt.getCurrentTarget();
+  body = comp.getParentNode();
+  originalBodyColor=body.getAttribute("Stroke");
+}
+
+function onChange(evt)
+{
+  status = parseInt(evt.getStatus());
+  
+  bgStroke = setColour(status);
+  if (bgStroke=="device"){
+  	body.setAttribute("Visibility", "Hidden");
+  }
+  else{
+	  body.setAttribute("Stroke", bgStroke);
+	  body.setAttribute("Visibility", "Visible");
+  }
+}
+
+function setColour(status){
+var col;
+
+  if(status==2){//Value from Device
+  	return "device";
+  }
+  else{
+  		if(status==3){//Forced Value
+  			return comp.getAttribute("Fill");
+  		}
+  		else{
+  	 		if(status==1){//Database Value
+  	 		return comp.getAttribute("Stroke");
+  			}
+  			else{
+  				if(status==0){
+  					return comp.getAttribute("Color")
+  				}
+  			}
+  		}
+  }
+
+}]]></Script>
+            </Bind>
+        </Path>
+    </Group>
+    <Rectangle Fill="#9FA0A4" Height="2.60001637008516"
+        Left="24.5996889683818" Opacity="1.0" RadiusX="0.0"
+        RadiusY="0.0" Stroke="#404040" StrokeDashArray="0.0"
+        StrokeWidth="1.0" Top="42.8626385482576" Width="49.4003110316182"/>
+</Component>

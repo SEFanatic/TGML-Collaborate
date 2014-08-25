@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<Component ContentHeight="170" ContentWidth="140" Height="170.0"
+    Left="10.0" Name="T Left" Top="10.0" Width="140.0">
+    <Metadata Name="Name" Value="T Left"/>
+    <Metadata Name="Description" Value=""/>
+    <Metadata Name="Version" Value="1.0"/>
+    <Rectangle Height="90.0" Left="10.0" Opacity="1.0" RadiusX="0.0"
+        RadiusY="0.0" Stroke="None" StrokeDashArray="0.0"
+        StrokeWidth="1.0" Top="40.0" Width="120.0">
+        <LinearGradient Attribute="Fill" EndPoint="0,1"
+            SpreadMethod="Pad" StartPoint="0.0,0.0">
+            <GradientStop Color="#FEFEFE" Offset="0.0"/>
+            <GradientStop Color="#C6C9CD" Offset="1.0"/>
+        </LinearGradient>
+    </Rectangle>
+    <Line Opacity="1.0" Stroke="#009530" StrokeDashArray="0.0"
+        StrokeWidth="1.0" X1="30.0" X2="10.0" Y1="40.0" Y2="40.0"/>
+    <Line Opacity="1.0" Stroke="#009530" StrokeDashArray="0.0"
+        StrokeWidth="1.0" X1="40.0" X2="10.0" Y1="130.0" Y2="130.0"/>
+    <Curve Fill="#FEFEFE" Opacity="1.0"
+        Points="40.0,30.0 40.0,30.0 40.0,40.0 30.0,40.0 40.0,40.0 40.0,40.0 51.0,40.0 51.0,40.0 51.0,40.0 40.0,30.0"
+        Stroke="#FEFEFE" StrokeDashArray="0.0" StrokeWidth="1.0"/>
+    <Polygon Fill="#FFFFFF" Opacity="1.0"
+        Points="130.0,30.0 110.0,50.0 60.0,50.0 40.0,30.0 40.0,10.0 130.0,10.0"
+        Stroke="None" StrokeDashArray="0.0" StrokeWidth="1.0">
+        <LinearGradient Attribute="Fill" EndPoint="1,0"
+            SpreadMethod="Pad" StartPoint="0.0,0.0">
+            <GradientStop Color="#C6C9CD" Offset="0"/>
+            <GradientStop Color="#EFEFEF" Offset="0.5"/>
+            <GradientStop Color="#C6C9CD" Offset="0.9"/>
+        </LinearGradient>
+    </Polygon>
+    <Path Fill="None"
+        PathData="M30.0,40.0 C35.523,40.0 40.0,35.5230003 40.0,30.0 M40.0,30.0 L40.0,10.0"
+        Stroke="#009530" StrokeDashArray="0.0" StrokeWidth="1.0"/>
+    <Curve Fill="#C6C9CD" Opacity="1.0"
+        Points="40.0,140.0 40.0,129.0 29.0,129.0 29.0,129.0 39.0,129.0 41.0,129.0 51.0,130.0 51.0,130.0 50.0,140.0 40.0,140.0"
+        Stroke="#C6C9CD" StrokeDashArray="0.0" StrokeWidth="1.0"/>
+    <Polygon Fill="#FFFFFF" Opacity="1.0"
+        Points="130.0,140.0 110.0,120.0 60.0,120.0 40.0,140.0 40.0,160.0 130.0,160.0"
+        Stroke="None" StrokeDashArray="0.0" StrokeWidth="1.0">
+        <LinearGradient Attribute="Fill" EndPoint="1,0"
+            SpreadMethod="Pad" StartPoint="0.0,0.0">
+            <GradientStop Color="#C6C9CD" Offset="0"/>
+            <GradientStop Color="#EFEFEF" Offset="0.5"/>
+            <GradientStop Color="#C6C9CD" Offset="0.9"/>
+        </LinearGradient>
+    </Polygon>
+    <Path Fill="None"
+        PathData="M40.0,140.0 L40.0,160.0 M30.0,130.0 C35.523,130.0 40.0,134.477 40.0,140.0"
+        Stroke="#009530" StrokeDashArray="0.0" StrokeWidth="1.0"/>
+    <Polygon Fill="#FEFEFE" Opacity="1.0"
+        Points="130.0,30.0 130.0,40.0 120.0,40.0" Stroke="#FEFEFE"
+        StrokeDashArray="0.0" StrokeWidth="1.0"/>
+    <Polygon Fill="#C6C9CD" Opacity="1.0"
+        Points="130.0,130.0 130.0,140.0 120.0,130.0" Stroke="#C6C9CD"
+        StrokeDashArray="0.0" StrokeWidth="1.0"/>
+    <Line Opacity="1.0" Stroke="#009530" StrokeDashArray="0.0"
+        StrokeWidth="1.0" X1="130.0" X2="130.0" Y1="10.0" Y2="160.0"/>
+</Component>

@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<Component Clip="False" ContentHeight="20" ContentWidth="20"
+    Fill="#FFFFFF" Height="20.0" Left="0.0" Name="Valve_3Way_1"
+    Stroke="#000000" Top="0.0" Width="20.0">
+    <Metadata Name="Name" Value="Valve_3Way_1"/>
+    <Metadata Name="Description" Value="3WayValve1"/>
+    <Polygon Points="0.0,5.0 10.0,10.0 0.0,15.0" StrokeDashArray="0.0" StrokeWidth="1.0"/>
+    <Polygon Points="5.0,0.0 10.0,10.0 15.0,0.0" StrokeDashArray="0.0" StrokeWidth="1.0"/>
+    <Polygon Points="20.0,5.0 10.0,10.0 20.0,15.0" StrokeDashArray="0.0" StrokeWidth="1.0"/>
+</Component>

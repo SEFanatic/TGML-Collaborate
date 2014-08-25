@@ -1,0 +1,95 @@
+<?xml version="1.0"?>
+<Component BottomScale="0" ComponentCounter="3" ContentHeight="110"
+    ContentWidth="70" Height="110.0" Left="13.0"
+    Name="Electric Flow Right" Top="11.0" TopScale="100" Width="70.0">
+    <Metadata Name="Name" Value="Electric Flow Right"/>
+    <Metadata Name="Description" Value="== Bindings ==&#xd;&#xa;###VlvPos - Valve position&#xd;&#xa;&#xd;&#xa;== Exposed Properties ==&#xd;&#xa;&lt;name> - &lt;default value> - &lt;Description>&#xd;&#xa;Bind Name - ElcHtrBat - Valve Position&#xd;&#xa;Top of scale - 100 - fully open value&#xd;&#xa;Bottom of Scale - 0 - fully closed value&#xd;&#xa;Coil Base Color - #FFD100 - Base color of Coil"/>
+    <Expose ExposedAttribute="TopScale" Name="Top of Scale"/>
+    <Expose ExposedAttribute="BottomScale" Name="Bottom of Scale"/>
+    <Curve Fill="None" Opacity="1.0"
+        Points="38.0,11.0 38.0,18.0 38.0,90.0 38.0,99.0 43.0,99.0 55.0,99.0 61.0,99.0 61.0,90.0 61.0,18.0 61.0,11.0"
+        Stroke="None" StrokeDashArray="0.0" StrokeWidth="1.0">
+        <LinearGradient Attribute="Fill" EndPoint="1.0,0.5"
+            SpreadMethod="Pad" StartPoint="0.0,0.5">
+            <GradientStop Color="#FFD100" Offset="0.0">
+                <Expose ExposedAttribute="Color" Name="Electric Battery Base Colour"/>
+            </GradientStop>
+            <GradientStop Color="#01F0080E" Offset="1.0"/>
+        </LinearGradient>
+        <Bind Attribute="Opacity" Name="ElcHtrBat" PreventDefault="True">
+            <ConvertRange AttributeMaxValue="1" AttributeMinValue="0"
+                SignalMaxValue="100" SignalMinValue="0">
+                <Expose ExposedAttribute="SignalMaxValue" Name="Top of Scale"/>
+                <Expose ExposedAttribute="SignalMinValue" Name="Bottom of Scale"/>
+            </ConvertRange>
+            <Expose ExposedAttribute="Name" Name="Bind Name"/>
+			<Expose ExposedAttribute="PreventDefault" Name="Prevent Default"/>
+        </Bind>
+    </Curve>
+    <Rectangle Fill="#FFD100" Height="88.0" Left="13.0" Opacity="1.0"
+        RadiusX="5.0" RadiusY="5.0" Stroke="#FFD100"
+        StrokeDashArray="0.0" StrokeWidth="1.0" Top="11.0" Width="30.0">
+        <Expose ExposedAttribute="Fill" Name="Electric Battery Base Colour"/>
+        <Expose ExposedAttribute="Stroke" Name="Electric Battery Base Colour"/>
+    </Rectangle>
+    <Rectangle Height="88.0" Left="13.0" Opacity="1.0" RadiusX="5.0"
+        RadiusY="5.0" Stroke="#404040" StrokeDashArray="0.0"
+        StrokeWidth="1.0" Top="11.0" Width="30.0">
+        <LinearGradient Attribute="Fill" EndPoint="1.0,0.0"
+            SpreadMethod="Pad" StartPoint="0.0,0.0">
+            <GradientStop Color="#EFEFEF" Offset="0.2"/>
+            <GradientStop Color="#7FFFFFFF" Offset="1.0"/>
+        </LinearGradient>
+    </Rectangle>
+    <Path
+        PathData="M39.0,90.0 C39.0,92.2090101 37.209087,94.0 35.0,94.0 32.7911001,94.0 31.0,92.2090101 31.0,90.0 31.0,87.7910001 32.7911001,86.0 35.0,86.0 37.209087,86.0 39.0,87.7910001 39.0,90.0 z M39.0,80.0 C39.0,82.2090101 37.209087,84.0 35.0,84.0 32.7911001,84.0 31.0,82.2090101 31.0,80.0 31.0,77.7910001 32.7911001,76.0 35.0,76.0 37.209087,76.0 39.0,77.7910001 39.0,80.0 z M39.0,70.0 C39.0,72.2090101 37.209087,74.0 35.0,74.0 32.7911001,74.0 31.0,72.2090101 31.0,70.0 31.0,67.7910001 32.7911001,66.0 35.0,66.0 37.209087,66.0 39.0,67.7910001 39.0,70.0 z M39.0,54.0 C39.0,56.2090101 37.209087,58.0 35.0,58.0 32.7911001,58.0 31.0,56.2090101 31.0,54.0 31.0,51.7910071 32.7911001,50.0 35.0,50.0 37.209087,50.0 39.0,51.7910071 39.0,54.0 z M39.0,44.0 C39.0,46.2090071 37.209087,48.0 35.0,48.0 32.7911001,48.0 31.0,46.2090071 31.0,44.0 31.0,41.7910001 32.7911001,40.0 35.0,40.0 37.209087,40.0 39.0,41.7910001 39.0,44.0 z M39.0,34.0 C39.0,36.2090061 37.209087,38.0 35.0,38.0 32.7911001,38.0 31.0,36.2090061 31.0,34.0 31.0,31.7910001 32.7911001,30.0 35.0,30.0 37.209087,30.0 39.0,31.7910001 39.0,34.0 z M25.0,20.0 C25.0,22.2090101 23.2091001,24.0 21.0,24.0 18.7911001,24.0 17.0,22.2090101 17.0,20.0 17.0,17.7910001 18.7911001,16.0 21.0,16.0 23.2091001,16.0 25.0,17.7910001 25.0,20.0 z M25.0,30.0 C25.0,32.2090101 23.2091001,34.0 21.0,34.0 18.7911001,34.0 17.0,32.2090101 17.0,30.0 17.0,27.7910001 18.7911001,26.0 21.0,26.0 23.2091001,26.0 25.0,27.7910001 25.0,30.0 z M25.0,40.0 C25.0,42.2090061 23.2091001,44.0 21.0,44.0 18.7911001,44.0 17.0,42.2090061 17.0,40.0 17.0,37.7910001 18.7911001,36.0 21.0,36.0 23.2091001,36.0 25.0,37.7910001 25.0,40.0 z M25.0,56.0 C25.0,58.2090101 23.2091001,60.0 21.0,60.0 18.7911001,60.0 17.0,58.2090101 17.0,56.0 17.0,53.7910091 18.7911001,52.0 21.0,52.0 23.2091001,52.0 25.0,53.7910091 25.0,56.0 z M25.0,66.0 C25.0,68.2090101 23.2091001,70.0 21.0,70.0 18.7911001,70.0 17.0,68.2090101 17.0,66.0 17.0,63.7910071 18.7911001,62.0 21.0,62.0 23.2091001,62.0 25.0,63.7910071 25.0,66.0 z M25.0,76.0 C25.0,78.2090101 23.2091001,80.0 21.0,80.0 18.7911001,80.0 17.0,78.2090101 17.0,76.0 17.0,73.7910001 18.7911001,72.0 21.0,72.0 23.2091001,72.0 25.0,73.7910001 25.0,76.0 z"
+        Stroke="#707070" StrokeDashArray="0.0" StrokeWidth=".5">
+        <LinearGradient Attribute="Fill" EndPoint="0,0"
+            SpreadMethod="Pad" StartPoint="0,1">
+            <GradientStop Color="#FFD100" Name="T" Offset=".5">
+                <Expose ExposedAttribute="Color" Name="Electric Battery Base Colour"/>
+            </GradientStop>
+            <GradientStop Color="#B6C5C9" Name="B" Offset=".51"/>
+        </LinearGradient>
+    </Path>
+    <Bind Name="ElcHtrBat" PreventDefault="True">
+        <Expose ExposedAttribute="Name" Name="Bind Name"/>
+		<Expose ExposedAttribute="PreventDefault" Name="Prevent Default"/>
+        <Script OnDocumentLoad="onLoad" OnSignalChange="onChange"><![CDATA[var comp;
+var topScale;
+var bottomScale;
+var scaleFactor;
+
+function onLoad(evt)
+{
+	comp = evt.getCurrentTarget().getParentNode();
+	topScale = parseFloat(comp.getAttribute("TopScale"));
+	bottomScale = parseFloat(comp.getAttribute("BottomScale"));
+	scaleFactor = topScale-bottomScale;
+	
+	
+	//alert();
+}
+
+function onChange(evt)
+{
+	val = parseFloat(evt.getValue());
+	setDisplay(val)
+}
+
+function setDisplay(val){
+	if (bottomScale == 0){
+		val = (val)/scaleFactor;
+	}
+	else{
+		val = (val-scaleFactor)/scaleFactor;
+	}
+	t=val;
+	b=val-.01;
+	if(t == 1) b = .99;
+	if (b == 0) t= .01;
+	comp.getChildByName("B").setAttribute("Offset", b);
+	comp.getChildByName("T").setAttribute("Offset", t);
+}]]></Script>
+    </Bind>
+</Component>

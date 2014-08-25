@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<Component Clip="False" ContentHeight="60" ContentWidth="50"
+    Fill="#FFFFFF" Height="60.0" Left="0.0" Name="VAV Box, IV"
+    Stroke="#000000" Top="0.0" Width="50.0">
+    <Rectangle Height="60.0" Left="10.0" Top="0.0" Width="40.0"/>
+    <Line X1="15.0" X2="25.0" Y1="0.0" Y2="60.0"/>
+    <Line X1="45.0" X2="35.0" Y1="0.0" Y2="60.0"/>
+    <Line StrokeDashArray="0.0" StrokeWidth="1.0" X1="0.0" X2="10.0"
+        Y1="30.0" Y2="30.0"/>
+    <Metadata Name="Name" Value="VAV Box, IV"/>
+    <Metadata Name="Description" Value="VAV Box"/>
+</Component>

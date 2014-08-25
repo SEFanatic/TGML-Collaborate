@@ -1,0 +1,606 @@
+<?xml version="1.0"?>
+<Component ComponentCounter="4" ContentHeight="400" ContentWidth="400"
+    GridSize="10" Height="400.0" Left="10.0" Name="Dial 4" Top="0.0" Width="400.0">
+    <Metadata Name="Name" Value="Dial 4"/>
+    <Metadata Name="Description" Value="== Bindings ==&#xd;&#xa;Gauge - Value&#xd;&#xa;&#xd;&#xa;== Exposed Properties ==&#xd;&#xa;&lt;name> - &lt;default value> - &lt;Description>&#xd;&#xa;Needle Bind - Gauge - Value&#xd;&#xa;Top of Scale - 100&#xd;&#xa;Bottom of Scale - 0&#xd;&#xa;Display Text - ... - Units of value&#xd;&#xa;LED Color - #303030 - Color of LED digits&#xd;&#xa;LED Background Color - #C1D1AF - color of led background"/>
+    <Ellipse Height="360.0" Left="10.0" Opacity="1.0" Stroke="#808080"
+        StrokeDashArray="0.0" StrokeWidth="1.0" Top="15.0" Width="360.0">
+        <LinearGradient Attribute="Fill" EndPoint="0.0,1.0"
+            SpreadMethod="Pad" StartPoint="0.0,0.0">
+            <GradientStop Color="#EEEEEE" Offset=".4"/>
+            <GradientStop Color="#AAAAAA" Offset=".6"/>
+        </LinearGradient>
+    </Ellipse>
+    <Ellipse Height="345.0" Left="17.5" Opacity="1.0" Stroke="None"
+        StrokeDashArray="0.0" StrokeWidth="1.0" Top="22.5" Width="345.0">
+        <LinearGradient Attribute="Fill" EndPoint="0.0,1.0"
+            SpreadMethod="Pad" StartPoint="0.0,0.0">
+            <GradientStop Color="#AAAAAA" Offset=".4"/>
+            <GradientStop Color="#EEEEEE" Offset=".6"/>
+        </LinearGradient>
+    </Ellipse>
+    <Ellipse Height="325.0" Left="27.5" Opacity="1.0" Stroke="#999999"
+        StrokeDashArray="0.0" StrokeWidth="3" Top="32.5" Width="325.0">
+        <RadialGradient Attribute="Fill" Focus="0.5,0.35" RadiusX=".9"
+            RadiusY="0.5" SpreadMethod="Pad">
+            <GradientStop Color="#FFFFFF" Offset=".3"/>
+            <GradientStop Color="#CCCCCC" Offset="1.0"/>
+        </RadialGradient>
+    </Ellipse>
+    <Curve Opacity="1.0"
+        Points="70.0,72.0 134.0,6.0 244.0,0.0 309.0,70.0"
+        Stroke="#BBBBBB" StrokeDashArray="0.0" StrokeWidth="1.0"/>
+    <Group>
+        <Line Opacity="1.0" Stroke="#404040" StrokeDashArray="0.0"
+            StrokeWidth="2" X1="116.0" X2="127.0" Y1="324.0" Y2="304.0"/>
+        <Line Opacity="1.0" Stroke="#404040" StrokeDashArray="0.0"
+            StrokeWidth="2.0" X1="253.0" X2="264.0" Y1="304.0" Y2="324.0"/>
+        <Line Opacity="1.0" Stroke="#404040" StrokeDashArray="0.0"
+            StrokeWidth="2.0" X1="299.0" X2="319.0" Y1="258.0" Y2="269.0"/>
+        <Line Opacity="1.0" Stroke="#404040" StrokeDashArray="0.0"
+            StrokeWidth="2.0" X1="316.0" X2="340.0" Y1="195.0" Y2="195.0"/>
+        <Line Opacity="1.0" Stroke="#404040" StrokeDashArray="0.0"
+            StrokeWidth="2.0" X1="190.0" X2="190.0" Y1="45.0" Y2="70.0"/>
+        <Line Opacity="1.0" Stroke="#404040" StrokeDashArray="0.0"
+            StrokeWidth="2.0" X1="40.0" X2="65.0" Y1="195.0" Y2="195.0"/>
+        <Line Opacity="1.0" Stroke="#404040" StrokeDashArray="0.0"
+            StrokeWidth="2.0" X1="298.0" X2="320.0" Y1="133.0" Y2="120.0"/>
+        <Line Opacity="1.0" Stroke="#404040" StrokeDashArray="0.0"
+            StrokeWidth="2.0" X1="253.0" X2="265.0" Y1="87.0" Y2="66.0"/>
+        <Line Opacity="1.0" Stroke="#404040" StrokeDashArray="0.0"
+            StrokeWidth="2.0" X1="128.0" X2="115.0" Y1="88.0" Y2="66.0"/>
+        <Line Opacity="1.0" Stroke="#404040" StrokeDashArray="0.0"
+            StrokeWidth="2.0" X1="82.0" X2="62.0" Y1="133.0" Y2="121.0"/>
+        <Line Opacity="1.0" Stroke="#404040" StrokeDashArray="0.0"
+            StrokeWidth="2.0" X1="61.0" X2="81.0" Y1="270.0" Y2="258.0"/>
+        <Line Opacity="1.0" Stroke="#404040" StrokeDashArray="0.0"
+            StrokeWidth="1" X1="85.0" X2="93.0" Y1="301.0" Y2="293.0"/>
+        <Line Opacity="1.0" Stroke="#404040" StrokeDashArray="0.0"
+            StrokeWidth="1" X1="46.0" X2="56.0" Y1="234.0" Y2="231.0"/>
+        <Line Opacity="1.0" Stroke="#404040" StrokeDashArray="0.0"
+            StrokeWidth="1" X1="46.0" X2="57.0" Y1="157.0" Y2="160.0"/>
+        <Line Opacity="1.0" Stroke="#404040" StrokeDashArray="0.0"
+            StrokeWidth="1" X1="94.0" X2="85.0" Y1="99.0" Y2="90.0"/>
+        <Line Opacity="1.0" Stroke="#404040" StrokeDashArray="0.0"
+            StrokeWidth="1" X1="151.0" X2="154.0" Y1="51.0" Y2="62.0"/>
+        <Line Opacity="1.0" Stroke="#404040" StrokeDashArray="0.0"
+            StrokeWidth="1" X1="226.0" X2="229.0" Y1="63.0" Y2="51.0"/>
+        <Line Opacity="1.0" Stroke="#404040" StrokeDashArray="0.0"
+            StrokeWidth="1" X1="287.0" X2="296.0" Y1="99.0" Y2="90.0"/>
+        <Line Opacity="1.0" Stroke="#404040" StrokeDashArray="0.0"
+            StrokeWidth="1" X1="324.0" X2="334.0" Y1="160.0" Y2="157.0"/>
+        <Line Opacity="1.0" Stroke="#404040" StrokeDashArray="0.0"
+            StrokeWidth="1" X1="323.0" X2="335.0" Y1="230.0" Y2="233.0"/>
+        <Line Opacity="1.0" Stroke="#404040" StrokeDashArray="0.0"
+            StrokeWidth="1" X1="287.0" X2="295.0" Y1="292.0" Y2="301.0"/>
+    </Group>
+    <Pie Center="190.0,194.5" Fill="#626469" Opacity="1.0"
+        RadiusX="150.0" RadiusY="150.0" StartAngle="120.0"
+        Stroke="#626469" StrokeDashArray="0.0" StrokeWidth="1.0" SweepAngle="300.0"/>
+    <Pie Center="190,194.5" Fill="#4FA600" Opacity="1.0" RadiusX="150"
+        RadiusY="150" StartAngle="120.0" Stroke="#4FA600"
+        StrokeDashArray="0.0" StrokeWidth="1.0" SweepAngle="10">
+        <Animate Attribute="SweepAngle" AutoReverse="False"
+            CalcMode="Linear" Duration="1" Freeze="True" From="0"
+            Name="" Repeat="1" To="0"/>
+    </Pie>
+    <Pie Center="190.0,194.5" Opacity="1.0" RadiusX="150.0"
+        RadiusY="150.0" StartAngle="120.0" Stroke="None"
+        StrokeDashArray="0.0" StrokeWidth="1.0" SweepAngle="300.0">
+        <RadialGradient Attribute="Fill" Focus="0.5,.5" RadiusX="0.5"
+            RadiusY="0.5" SpreadMethod="Pad">
+            <GradientStop Color="#80000000" Offset="0.75"/>
+            <GradientStop Color="None" Offset="0.85"/>
+            <GradientStop Color="None" Offset=".9"/>
+            <GradientStop Color="#80000000" Offset="1.0"/>
+        </RadialGradient>
+        <Animate Attribute="SweepAngle" AutoReverse="False"
+            CalcMode="Linear" Duration="1" Freeze="True" From="0"
+            Name="" Repeat="1" To="0"/>
+    </Pie>
+    <Ellipse Fill="#FFFFFF" Height="220.0" Left="80.0" Opacity="1.0"
+        Stroke="#000000" StrokeDashArray="0.0" StrokeWidth="1.0"
+        Top="85.0" Width="220.0"/>
+    <Curve Fill="#FFFFC0" Opacity="1.0"
+        Points="135.0,290.0 116.0,324.0 135.0,290.0 115.0,324.0 74.0,304.0 40.0,250.0 39.0,196.0 39.0,104.0 118.581923390301,44.1178512906537 190.0,44.0 280.0,44.0 341.0,119.0 340.0,195.0 337.0,271.0 288.0,315.0 264.0,323.0 263.73964082673,327.765500065961 266.233312994013,335.762360010243 271.0,336.0 324.0,303.0 351.0,258.0 352.0,195.0 354.0,116.0 288.0,33.0 190.0,33.0 106.0,35.0 28.0,99.0 28.0,195.0 26.0,286.0 126.0,403.0 270.0,337.0 244.0,291.0 263.0,324.0 245.0,290.0 265.0,281.0 299.531818932523,247.617209940519 300.0,196.0 300.0,140.0 258.0,86.0 191.0,84.0 128.0,85.0 80.0,135.0 80.0,194.0 79.0,230.0 99.0,271.0 135.0,290.0"
+        Stroke="None" StrokeDashArray="0.0" StrokeWidth="1.0">
+        <RadialGradient Attribute="Fill" Focus="0.5,0.35" RadiusX=".9"
+            RadiusY="0.5" SpreadMethod="Pad">
+            <GradientStop Color="#FFFFFF" Offset=".3"/>
+            <GradientStop Color="#CCCCCC" Offset="1.0"/>
+        </RadialGradient>
+    </Curve>
+    <Arc Center="190.0,194.5" Opacity="1.0" RadiusX="110.0"
+        RadiusY="110" StartAngle="120" Stroke="#404040"
+        StrokeDashArray="0.0" StrokeWidth="2" SweepAngle="300"/>
+    <Arc Center="190.0,194.5" Opacity="1.0" RadiusX="150" RadiusY="150"
+        StartAngle="120.0" Stroke="#404040" StrokeDashArray="0.0"
+        StrokeWidth="2" SweepAngle="300.0"/>
+    <Group>
+        <Line Opacity="1.0" Stroke="#404040" StrokeDashArray="0.0"
+            StrokeWidth="2" X1="115.5" X2="135.5" Y1="324.5" Y2="290.5"/>
+        <Line Opacity="1.0" Stroke="#404040" StrokeDashArray="0.0"
+            StrokeWidth="2" X1="245.0" X2="264.0" Y1="290.0" Y2="325.0"/>
+        <Line Opacity="1.0" Stroke="#404040" StrokeDashArray="0.0"
+            StrokeWidth="2.0" X1="261.0" X2="285.0" Y1="281.0" Y2="309.0"/>
+        <Line Opacity="1.0" Stroke="#404040" StrokeDashArray="0.0"
+            StrokeWidth="2.0" X1="275.0" X2="303.0" Y1="267.0" Y2="291.0"/>
+        <Line Opacity="1.0" Stroke="#404040" StrokeDashArray="0.0"
+            StrokeWidth="2.0" X1="286.0" X2="318.0" Y1="251.0" Y2="270.0"/>
+        <Line Opacity="1.0" Stroke="#404040" StrokeDashArray="0.0"
+            StrokeWidth="2.0" X1="294.0" X2="328.0" Y1="233.0" Y2="246.0"/>
+        <Line Opacity="1.0" Stroke="#404040" StrokeDashArray="0.0"
+            StrokeWidth="2.0" X1="299.0" X2="337.0" Y1="214.0" Y2="222.0"/>
+        <Line Opacity="1.0" Stroke="#404040" StrokeDashArray="0.0"
+            StrokeWidth="2.0" X1="340.0" X2="302.0" Y1="195.0" Y2="195.0"/>
+        <Line Opacity="1.0" Stroke="#404040" StrokeDashArray="0.0"
+            StrokeWidth="2.0" X1="299.0" X2="337.0" Y1="177.0" Y2="170.0"/>
+        <Line Opacity="1.0" Stroke="#404040" StrokeDashArray="0.0"
+            StrokeWidth="2.0" X1="294.0" X2="331.0" Y1="158.0" Y2="145.0"/>
+        <Line Opacity="1.0" Stroke="#404040" StrokeDashArray="0.0"
+            StrokeWidth="2.0" X1="286.0" X2="319.0" Y1="140.0" Y2="122.0"/>
+        <Line Opacity="1.0" Stroke="#404040" StrokeDashArray="0.0"
+            StrokeWidth="2.0" X1="275.0" X2="305.0" Y1="124.0" Y2="101.0"/>
+        <Line Opacity="1.0" Stroke="#404040" StrokeDashArray="0.0"
+            StrokeWidth="2.0" X1="262.0" X2="287.0" Y1="110.0" Y2="82.0"/>
+        <Line Opacity="1.0" Stroke="#404040" StrokeDashArray="0.0"
+            StrokeWidth="2.0" X1="246.0" X2="265.0" Y1="99.0" Y2="66.0"/>
+        <Line Opacity="1.0" Stroke="#404040" StrokeDashArray="0.0"
+            StrokeWidth="2.0" X1="229.0" X2="241.0" Y1="91.0" Y2="55.0"/>
+        <Line Opacity="1.0" Stroke="#404040" StrokeDashArray="0.0"
+            StrokeWidth="2.0" X1="210.0" X2="217.0" Y1="85.0" Y2="48.0"/>
+        <Line Opacity="1.0" Stroke="#404040" StrokeDashArray="0.0"
+            StrokeWidth="2.0" X1="190.0" X2="190.0" Y1="84.0" Y2="45.0"/>
+        <Line Opacity="1.0" Stroke="#404040" StrokeDashArray="0.0"
+            StrokeWidth="2.0" X1="172.0" X2="164.0" Y1="85.0" Y2="48.0"/>
+        <Line Opacity="1.0" Stroke="#404040" StrokeDashArray="0.0"
+            StrokeWidth="2.0" X1="153.0" X2="140.020812988281" Y1="90.0" Y2="55.037712097168"/>
+        <Line Opacity="1.0" Stroke="#404040" StrokeDashArray="0.0"
+            StrokeWidth="2.0" X1="134.0" X2="117.0" Y1="98.0" Y2="66.0"/>
+        <Line Opacity="1.0" Stroke="#404040" StrokeDashArray="0.0"
+            StrokeWidth="2.0" X1="95.0" X2="118.0" Y1="81.0" Y2="108.0"/>
+        <Line Opacity="1.0" Stroke="#404040" StrokeDashArray="0.0"
+            StrokeWidth="2.0" X1="77.0" X2="104.0" Y1="100.0" Y2="123.0"/>
+        <Line Opacity="1.0" Stroke="#404040" StrokeDashArray="0.0"
+            StrokeWidth="2.0" X1="62.0" X2="94.0" Y1="121.0" Y2="139.0"/>
+        <Line Opacity="1.0" Stroke="#404040" StrokeDashArray="0.0"
+            StrokeWidth="2.0" X1="50.0" X2="86.0" Y1="143.0" Y2="156.0"/>
+        <Line Opacity="1.0" Stroke="#404040" StrokeDashArray="0.0"
+            StrokeWidth="2.0" X1="43.0" X2="81.0" Y1="168.0" Y2="174.0"/>
+        <Line Opacity="1.0" Stroke="#404040" StrokeDashArray="0.0"
+            StrokeWidth="2.0" X1="41.0" X2="79.0" Y1="195.0" Y2="195.0"/>
+        <Line Opacity="1.0" Stroke="#404040" StrokeDashArray="0.0"
+            StrokeWidth="2.0" X1="44.0" X2="81.0" Y1="220.0" Y2="213.0"/>
+        <Line Opacity="1.0" Stroke="#404040" StrokeDashArray="0.0"
+            StrokeWidth="2.0" X1="50.0" X2="85.0" Y1="246.0" Y2="233.0"/>
+        <Line Opacity="1.0" Stroke="#404040" StrokeDashArray="0.0"
+            StrokeWidth="2.0" X1="62.0" X2="94.0" Y1="269.0" Y2="250.0"/>
+        <Line Opacity="1.0" Stroke="#404040" StrokeDashArray="0.0"
+            StrokeWidth="2.0" X1="76.0" X2="105.0" Y1="290.0" Y2="266.0"/>
+        <Line Opacity="1.0" Stroke="#404040" StrokeDashArray="0.0"
+            StrokeWidth="2.0" X1="94.0" X2="118.0" Y1="310.0" Y2="280.0"/>
+    </Group>
+    <Polygon Fill="#FF0000" Opacity="1.0"
+        Points="109.0,322.0 119.0,328.0 121.0,315.0" Stroke="None"
+        StrokeDashArray="0.0" StrokeWidth="2.0">
+        <Rotate Center="6.75,-9.26">
+            <Animate Attribute="Angle" AutoReverse="False"
+                CalcMode="Linear" Duration="1" Freeze="True" From="300"
+                Name="Arrow" Repeat="1" To="300"/>
+        </Rotate>
+    </Polygon>
+    <Text FontFamily="Arial" FontSize="40" FontStyle="Normal"
+        FontWeight="Bold" HorizontalAlign="Center"
+        Left="189.660000003875" Opacity="1.0" Stroke="#404040"
+        TextDecoration="None" Top="297.0"
+            VerticalAlign="Top"><![CDATA[....]]><Expose
+            ExposedAttribute="Content" Name="Display Text"/>
+    </Text>
+    <Text FontFamily="Arial" FontSize="20" FontStyle="Normal"
+        FontWeight="Bold" HorizontalAlign="Right"
+        Left="246.246021836996" Name="Top" Opacity="1.0"
+        Stroke="#404040" TextDecoration="None" Top="268.0"
+            VerticalAlign="Top"><![CDATA[20]]><Expose
+            ExposedAttribute="Content" Name="Top of Scale"/>
+    </Text>
+    <Text FontFamily="Arial" FontSize="20" FontStyle="Normal"
+        FontWeight="Bold" HorizontalAlign="Center"
+        Left="139.562006765975" Name="Bottom" Opacity="1.0"
+        Stroke="#404040" TextDecoration="None" Top="269.0"
+            VerticalAlign="Top"><![CDATA[0]]><Expose
+            ExposedAttribute="Content" Name="Bottom of Scale"/>
+    </Text>
+    <Text FontFamily="Arial" FontSize="20" FontStyle="Normal"
+        FontWeight="Bold" HorizontalAlign="Left" Left="90.0" Name="t1"
+        Opacity="1.0" Stroke="#404040" TextDecoration="None" Top="156.0" VerticalAlign="Top"><![CDATA[..]]></Text>
+    <Text FontFamily="Arial" FontSize="20" FontStyle="Normal"
+        FontWeight="Bold" HorizontalAlign="Center"
+        Left="189.123000025749" Name="t2" Opacity="1.0" Stroke="#404040"
+        TextDecoration="None" Top="85.0" VerticalAlign="Top"><![CDATA[..]]></Text>
+    <Text FontFamily="Arial" FontSize="20" FontStyle="Normal"
+        FontWeight="Bold" HorizontalAlign="Right"
+        Left="292.113000124693" Name="t3" Opacity="1.0" Stroke="#404040"
+        TextDecoration="None" Top="160.0" VerticalAlign="Top"><![CDATA[..]]></Text>
+    <Bind Name="Guage">
+        <Expose ExposedAttribute="Name" Name="Indicator Bind"/>
+        <Script OnDocumentLoad="onLoad" OnSignalChange="onChange"><![CDATA[var comp;
+var tS;
+var bS;
+var ani;
+var offset;
+
+function onLoad(evt)
+{
+	var niftyP
+	comp=evt.getCurrentTarget().getParentNode();
+	ani = comp.getElementsByTagName("Animate");	
+	tS = parseFloat(comp.getChildByName("Top").getAttribute("Content"));
+	bS = parseFloat(comp.getChildByName("Bottom").getAttribute("Content"));
+	niftyP = (tS-bS)/2;
+	comp.getChildByName("t1").setAttribute("Content", niftyP/2);
+	comp.getChildByName("t2").setAttribute("Content", niftyP);
+	comp.getChildByName("t3").setAttribute("Content", niftyP+(niftyP/2));
+	offset = bS/tS;
+}
+
+function onChange(evt)
+{
+	val=parseFloat(evt.getValue());
+	if (val >= bS && val <= tS){ 
+		var angle = ((val - bS) / (tS-bS)*100) * 3;
+	}
+	for(var i=0; i < ani.length; i++){
+		if (ani.item(i).getAttribute("Name") != "Arrow"){
+			animate(ani.item(i),Math.round(angle/10)*10) ;
+		}
+		else{
+			animate(ani.item(i),angle) ;
+		}
+	}
+}
+
+function animate(element, val){
+	element.setAttribute("Animation", "Stop");
+	element.setAttribute("Animation", "Stop");
+	element.setAttribute("From", element.getAttribute("To"));
+	element.setAttribute("To", val);
+	element.setAttribute("Animation", "Start");
+	element.setAttribute("Animation", "Start");
+}
+]]></Script>
+    </Bind>
+    <Component ComponentCounter="7" ContentHeight="140"
+        ContentWidth="400" Fill="#303030" GridSize="10" Height="55.0"
+        Left="111.428585529327" Name="" Top="135.0" Width="157.142828822136">
+        <Expose ExposedAttribute="Fill" Name="LED Color"/>
+        <Rectangle Fill="#C1D1AF" Height="120.0" Left="10.0"
+            Opacity="1.0" RadiusX="0.0" RadiusY="0.0" Stroke="#000000"
+            StrokeDashArray="0.0" StrokeWidth="1.0" Top="10.0" Width="380.0">
+            <Expose ExposedAttribute="Fill" Name="LED Background Color"/>
+        </Rectangle>
+        <Component Clip="False" ContentHeight="94.0" ContentWidth="52.0"
+            Height="94.0" Left="20.0" Name="D6" Top="20.0" Width="52.0">
+            <Polygon Fill="#303030" Name="a" Opacity="1.0"
+                Points="11.0,0.0 6.0,5.0 11.0,10.0 41.0,10.0 46.0,5.0 41.0,0.0"
+                Stroke="None" StrokeDashArray="0.0" StrokeWidth="1.0">
+                <Expose ExposedAttribute="Fill" Name="LED Color"/>
+            </Polygon>
+            <Polygon Fill="#303030" Name="b" Opacity="1.0"
+                Points="42.0,11.0 47.0,6.0 52.0,11.0 52.0,41.0 47.0,46.0 42.0,41.0"
+                Stroke="None" StrokeDashArray="0.0" StrokeWidth="1.0">
+                <Expose ExposedAttribute="Fill" Name="LED Color"/>
+            </Polygon>
+            <Polygon Fill="#303030" Name="c" Opacity="1.0"
+                Points="42.0,53.0 47.0,48.0 52.0,53.0 52.0,83.0 47.0,88.0 42.0,83.0"
+                Stroke="None" StrokeDashArray="0.0" StrokeWidth="1.0">
+                <Expose ExposedAttribute="Fill" Name="LED Color"/>
+            </Polygon>
+            <Polygon Fill="#303030" Name="d" Opacity="1.0"
+                Points="11.0,84.0 6.0,89.0 11.0,94.0 41.0,94.0 46.0,89.0 41.0,84.0"
+                Stroke="None" StrokeDashArray="0.0" StrokeWidth="1.0">
+                <Expose ExposedAttribute="Fill" Name="LED Color"/>
+            </Polygon>
+            <Polygon Fill="#303030" Name="e" Opacity="1.0"
+                Points="0.0,53.0 5.0,48.0 10.0,53.0 10.0,83.0 5.0,88.0 0.0,83.0"
+                Stroke="None" StrokeDashArray="0.0" StrokeWidth="1.0">
+                <Expose ExposedAttribute="Fill" Name="LED Color"/>
+            </Polygon>
+            <Polygon Fill="#303030" Name="f" Opacity="1.0"
+                Points="0.0,11.0 5.0,6.0 10.0,11.0 10.0,41.0 5.0,46.0 0.0,41.0"
+                Stroke="None" StrokeDashArray="0.0" StrokeWidth="1.0">
+                <Expose ExposedAttribute="Fill" Name="LED Color"/>
+            </Polygon>
+            <Polygon Fill="#303030" Name="g" Opacity="1.0"
+                Points="11.0,42.0 6.0,47.0 11.0,52.0 41.0,52.0 46.0,47.0 41.0,42.0"
+                Stroke="None" StrokeDashArray="0.0" StrokeWidth="1.0">
+                <Expose ExposedAttribute="Fill" Name="LED Color"/>
+            </Polygon>
+            <Polygon Fill="#303030" Name="h" Opacity="1.0"
+                Points="25.0,84.0 20.0,89.0 25.0,94.0 30.0,89"
+                Stroke="None" StrokeDashArray="0.0" StrokeWidth="1.0">
+                <Expose ExposedAttribute="Fill" Name="LED Color"/>
+            </Polygon>
+        </Component>
+        <Component Clip="False" ContentHeight="94.0" ContentWidth="52.0"
+            Height="94.0" Left="80.0" Name="D5" Top="20.0" Width="52.0">
+            <Polygon Fill="#303030" Name="a" Opacity="1.0"
+                Points="11.0,0.0 6.0,5.0 11.0,10.0 41.0,10.0 46.0,5.0 41.0,0.0"
+                Stroke="None" StrokeDashArray="0.0" StrokeWidth="1.0">
+                <Expose ExposedAttribute="Fill" Name="LED Color"/>
+            </Polygon>
+            <Polygon Fill="#303030" Name="b" Opacity="1.0"
+                Points="42.0,11.0 47.0,6.0 52.0,11.0 52.0,41.0 47.0,46.0 42.0,41.0"
+                Stroke="None" StrokeDashArray="0.0" StrokeWidth="1.0">
+                <Expose ExposedAttribute="Fill" Name="LED Color"/>
+            </Polygon>
+            <Polygon Fill="#303030" Name="c" Opacity="1.0"
+                Points="42.0,53.0 47.0,48.0 52.0,53.0 52.0,83.0 47.0,88.0 42.0,83.0"
+                Stroke="None" StrokeDashArray="0.0" StrokeWidth="1.0">
+                <Expose ExposedAttribute="Fill" Name="LED Color"/>
+            </Polygon>
+            <Polygon Fill="#303030" Name="d" Opacity="1.0"
+                Points="11.0,84.0 6.0,89.0 11.0,94.0 41.0,94.0 46.0,89.0 41.0,84.0"
+                Stroke="None" StrokeDashArray="0.0" StrokeWidth="1.0">
+                <Expose ExposedAttribute="Fill" Name="LED Color"/>
+            </Polygon>
+            <Polygon Fill="#303030" Name="e" Opacity="1.0"
+                Points="0.0,53.0 5.0,48.0 10.0,53.0 10.0,83.0 5.0,88.0 0.0,83.0"
+                Stroke="None" StrokeDashArray="0.0" StrokeWidth="1.0">
+                <Expose ExposedAttribute="Fill" Name="LED Color"/>
+            </Polygon>
+            <Polygon Fill="#303030" Name="f" Opacity="1.0"
+                Points="0.0,11.0 5.0,6.0 10.0,11.0 10.0,41.0 5.0,46.0 0.0,41.0"
+                Stroke="None" StrokeDashArray="0.0" StrokeWidth="1.0">
+                <Expose ExposedAttribute="Fill" Name="LED Color"/>
+            </Polygon>
+            <Polygon Fill="#303030" Name="g" Opacity="1.0"
+                Points="11.0,42.0 6.0,47.0 11.0,52.0 41.0,52.0 46.0,47.0 41.0,42.0"
+                Stroke="None" StrokeDashArray="0.0" StrokeWidth="1.0">
+                <Expose ExposedAttribute="Fill" Name="LED Color"/>
+            </Polygon>
+            <Polygon Fill="#303030" Name="h" Opacity="1.0"
+                Points="25.0,84.0 20.0,89.0 25.0,94.0 30.0,89"
+                Stroke="None" StrokeDashArray="0.0" StrokeWidth="1.0">
+                <Expose ExposedAttribute="Fill" Name="LED Color"/>
+            </Polygon>
+        </Component>
+        <Component Clip="False" ContentHeight="94.0" ContentWidth="52.0"
+            Height="94.0" Left="140.0" Name="D4" Top="20.0" Width="52.0">
+            <Polygon Fill="#303030" Name="a" Opacity="1.0"
+                Points="11.0,0.0 6.0,5.0 11.0,10.0 41.0,10.0 46.0,5.0 41.0,0.0"
+                Stroke="None" StrokeDashArray="0.0" StrokeWidth="1.0">
+                <Expose ExposedAttribute="Fill" Name="LED Color"/>
+            </Polygon>
+            <Polygon Fill="#303030" Name="b" Opacity="1.0"
+                Points="42.0,11.0 47.0,6.0 52.0,11.0 52.0,41.0 47.0,46.0 42.0,41.0"
+                Stroke="None" StrokeDashArray="0.0" StrokeWidth="1.0">
+                <Expose ExposedAttribute="Fill" Name="LED Color"/>
+            </Polygon>
+            <Polygon Fill="#303030" Name="c" Opacity="1.0"
+                Points="42.0,53.0 47.0,48.0 52.0,53.0 52.0,83.0 47.0,88.0 42.0,83.0"
+                Stroke="None" StrokeDashArray="0.0" StrokeWidth="1.0">
+                <Expose ExposedAttribute="Fill" Name="LED Color"/>
+            </Polygon>
+            <Polygon Fill="#303030" Name="d" Opacity="1.0"
+                Points="11.0,84.0 6.0,89.0 11.0,94.0 41.0,94.0 46.0,89.0 41.0,84.0"
+                Stroke="None" StrokeDashArray="0.0" StrokeWidth="1.0">
+                <Expose ExposedAttribute="Fill" Name="LED Color"/>
+            </Polygon>
+            <Polygon Fill="#303030" Name="e" Opacity="1.0"
+                Points="0.0,53.0 5.0,48.0 10.0,53.0 10.0,83.0 5.0,88.0 0.0,83.0"
+                Stroke="None" StrokeDashArray="0.0" StrokeWidth="1.0">
+                <Expose ExposedAttribute="Fill" Name="LED Color"/>
+            </Polygon>
+            <Polygon Fill="#303030" Name="f" Opacity="1.0"
+                Points="0.0,11.0 5.0,6.0 10.0,11.0 10.0,41.0 5.0,46.0 0.0,41.0"
+                Stroke="None" StrokeDashArray="0.0" StrokeWidth="1.0">
+                <Expose ExposedAttribute="Fill" Name="LED Color"/>
+            </Polygon>
+            <Polygon Fill="#303030" Name="g" Opacity="1.0"
+                Points="11.0,42.0 6.0,47.0 11.0,52.0 41.0,52.0 46.0,47.0 41.0,42.0"
+                Stroke="None" StrokeDashArray="0.0" StrokeWidth="1.0">
+                <Expose ExposedAttribute="Fill" Name="LED Color"/>
+            </Polygon>
+            <Polygon Fill="#303030" Name="h" Opacity="1.0"
+                Points="25.0,84.0 20.0,89.0 25.0,94.0 30.0,89"
+                Stroke="None" StrokeDashArray="0.0" StrokeWidth="1.0">
+                <Expose ExposedAttribute="Fill" Name="LED Color"/>
+            </Polygon>
+        </Component>
+        <Component Clip="False" ContentHeight="94.0" ContentWidth="52.0"
+            Height="94.0" Left="200.0" Name="D3" Top="20.0" Width="52.0">
+            <Polygon Fill="#303030" Name="a" Opacity="1.0"
+                Points="11.0,0.0 6.0,5.0 11.0,10.0 41.0,10.0 46.0,5.0 41.0,0.0"
+                Stroke="None" StrokeDashArray="0.0" StrokeWidth="1.0">
+                <Expose ExposedAttribute="Fill" Name="LED Color"/>
+            </Polygon>
+            <Polygon Fill="#303030" Name="b" Opacity="1.0"
+                Points="42.0,11.0 47.0,6.0 52.0,11.0 52.0,41.0 47.0,46.0 42.0,41.0"
+                Stroke="None" StrokeDashArray="0.0" StrokeWidth="1.0">
+                <Expose ExposedAttribute="Fill" Name="LED Color"/>
+            </Polygon>
+            <Polygon Fill="#303030" Name="c" Opacity="1.0"
+                Points="42.0,53.0 47.0,48.0 52.0,53.0 52.0,83.0 47.0,88.0 42.0,83.0"
+                Stroke="None" StrokeDashArray="0.0" StrokeWidth="1.0">
+                <Expose ExposedAttribute="Fill" Name="LED Color"/>
+            </Polygon>
+            <Polygon Fill="#303030" Name="d" Opacity="1.0"
+                Points="11.0,84.0 6.0,89.0 11.0,94.0 41.0,94.0 46.0,89.0 41.0,84.0"
+                Stroke="None" StrokeDashArray="0.0" StrokeWidth="1.0">
+                <Expose ExposedAttribute="Fill" Name="LED Color"/>
+            </Polygon>
+            <Polygon Fill="#303030" Name="e" Opacity="1.0"
+                Points="0.0,53.0 5.0,48.0 10.0,53.0 10.0,83.0 5.0,88.0 0.0,83.0"
+                Stroke="None" StrokeDashArray="0.0" StrokeWidth="1.0">
+                <Expose ExposedAttribute="Fill" Name="LED Color"/>
+            </Polygon>
+            <Polygon Fill="#303030" Name="f" Opacity="1.0"
+                Points="0.0,11.0 5.0,6.0 10.0,11.0 10.0,41.0 5.0,46.0 0.0,41.0"
+                Stroke="None" StrokeDashArray="0.0" StrokeWidth="1.0">
+                <Expose ExposedAttribute="Fill" Name="LED Color"/>
+            </Polygon>
+            <Polygon Fill="#303030" Name="g" Opacity="1.0"
+                Points="11.0,42.0 6.0,47.0 11.0,52.0 41.0,52.0 46.0,47.0 41.0,42.0"
+                Stroke="None" StrokeDashArray="0.0" StrokeWidth="1.0">
+                <Expose ExposedAttribute="Fill" Name="LED Color"/>
+            </Polygon>
+            <Polygon Fill="#303030" Name="h" Opacity="1.0"
+                Points="25.0,84.0 20.0,89.0 25.0,94.0 30.0,89"
+                Stroke="None" StrokeDashArray="0.0" StrokeWidth="1.0">
+                <Expose ExposedAttribute="Fill" Name="LED Color"/>
+            </Polygon>
+        </Component>
+        <Component Clip="False" ContentHeight="94.0" ContentWidth="52.0"
+            Height="94.0" Left="260.0" Name="D2" Top="20.0" Width="52.0">
+            <Polygon Fill="#303030" Name="a" Opacity="1.0"
+                Points="11.0,0.0 6.0,5.0 11.0,10.0 41.0,10.0 46.0,5.0 41.0,0.0"
+                Stroke="None" StrokeDashArray="0.0" StrokeWidth="1.0">
+                <Expose ExposedAttribute="Fill" Name="LED Color"/>
+            </Polygon>
+            <Polygon Fill="#303030" Name="b" Opacity="1.0"
+                Points="42.0,11.0 47.0,6.0 52.0,11.0 52.0,41.0 47.0,46.0 42.0,41.0"
+                Stroke="None" StrokeDashArray="0.0" StrokeWidth="1.0">
+                <Expose ExposedAttribute="Fill" Name="LED Color"/>
+            </Polygon>
+            <Polygon Fill="#303030" Name="c" Opacity="1.0"
+                Points="42.0,53.0 47.0,48.0 52.0,53.0 52.0,83.0 47.0,88.0 42.0,83.0"
+                Stroke="None" StrokeDashArray="0.0" StrokeWidth="1.0">
+                <Expose ExposedAttribute="Fill" Name="LED Color"/>
+            </Polygon>
+            <Polygon Fill="#303030" Name="d" Opacity="1.0"
+                Points="11.0,84.0 6.0,89.0 11.0,94.0 41.0,94.0 46.0,89.0 41.0,84.0"
+                Stroke="None" StrokeDashArray="0.0" StrokeWidth="1.0">
+                <Expose ExposedAttribute="Fill" Name="LED Color"/>
+            </Polygon>
+            <Polygon Fill="#303030" Name="e" Opacity="1.0"
+                Points="0.0,53.0 5.0,48.0 10.0,53.0 10.0,83.0 5.0,88.0 0.0,83.0"
+                Stroke="None" StrokeDashArray="0.0" StrokeWidth="1.0">
+                <Expose ExposedAttribute="Fill" Name="LED Color"/>
+            </Polygon>
+            <Polygon Fill="#303030" Name="f" Opacity="1.0"
+                Points="0.0,11.0 5.0,6.0 10.0,11.0 10.0,41.0 5.0,46.0 0.0,41.0"
+                Stroke="None" StrokeDashArray="0.0" StrokeWidth="1.0">
+                <Expose ExposedAttribute="Fill" Name="LED Color"/>
+            </Polygon>
+            <Polygon Fill="#303030" Name="g" Opacity="1.0"
+                Points="11.0,42.0 6.0,47.0 11.0,52.0 41.0,52.0 46.0,47.0 41.0,42.0"
+                Stroke="None" StrokeDashArray="0.0" StrokeWidth="1.0">
+                <Expose ExposedAttribute="Fill" Name="LED Color"/>
+            </Polygon>
+            <Polygon Fill="#303030" Name="h" Opacity="1.0"
+                Points="25.0,84.0 20.0,89.0 25.0,94.0 30.0,89"
+                Stroke="None" StrokeDashArray="0.0" StrokeWidth="1.0">
+                <Expose ExposedAttribute="Fill" Name="LED Color"/>
+            </Polygon>
+        </Component>
+        <Component Clip="False" ContentHeight="94.0" ContentWidth="52.0"
+            Height="94.0" Left="320.0" Name="D1" Top="20.0" Width="52.0">
+            <Polygon Fill="#303030" Name="a" Opacity="1.0"
+                Points="11.0,0.0 6.0,5.0 11.0,10.0 41.0,10.0 46.0,5.0 41.0,0.0"
+                Stroke="None" StrokeDashArray="0.0" StrokeWidth="1.0">
+                <Expose ExposedAttribute="Fill" Name="LED Color"/>
+            </Polygon>
+            <Polygon Fill="#303030" Name="b" Opacity="1.0"
+                Points="42.0,11.0 47.0,6.0 52.0,11.0 52.0,41.0 47.0,46.0 42.0,41.0"
+                Stroke="None" StrokeDashArray="0.0" StrokeWidth="1.0">
+                <Expose ExposedAttribute="Fill" Name="LED Color"/>
+            </Polygon>
+            <Polygon Fill="#303030" Name="c" Opacity="1.0"
+                Points="42.0,53.0 47.0,48.0 52.0,53.0 52.0,83.0 47.0,88.0 42.0,83.0"
+                Stroke="None" StrokeDashArray="0.0" StrokeWidth="1.0">
+                <Expose ExposedAttribute="Fill" Name="LED Color"/>
+            </Polygon>
+            <Polygon Fill="#303030" Name="d" Opacity="1.0"
+                Points="11.0,84.0 6.0,89.0 11.0,94.0 41.0,94.0 46.0,89.0 41.0,84.0"
+                Stroke="None" StrokeDashArray="0.0" StrokeWidth="1.0">
+                <Expose ExposedAttribute="Fill" Name="LED Color"/>
+            </Polygon>
+            <Polygon Fill="#303030" Name="e" Opacity="1.0"
+                Points="0.0,53.0 5.0,48.0 10.0,53.0 10.0,83.0 5.0,88.0 0.0,83.0"
+                Stroke="None" StrokeDashArray="0.0" StrokeWidth="1.0">
+                <Expose ExposedAttribute="Fill" Name="LED Color"/>
+            </Polygon>
+            <Polygon Fill="#303030" Name="f" Opacity="1.0"
+                Points="0.0,11.0 5.0,6.0 10.0,11.0 10.0,41.0 5.0,46.0 0.0,41.0"
+                Stroke="None" StrokeDashArray="0.0" StrokeWidth="1.0">
+                <Expose ExposedAttribute="Fill" Name="LED Color"/>
+            </Polygon>
+            <Polygon Fill="#303030" Name="g" Opacity="1.0"
+                Points="11.0,42.0 6.0,47.0 11.0,52.0 41.0,52.0 46.0,47.0 41.0,42.0"
+                Stroke="None" StrokeDashArray="0.0" StrokeWidth="1.0">
+                <Expose ExposedAttribute="Fill" Name="LED Color"/>
+            </Polygon>
+            <Polygon Fill="#303030" Name="h" Opacity="1.0"
+                Points="25.0,84.0 20.0,89.0 25.0,94.0 30.0,89"
+                Stroke="None" StrokeDashArray="0.0" StrokeWidth="1.0">
+                <Expose ExposedAttribute="Fill" Name="LED Color"/>
+            </Polygon>
+        </Component>
+        <Bind Name="Guage">
+            <Expose ExposedAttribute="Name" Name="Needle Bind"/>
+            <Script OnDocumentLoad="onLoad" OnSignalChange="onChange"><![CDATA[var comp;
+var onCol;
+var offCol;
+
+function onLoad(evt)
+{
+	comp=evt.getCurrentTarget().getParentNode();
+	onCol = comp.getAttribute("Fill");
+	offCol = "#10"+onCol.substring(1,7);
+}
+
+function onChange(evt)
+{
+	var valAr = evt.getValue().toString().split('');
+	valAr = valAr.reverse();
+	for(var i=0; i < 6;i++){
+		if (i < valAr.length){
+			setNumber(comp.getChildByName("D"+(i+1)), valAr[i]);
+		}
+		else{
+			setNumber(comp.getChildByName("D"+(i+1)), "z");
+		}
+	}
+}
+
+function setNumber(tree, val)
+{
+	var bindList = tree.getElementsByTagName("Polygon");
+	for(var i=0; i < bindList.length;i++){
+		bindList.item(i).setAttribute("Fill", offCol);
+		if (i == bindList.length-1) bindList.item(i).setAttribute("Visibility", "Hidden");
+	}
+	var lightUp="";
+	if (val == 0) lightUp="012345";
+	if (val == 1) lightUp="12";
+	if (val == 2) lightUp="01346";
+	if (val == 3) lightUp="01236";
+	if (val == 4) lightUp="1256";
+	if (val == 5) lightUp="02356";
+	if (val == 6) lightUp="23456";
+	if (val == 7) lightUp="012";
+	if (val == 8) lightUp="0123456";
+	if (val == 9) lightUp="01256";
+	if (val.toString() == "."){
+		lightUp="7";
+		bindList.item(7).setAttribute("Visibility", "Visible");
+	}
+	if (val.toString() == "-") lightUp="6";
+	
+	for(var i=0; i < bindList.length;i++){
+		if (lightUp.indexOf(i) >= 0){
+			bindList.item(i).setAttribute("Fill", onCol);
+		}
+	}
+}]]></Script>
+        </Bind>
+    </Component>
+    <Ellipse Height="325.0" Left="27.5" Opacity="1.0" Stroke="#999999"
+        StrokeDashArray="0.0" StrokeWidth="3" Top="32.5" Width="325.0">
+        <RadialGradient Attribute="Fill" Focus="0.5,0.5" RadiusX="0.5"
+            RadiusY="0.5" SpreadMethod="Pad">
+            <GradientStop Color="#10000000" Offset=".95"/>
+            <GradientStop Color="#404040" Offset="1.0"/>
+        </RadialGradient>
+    </Ellipse>
+</Component>

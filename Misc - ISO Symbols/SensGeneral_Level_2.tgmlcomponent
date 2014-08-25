@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<Component Clip="False" ContentHeight="20.0" ContentWidth="50.0"
+    Fill="#FFFFFF" Height="20.0" Left="0.0" Name="SensGeneral_Level_2"
+    Stroke="#000000" Top="0.0" Width="50.0">
+    <Metadata Name="Name" Value="SensGeneral_Level_2"/>
+    <Metadata Name="Description" Value="LevelSensGeneral2"/>
+    <Line StrokeWidth="1.0" X1="20.5" X2="50.0" Y1="10.0" Y2="10.0"/>
+    <Ellipse Height="20.0" Left="0.0" Top="0.0" Width="20.0"/>
+    <Path Fill="#000000"
+        PathData="M7.2360005378723145,14.294998168945313 L7.2360005378723145,5.7050018310546875 8.4070014953613281,5.7050018310546875 8.4070014953613281,13.282001495361328 12.763998985290527,13.282001495361328 12.763998985290527,14.294998168945313 z"
+        Stroke="None" StrokeDashArray="0.0" StrokeWidth="1.0"/>
+</Component>

@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<Component Clip="False" ContentHeight="20" ContentWidth="20"
+    Fill="#FFFFFF" Height="20.0" Left="5.0" Name="Valve_NonReturn_4"
+    Stroke="#000000" Top="0.0" Width="20.0">
+    <Metadata Name="Name" Value="Valve_NonReturn_4"/>
+    <Metadata Name="Description" Value="NonReturnValve4"/>
+    <Polygon Points="5.0,0.0 10.0,10.0 15.0,0.0" StrokeDashArray="0.0" StrokeWidth="1.0"/>
+    <Polygon Points="5.0,20.0 10.0,10.0 15.0,20.0" StrokeDashArray="0.0" StrokeWidth="1.0"/>
+    <Ellipse Fill="#000000" Height="2.0" Left="14.0"
+        StrokeDashArray="0.0" StrokeWidth="1.0" Top="19.0" Width="2.0"/>
+</Component>

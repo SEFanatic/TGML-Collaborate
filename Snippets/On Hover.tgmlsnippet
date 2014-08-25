@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<Snippet>
+    <RadialGradient RadiusX="1" RadiusY="1">
+        <GradientStop Color="None" GColor="#00FF00" Name="CenterColor" Offset="0">
+            <Expose ExposedAttribute="GColor" Name="Color"/>
+        </GradientStop>
+        <GradientStop Color="None" Name="OuterColor" Offset="1"/>
+    </RadialGradient>
+    <Script Name="OnHoverScript" OnDocumentLoad="load" OnMouseOut="out" OnMouseOver="over"><![CDATA[
+		
+var RealColor;	// Variable that's is declared globally. 
+
+function load(evt)
+{
+evt.getCurrentTarget().getChildByName("CenterColor").setAttribute("Color", "None");		// Sets the gradient color to nothing when it loads.
+RealColor = evt.getTarget().getChildByName("CenterColor").getAttribute("GColor");		// Get the exposed property and sets it to a variable. 
+}
+
+function over(evt)																		// Function that handles what happens when the mouse goes over the component.
+{
+if ( RealColor == "" )																	// If statement that alerts the user if there is no color that has been set at the gradient color. 
+{
+	alert("You Did Not Set A Color For Gradient");
+	RealColor = "None" ; 
+}
+evt.getCurrentTarget().getChildByName("CenterColor").setAttribute("Color", RealColor);	// Sets the gradient to the color the exposed property. 
+}
+
+function out(evt)																		// Function that handles what happens when the mouse hovers away from the component. 
+{
+evt.getCurrentTarget().getChildByName("CenterColor").setAttribute("Color", "None");
+}
+
+]]></Script>
+    <Metadata Name="Name" Value="On Hover"/>
+    <Metadata Name="Description" Value=""/>
+</Snippet>

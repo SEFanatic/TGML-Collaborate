@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<Component Clip="False" ContentHeight="40" ContentWidth="20"
+    Fill="#FFFFFF" Height="40.0" Left="0.0" Name="Frost Guard, I"
+    Stroke="#000000" Top="20.0" Width="20.0">
+    <Metadata Name="Name" Value="Frost Guard, I"/>
+    <Metadata Name="Description" Value="Frost Guard"/>
+    <Line StrokeWidth="2.0" X1="10.0" X2="10.0" Y1="0.0" Y2="20.0"/>
+    <Rectangle Height="20.0" Left="0.0" RadiusX="0.0" RadiusY="0.0"
+        StrokeDashArray="0.0" StrokeWidth="1.0" Top="20.0" Width="20.0"/>
+    <Polyline Fill="None"
+        Points="17.603157043457,25.4039916992188 12.5368270874023,25.4039916992188 12.3715400695801,22.5455894470215"
+        StrokeDashArray="0.0" StrokeWidth="1.0"/>
+    <Polyline Fill="None"
+        Points="2.49238967895508,25.2262134552002 7.7368278503418,25.2262134552002 13.603157043457,23.270658493042"
+        StrokeDashArray="0.0" StrokeWidth="1.0"/>
+    <Path Fill="#000000"
+        PathData="M7.0163006782531738,37.5916748046875 L7.0163006782531738,29.001832962036133 12.983698844909668,29.001832962036133 12.983698844909668,30.015504837036133 8.1867027282714844,30.015504837036133 8.1867027282714844,32.6756591796875 12.3380708694458,32.6756591796875 12.3380708694458,33.689334869384766 8.1867027282714844,33.689334869384766 8.1867027282714844,37.5916748046875 z"
+        Stroke="None" StrokeDashArray="0.0" StrokeWidth="1.0"/>
+</Component>

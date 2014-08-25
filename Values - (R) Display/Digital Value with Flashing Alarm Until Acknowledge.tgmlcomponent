@@ -1,0 +1,226 @@
+<?xml version="1.0"?>
+<Component AlarmText="Alarm" Color="#F0080E" ContentHeight="20"
+    ContentWidth="100"
+    Description="Digital Alarm 100 with Flashing Alarm Till Ack"
+    GridSize="5" Height="20.0" Id="" Left="255.0"
+    Name="Digital Value with Flashing Alarm Until Acknowledge"
+    NormalText="Normal" Top="271.0" Width="100.0">
+    <Script OnDocumentLoad="onLoad" OnSignalChange="onChange"><![CDATA[
+
+var comp;	
+var alarmStatus;
+var alarmAcknowledgementStatus;
+var correctAlarmBinding;									// Variables that are declared globally so they can be used in all the functions
+var normalColor;
+var alarmColor;
+var alarmBind;
+var normalText;
+var alarmText;
+
+function onLoad(evt)
+{
+	alarmStatus = false;
+	alarmAcknowledgementStatus = true;
+	correctAlarmBinding = true;
+	comp=evt.getCurrentTarget();
+	normalColor=comp.getChildByName("background").getAttribute("Stroke");		// Short cuts that are going to be used for the component. 
+	alarmColor=comp.getAttribute("Color");
+	normalText = comp.getAttribute("NormalText");
+	alarmText = comp.getAttribute("AlarmText");
+	
+	
+
+	var bindGroup = comp.getChildByName("Binds");
+	if(bindGroup)													// If statement that will set the bind for the component. 
+	{
+		var bindList = bindGroup.getElementsByTagName("Bind");
+		var i = bindList.length;
+		while(i--)
+		{
+			var child = bindList.item(i);
+			var description = String(child.getAttribute("Description"));			
+
+			if(description.equals("Alarm State Bind"))				// Will set the bind if the description matches "Alarm State Bind"
+			{
+				alarmBind = child;
+			}
+		}
+	}
+	else
+	{
+		alert("ERROR: The BindGroup has been removed from this component.");	// An error that will alert the user when there is no bindGroup
+	}
+}
+
+
+function onChange(evt)															// Function that handles what happens when the value of a bind changes. 
+{
+	
+	if(evt.getTarget().getFullBindName() == alarmBind.getFullBindName())
+	{
+		
+		
+		var alarmStateNum = parseInt(evt.getValue());							// This gets the value that was set to component. 
+		
+	
+		
+		switch(alarmStateNum)													// This is a switch statement that takes the value of the component and has cases based off of that. 
+		{
+			
+			case 0:
+			{
+				alarmStatus = false;
+				alarmAcknowledgementStatus = true;
+				correctAlarmBinding = true;
+				break;
+			}
+			
+			case 1:
+			{
+				alarmStatus = true;
+				alarmAcknowledgementStatus = false;
+				correctAlarmBinding = true;
+				break;
+			}
+			
+			case 2:
+			{
+				alarmStatus = true;					
+				alarmAcknowledgementStatus = true;							// Cases that have different settings that will be used later in the component. 
+				correctAlarmBinding = true;
+				break;
+			}
+		
+			case 3:
+			{
+				alarmStatus = false;
+				alarmAcknowledgementStatus = false;
+				correctAlarmBinding = true;
+				break;
+			}
+			case 4:
+			{	
+				alarmStatus = false;
+				alarmAcknowledgementStatus = true;
+				correctAlarmBinding = true;
+				break;
+			}
+			default:
+			{
+				
+				alert("Alarm Not Bound To Alarm State.\nBind name: \"" + evt.getTarget().getFullBindName() + "\""); // An alert that will notify the user if there is nothing bound to the alarm.
+				alarmStatus = false;
+				alarmAcknowledgementStatus = true;
+				correctAlarmBinding = false;
+			}
+		}
+	}
+	
+	
+	var outline = comp.getChildByName("background");
+	
+	
+	// update border and text based on alarm state
+	if(alarmStatus)														// If statement that handles whether the componenet displays whether its in alarm or not. 
+	{
+		outline.setAttribute("Stroke", alarmColor);
+		outline.setAttribute("StrokeWidth", "3");						
+
+		comp.getChildByName("Text").setAttribute("Content", alarmText);
+	}
+	else
+	{
+		outline.setAttribute("Stroke", normalColor);
+		outline.setAttribute("StrokeWidth", "1");
+
+		comp.getChildByName("Text").setAttribute("Content", normalText);
+	}
+	
+	// update flash based on acknowledgement state
+	if(alarmAcknowledgementStatus)											// If statement that handles whether the alarm has been acknowledged
+	{
+		setAttributeById(comp, "Animate", "Animation", "Stop", "AlmAck");
+	}
+	else
+	{
+		setAttributeById(comp, "Animate", "Animation", "Start", "AlmAck");
+	}
+	
+	if(!correctAlarmBinding)												// If statement that sees if it the correct Alarm Binding.
+	{
+		outline.setAttribute("Stroke", normalColor);
+		outline.setAttribute("StrokeWidth", "1");
+		
+		setAttributeById(comp, "Animate", "Animation", "Stop", "AlmAck");
+		
+		comp.getChildByName("Text").setAttribute("Content", "Incorrect Alarm Bind");
+	}
+}
+
+
+function setAttributeById(parent, elementName, attribute, value, id)					// Function that sets attributes by id. Used by If statements in the function above. 
+{
+	
+	var bindList = parent.getElementsByTagName(elementName);
+	
+	for(var i=0; i < bindList.length; i++)
+	{		
+		if (bindList.item(i).getAttribute("Id")==id)
+		{
+			
+			bindList.item(i).setAttribute(attribute, value);
+		}
+		else
+		{
+			
+		}
+	}
+}
+]]></Script>
+    <Expose ExposedAttribute="AlarmText" Name="Alarm Message"/>
+    <Expose ExposedAttribute="NormalText" Name="Normal Message"/>
+    <Expose ExposedAttribute="Color" Name="Alarm Color"/>
+    <Group Name="Display">
+        <Rectangle Fill="None" Height="20.0" Left="0.0"
+            Name="background" RadiusX="5" RadiusY="5" Stroke="#004000"
+            StrokeDashArray="0.0" StrokeWidth="1.0" Top="0.0" Width="100">
+            <LinearGradient EndPoint="0,1">
+                <GradientStop Color="#FEFEFE" Offset="0"/>
+                <GradientStop Color="#DFE0E2" Offset="1.0"/>
+            </LinearGradient>
+            <Expose ExposedAttribute="Stroke" Name="Normal Color"/>
+            <Expose ExposedAttribute="Width" Name="Component Width"/>
+        </Rectangle>
+        <Rectangle Fill="#F0080E" Height="20"
+            Name="Alarm Acknowledgement" RadiusX="5" RadiusY="5"
+            Stroke="None" Visibility="Hidden" Width="100">
+            <Animate Animation="Stop" Attribute="Visibility"
+                Duration="2" From="Hidden" Id="AlmAck" To="Visible">
+                <Expose ExposedAttribute="Duration" Name="Flash Speed"/>
+            </Animate>
+            <RadialGradient RadiusX="2" RadiusY="1">
+                <GradientStop Color="#77F0080E" Offset="0"/>
+                <GradientStop Color="#EEF0080E" Offset="1.0"/>
+            </RadialGradient>
+            <Expose ExposedAttribute="Width" Name="Component Width"/>
+        </Rectangle>
+        <TextBox Fill="None" FontFamily="Arial" FontSize="15.0"
+            FontStyle="Normal" FontWeight="Normal" Height="20.0"
+            HorizontalAlign="Center" Left="2.5" Name="Text"
+            Stroke="#000000" TextDecoration="None" Top="0.0"
+            VerticalAlign="Middle" Width="95"><![CDATA[...]]><Expose
+                ExposedAttribute="Width" Name="Component Width"/>
+            <Expose ExposedAttribute="Left" Name="Text Position"/>
+        </TextBox>
+    </Group>
+    <Group Name="Binds">
+        <Bind Description="Alarm State Bind" Name="Alarm State" PreventDefault="True">
+            <Expose ExposedAttribute="Name" Name="Alarm State Bind"/>
+            <Expose ExposedAttribute="PreventDefault" Name="Prevent Default"/>
+        </Bind>
+    </Group>
+    <Expose ExposedAttribute="ContentWidth" Name="Component Width"/>
+    <Expose ExposedAttribute="Width" Name="Component Width"/>
+    <Metadata Name="Name" Value="Digital Value with Flashing Alarm Until Acknowledge"/>
+    <Metadata Name="Description" Value=""/>
+</Component>

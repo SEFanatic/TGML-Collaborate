@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<Component Clip="False" ComponentCounter="7" ContentHeight="20"
+    ContentWidth="20" GridSize="5" Height="20.0" Left="5.0" Name="CwFlC"
+    Top="5.0" Width="20.0">
+    <Metadata Name="Name" Value="CwFlC"/>
+    <Metadata Name="Description" Value="== Exposed Properties ==&#xd;&#xa;&lt;name> - &lt;default value> - &lt;Description>&#xd;&#xa;CwFlColour  - #87D300 - Base color of pipe"/>
+    <Metadata Name="Version" Value="1.0"/>
+    <Polygon Fill="#87D300" Opacity="1.0"
+        Points="5.0,10.0 10.0,10.0 10.0,5.0 15.0,5.0 15.0,10.0 20.0,10.0 20.0,15.0 15.0,15.0 15.0,20.0 10.0,20.0 10.0011682510376,15.0023365020752 5.0,15.0"
+        Stroke="#87D300" StrokeDashArray="0.0" StrokeWidth="1.0">
+        <Expose ExposedAttribute="Fill" Name="CwFlColour"/>
+        <Expose ExposedAttribute="Stroke" Name="CwFlColour"/>
+    </Polygon>
+    <Polyline Opacity="1.0" Points="10.0,5.0 10.0,10.0 5.0,10.0"
+        Stroke="#5F000000" StrokeDashArray="0.0" StrokeWidth="1.0"/>
+    <Polyline Opacity="1.0" Points="15,5 15.0,10.0 20,10"
+        Stroke="#5F000000" StrokeDashArray="0.0" StrokeWidth="1.0"/>
+    <Polyline Opacity="1.0" Points="15.0,20.0 15,15 20.0,15.0"
+        Stroke="#5F000000" StrokeDashArray="0.0" StrokeWidth="1.0"/>
+    <Polyline Opacity="1.0" Points="5.0,15.0 10.0,15.0 10.0,20.0"
+        Stroke="#5F000000" StrokeDashArray="0.0" StrokeWidth="1.0"/>
+</Component>

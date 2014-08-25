@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<Component Clip="False" ContentHeight="60" ContentWidth="20"
+    Fill="#FFFFFF" Height="60.0" Left="0.0"
+    Name="Valve_2MagnetWay_Closed" Stroke="#000000" Top="5.0" Width="20.0">
+    <Polygon Points="5.0,24.0 10.0,14.0 15.0,24.0" StrokeDashArray="0.0" StrokeWidth="1.0"/>
+    <Metadata Name="Name" Value="Valve_2MagnetWay_Closed"/>
+    <Metadata Name="Description" Value="Valve_2MagnetWay_Closed"/>
+    <Polygon Points="0.0,5.0 10.0,10.0 0.0,15.0" StrokeDashArray="0.0" StrokeWidth="1.0"/>
+    <Polygon Points="20.0,5.0 10.0,10.0 20.0,15.0" StrokeDashArray="0.0" StrokeWidth="1.0"/>
+    <Rectangle Height="30.0" Left="0.0" RadiusX="0.0" RadiusY="0.0"
+        StrokeDashArray="0.0" StrokeWidth="1.0" Top="30.0" Width="20.0"/>
+    <Line StrokeDashArray="0.0" StrokeWidth="1.0" X1="0.0" X2="20.0"
+        Y1="40.0" Y2="50.0"/>
+    <Line StrokeDashArray="0.0" StrokeWidth="1.0" X1="10.0" X2="10.0"
+        Y1="10.0" Y2="30.0"/>
+</Component>

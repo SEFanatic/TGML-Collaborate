@@ -1,0 +1,273 @@
+<?xml version="1.0"?>
+<Component Clip="False" ContentHeight="40.0" ContentWidth="210.0"
+    Decimals="0" Fill="#CC001F85" Height="40.0" Left="5.0"
+    MaxValue="100" MinValue="0" Name="Trackbar" Push="#3F000000"
+    Stroke="#808080" Top="0.0" Width="210.0">
+    <Expose ExposedAttribute="MaxValue" Name="Value, Max"/>
+    <Expose ExposedAttribute="MinValue" Name="Value, Min"/>
+    <Expose ExposedAttribute="Decimals" Name="Value, Decimals"/>
+    <Group>
+        <Rectangle Fill="None" Height="10.0" Left="5.0" Name="Edge"
+            Opacity="1.0" RadiusX="0.0" RadiusY="0.0"
+            StrokeDashArray="0.0" StrokeWidth="1.0" Top="15.0" Width="200.0"/>
+        <Rectangle Fill="#BBBBFF" Height="8.0" Left="6.0" Name="Bar"
+            Opacity="1.0" RadiusX="0.0" RadiusY="0.0" Stroke="None"
+            StrokeDashArray="0.0" StrokeWidth="1.0" Top="16.0" Width="99.0">
+            <Bind Attribute="Width" Name="Value" PreventDefault="True">
+                <Expose ExposedAttribute="Name" Name="BindName"/>
+                <ConvertValue AttributeValue="0" SignalLessOrEqualTo="0">
+                    <Expose ExposedAttribute="SignalLessOrEqualTo" Name="Value, Min"/>
+                </ConvertValue>
+                <ConvertRange AttributeMaxValue="198"
+                    AttributeMinValue="0" SignalMaxValue="100" SignalMinValue="0">
+                    <Expose ExposedAttribute="SignalMinValue" Name="Value, Min"/>
+                    <Expose ExposedAttribute="SignalMaxValue" Name="Value, Max"/>
+                </ConvertRange>
+                <ConvertValue AttributeValue="198" SignalMoreOrEqualTo="100">
+                    <Expose ExposedAttribute="SignalMoreOrEqualTo" Name="Value, Max"/>
+                </ConvertValue>
+            </Bind>
+            <Expose ExposedAttribute="Fill" Name="BarColor"/>
+        </Rectangle>
+        <Rectangle Fill="None" Height="8.0" Left="6.0" Name="Light"
+            Opacity="1.0" RadiusX="0.0" RadiusY="0.0" Stroke="None"
+            StrokeDashArray="0.0" StrokeWidth="1.0" Top="16.0"
+            Visibility="Visible" Width="198.0">
+            <LinearGradient EndPoint="0.0,1.0">
+                <GradientStop Color="#B2FFFFFF" Offset="0"/>
+                <GradientStop Color="#19000000" Offset="1.0"/>
+            </LinearGradient>
+        </Rectangle>
+        <Path Fill="None" Name="Scales"
+            PathData="M25.0,-0.0 L25.0,10.0 M45.0,-0.0 L45.0,10.0 M65.0,-0.0 L65.0,10.0 M85.0,-0.0 L85.0,10.0 M105.0,-0.0 L105.0,10.0 M125.0,-0.0 L125.0,10.0 M145.0,-0.0 L145.0,10.0 M165.0,-0.0 L165.0,10.0 M185.0,-0.0 L185.0,10.0"
+            StrokeDashArray="0.0" StrokeWidth="1.0"/>
+        <Path Fill="None" Name="Scales"
+            PathData="M25.0,30.0 L25.0,40.0 M45.0,30.0 L45.0,40.0 M65.0,30.0 L65.0,40.0 M85.0,30.0 L85.0,40.0 M105.0,30.0 L105.0,40.0 M125.0,30.0 L125.0,40.0 M145.0,30.0 L145.0,40.0 M165.0,30.0 L165.0,40.0 M185.0,30.0 L185.0,40.0"
+            StrokeDashArray="0.0" StrokeWidth="1.0"/>
+    </Group>
+    <Expose ExposedAttribute="Fill" Name="ButtonColor"/>
+    <Expose ExposedAttribute="Stroke" Name="ScaleColor"/>
+    <Component Clip="False" ContentHeight="30.0" ContentWidth="10.0"
+        Height="30.0" Left="100.0" Name="" Top="5.0" Width="10.0">
+        <Script OnMouseClick="" OnMouseDown="down" OnMouseMove="move"
+            OnMouseOut="out" OnMouseOver="over" OnMouseUp="up" OnSignalChange="signal"><![CDATA[var currentValue = NaN;
+var moveState = false;
+var offsetLeft = 0;
+var initiated = false;
+
+// --------------------------------------------------
+// Mouse event handlers
+// --------------------------------------------------
+
+function over(evt)
+{
+  if(initiated)
+  {
+    var component = evt.getCurrentTarget();
+    component.getChild("Hover").setAttribute("Visibility", "Visible");
+  }
+}
+        	
+function out(evt)
+{
+  if(initiated)
+  {
+    var component = evt.getCurrentTarget();
+    component.getChild("Hover").setAttribute("Visibility", "Hidden");
+    component.getChild("Edge").setAttribute("Fill", "None");
+
+    if(endMoveOnOut(evt) == false)
+    {
+      var errorBlink = component.getChild("Status").getChild("ErrorBlink");
+      errorBlink.setAttribute("Animation", "Stop");
+      errorBlink.setAttribute("Animation", "Start");
+    }
+  }
+}
+
+function down(evt)
+{
+  if(evt.getButton() != 0  || !initiated) return;
+
+  var component = evt.getCurrentTarget();
+  var color = component.getAttribute("Push");
+  component.getChild("Edge").setAttribute("Fill", color);
+
+  startMove(evt);
+}
+        	
+function up(evt)
+{
+  if(evt.getButton() != 0  || !initiated) return;
+
+  var component = evt.getCurrentTarget();
+  component.getChild("Edge").setAttribute("Fill", "None");
+
+  if (endMove(evt) == false)
+  {
+    var errorBlink = component.getChild("Status").getChild("ErrorBlink");
+    errorBlink.setAttribute("Animation", "Stop");
+    errorBlink.setAttribute("Animation", "Start");
+  }
+}
+
+function move(evt)
+{
+  if(moveState == true)
+  {
+    var component = evt.getCurrentTarget();
+    var left = evt.getCurrentTargetParentX() - offsetLeft;
+    component.setAttribute("Left", Math.max(0, Math.min(left, 200)));
+  }
+}
+
+// --------------------------------------------------
+// Move functions
+// --------------------------------------------------
+
+function startMove(evt)
+{
+  moveState = true;
+  offsetLeft = evt.getCurrentTargetX();
+}
+
+function endMove(evt)
+{
+  component = evt.getCurrentTarget();
+  moveState = false;
+  return setCurrentValue(component);
+}
+
+function endMoveOnOut(evt)
+{
+  var result = true;
+  var component = evt.getCurrentTarget();
+  
+  if (moveState == true)
+  {
+    result = setCurrentValue(component);
+  }
+  
+  moveState = false;
+  return result;
+}
+        	
+// --------------------------------------------------
+// Value functions
+// --------------------------------------------------
+
+function signal(evt)
+{
+  var component = evt.getCurrentTarget();
+  currentValue = evt.getValue();
+
+  initiated = true;
+
+  if (moveState == false)
+  {
+    var value = calculateSignal(component, new Number(currentValue));
+    component.setAttribute("Left", Math.max(0, Math.min(value, 200)));
+  }
+}
+
+function setCurrentValue(component)
+{
+  var oldValue = new Number(currentValue);
+         		
+  if(!isNaN(oldValue))
+  {
+    var value = new Number(calculateValue(component));
+        	    	
+    var nodeList = component.getChildNodes();
+    var length = nodeList.getLength();
+    var fullName = "";
+        	    		
+    for(i=0; i<length; ++i)
+    {
+      var node = nodeList.item(i);
+      if(node.getTagName() == "Bind")
+      {
+        fullName = node.getFullBindName();
+        break;
+      }
+    }
+
+    return setValue(fullName, value);
+  }
+  return true;
+}
+        	        	
+function calculateValue(component)
+{
+  var min = new Number(component.getAttribute("MinValue"));
+  var max = new Number(component.getAttribute("MaxValue"));
+  var decimals = new Number(component.getAttribute("Decimals"));
+	
+  var position = new Number(component.getAttribute("Left"));
+  var value = (position) * (max - min) / 200 + min;
+
+  return value.toFixed(decimals);
+}
+
+function calculateSignal(component, value)
+{
+  var min = new Number(component.getAttribute("MinValue"));
+  var max = new Number(component.getAttribute("MaxValue"));
+  var decimals = new Number(component.getAttribute("Decimals"));
+	
+  var position = (value.toFixed(decimals) - min) * (200) / (max - min);
+
+  return position.toFixed(0);
+}]]></Script>
+        <Bind Name="Value" PreventDefault="True">
+            <Expose ExposedAttribute="Name" Name="BindName"/>
+        </Bind>
+        <Rectangle Height="28.0" Left="1.0" Name="Background"
+            Opacity="1.0" RadiusX="2.0" RadiusY="2.0" Stroke="#FFFFFF"
+            StrokeDashArray="0.0" StrokeWidth="3.0" Top="1.0" Width="8.0"/>
+        <Rectangle Fill="None" Height="30.0" Left="0.0" Name="Hover"
+            Opacity="1.0" RadiusX="3.0" RadiusY="3.0" Stroke="None"
+            StrokeDashArray="0.0" StrokeWidth="1.0" Top="0.0"
+            Visibility="Hidden" Width="10.0">
+            <RadialGradient Attribute="Fill" Center="0.5,0.5"
+                Focus="0.5,1.0" RadiusX="0.7" RadiusY="0.7" SpreadMethod="Pad">
+                <GradientStop Color="#33BBF7" Offset="0.0">
+                    <Expose
+                        Description="The color of the hover indication."
+                        ExposedAttribute="Color" Name="HoverColor"/>
+                </GradientStop>
+                <GradientStop Color="None" Offset="1.0"/>
+            </RadialGradient>
+        </Rectangle>
+        <Rectangle Fill="None" Height="28.0" Left="1.0" Name="Edge"
+            Opacity="1.0" RadiusX="2.0" RadiusY="2.0" Stroke="#000000"
+            StrokeDashArray="0.0" StrokeWidth="1.0" Top="1.0"
+            Visibility="Visible" Width="8.0"/>
+        <Rectangle Fill="None" Height="26.0" Left="2.0" Name="Light"
+            Opacity="1.0" RadiusX="1.0" RadiusY="1.0" Stroke="None"
+            StrokeDashArray="0.0" StrokeWidth="1.0" Top="2.0"
+            Visibility="Visible" Width="6.0">
+            <LinearGradient EndPoint="0.0,1.0">
+                <GradientStop Color="#B2FFFFFF" Offset="0"/>
+                <GradientStop Color="#19FFFFFF" Offset="0.5"/>
+                <GradientStop Color="#19000000" Offset="0.5"/>
+                <GradientStop Color="None" Offset="0.8"/>
+                <GradientStop Color="#33FFFFFF" Offset="1.0"/>
+            </LinearGradient>
+        </Rectangle>
+        <Rectangle Fill="None" Height="29.0" Left="0.5" Name="Status"
+            Opacity="1.0" RadiusX="2.0" RadiusY="2.0" Stroke="None"
+            StrokeDashArray="0.0" StrokeWidth="2.0" Top="0.5"
+            Visibility="Visible" Width="9.0">
+            <Animate Animation="Stop" Attribute="Stroke" Duration="1"
+                From="#FF0000" Name="ErrorBlink" Repeat="3" To="#000000"/>
+            <Bind Attribute="Stroke" Name="Value" PreventDefault="True">
+                <Expose ExposedAttribute="Name" Name="BindName"/>
+                <ConvertStatus Error="#C00000" Forced="#1E90FF" Stored="#FFBF00"/>
+            </Bind>
+        </Rectangle>
+        <TargetArea Height="30.0" Left="0.0" Top="0.0" Width="10.0"/>
+    </Component>
+    <Metadata Name="Name" Value="Trackbar"/>
+    <Metadata Name="Description" Value="Trackbar that shows/sets a value.&#xd;&#xa;&#xd;&#xa;== Bindings ==&#xd;&#xa;Value: A numeric value.&#xd;&#xa;&#xd;&#xa;== Exposed Properties ==&#xd;&#xa;Value, Max: The maximum value.&#xd;&#xa;Value, Min: The minimum value.&#xd;&#xa;Value, Decimals: The number of decimals to display.&#xd;&#xa;BindName: The name of the binding.&#xd;&#xa;BarColor: The color of the value bar.&#xd;&#xa;ButtonColor: The color of the slider.&#xd;&#xa;ScaleColor: The color of the scale.&#xd;&#xa;HoverColor: The color of the slider when the mouse is over it."/>
+</Component>

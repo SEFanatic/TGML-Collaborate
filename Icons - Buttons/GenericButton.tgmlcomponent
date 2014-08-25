@@ -1,0 +1,82 @@
+<?xml version="1.0"?>
+<Component Clip="False" ContentHeight="30.0" ContentWidth="70.0"
+    Height="30.0" Id="GenericButton" Left="50.0" Name="GenericButton"
+    Top="490.0" Width="70.0">
+    <Expose ExposedAttribute="Id" Name="ButtonName"/>
+    <Expose ExposedAttribute="Name" Name="ButtonName"/>
+    <Expose ExposedAttribute="Height" Name="ButtonHeight"/>
+    <Expose ExposedAttribute="ContentHeight" Name="ButtonHeight"/>
+    <Expose ExposedAttribute="Width" Name="ButtonWidth"/>
+    <Expose ExposedAttribute="ContentWidth" Name="ButtonWidth"/>
+    <Rectangle Fill="#21BCEF" Height="30.0" Left="0.0" Name="Background"
+        Opacity="1.0" RadiusX="5.0" RadiusY="5.0" Stroke="#006699"
+        StrokeDashArray="0.0" StrokeWidth="2.0" Top="0.0" Width="70.0">
+        <Expose ExposedAttribute="Fill" Name="ButtonFillColor"/>
+        <Expose ExposedAttribute="Stroke" Name="ButtonStrokeColor"/>
+        <Expose ExposedAttribute="Height" Name="ButtonHeight"/>
+        <Expose ExposedAttribute="Width" Name="ButtonWidth"/>
+    </Rectangle>
+    <Rectangle Fill="#006699" Height="30.0" Left="0.0" Name="Hover"
+        Opacity="1.0" RadiusX="5.0" RadiusY="5.0" Stroke="#006699"
+        StrokeDashArray="0.0" StrokeWidth="3.0" Top="0.0"
+        Visibility="Hidden" Width="70.0">
+        <Expose ExposedAttribute="Fill" Name="HoverColor"/>
+        <Expose ExposedAttribute="Stroke" Name="ButtonStrokeColor"/>
+        <Expose ExposedAttribute="Height" Name="ButtonHeight"/>
+        <Expose ExposedAttribute="Width" Name="ButtonWidth"/>
+    </Rectangle>
+    <Rectangle Fill="#006699" Height="30.0" Left="0.0" Name="Selected"
+        Opacity="1.0" RadiusX="5.0" RadiusY="5.0" Stroke="#006699"
+        StrokeDashArray="0.0" StrokeWidth="3.0" Top="0.0"
+        Visibility="Hidden" Width="70.0">
+        <Expose ExposedAttribute="Fill" Name="SelectedColor"/>
+        <Expose ExposedAttribute="Stroke" Name="ButtonStrokeColor"/>
+        <Expose ExposedAttribute="Height" Name="ButtonHeight"/>
+        <Expose ExposedAttribute="Width" Name="ButtonWidth"/>
+    </Rectangle>
+    <Rectangle Fill="#FFFFFF" Height="30.0" Left="0.0" Name="Shading"
+        Opacity="1.0" RadiusX="5.0" RadiusY="5.0" Stroke="None"
+        StrokeDashArray="0.0" StrokeWidth="4.0" Top="0.0"
+        Visibility="Visible" Width="70.0">
+        <LinearGradient EndPoint="0.0,1.0">
+            <GradientStop Color="#B2FFFFFF" Offset="0"/>
+            <GradientStop Color="#19FFFFFF" Offset="0.5"/>
+            <GradientStop Color="#19000000" Offset="0.5"/>
+            <GradientStop Color="None" Offset="0.8"/>
+            <GradientStop Color="#33FFFFFF" Offset="1.0"/>
+        </LinearGradient>
+        <Expose ExposedAttribute="Height" Name="ButtonHeight"/>
+        <Expose ExposedAttribute="Width" Name="ButtonWidth"/>
+    </Rectangle>
+    <TextBox FontFamily="Arial" FontSize="14.0" FontStyle="Normal"
+        FontWeight="Normal" Height="30.0" HorizontalAlign="Center"
+        Left="0.0" Name="Text" Opacity="1.0" Stroke="#FFFFFF"
+        TextDecoration="None" Top="0.0" VerticalAlign="Middle" Width="70.0">
+        <Expose ExposedAttribute="Content" Name="ButtonText"/>
+        <Expose ExposedAttribute="Stroke" Name="ButtonTextColor"/>
+        <Expose ExposedAttribute="FontSize" Name="ButtonFontSize"/>
+        <Expose ExposedAttribute="Height" Name="ButtonHeight"/>
+        <Expose ExposedAttribute="Width" Name="ButtonWidth"/><![CDATA[Button]]></TextBox>
+    <Script Name="VisualEffects" OnDocumentLoad="" OnMouseClick=""
+        OnMouseMove="" OnMouseOut="onMouseOut" OnMouseOver="onMouseOver"><![CDATA[function onMouseOut(evt)
+{
+	var t = evt.getCurrentTarget();
+	
+	var rect = t.firstChild;
+		
+	rect.setAttribute("StrokeWidth","2.0");
+	t.getChild("Hover").setAttribute("Visibility","Hidden");	
+}
+
+function onMouseOver(evt)
+{
+	var t = evt.getCurrentTarget();
+		
+	var rect = t.firstChild;
+		
+	rect.setAttribute("StrokeWidth","4.0");
+	t.getChild("Hover").setAttribute("Visibility", "Visible");	
+}]]></Script>
+    <Metadata Name="Name" Value="GenericButton"/>
+    <Metadata Name="Description" Value="GenericButton without any Link or Script that add function.&#xd;&#xa;&#xd;&#xa;The &quot;OpenIn&quot; snippets from the 'SBO TGML Snippets Library 2013' can be dropped onto the button, e.g. OpenInParent, OpenInFloatingWindow etc.&#xd;&#xa;&#xd;&#xa;NOTE! To resize the button please use the following properties on the Button component:&#xd;&#xa;ButtonHeight&#xd;&#xa;ButtonWidth"/>
+</Component>
