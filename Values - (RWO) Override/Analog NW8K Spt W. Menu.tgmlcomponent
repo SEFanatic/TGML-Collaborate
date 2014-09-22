@@ -1,0 +1,482 @@
+<?xml version="1.0"?>
+<Component Clip="False" ContentHeight="20" ContentWidth="100"
+    Decimals="1" Fill="#FFD100" Height="20.0" Left="587.0"
+    Name="Analog NW8K Spt W. Menu" Top="311.0" Visibility="Visible" Width="100.0">
+    <Component Clip="False" Height="0" Id="" Left="-100" Name=""
+        Top="-80" Visibility="Hidden" Width="0">
+        <Group Name="01">
+            <Rectangle Fill="#FFFFFF" Height="145" Left="0"
+                Name="Background" RadiusX="5" RadiusY="5"
+                Stroke="#626469" Top="0" Width="260"/>
+            <Rectangle Fill="None" Height="20" Left="185"
+                Name="Value Display Background" RadiusX="5" RadiusY="5"
+                Stroke="#626469" Top="30" Width="65"/>
+            <Rectangle Fill="None" Height="20.0" Left="185"
+                Name="Value Requested Display Background" RadiusX="5"
+                RadiusY="5" Stroke="#626469" Top="55" Width="65"/>
+            <Rectangle Fill="None" Height="20.0" Left="185"
+                Name="Override Time Value Display Background"
+                RadiusX="5" RadiusY="5" Stroke="#626469" Top="90" Width="65.0"/>
+            <Rectangle Fill="None" Height="20.0" Left="185"
+                Name="Override Time Requested Display Background"
+                RadiusX="5" RadiusY="5" Stroke="#626469" Top="115" Width="65.0"/>
+            <TextBox Fill="None" FontFamily="Arial" FontSize="13"
+                FontStyle="Normal" FontWeight="Normal" Height="20"
+                HorizontalAlign="Center" Left="187"
+                Name="Point Value Text Display" Opacity="1.0"
+                Stroke="#000000" TextDecoration="None" Top="33"
+                VerticalAlign="Top" Width="65"><![CDATA[...]]></TextBox>
+            <TextBox Fill="None" FontFamily="Arial" FontSize="13"
+                FontStyle="Normal" FontWeight="Normal" Height="20"
+                HorizontalAlign="Center" Left="187"
+                Name="Value Requested Text Display" Opacity="1.0"
+                Stroke="#000000" TextDecoration="None" Top="56"
+                VerticalAlign="Top" Width="65"><![CDATA[...]]></TextBox>
+            <TextBox Fill="None" FontFamily="Arial" FontSize="12"
+                FontStyle="Normal" FontWeight="Normal" Height="20.0"
+                HorizontalAlign="Center" Left="185"
+                Name="Override Time Value Text Display" Opacity="1.0"
+                Stroke="#000000" TextDecoration="None" Top="93"
+                VerticalAlign="Top" Width="65"><![CDATA[...]]></TextBox>
+            <TextBox Fill="None" FontFamily="Arial" FontSize="12"
+                FontStyle="Normal" FontWeight="Normal" Height="20.0"
+                HorizontalAlign="Center" Left="185"
+                Name="Override Time Requested Text Display"
+                Opacity="1.0" Stroke="#000000" TextDecoration="None"
+                Top="116" VerticalAlign="Top" Width="65.0"><![CDATA[...]]></TextBox>
+            <Text Fill="#FFFFFF" FontFamily="Arial" FontSize="12"
+                FontStyle="Normal" FontWeight="Normal"
+                HorizontalAlign="Right" Left="180"
+                Name="Point Value Label" Opacity="1.0" Stroke="#000000"
+                TextDecoration="None" Top="35" VerticalAlign="Top"><![CDATA[Value]]></Text>
+            <Text Fill="None" FontFamily="Arial" FontSize="12"
+                FontStyle="Normal" FontWeight="Normal"
+                HorizontalAlign="Right" Left="183"
+                Name="Value Requested Label" Opacity="1.0"
+                Stroke="#000000" TextDecoration="None" Top="55" VerticalAlign="Top"><![CDATA[Requested ]]></Text>
+            <Text Fill="None" FontFamily="Arial" FontSize="12"
+                FontStyle="Normal" FontWeight="Normal"
+                HorizontalAlign="Right" Left="180"
+                Name="Override Time Value Label" Opacity="1.0"
+                Stroke="#000000" TextDecoration="None" Top="95" VerticalAlign="Top"><![CDATA[Time Remaining]]></Text>
+            <Text Fill="None" FontFamily="Arial" FontSize="12"
+                FontStyle="Normal" FontWeight="Normal"
+                HorizontalAlign="Right" Left="180"
+                Name="Override Time Requested Label" Opacity="1.0"
+                Stroke="#000000" TextDecoration="None" Top="115" VerticalAlign="Top"><![CDATA[Time Requested]]></Text>
+            <TextBox Fill="None" FontFamily="Arial" FontSize="15.0"
+                FontStyle="Normal" FontWeight="Bold"
+                Height="20.490394592285156" HorizontalAlign="Left"
+                Left="15" Name="Component Title" Opacity="1.0"
+                Stroke="#000000" TextDecoration="None" Top="3"
+                VerticalAlign="Top" Width="135.98178100585938"><![CDATA[Test Title]]></TextBox>
+            <Bind Name="NOTE1" PreventDefault="False"/>
+            <Bind Name="DESCR" PreventDefault="False"/>
+            <Bind Name="NAME" PreventDefault="False"/>
+            <Script Name="Title Managment" OnMouseClick="OnClick"
+                OnMouseDown="OnMouseDown" OnSignalChange="OnChange"><![CDATA[var Note1Selector  = 0; 
+var DESCRSelector = 0;
+var NAMESelector = 0;					// Global variables that are going to be used in the rest of the component. 
+var Note1Title = "";
+var DESCRTitle = "";
+var NAMESTitle = ""; 
+	
+	function OnChange(evt)
+{
+var GroupAccess1 =evt.getCurrentTarget().getParentNode().getParentNode().getChildNodes().item(0).getChildNodes().item(0);
+var GroupAccess2 =evt.getCurrentTarget().getParentNode().getParentNode().getChildNodes().item(1).getChildNodes().item(0);		// Shortcuts that access the seperate components without having names be used so they do not intefere with the bind names.
+var GroupAccess3 =evt.getCurrentTarget().getParentNode().getParentNode().getChildNodes().item(2).getChildNodes().item(0);
+
+var comp=evt.getCurrentTarget().getParentNode();
+var NewTitle = evt.getValue();																									// Gets the value of the bind that was just given a value. In this case the value is going to be the title name.
+var Note1Bind = GroupAccess1.getElementsByTagName("Bind").item(0).getFullBindName();
+var DESCRBind = GroupAccess1.getElementsByTagName("Bind").item(1).getFullBindName();			// Sets the binds that are used to see what the title name is going to be. 
+var NAMEBind = GroupAccess1.getElementsByTagName("Bind").item(2).getFullBindName();
+var ComponentTitle = GroupAccess1.getChildByName("Component Title");
+var Note1Val = evt.getTarget().getFullBindName() == Note1Bind;
+var DESCRVal = evt.getTarget().getFullBindName() == DESCRBind;									// Short cuts that checks which bind that is being given a value to. I used these to see give a value to the global values and then used 
+var NAMEVal =  evt.getTarget().getFullBindName() == NAMEBind;									// the values of the global values to make an if statement. 
+
+	if(Note1Val)
+	{
+		if (NewTitle == "")
+		{
+		Note1Selector = 0; 										// If statement that checks whether the Note1 bind is changed and sets it to zero if the value assigned is empty.
+		}else{													// Sets Note1Title to the value assigned to the bind. 
+		Note1Selector = 1
+		Note1Title = NewTitle;
+		}
+	}else if(DESCRVal)
+	{
+		if (NewTitle == "")
+		{
+		DESCRSelector = 0; 										// If statement that checks whether the DESCR bind is changed and sets it to zero if the value assigned is empty.
+		}else{													// Sets DESCRTitle to the value assigned to the bind. 
+		DESCRSelector = 1
+		DESCRTitle = NewTitle;
+		}
+	}else if(NAMEVal)
+	{
+		if (NewTitle == "")
+		{
+		NAMESelector = 0; 										// If statement that checks whether the NAME bind is changed and sets it to zero if the value assigned is empty.
+		}else{													// Sets NAMESelector to the value assigned to the bind.
+		NAMESelector = 1
+		NAMESTitle = NewTitle;
+		}
+	}
+
+
+	if(Note1Selector == 1)										//	If statement that handles the priory functions. Uses the Selectors to know whether there has been a value assigned to the bind. 
+	{
+	
+	ComponentTitle.setAttribute("Content" , Note1Title);		// Sets the component title to the the value of the bind of Note1Title.
+	
+	}else if (Note1Selector == 0 && DESCRSelector == 1 )
+	{
+	
+	ComponentTitle.setAttribute("Content" , DESCRTitle);		// Sets the component title to the the value of the bind of DESCRTitle.
+	
+	}else if (Note1Selector == 0 && DESCRSelector == 0 && NAMESelector == 1)
+	{
+	
+	ComponentTitle.setAttribute("Content" , NAMESTitle);		// Sets the component title to the the value of the bind of NAMESTitle.
+	
+	}
+}
+
+
+
+function OnClick(evt)
+{
+evt.preventDefault();
+var GroupAccess1 =evt.getCurrentTarget().getParentNode().getParentNode().getChildNodes().item(0);
+var GroupAccess2 =evt.getCurrentTarget().getParentNode().getParentNode().getChildNodes().item(1);		// Shortcuts that access the seperate components without having names be used so they do not intefere with the bind names.
+var GroupAccess3 =evt.getCurrentTarget().getParentNode().getParentNode().getChildNodes().item(2);
+var GroupAccess4 =evt.getCurrentTarget().getParentNode().getParentNode().getChildNodes().item(3);
+evt.preventDefault();
+var Button = evt.getButton();
+
+if (Button == 2)
+{
+
+var comp=evt.getCurrentTarget().getParentNode();
+ GroupAccess1.setAttribute("Visibility", "Hidden");		// This is the JavaScript for the close button. This sets the components to hidden
+ GroupAccess2.setAttribute("Visibility", "Hidden");		// except for the analog display. This closes the menu. 
+ GroupAccess3.setAttribute("Visibility", "Visible");
+ GroupAccess4.setAttribute("Visibility", "Hidden");
+}
+
+}
+
+function OnMouseDown(evt)
+{
+}]]></Script>
+            <Line Stroke="#626469" StrokeWidth=".5" Visibility="Visible"
+                X1="10" X2="252" Y1="83" Y2="83"/>
+            <Line Stroke="#626469" StrokeWidth=".5" Visibility="Visible"
+                X1="10" X2="252" Y1="22" Y2="22"/>
+        </Group>
+    </Component>
+    <Component Clip="False" Id="" Left="-107" Name="" Top="-103" Visibility="Hidden">
+        <Group Name="02">
+            <Rectangle Fill="None" Height="20.0" Left="15"
+                Name="background" RadiusX="5" RadiusY="5"
+                Stroke="#626469" StrokeDashArray="0.0" StrokeWidth="1.0"
+                Top="53" Width="70">
+                <LinearGradient EndPoint="0,1">
+                    <GradientStop Color="#FEFEFE" Offset="0"/>
+                    <GradientStop Color="#DFE0E2" Offset="1.0"/>
+                </LinearGradient>
+                <Expose ExposedAttribute="Stroke" Name="Normal Color"/>
+            </Rectangle>
+            <TextBox Fill="None" FontFamily="Arial" FontSize="12"
+                FontStyle="Normal" FontWeight="Normal" Height="20.0"
+                HorizontalAlign="Center" Left="15" Name="Text"
+                Stroke="#000000" TextDecoration="None" Top="53"
+                VerticalAlign="Middle" Width="70"><![CDATA[Override]]></TextBox>
+            <Bind Name="AV" PreventDefault="True">
+                <Expose ExposedAttribute="Name" Name="Value Bind Name"/>
+            </Bind>
+            <Bind Name="OvTim" PreventDefault="True">
+                <Expose ExposedAttribute="Name" Name="OvTim Bind Name "/>
+            </Bind>
+            <Script Name="OnClickBehavior" OnMouseClick="OnClick" OnSignalChange="OnChange"><![CDATA[function OnClick(evt)																								
+{
+var GroupAccess1 =evt.getCurrentTarget().getParentNode().getParentNode().getChildNodes().item(0).getChildNodes().item(0);
+var GroupAccess2 =evt.getCurrentTarget().getParentNode().getParentNode().getChildNodes().item(1).getChildNodes().item(0);	// Shortcuts that access the seperate components without having names be used so they do not intefere with the bind names.
+var GroupAccess3 =evt.getCurrentTarget().getParentNode().getParentNode().getChildNodes().item(2).getChildNodes().item(0);
+
+var comp = evt.getCurrentTarget().getParentNode();
+var FinalTimeValue;
+var FinalOverrideValue;
+var decs = GroupAccess3.getAttribute("Decimals");
+var ButtonTextContent = GroupAccess2.getChildByName("Text").getAttribute("Content"); 
+var Units  = GroupAccess3.getAttribute("Units");	
+var OverrideText = GroupAccess1.getChildByName("Value Requested Text Display");
+var TimeValue = parseInt(GroupAccess1.getChildByName("Override Time Requested Text Display").getAttribute("Content"));		// Variables that are declared to be used in this function. 
+var TimeValueTextDisplay  = GroupAccess1.getChildByName("Override Time Value Text Display");
+var ValueBind = GroupAccess2.getElementsByTagName("Bind").item(0).getFullBindName();
+var OvTimBind = GroupAccess2.getElementsByTagName("Bind").item(1).getFullBindName();
+
+
+
+
+	if (isNaN(TimeValue))							// Assigns the variable TimeValue to 500,000 if it is anything but a number. This value is the permanent override value.
+	{
+	TimeValue = 500000;
+	}
+
+	if (ButtonTextContent == "Override")			// If statement that handles what happens when the button is clicked on and then text content of the button is "Override". The text is only Override when it it is not forced. 
+	{												// Forces the ValueBind to a forced setting so the value can act as an override.
+													 
+	var OverrideValue = prompt("What is the value of the override?" , "");				// Prompt that asks for the value of the override. 
+
+			while ((isNaN(OverrideValue) == true) && (OverrideValue != null))			// While loop that handles input verification. 
+			{
+			OverrideValue = prompt("Please Enter A Number.\nWhat is the value of the override ?  ", "");		
+			}
+			if (OverrideValue != null)
+			{
+			setForce(ValueBind, true);	
+			FinalOverrideValue = new Number(OverrideValue).toFixed(decs);
+			FinalOverrideValue += " " + Units;
+			OverrideText.setAttribute("Content" , FinalOverrideValue);					// Sets the textbox to what the override value is , plus the units used. 
+
+			if (TimeValue == 500000)													// If testament that handles what happens when the timevalue equals the permanent override value. 
+			{
+			TimeValueTextDisplay.setAttribute("Content", "Permanent");
+			GroupAccess1.getChildByName("Override Time Requested Text Display").setAttribute("Content", "Permanent");
+			}else 																		// Else statement that handles the value of anything else.
+			{
+			FinalTimeValue = new Number(TimeValue).toFixed(decs);
+			FinalTimeValue += " " + Units;
+			TimeValueTextDisplay.setAttribute("Content", FinalTimeValue);
+			}
+			}
+	var timeoutId = setTimeout("AssignValue()", 1000);									// A 1 second timer that takes the time value and applies it to OvTimBind.
+
+		AssignValue = function () {
+		setValue(OvTimBind , TimeValue);
+		}
+
+	var timeoutId1 = setTimeout("AssignValue1()", 1000);								// A 1 second timer that assigns the requested value to the actual value of the component. 
+		AssignValue1 = function () {
+		setValue(ValueBind , OverrideValue);
+	}
+	}
+
+	if (ButtonTextContent == "Automatic")												// Handles what happens when the 02 has the text "Automatic"
+	{	
+	setForce(ValueBind,false); 															// When clicked and the content of the button is Automatic this takes the force off the point. 
+	OverrideText.setAttribute("Content" , "...");
+	}
+	
+}
+
+	function OnChange(evt)																// Function that handles what happens whenever a bound value changes. 
+{
+var GroupAccess1 =evt.getCurrentTarget().getParentNode().getParentNode().getChildNodes().item(0).getChildNodes().item(0);
+var GroupAccess2 =evt.getCurrentTarget().getParentNode().getParentNode().getChildNodes().item(1).getChildNodes().item(0);		// Shortcuts that access the seperate components without having names be used so they do not intefere with the bind names.
+var GroupAccess3 =evt.getCurrentTarget().getParentNode().getParentNode().getChildNodes().item(2).getChildNodes().item(0);
+
+
+var comp = evt.getCurrentTarget().getParentNode();
+var FinalValue; 
+var FinalTimeValue;
+var status = evt.getStatus();
+var value = evt.getValue();
+var ForceColor = GroupAccess3.getAttribute("Fill");
+var NormalColor = GroupAccess3.getAttribute("Stroke");
+var decs = GroupAccess3.getAttribute("Decimals");
+var Units  = GroupAccess3.getAttribute("Units");	
+var ButtonText = GroupAccess2.getChildByName("Text");											// Variables that are going to be used in the function. 
+var ValueBind = GroupAccess2.getElementsByTagName("Bind").item(0).getFullBindName();
+var OvTimBind = GroupAccess2.getElementsByTagName("Bind").item(1).getFullBindName();
+var PointValueText = GroupAccess1.getChildByName("Point Value Text Display");
+var OvTimText = GroupAccess1.getChildByName("Override Time Value Text Display");
+
+
+	if (evt.getTarget().getFullBindName() == ValueBind)											// If statement that handles what happens when the bind that changes is the ValueBind.
+	{
+	FinalValue = new Number(value).toFixed(decs);
+	FinalValue += " " + Units;
+	PointValueText.setAttribute("Content",FinalValue);											// Sets the content of the Point Value Textbox to the value that is given plus the units from the 
+	GroupAccess3.getChildByName("Text").setAttribute("Content", FinalValue);					// exposed variables. This formats the values.
+	}
+ 
+	if (evt.getTarget().getFullBindName() == OvTimBind)											// If statement that handles what happens when the bind that changes is the OvTimBind.
+	{
+		if (value == 500000)																	// Checks to see if the value assigned is 500,000 and if its true then writes "Permanent" to a textbox.
+		{																						// If its not then it writes the value of the time to the same text box. 
+		OvTimText.setAttribute("Content" , "Permanent");
+		}else{
+		FinalTimeValue = Math.round(value * 100)/100; 
+		FinalTimeValue = FinalTimeValue.toString() + " Min.";
+		OvTimText.setAttribute("Content",FinalTimeValue);
+		}
+	}
+ 
+	if ((status == 3) && (evt.getTarget().getFullBindName() == ValueBind))						// If statement that changes the 02 textbox based off of the status. If the point is forced then 
+	{																							// it changes the textbox to "Automatic". For any other status it changes it to "Override".
+	ButtonText.setAttribute("Content" , "Automatic");
+	GroupAccess3.getChildByName("background").setAttribute("Stroke" , ForceColor); 
+	GroupAccess3.getChildByName("background").setAttribute("StrokeWidth" , "2");
+	GroupAccess3.getChildByName("Ovr Notification").setAttribute("Visibility" , "Visible");
+	GroupAccess3.getChildByName("Text").setAttribute("Left" , "8");
+	GroupAccess1.getChildByName("Background").setAttribute("Stroke" ,ForceColor);
+	}
+	
+	if ((status == 0 || status == 1 || status == 2) && (evt.getTarget().getFullBindName() == ValueBind))
+	{
+	ButtonText.setAttribute("Content" , "Override");
+	GroupAccess3.getChildByName("background").setAttribute("Stroke" , NormalColor);
+	GroupAccess3.getChildByName("background").setAttribute("StrokeWidth" , "1");
+	GroupAccess3.getChildByName("Ovr Notification").setAttribute("Visibility" , "Hidden");
+	GroupAccess3.getChildByName("Text").setAttribute("Left" , "-4");
+	GroupAccess1.getChildByName("Background").setAttribute("Stroke" ,"#626469");
+		
+	}
+
+}]]></Script>
+        </Group>
+    </Component>
+    <Component Clip="False" ContentWidth="100" Id="" Name=""
+        Stroke="#626469" Units="%" Visibility="Visible" Width="100">
+        <Group Decimals="1" Fill="#FFD100" Name="03" Units="%">
+            <Rectangle Fill="None" Height="20.0" Left="0"
+                Name="background" RadiusX="5" RadiusY="5"
+                Stroke="#626469" StrokeDashArray="0.0" StrokeWidth="1.0"
+                Top="0" Width="100">
+                <LinearGradient EndPoint="0,1">
+                    <GradientStop Color="#FEFEFE" Offset="0"/>
+                    <GradientStop Color="#DFE0E2" Offset="1.0"/>
+                </LinearGradient>
+                <Expose ExposedAttribute="Width" Name="Component Width"/>
+            </Rectangle>
+            <Expose ExposedAttribute="Fill" Name="Forced Color"/>
+            <Expose ExposedAttribute="Decimals" Name="Decimals"/>
+            <Expose ExposedAttribute="Units" Name="Units"/>
+            <TextBox Fill="None" FontFamily="Arial" FontSize="13"
+                FontStyle="Normal" FontWeight="Normal" Height="20.0"
+                HorizontalAlign="Center" Left="-4" Name="Text"
+                Stroke="#000000" TextDecoration="None" Top="0"
+                VerticalAlign="Middle"
+                    Width="100"><![CDATA[...]]><Expose
+                    ExposedAttribute="Width" Name="Component Width"/>
+            </TextBox>
+            <Component Clip="False" ContentHeight="20.0"
+                ContentWidth="15" Height="20.0" Left="85"
+                Name="OvrArrow" Top="0" Width="15.0">
+                <Path Fill="#009530" Name="Box"
+                    PathData="M0.0,0.0 C5.0,0.0 5,0 10,0 12,0 15,2 15,5 15,10 15,15 15,15 15,18 12,20 9,20 4,20 5.0,20.0 0.0,20.0 0.0,15.0 0.0,5.0 0.0,0.0"
+                    Stroke="#004000" StrokeDashArray="0.0" StrokeWidth="1.0"/>
+                <Polygon Fill="#FFFFFF" Name="Arrow"
+                    Points="9.83830081246947,3.812333812258316 2.670400857925415,9.837342605211944 9.83830081246947,15.862351398165572"
+                    Stroke="None" StrokeDashArray="0.0" StrokeWidth="0"/>
+                <Expose ExposedAttribute="Left" Name="Override Notification Position"/>
+            </Component>
+            <Expose ExposedAttribute="Width" Name="Component Width"/>
+            <Expose ExposedAttribute="ContentWidth" Name="Component Width"/>
+            <Script Name="OnClickBehavior" OnMouseClick="OnClick"><![CDATA[function OnClick(evt)
+{
+evt.preventDefault();
+var GroupAccess1 =evt.getCurrentTarget().getParentNode().getParentNode().getChildNodes().item(0);
+var GroupAccess2 =evt.getCurrentTarget().getParentNode().getParentNode().getChildNodes().item(1);
+var GroupAccess3 =evt.getCurrentTarget().getParentNode().getParentNode().getChildNodes().item(2);
+var GroupAccess4 =evt.getCurrentTarget().getParentNode().getParentNode().getChildNodes().item(3);
+
+ var comp=evt.getCurrentTarget().getParentNode();
+ GroupAccess1.setAttribute("Visibility", "Visible");					// This is the JavaScript for the open button. This sets the components to visible				 
+ GroupAccess2.setAttribute("Visibility", "Visible");					// except for the analog display. This opens the menu.
+ GroupAccess3.setAttribute("Visibility", "Hidden");
+ GroupAccess4.setAttribute("Visibility", "Visible");
+ 
+var CompWidth = parseInt(GroupAccess3.getAttribute("Width"));
+var Position = ((CompWidth /2) - 130); 
+var FinalPosition = Position.toString();
+ 
+GroupAccess1.setAttribute("Left", FinalPosition);					// Handles the position of the menu when the 03 is 
+GroupAccess2.setAttribute("Left", FinalPosition);					// a different size. 
+GroupAccess4.setAttribute("Left", FinalPosition);
+ 
+}]]></Script>
+            <Image Height="11.0" Left="8" Name="Ovr Notification"
+                Opacity="1.0" Top="4" Visibility="Hidden" Width="14.0"><![CDATA[iVBORw0KGgoAAAANSUhEUgAAAA4AAAALCAYAAABPhbxiAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAActJREFUeNpskl+IzFEUxz/3/n5rbJtmjW1+uxqWnZ3kxS6RUiTLE1JYkz954QGFJ+VReWGR2nhQnkXkRbI2pYRkScIWtcraBxpLWs3OzL2/e9zZyaZmTt3OeTjnfs/3+z1KRPg/Prx7I9ZanBNa56dY2tWtaBDhv+LZ0ydy984NtJmkeQ5IbJn4pTlzdkA6l2TrhlUV8eLAOXn1fJht6zMsjhK8//SV4p8pbj78zNadB+lZ0Yvzfel0xIaNfTOfqOvXrsjjoVucOryJjgVNFAoFbj94zY/J31TKJYJA0AhxHDP6pcLJ0+fZteeA0mNjH9ne18uihSm0VqRTLRzNr+T4vh6WdyXJZZrJdgRk2wOSiQqPhodqHMNAo3Q9eWMdE9+LiKv4Z3A2pjM9l7cv7nN18JKEWlVXlrrBwKO3zvMqeXUl9qtaReGnIdUWEUXt6DiWRmpTdcl6VGMF43uqeXS8yLJVW9id369CGztEGg0KJeM8omO6ZBn/ZsjkVtOf31vjmO3Occ+r6kzJe1PGxSW/2jSmXKQtmfA1TAUWlWhhR/8h1qxdp2Z9HLx8QUZGXvrVDMrzrV2Tm8nOI4Zhk/dvM0eOnZg9hL8CDACZfM3GReCGtAAAAABJRU5ErkJggg==]]></Image>
+            <Expose ExposedAttribute="Stroke" Name="Normal Color"/>
+        </Group>
+    </Component>
+    <Component Clip="False" Height="1.0" Id="" Left="-107" Name=""
+        Top="-38" Visibility="Hidden" Width="1.0">
+        <Group Name="04">
+            <Rectangle Fill="None" Height="20.0" Left="15"
+                Name="background" RadiusX="5" RadiusY="5"
+                Stroke="#626469" StrokeDashArray="0.0" StrokeWidth="1.0"
+                Top="50" Width="70">
+                <LinearGradient EndPoint="0,1">
+                    <GradientStop Color="#FEFEFE" Offset="0"/>
+                    <GradientStop Color="#DFE0E2" Offset="1.0"/>
+                </LinearGradient>
+                <Expose ExposedAttribute="Stroke" Name="Normal Color"/>
+            </Rectangle>
+            <TextBox Fill="None" FontFamily="Arial" FontSize="10"
+                FontStyle="Normal" FontWeight="Normal" Height="20.0"
+                HorizontalAlign="Center" Left="15" Name="Text"
+                Stroke="#000000" TextDecoration="None" Top="50"
+                VerticalAlign="Middle" Width="70"><![CDATA[Override Time]]></TextBox>
+            <Script Name="OnClickBehavior" OnMouseClick="OnClick"><![CDATA[function OnClick(evt)
+{
+var GroupAccess1 =evt.getCurrentTarget().getParentNode().getParentNode().getChildNodes().item(0).getChildNodes().item(0);
+var GroupAccess2 =evt.getCurrentTarget().getParentNode().getParentNode().getChildNodes().item(1).getChildNodes().item(0);	// Shortcuts that access the seperate components without having names be used so they do not intefere with the bind names.
+var GroupAccess3 =evt.getCurrentTarget().getParentNode().getParentNode().getChildNodes().item(2).getChildNodes().item(0);
+
+var comp=evt.getCurrentTarget().getParentNode();
+var TimeValueText =  GroupAccess1.getChildByName("Override Time Requested Text Display");
+var OvTimBind = GroupAccess2.getElementsByTagName("Bind").item(1).getFullBindName();							// Variables that are going to be used in this function. 
+var PermanentOvrBool = confirm("Would you like to place this bind in a permanent override ? ");
+var FinalValue;
+
+	if (PermanentOvrBool == true)																				// If statement that handles what happens when the confirm is true. 
+	{																											// Sets the time value text box to Permanent and if the 02 text is automatic	
+	TimeValueText.setAttribute("Content", "Permanent");															// it sets the OVtime bind to the permanent value. 
+
+		if ((GroupAccess2.getChildByName("Text").getAttribute("Content") == "Automatic"))
+		{
+			setValue(OvTimBind, 500000);
+		}
+	}
+
+	
+	if (PermanentOvrBool == false)																				// If statement that handles when the user confirm box is false. 			
+	{
+	var OvrTime = prompt("How minutes would like to override this bind for ? ", "");							// Initiates a prompt that asks for the value of the override. 
+	var OvrValue = parseInt(OvrTime);
+	
+		
+		while ((isNaN(OvrValue) == true) && (OvrTime != null))													// Once the value is recieved then it enters the while loop that checks 
+		{																										// if its a number. Once it has  
+		OvrTime = prompt("Please Enter A Number.\nHow minutes would like to override this bind for ? ", "");
+		OvrValue = parseInt(OvrTime);
+		}
+		
+		FinalValue = OvrValue.toString() + " Min.";																// Adds the the string "Min." to the value and then sets the time value requested textbox
+		TimeValueText.setAttribute("Content", FinalValue);														// to the value. 
+		
+	if (OvrTime == null)																						// Sets the box to ... if the OVTim value is null. 
+	{	
+	TimeValueText.setAttribute("Content", "...");
+	}
+
+	if((GroupAccess2.getChildByName("Text").getAttribute("Content") == "Automatic"))							// Sets the value bind to the OvrValue if the textbox has the content "Automatic" 
+	{
+	setValue(OvTimBind , OvrValue);
+	}	
+}
+}]]></Script>
+        </Group>
+    </Component>
+    <Expose ExposedAttribute="ContentWidth" Name="Component Width"/>
+    <Expose ExposedAttribute="Width" Name="Component Width"/>
+    <Metadata Name="Name" Value="Analog NW8K Spt W. Menu"/>
+    <Metadata Name="Description" Value=""/>
+</Component>
