@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<Component ContentHeight="20" ContentWidth="100" Description=""
+<Component ContentHeight="20" ContentWidth="100" 
     Fill="#FFD100" Height="20.0" Left="286.0" NAValue="163.835"
     Name="MNL Digital Override With NA" OffText="Off" OnText="On"
     OnValue="1,on,true" Top="159.0" Width="100.0">

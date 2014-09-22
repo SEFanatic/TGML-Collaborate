@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <Component ContentHeight="20" ContentWidth="100" Decimals="1"
-    Description="" Desription="" Fill="#FFD100" GridSize="5"
+     Fill="#FFD100" GridSize="5"
     Height="20.0" Left="268.0" Name="Analog Override" Top="140.0"
     Units="°F" Width="100.0">
     <Rectangle Fill="None" Height="20.0" Left="0" Name="background"

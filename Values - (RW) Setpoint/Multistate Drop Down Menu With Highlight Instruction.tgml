@@ -2,9 +2,9 @@
 
 <!--[DocumentInformation]
 Created: 2014-07-21 08:47
-Modified: 2014-07-29 10:10
+Modified: 2014-09-22 11:28
 -->
-<?tgml version="1.21"?><Tgml ComponentCounter="33" GridSize="10">
+<?tgml version="1.21"?><Tgml ComponentCounter="34" GridSize="10">
     <TextBox FontFamily="Arial" FontSize="15.0" FontStyle="Normal"
         FontWeight="Normal" Height="18.0" HorizontalAlign="Left"
         Left="465.0" Opacity="1.0" Stroke="#000000"
@@ -13,16 +13,15 @@ Modified: 2014-07-29 10:10
         FontWeight="Normal" Height="494.0" HorizontalAlign="Left"
         Left="457.0" Opacity="1.0" Stroke="#000000"
         TextDecoration="None" Top="74.0" VerticalAlign="Top" Width="218.0"><![CDATA[ * Creates a drop down menu based off of exposed states.                                                            * The user can then click on the state that he/she wants the point to be in and the component will set it.                                                                        * To set the amount of states  and to set what state numbers they will be go to the group named "display". Inside of this there is a component named "Multipoint".  Here you can make changes.                                                                                 * To change the state names go to the main component and in the exposed properties will be listed all the states and you can change them there.                                                                    * The width of the whole component can be adjusted and the component will automaticallay adjust the position of the override indicator and the display when loaded. ]]></TextBox>
-    <Component Clip="False" ContentHeight="20" ContentWidth="120"
-        Height="20.0" Id="Test" Left="126.0"
-        Name="Multistate Drop Down Menu V2_032" Top="211.0" Width="120.0">
+    <Component Clip="False" ContentHeight="20" ContentWidth="100"
+        Height="20.0" Id="" Left="114.0"
+        Name="Multistate Drop Down Menu" Top="229.0" Width="100.0">
         <Component Clip="False" Color="#F0080E" ComponentCounter="5"
-            ContentHeight="20" ContentWidth="120" Decimals="0"
-            Fill="#FFD100" GridSize="10" Height="20.0" Left="0"
-            Name="Drop Down Menu" Stroke="#42B4E6" Top="0" Units="" Width="120">
-            <Script Name="OnClickBehavior" OnMouseClick="OnClick" OnMouseDown="MouseDown"><![CDATA[
-		
-			// ***Note*** The reason that the component has 2 components within it is because the Override Indicator was interfering 
+            ContentHeight="20" ContentWidth="100" Decimals="0"
+            Fill="#FFD100" GridSize="10" Height="20.0" Left="0" Name=""
+            Stroke="#42B4E6" Top="0" Units="" Width="100">
+            <Group ContentWidth="100" Width="100">
+                <Script Name="OnClickBehavior" OnMouseClick="OnClick" OnMouseDown="MouseDown"><![CDATA[// ***Note*** The reason that the component has 2 components within it is because the Override Indicator was interfering 
 			// with the dropdown menu creation and would create errors when clicked on. The way it is built right now does not bring up errors
 			// and functions perfectly. 
 		
@@ -42,14 +41,16 @@ var browser
 		
 function OnClick (evt)
 {
+var GroupAccess =evt.getCurrentTarget().getParentNode().getParentNode().getChildNodes().item(0).getChildNodes().item(0);
+
 
 comp = evt.getTarget().getParentNode();
-BackgroundShortCut = comp.getChildByName("BackgroundRectangle");
-BindShortCut = comp.getElementsByTagName("Bind").item(0);
-StatesList = comp.getChildByName("display").getElementsByTagName("Expose");	 // Shortcuts for various things within the component so referencing things will be easier and more readable. 
-MenuShortCut = comp.getChildByName("MenuText");
-OnClickHighlightShortCut = comp.getChildByName("OnClickHighlight");
-MultPointShortCut = comp.getChildByName("MultiPoint");
+BackgroundShortCut = GroupAccess.getChildByName("BackgroundRectangle");
+BindShortCut = GroupAccess.getElementsByTagName("Bind").item(0);
+StatesList = GroupAccess.getChildByName("display").getElementsByTagName("Expose");	 // Shortcuts for various things within the component so referencing things will be easier and more readable. 
+MenuShortCut = GroupAccess.getChildByName("MenuText");
+OnClickHighlightShortCut = GroupAccess.getChildByName("OnClickHighlight");
+MultPointShortCut = GroupAccess.getChildByName("MultiPoint");
 runtime = Packages.java.lang.System.getProperty("java.runtime.name");
 
 
@@ -228,71 +229,61 @@ function Main()
 			}	
 			}		
 			}
-}
-
-
-
-
-
-]]></Script>
-            <Expose ExposedAttribute="ContentWidth" Name="Content Width"/>
-            <Expose ExposedAttribute="Width" Name="Content Width"/>
-            <Expose ExposedAttribute="Color" Name="Alarm Color"/>
-            <Expose ExposedAttribute="Fill" Name="Forced Color"/>
-            <Expose ExposedAttribute="Stroke" Name="Database Color"/>
-            <Rectangle Fill="#FFFFFF" Height="100" Left="3"
-                Name="BackgroundRectangle" RadiusX="5" RadiusY="5"
-                Stroke="#000000" Top="20" Visibility="Hidden" Width="115"/>
-            <Rectangle Fill="None" Height="20.0" Left="0.0"
-                Name="background" RadiusX="5" RadiusY="5"
-                Stroke="#626469" StrokeDashArray="0.0" StrokeWidth="1.0"
-                Top="0.0" Width="120">
-                <LinearGradient EndPoint="0,1">
-                    <GradientStop Color="#FEFEFE" Offset="0"/>
-                    <GradientStop Color="#DFE0E2" Offset="1.0"/>
-                </LinearGradient>
+}]]></Script>
+                <Expose ExposedAttribute="ContentWidth" Name="Content Width"/>
                 <Expose ExposedAttribute="Width" Name="Content Width"/>
-            </Rectangle>
-            <Rectangle Fill="#C0C0C0" Height="20" Id="" Left="4"
-                Name="OnClickHighlight" RadiusX="0" RadiusY="0"
-                Stroke="#000000" StrokeWidth="0" Top="0"
-                Visibility="Hidden" Width="110"/>
-            <TextBox Fill="None" FontFamily="Arial" FontSize="15.0"
-                FontStyle="Normal" FontWeight="Normal" Height="20.0"
-                HorizontalAlign="Center" Left="-8" Name="Text"
-                Stroke="#000000" TextDecoration="None" Top="0.0"
-                VerticalAlign="Middle"
-                    Width="115"><![CDATA[...]]><Expose
-                    ExposedAttribute="Left" Name="Display Text Position"/>
-            </TextBox>
-            <Group Name="display">
-                <Component Clip="False" ContentHeight="20.0"
-                    ContentWidth="120.0" Height="20.0" Left="10.0"
-                    Name="MultiPoint" State1="State 1"
-                    State10="State 10" State11="State 11 "
-                    State2="State 2" State3="State 3" State4="State 4"
-                    State5="State 5" State6="State 6" State7="State 7"
-                    State8="State 8" State9="State 9" Top="30.0" Width="120.0">
-                    <Expose ExposedAttribute="State1" Name="State1"/>
-                    <Expose ExposedAttribute="State2" Name="State2"/>
-                    <Expose ExposedAttribute="State3" Name="State3"/>
-                    <Expose ExposedAttribute="State4" Name="State4"/>
-                    <Expose ExposedAttribute="State5" Name="State5"/>
-                    <Expose ExposedAttribute="State6" Name="State6"/>
-                    <Expose ExposedAttribute="State7" Name="State7"/>
-                    <Expose ExposedAttribute="State8" Name="State8"/>
-                    <Expose ExposedAttribute="State9" Name="State9"/>
-                    <Expose ExposedAttribute="State10" Name="State10"/>
-                </Component>
-            </Group>
-            <TextBox Fill="None" FontFamily="Arial" FontSize="15"
-                FontStyle="Normal" FontWeight="Normal" Height="0"
-                HorizontalAlign="Center" Name="MenuText"
-                Stroke="#000000" Width="120"><![CDATA[0]]></TextBox>
-            <Bind Attribute="" Color="#009530" Name="DefaultBindName" PreventDefault="True">
-                <Expose ExposedAttribute="Color" Name="On Color"/>
-                <Expose ExposedAttribute="Name" Name="Bind Name"/>
-                <Script OnDocumentLoad="onLoad" OnMouseClick="" OnSignalChange="onChange"><![CDATA[
+                <Expose ExposedAttribute="Color" Name="Alarm Color"/>
+                <Expose ExposedAttribute="Fill" Name="Forced Color"/>
+                <Expose ExposedAttribute="Stroke" Name="Database Color"/>
+                <Rectangle Fill="#FFFFFF" Height="100" Left="3"
+                    Name="BackgroundRectangle" RadiusX="5" RadiusY="5"
+                    Stroke="#000000" Top="20" Visibility="Hidden" Width="115"/>
+                <Rectangle Fill="None" Height="20.0" Left="0.0"
+                    Name="background" RadiusX="5" RadiusY="5"
+                    Stroke="#626469" StrokeDashArray="0.0"
+                    StrokeWidth="1.0" Top="0.0" Width="100">
+                    <LinearGradient EndPoint="0,1">
+                        <GradientStop Color="#FEFEFE" Offset="0"/>
+                        <GradientStop Color="#DFE0E2" Offset="1.0"/>
+                    </LinearGradient>
+                    <Expose ExposedAttribute="Width" Name="Content Width"/>
+                </Rectangle>
+                <Rectangle Fill="#C0C0C0" Height="20" Id="" Left="4"
+                    Name="OnClickHighlight" RadiusX="0" RadiusY="0"
+                    Stroke="#000000" StrokeWidth="0" Top="0"
+                    Visibility="Hidden" Width="110"/>
+                <TextBox Fill="None" FontFamily="Arial" FontSize="15.0"
+                    FontStyle="Normal" FontWeight="Normal" Height="20.0"
+                    HorizontalAlign="Center" Left="-8" Name="Text"
+                    Stroke="#000000" TextDecoration="None" Top="0.0"
+                    VerticalAlign="Middle"
+                        Width="115"><![CDATA[...]]><Expose
+                        ExposedAttribute="Left" Name="Display Text Position"/>
+                </TextBox>
+                <Group Name="display">
+                    <Component Clip="False" ContentHeight="20.0"
+                        ContentWidth="120.0" Height="20.0" Left="10.0"
+                        Name="MultiPoint" State1="State 1"
+                        State10="State 10" State11="State 11 "
+                        State2="State 2" State3="State 3"
+                        State4="State 4" State5="State 5"
+                        State6="State 6" State7="State 7"
+                        State8="State 8" State9="State 9" Top="30.0" Width="120.0">
+                        <Expose ExposedAttribute="State1" Name="State1"/>
+                        <Expose ExposedAttribute="State2" Name="State2"/>
+                        <Expose ExposedAttribute="State3" Name="State3"/>
+                        <Expose ExposedAttribute="State4" Name="State4"/>
+                        <Expose ExposedAttribute="State5" Name="State5"/>
+                    </Component>
+                </Group>
+                <TextBox Fill="None" FontFamily="Arial" FontSize="15"
+                    FontStyle="Normal" FontWeight="Normal" Height="0"
+                    HorizontalAlign="Center" Name="MenuText"
+                    Stroke="#000000" Width="120"><![CDATA[0]]></TextBox>
+                <Bind Attribute="" Color="#009530" Name="Value" PreventDefault="True">
+                    <Expose ExposedAttribute="Color" Name="On Color"/>
+                    <Expose ExposedAttribute="Name" Name="Bind Name"/>
+                    <Script OnDocumentLoad="onLoad" OnMouseClick="" OnSignalChange="onChange"><![CDATA[
 			
 					
 var comp;
@@ -420,37 +411,38 @@ function debug(str){
 
 	
 	 ]]></Script>
-                <Expose ExposedAttribute="PreventDefault" Name="Prevent Default"/>
-            </Bind>
+                    <Expose ExposedAttribute="PreventDefault" Name="Prevent Default"/>
+                </Bind>
+            </Group>
+            <Expose ExposedAttribute="ContentWidth" Name="Content Width"/>
+            <Expose ExposedAttribute="Width" Name="Content Width"/>
         </Component>
         <Component Clip="False" ContentHeight="20" ContentWidth="15"
-            Height="19.285535983181774" Left="105"
-            Name="ActionIndication" Top="0.284520258199564"
-            Visibility="Visible" Width="15.22063586152035">
-            <Path Fill="#009530" Name="OvrBox"
-                PathData="M0.0,0.0 C5.0,0.0 4.0,0.0 9.0,0.0 12.0,0.0 14.0,2.0 14.0,5.0 14.0,8.0 14.0,12.0 14.0,15.0 14.0,18.0 12.0,19.93 9.0,20.0 4.0,20.0 5.0,20.0 0.0,20.0 0.0,15.0 0.0,5.0 0.0,0.0"
-                Stroke="#004000" StrokeDashArray="0.0" StrokeWidth="0"/>
-            <Polygon Fill="#FFFFFF" Name="OvrArrow"
-                Points="10.0,4.0 3.0,10.0 10.0,15.0" Stroke="None"
-                StrokeDashArray="0.0" StrokeWidth="0"/>
-            <Expose ExposedAttribute="Left" Name="OvrIndicator Position"/>
-            <Script OnDocumentLoad="OnLoad"><![CDATA[
-
-
-function OnLoad(evt)
+            Height="19.285535983181774" Left="85" Name=""
+            Top="0.284520258199564" Visibility="Visible" Width="15.22063586152035">
+            <Group Left="85">
+                <Path Fill="#009530" Name="OvrBox"
+                    PathData="M0.0,0.0 C5.0,0.0 4.0,0.0 9.0,0.0 12.0,0.0 14.0,2.0 14.0,5.0 14.0,8.0 14.0,12.0 14.0,15.0 14.0,18.0 12.0,19.93 9.0,20.0 4.0,20.0 5.0,20.0 0.0,20.0 0.0,15.0 0.0,5.0 0.0,0.0"
+                    Stroke="#004000" StrokeDashArray="0.0" StrokeWidth="0"/>
+                <Polygon Fill="#FFFFFF" Name="OvrArrow"
+                    Points="10.0,4.0 3.0,10.0 10.0,15.0" Stroke="None"
+                    StrokeDashArray="0.0" StrokeWidth="0"/>
+                <Script OnDocumentLoad="OnLoad"><![CDATA[function OnLoad(evt)
 {
 
-var comp  = evt.getTarget().getParentNode();
-
-var Width= comp.getChildByName("BackgroundRectangle").getAttribute("Width");
+var GroupAccess =evt.getCurrentTarget().getParentNode().getParentNode().getChildNodes().item(0); //component 0
+var GroupAccess1 =evt.getCurrentTarget().getParentNode().getParentNode().getChildNodes().item(1);
+var Width= GroupAccess.getAttribute("Width");
 var Position = parseInt(Width);
-comp.getChildByName("ActionIndication").setAttribute("Left" , Position  - 10 ); // Sets the Position of the Override indicator. 
+GroupAccess1.setAttribute("Left" , Position - 15); // Sets the Position of the Override indicator. 
 
 }
 // Commented/Edited by Jarred Nolasco Email : JarredNolasco@gmail.com
-// Last Updated July 23rd, 2014
-
-]]></Script>
+// Last Updated July 23rd, 2014]]></Script>
+            </Group>
+            <Expose ExposedAttribute="Left" Name="OvrIndicator Position"/>
         </Component>
+        <Expose ExposedAttribute="ContentWidth" Name="Content Width"/>
+        <Expose ExposedAttribute="Width" Name="Content Width"/>
     </Component>
 </Tgml>

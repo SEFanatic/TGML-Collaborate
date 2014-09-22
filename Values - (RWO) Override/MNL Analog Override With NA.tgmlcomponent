@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <Component ContentHeight="20" ContentWidth="100" Decimals="2"
-    Description="" Fill="#FFD100" Height="20.0" Left="287.0"
+     Fill="#FFD100" Height="20.0" Left="287.0"
     NAValue="163.835" Name="MNL Analog Override With NA" Top="250.0"
     Units="%" Width="100.0">
     <Script OnDocumentLoad="onLoad" OnSignalChange="onChange"><![CDATA[

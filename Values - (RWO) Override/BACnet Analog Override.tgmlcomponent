@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <Component ContentHeight="20" ContentWidth="100" Decimals="2"
-    Description="BACnet Analog Override" Fill="#FFD100" GridSize="10"
+    Fill="#FFD100" GridSize="10"
     Height="20.0" Left="223.0" Name="BACnet Analog Override" Top="137.0"
     Units="%" Width="100.0">
     <Script OnDocumentLoad="onLoad" OnSignalChange="onChange"><![CDATA[
