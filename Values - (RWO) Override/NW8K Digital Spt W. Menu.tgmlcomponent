@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Component Clip="False" ContentHeight="20" ContentWidth="100"
-    Decimals="1" Fill="#FFD100" Height="20.0" Left="587.0"
-    Name="Analog NW8K Spt W. Menu" Top="311.0" Visibility="Visible" Width="100.0">
+    Fill="#FFD100" Height="20.0" Left="767.2133005857468"
+    Name="NW8K Digital Spt W. Menu" Top="310.0" Visibility="Visible" Width="100.0">
     <Component Clip="False" Height="0" Id="" Left="-100" Name=""
         Top="-80" Visibility="Hidden" Width="0">
         <Group Name="01">
@@ -83,12 +83,13 @@ var NAMESTitle = "";
 	
 	function OnChange(evt)
 {
+
 var GroupAccess1 =evt.getCurrentTarget().getParentNode().getParentNode().getChildNodes().item(0).getChildNodes().item(0);
-var GroupAccess2 =evt.getCurrentTarget().getParentNode().getParentNode().getChildNodes().item(1).getChildNodes().item(0);		// Shortcuts that access the seperate components without having names be used so they do not intefere with the bind names.
+var GroupAccess2 =evt.getCurrentTarget().getParentNode().getParentNode().getChildNodes().item(1).getChildNodes().item(0);	// Shortcuts that access the seperate components without having names be used so they do not intefere with the bind names.
 var GroupAccess3 =evt.getCurrentTarget().getParentNode().getParentNode().getChildNodes().item(2).getChildNodes().item(0);
 
-var comp=evt.getCurrentTarget().getParentNode();
-var NewTitle = evt.getValue();																									// Gets the value of the bind that was just given a value. In this case the value is going to be the title name.
+
+var NewTitle = evt.getValue();																	// Gets the value of the bind that was just given a value. In this case the value is going to be the title name.
 var Note1Bind = GroupAccess1.getElementsByTagName("Bind").item(0).getFullBindName();
 var DESCRBind = GroupAccess1.getElementsByTagName("Bind").item(1).getFullBindName();			// Sets the binds that are used to see what the title name is going to be. 
 var NAMEBind = GroupAccess1.getElementsByTagName("Bind").item(2).getFullBindName();
@@ -151,10 +152,9 @@ function OnClick(evt)
 {
 evt.preventDefault();
 var GroupAccess1 =evt.getCurrentTarget().getParentNode().getParentNode().getChildNodes().item(0);
-var GroupAccess2 =evt.getCurrentTarget().getParentNode().getParentNode().getChildNodes().item(1);		// Shortcuts that access the seperate components without having names be used so they do not intefere with the bind names.
+var GroupAccess2 =evt.getCurrentTarget().getParentNode().getParentNode().getChildNodes().item(1);// Shortcuts that access the seperate components without having names be used so they do not intefere with the bind names.
 var GroupAccess3 =evt.getCurrentTarget().getParentNode().getParentNode().getChildNodes().item(2);
 var GroupAccess4 =evt.getCurrentTarget().getParentNode().getParentNode().getChildNodes().item(3);
-evt.preventDefault();
 var Button = evt.getButton();
 
 if (Button == 2)
@@ -173,13 +173,14 @@ function OnMouseDown(evt)
 {
 }]]></Script>
             <Line Stroke="#626469" StrokeWidth=".5" Visibility="Visible"
-                X1="10" X2="252" Y1="83" Y2="83"/>
+                X1="10.0" X2="252.0" Y1="22.0" Y2="22.0"/>
             <Line Stroke="#626469" StrokeWidth=".5" Visibility="Visible"
-                X1="10" X2="252" Y1="22" Y2="22"/>
+                X1="10.0" X2="252.0" Y1="83.0" Y2="83"/>
         </Group>
     </Component>
-    <Component Clip="False" Id="" Left="-107" Name="" Top="-103" Visibility="Hidden">
-        <Group Name="02">
+    <Component Clip="False" Id="" Left="-107" Name="" State0="Disable"
+        State1="Enable" Top="-103" Visibility="Hidden">
+        <Group Name="02" State0="Disable" State1="Enable">
             <Rectangle Fill="None" Height="20.0" Left="15"
                 Name="background" RadiusX="5" RadiusY="5"
                 Stroke="#626469" StrokeDashArray="0.0" StrokeWidth="1.0"
@@ -195,11 +196,11 @@ function OnMouseDown(evt)
                 HorizontalAlign="Center" Left="15" Name="Text"
                 Stroke="#000000" TextDecoration="None" Top="53"
                 VerticalAlign="Middle" Width="70"><![CDATA[Override]]></TextBox>
-            <Bind Name="AV" PreventDefault="True">
+            <Bind Name="DV" PreventDefault="True">
                 <Expose ExposedAttribute="Name" Name="Value Bind Name"/>
             </Bind>
             <Bind Name="OvTim" PreventDefault="True">
-                <Expose ExposedAttribute="Name" Name="OvTim Bind Name "/>
+                <Expose ExposedAttribute="Name" Name="OvTime Bind Name"/>
             </Bind>
             <Script Name="OnClickBehavior" OnMouseClick="OnClick" OnSignalChange="OnChange"><![CDATA[function OnClick(evt)																								
 {
@@ -210,10 +211,14 @@ var GroupAccess3 =evt.getCurrentTarget().getParentNode().getParentNode().getChil
 var comp = evt.getCurrentTarget().getParentNode();
 var FinalTimeValue;
 var FinalOverrideValue;
-var decs = GroupAccess3.getAttribute("Decimals");
+var OnOffValue = 0;
+var decs = "2" ;
+var Units = " Min.";
+var State0  = GroupAccess2.getAttribute("State0");
+var State1  = GroupAccess2.getAttribute("State1");
 var ButtonTextContent = GroupAccess2.getChildByName("Text").getAttribute("Content"); 
-var Units  = GroupAccess3.getAttribute("Units");	
 var OverrideText = GroupAccess1.getChildByName("Value Requested Text Display");
+var ValueText = GroupAccess1.getChildByName("Point Value Text Display").getAttribute("Content");
 var TimeValue = parseInt(GroupAccess1.getChildByName("Override Time Requested Text Display").getAttribute("Content"));		// Variables that are declared to be used in this function. 
 var TimeValueTextDisplay  = GroupAccess1.getChildByName("Override Time Value Text Display");
 var ValueBind = GroupAccess2.getElementsByTagName("Bind").item(0).getFullBindName();
@@ -221,29 +226,53 @@ var OvTimBind = GroupAccess2.getElementsByTagName("Bind").item(1).getFullBindNam
 
 
 
-
-	if (isNaN(TimeValue))							// Assigns the variable TimeValue to 500,000 if it is anything but a number. This value is the permanent override value.
+	if (isNaN(TimeValue))																// Assigns the variable TimeValue to 500,000 if it is anything but a number. This value is the permanent override value.
 	{
 	TimeValue = 500000;
 	}
-
-	if (ButtonTextContent == "Override")			// If statement that handles what happens when the button is clicked on and then text content of the button is "Override". The text is only Override when it it is not forced. 
-	{												// Forces the ValueBind to a forced setting so the value can act as an override.
-													 
-	var OverrideValue = prompt("What is the value of the override?" , "");				// Prompt that asks for the value of the override. 
-
-			while ((isNaN(OverrideValue) == true) && (OverrideValue != null))			// While loop that handles input verification. 
-			{
-			OverrideValue = prompt("Please Enter A Number.\nWhat is the value of the override ?  ", "");		
-			}
-			if (OverrideValue != null)
-			{
-			setForce(ValueBind, true);	
-			FinalOverrideValue = new Number(OverrideValue).toFixed(decs);
-			FinalOverrideValue += " " + Units;
-			OverrideText.setAttribute("Content" , FinalOverrideValue);					// Sets the textbox to what the override value is , plus the units used. 
-
-			if (TimeValue == 500000)													// If testament that handles what happens when the timevalue equals the permanent override value. 
+	
+	
+	
+	
+	if (ButtonTextContent == "Override")												// If statement that handles what happens when the button is clicked on and then text content of the button is "Override". The text is only Override when it it is not forced. 
+	{	
+		if(ValueText == "...")						
+		{
+		var OverrideValue = confirm("Would you like to override this to "+ State1 + " ? \n \n Yes = " + State1 + "    No = " + State0 );	// If statement that handles what happens when the textbox is "..." .
+				if(OverrideValue == true)												// Its basically the same thing that happens when the point is set to off. 
+				{
+					OnOffValue = 1;
+				}else
+				{
+					OnOffValue = 0;
+				}
+		}
+	
+		if(ValueText == State0)															// If statement that handles what happens when the point is set to State0. 
+		{					
+		var OverrideValue = confirm("Would you like to override this to "+ State1 + " ? \n \n Yes = " + State1 + "    No = " + State0);	// Prompt that ask if you want to set the point to the opposite state.
+				if(OverrideValue == true)												
+				{
+					OnOffValue = 1;
+				}else
+				{
+					OnOffValue = 0;														// Sets OnOffValue to either 0 or 1 based on the value of the prompt. 
+				}
+		}
+	
+		if(ValueText == State1)															// If statement that handles what happens when the point is set to State1.
+		{
+		var OverrideValue = confirm("Would you like to override this to " + State0 + " ? \n \n Yes = " + State0 + "    No = " + State1);
+				if(OverrideValue == true)
+				{
+				OnOffValue = 0;
+				}else
+				{																		// Sets OnOffValue to either 0 or 1 based on the value of the prompt. 
+				OnOffValue = 1;
+				}
+		}
+		
+		if (TimeValue == 500000)														// If testament that handles what happens when the timevalue equals the permanent override value. 
 			{
 			TimeValueTextDisplay.setAttribute("Content", "Permanent");
 			GroupAccess1.getChildByName("Override Time Requested Text Display").setAttribute("Content", "Permanent");
@@ -253,16 +282,28 @@ var OvTimBind = GroupAccess2.getElementsByTagName("Bind").item(1).getFullBindNam
 			FinalTimeValue += " " + Units;
 			TimeValueTextDisplay.setAttribute("Content", FinalTimeValue);
 			}
-			}
-	var timeoutId = setTimeout("AssignValue()", 1000);									// A 1 second timer that takes the time value and applies it to OvTimBind.
+		
+			
+		
+		if(OnOffValue == 0)
+		{
+		OverrideText.setAttribute("Content" ,State0);
+		}else																			// If statement that sets the text content of the Value Requested Textbox.
+		{
+		OverrideText.setAttribute("Content" ,State1);
+		}
+		
+		setForce(ValueBind,true); 														// Forces the point right before the time value and value are set. 
+			
+		var timeoutId = setTimeout("AssignValue()", 1000);								// A 1 second timer that takes the time value and applies it to OvTimBind.
 
 		AssignValue = function () {
 		setValue(OvTimBind , TimeValue);
 		}
 
-	var timeoutId1 = setTimeout("AssignValue1()", 1000);								// A 1 second timer that assigns the requested value to the actual value of the component. 
+		var timeoutId1 = setTimeout("AssignValue1()", 1000);							// A 1 second timer that assigns the requested value to the actual value of the component. 
 		AssignValue1 = function () {
-		setValue(ValueBind , OverrideValue);
+		setValue(ValueBind , OnOffValue);
 	}
 	}
 
@@ -274,41 +315,46 @@ var OvTimBind = GroupAccess2.getElementsByTagName("Bind").item(1).getFullBindNam
 	
 }
 
-	function OnChange(evt)																// Function that handles what happens whenever a bound value changes. 
+	function OnChange(evt)																									// Function that handles what happens whenever a bound value changes. 
 {
 var GroupAccess1 =evt.getCurrentTarget().getParentNode().getParentNode().getChildNodes().item(0).getChildNodes().item(0);
-var GroupAccess2 =evt.getCurrentTarget().getParentNode().getParentNode().getChildNodes().item(1).getChildNodes().item(0);		// Shortcuts that access the seperate components without having names be used so they do not intefere with the bind names.
+var GroupAccess2 =evt.getCurrentTarget().getParentNode().getParentNode().getChildNodes().item(1).getChildNodes().item(0);	// Shortcuts that access the seperate components without having names be used so they do not intefere with the bind names.
 var GroupAccess3 =evt.getCurrentTarget().getParentNode().getParentNode().getChildNodes().item(2).getChildNodes().item(0);
-
 
 var comp = evt.getCurrentTarget().getParentNode();
 var FinalValue; 
 var FinalTimeValue;
 var status = evt.getStatus();
-var value = evt.getValue();
+var value = evt.getValue();	
 var ForceColor = GroupAccess3.getAttribute("Fill");
 var NormalColor = GroupAccess3.getAttribute("Stroke");
-var decs = GroupAccess3.getAttribute("Decimals");
-var Units  = GroupAccess3.getAttribute("Units");	
-var ButtonText = GroupAccess2.getChildByName("Text");											// Variables that are going to be used in the function. 
+var State0  = GroupAccess2.getAttribute("State0");
+var State1  = GroupAccess2.getAttribute("State1");
+var ButtonText = GroupAccess2.getChildByName("Text");										// Variables that are going to be used in the function. 
 var ValueBind = GroupAccess2.getElementsByTagName("Bind").item(0).getFullBindName();
 var OvTimBind = GroupAccess2.getElementsByTagName("Bind").item(1).getFullBindName();
 var PointValueText = GroupAccess1.getChildByName("Point Value Text Display");
 var OvTimText = GroupAccess1.getChildByName("Override Time Value Text Display");
 
-
-	if (evt.getTarget().getFullBindName() == ValueBind)											// If statement that handles what happens when the bind that changes is the ValueBind.
+//alert(NormalColor);
+	if (evt.getTarget().getFullBindName() == ValueBind)										// If statement that handles what happens when the bind that changes is the ValueBind.
 	{
-	FinalValue = new Number(value).toFixed(decs);
-	FinalValue += " " + Units;
-	PointValueText.setAttribute("Content",FinalValue);											// Sets the content of the Point Value Textbox to the value that is given plus the units from the 
-	GroupAccess3.getChildByName("Text").setAttribute("Content", FinalValue);					// exposed variables. This formats the values.
+	if (value == 0)
+	{
+	FinalValue = State0;
+	}else{
+	FinalValue = State1;
+	}
+	
+	//alert(FinalValue);
+	PointValueText.setAttribute("Content",FinalValue);										// Sets the content of the Point Value Textbox to the value that is given plus the units from the 
+	GroupAccess3.getChildByName("Text").setAttribute("Content", FinalValue);				// exposed variables. This formats the values.
 	}
  
-	if (evt.getTarget().getFullBindName() == OvTimBind)											// If statement that handles what happens when the bind that changes is the OvTimBind.
+	if (evt.getTarget().getFullBindName() == OvTimBind)										// If statement that handles what happens when the bind that changes is the OvTimBind.
 	{
-		if (value == 500000)																	// Checks to see if the value assigned is 500,000 and if its true then writes "Permanent" to a textbox.
-		{																						// If its not then it writes the value of the time to the same text box. 
+		if (value == 500000)																// Checks to see if the value assigned is 500,000 and if its true then writes "Permanent" to a textbox.
+		{																					// If its not then it writes the value of the time to the same text box. 
 		OvTimText.setAttribute("Content" , "Permanent");
 		}else{
 		FinalTimeValue = Math.round(value * 100)/100; 
@@ -317,8 +363,8 @@ var OvTimText = GroupAccess1.getChildByName("Override Time Value Text Display");
 		}
 	}
  
-	if ((status == 3) && (evt.getTarget().getFullBindName() == ValueBind))						// If statement that changes the 02 textbox based off of the status. If the point is forced then 
-	{																							// it changes the textbox to "Automatic". For any other status it changes it to "Override".
+	if ((status == 3) && (evt.getTarget().getFullBindName() == ValueBind))					// If statement that changes the 02 textbox based off of the status. If the point is forced then 
+	{																						// it changes the textbox to "Automatic". For any other status it changes it to "Override".
 	ButtonText.setAttribute("Content" , "Automatic");
 	GroupAccess3.getChildByName("background").setAttribute("Stroke" , ForceColor); 
 	GroupAccess3.getChildByName("background").setAttribute("StrokeWidth" , "2");
@@ -334,16 +380,17 @@ var OvTimText = GroupAccess1.getChildByName("Override Time Value Text Display");
 	GroupAccess3.getChildByName("background").setAttribute("StrokeWidth" , "1");
 	GroupAccess3.getChildByName("Ovr Notification").setAttribute("Visibility" , "Hidden");
 	GroupAccess3.getChildByName("Text").setAttribute("Left" , "-4");
-	GroupAccess1.getChildByName("Background").setAttribute("Stroke" ,"#626469");
-		
+	GroupAccess1.getChildByName("Background").setAttribute("Stroke" ,"#626469");	
 	}
 
 }]]></Script>
+            <Expose ExposedAttribute="State0" Name="State 0 "/>
+            <Expose ExposedAttribute="State1" Name="State 1 "/>
         </Group>
     </Component>
     <Component Clip="False" ContentWidth="100" Id="" Name=""
-        Stroke="#626469" Units="%" Visibility="Visible" Width="100">
-        <Group Decimals="1" Fill="#FFD100" Name="03" Units="%">
+        Stroke="#626469" Visibility="Visible" Width="100">
+        <Group Fill="#FFD100" Name="03">
             <Rectangle Fill="None" Height="20.0" Left="0"
                 Name="background" RadiusX="5" RadiusY="5"
                 Stroke="#626469" StrokeDashArray="0.0" StrokeWidth="1.0"
@@ -355,8 +402,6 @@ var OvTimText = GroupAccess1.getChildByName("Override Time Value Text Display");
                 <Expose ExposedAttribute="Width" Name="Component Width"/>
             </Rectangle>
             <Expose ExposedAttribute="Fill" Name="Forced Color"/>
-            <Expose ExposedAttribute="Decimals" Name="Decimals"/>
-            <Expose ExposedAttribute="Units" Name="Units"/>
             <TextBox Fill="None" FontFamily="Arial" FontSize="13"
                 FontStyle="Normal" FontWeight="Normal" Height="20.0"
                 HorizontalAlign="Center" Left="-4" Name="Text"
@@ -427,7 +472,7 @@ GroupAccess4.setAttribute("Left", FinalPosition);
             <Script Name="OnClickBehavior" OnMouseClick="OnClick"><![CDATA[function OnClick(evt)
 {
 var GroupAccess1 =evt.getCurrentTarget().getParentNode().getParentNode().getChildNodes().item(0).getChildNodes().item(0);
-var GroupAccess2 =evt.getCurrentTarget().getParentNode().getParentNode().getChildNodes().item(1).getChildNodes().item(0);	// Shortcuts that access the seperate components without having names be used so they do not intefere with the bind names.
+var GroupAccess2 =evt.getCurrentTarget().getParentNode().getParentNode().getChildNodes().item(1).getChildNodes().item(0);		// Shortcuts that access the seperate components without having names be used so they do not intefere with the bind names.
 var GroupAccess3 =evt.getCurrentTarget().getParentNode().getParentNode().getChildNodes().item(2).getChildNodes().item(0);
 
 var comp=evt.getCurrentTarget().getParentNode();
@@ -438,7 +483,7 @@ var FinalValue;
 
 	if (PermanentOvrBool == true)																				// If statement that handles what happens when the confirm is true. 
 	{																											// Sets the time value text box to Permanent and if the 02 text is automatic	
-	TimeValueText.setAttribute("Content", "Permanent");															// it sets the OVtime bind to the permanent value. 
+	TimeValueText.setAttribute("Content", "Permanent")															// it sets the OVtime bind to the permanent value. 
 
 		if ((GroupAccess2.getChildByName("Text").getAttribute("Content") == "Automatic"))
 		{
@@ -477,6 +522,6 @@ var FinalValue;
     </Component>
     <Expose ExposedAttribute="ContentWidth" Name="Component Width"/>
     <Expose ExposedAttribute="Width" Name="Component Width"/>
-    <Metadata Name="Name" Value="Analog NW8K Spt W. Menu"/>
+    <Metadata Name="Name" Value="NW8K Digital Spt W. Menu"/>
     <Metadata Name="Description" Value=""/>
 </Component>
