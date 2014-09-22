@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Component ContentHeight="20" ContentWidth="100" Description=""
     Fill="#FFD100" GridSize="10" Height="20.0" Left="265.0"
-    Name="Digital Override" OffText="Disable" OnText="Enable"
+    Name="Native Digital Override" OffText="Disable" OnText="Enable"
     OnValue="1,100,on,true,enable,enabled" Top="168.0" Width="100.0">
     <Expose ExposedAttribute="OnValue" Name="On Value"/>
     <Expose ExposedAttribute="Fill" Name="Forced Color"/>
@@ -138,6 +138,6 @@ function isNumber (o) {					// Function that checks to see if something is a num
     </Component>
     <Expose ExposedAttribute="Width" Name="Component Width"/>
     <Expose ExposedAttribute="ContentWidth" Name="Component Width"/>
-    <Metadata Name="Name" Value="Digital Override"/>
+    <Metadata Name="Name" Value="Native Digital Override"/>
     <Metadata Name="Description" Value=""/>
 </Component>

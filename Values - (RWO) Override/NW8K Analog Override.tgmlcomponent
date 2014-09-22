@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Component Clip="False" ComponentCounter="2" ContentHeight="20"
     ContentWidth="100" GridSize="10" Height="20.0" Left="243.0"
-    Name="NW8K AO-APT" Top="109.0" Width="100.0">
+    Name="NW8K Analog Override" Top="109.0" Width="100.0">
     <Component Clip="False" ContentHeight="40.0" ContentWidth="100"
         Height="40.0" Left="0" Name="NW8K AO-APT" Top="0" Width="100">
         <Group Name="binds">
@@ -254,6 +254,6 @@ function valueObject(){
             Stroke="None" StrokeDashArray="0.0" StrokeWidth="0"/>
         <Expose ExposedAttribute="Left" Name="Override Notification Position"/>
     </Component>
-    <Metadata Name="Name" Value="AO-APT Cmd"/>
+    <Metadata Name="Name" Value="NW8K Analog Override"/>
     <Metadata Name="Description" Value=""/>
 </Component>
