@@ -1,8 +1,7 @@
 <?xml version="1.0"?>
-<Component ContentHeight="20" ContentWidth="100"
-     Fill="#FFD100" Height="20.0"
-    Left="190.0" Name="BACnet Digital Override" OffText="Off" OnText="On"
-    OnValue="1,on,true" Top="168.0" Width="100.0">
+<Component ContentHeight="20" ContentWidth="100" Fill="#FFD100"
+    Height="20.0" Left="408.0" Name="BACnet Digital Override"
+    OffText="Off" OnText="On" OnValue="1,on,true" Top="49.0" Width="100.0">
     <Script OnDocumentLoad="onLoad" OnSignalChange="onChange"><![CDATA[var comp;
 var onText;
 var offText;
@@ -175,17 +174,17 @@ function isNumber (o)															// Function that checks if something is a nu
     </TextBox>
     <Group Name="Binds">
         <Bind Attribute="" Color="#009530" Description="ValueBind" Id=""
-            Name="Value" PreventDefault="False">
+            Name="Value" PreventDefault="True">
             <Expose ExposedAttribute="Name" Name="Value Bind"/>
-            <Expose ExposedAttribute="PreventDefault" Name="Prevent Default"/>
+            <Expose ExposedAttribute="PreventDefault" Name="Value Prevent Default"/>
         </Bind>
         <Bind Description="PriorityBind" Id="" Name="Pri" PreventDefault="False">
             <Expose ExposedAttribute="Name" Name="Priority Bind"/>
-            <Expose ExposedAttribute="PreventDefault" Name="Prevent Default"/>
+            <Expose ExposedAttribute="PreventDefault" Name="Priority Prevent Default"/>
         </Bind>
         <Bind Description="OverrideBind" Name="Ovr" PreventDefault="False">
             <Expose ExposedAttribute="Name" Name="Override Bind"/>
-            <Expose ExposedAttribute="PreventDefault" Name="Prevent Default"/>
+            <Expose ExposedAttribute="PreventDefault" Name="Override Prevent Default"/>
         </Bind>
     </Group>
     <Component Clip="False" ContentHeight="20.0" ContentWidth="15"

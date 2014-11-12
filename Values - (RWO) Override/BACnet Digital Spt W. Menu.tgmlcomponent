@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Component Clip="False" ContentHeight="20" ContentWidth="100"
-    Fill="#FFD100" Height="20.0" Left="765.2133005857468"
-    Name="BACnet Digital Spt W. Menu" Top="191.66664111614227" Width="100.0">
+    Fill="#FFD100" Height="20.0" Left="390.0"
+    Name="BACnet Digital Spt W. Menu" Top="220.0" Width="100.0">
     <Component Clip="False" Height="0" Id="" Left="-90" Name=""
         Top="-45" Visibility="Hidden" Width="0">
         <Group Name="01">

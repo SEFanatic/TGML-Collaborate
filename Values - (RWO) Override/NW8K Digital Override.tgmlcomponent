@@ -1,22 +1,22 @@
 <?xml version="1.0"?>
 <Component Clip="False" ComponentCounter="2" ContentHeight="20"
-    ContentWidth="100" GridSize="10" Height="20.0" Left="167.0"
-    Name="NW8K Digital Override" Top="153.0" Width="100.0">
+    ContentWidth="100" GridSize="10" Height="20.0" Left="559.0"
+    Name="NW8K Digital Override" Top="163.0" Width="100.0">
     <Component Clip="False" ContentHeight="20.0" ContentWidth="100.0"
         Height="20.0" Left="0" Name="NW8K DO-DPT" Top="0" Width="100.0">
         <Group Name="binds">
             <Bind Attribute="Visibility" Description="ValueBind"
-                Name="DV" PreventDefault="False">
+                Name="DV" PreventDefault="True">
                 <Expose ExposedAttribute="Name" Name="ValueBind"/>
-                <Expose ExposedAttribute="PreventDefault" Name="Prevent Default"/>
+                <Expose ExposedAttribute="PreventDefault" Name="Value Prevent Default"/>
             </Bind>
             <Bind Description="AlarmBind" Name="COS" PreventDefault="False">
                 <Expose ExposedAttribute="Name" Name="AlarmBind"/>
-                <Expose ExposedAttribute="PreventDefault" Name="Prevent Default"/>
+                <Expose ExposedAttribute="PreventDefault" Name="Alarm Prevent Default"/>
             </Bind>
             <Bind Description="OvTimBind" Name="OvTim" PreventDefault="False">
                 <Expose ExposedAttribute="Name" Name="OvTimBind"/>
-                <Expose ExposedAttribute="PreventDefault" Name="Prevent Default"/>
+                <Expose ExposedAttribute="PreventDefault" Name="OvTim Prevent Default"/>
             </Bind>
         </Group>
         <Group Name="display">
