@@ -1,0 +1,158 @@
+<?xml version="1.0"?>
+<Component Clip="False" Color="#F0080E" ComponentCounter="5"
+    ContentHeight="20" ContentWidth="100" Decimals="1" Fill="#FFD100"
+    GridSize="10" Height="20.0" Left="272.0" Name="Active Setpoint"
+    OffsetValue="3" RmTmpOfs="50" Stroke="#42B4E6" Top="55.0" Units="°F" Width="100.0">
+    <Expose ExposedAttribute="Color" Name="Alarm Color"/>
+    <Expose ExposedAttribute="Fill" Name="Forced Color"/>
+    <Expose ExposedAttribute="Stroke" Name="Database Color"/>
+    <Expose ExposedAttribute="Decimals" Name="Decimals"/>
+    <Expose ExposedAttribute="Units" Name="Units"/>
+    <Expose ExposedAttribute="OffsetValue" Name="OffsetValue"/>
+    <Rectangle Fill="#E0E0E0" Height="20.0" Left="0.0" Name="background"
+        RadiusX="5" RadiusY="5" Stroke="#626469" StrokeDashArray="0.0"
+        StrokeWidth="1.0" Top="0.0" Width="100">
+        <LinearGradient EndPoint="0,1" Name="LinearGradient">
+            <GradientStop Color="#FEFEFE" Offset="0"/>
+            <GradientStop Color="#DFE0E2" Offset="1.0"/>
+        </LinearGradient>
+    </Rectangle>
+    <TextBox Height="40" Name="OffsetValueText" Visibility="Hidden" Width="40"><![CDATA[0]]></TextBox>
+    <TextBox Fill="None" FontFamily="Arial" FontSize="15.0"
+        FontStyle="Normal" FontWeight="Normal" Height="20.0"
+        HorizontalAlign="Center" Left="2.5" Name="Text" Stroke="#000000"
+        TextDecoration="None" Top="0.0" VerticalAlign="Middle" Width="95"><![CDATA[...]]></TextBox>
+    <Bind Attribute="" Color="#009530" Name="AnalogValue" PreventDefault="True">
+        <Expose ExposedAttribute="Color" Name="On Color"/>
+        <Expose ExposedAttribute="Name" Name="Bind Name"/>
+        <Expose ExposedAttribute="PreventDefault" Name="Prevent Default"/>
+        <Script OnDocumentLoad="onLoad" OnSignalChange="onChange"><![CDATA[var comp;
+var dec;
+var units;
+var offColor;
+var onColor;
+var f;
+var d;
+var a;
+
+function onLoad(evt)
+{
+	comp=evt.getCurrentTarget().getParentNode();
+	offColor=comp.getChildByName("background").getAttribute("Stroke");
+	onColor=evt.getCurrentTarget().getAttribute("Color");
+	f=comp.getAttribute("Fill");
+	d=comp.getAttribute("Stroke");
+	a=comp.getAttribute("Color");
+	dec = comp.getAttribute("Decimals");
+	units = comp.getAttribute("Units");
+}
+
+function onChange(evt)
+{
+
+	var value = evt.getValue();
+	var status = parseInt(evt.getStatus());
+	var tempCol = "";
+	var outline = comp.getChildByName("background");
+	
+	comp.getChildByName("Text").setAttribute("Content", getDisplayText(parseFloat(value)));
+		
+	if (status == 2){
+		outline.setAttribute("Stroke", offColor);
+		outline.setAttribute("StrokeWidth", "1");
+	}
+	else{
+		outline.setAttribute("Stroke", borderCol(status));
+		outline.setAttribute("StrokeWidth", "2");
+	}
+	
+}
+
+function borderCol(status){
+	if(status==3){
+		return f
+	}
+	else{
+		if(status==1){
+			return d
+		}
+		else{
+			return a
+		}
+	}
+}
+
+function getDisplayText(value){
+		try{		
+			var str = "...";
+			if(!isNaN(value) && value != Infinity){
+				str = new Number(value).toFixed(dec);
+				str += " " + units;
+			}
+			return str;
+		}
+		catch(ex){
+			return "... " + units;
+		}
+
+}
+	
+function debug(str){
+	alert(str);
+	}]]></Script>
+    </Bind>
+    <Bind Name="RoomTempOffset"/>
+    <Script OnSignalChange="OnChange"><![CDATA[function OnChange(evt)
+
+{	
+	var comp = evt.getTarget().getParentNode();
+	var value = evt.getValue();
+	var TempValue = parseInt(comp.getChildByName("Text").getAttribute("Content"));
+	var OffsetValue;
+	var Something;
+	var TwoDegreesBelow = 0;
+	var TwoDegreesAbove = 0;
+	var AnalogBind = comp.getElementsByTagName("Bind").item(0).getFullBindName();
+	var RoomTempOffsetBindName = comp.getElementsByTagName("Bind").item(1).getFullBindName(); 
+
+	
+	if (evt.getTarget().getFullBindName() == RoomTempOffsetBindName)	
+	{
+		
+		Something = value ;
+		comp.getChildByName("OffsetValueText").setAttribute("Content" , Something);
+	}
+
+	
+	var RoomTempOffset= parseInt(comp.getChildByName("OffsetValueText").getAttribute("Content"));
+	OffsetValue = parseInt(evt.getCurrentTarget().getAttribute("OffsetValue"));
+	Background =evt.getTarget().getParentNode().getChildByName("background");
+	TwoDegreesBelow = RoomTempOffset - OffsetValue;
+	TwoDegreesAbove = RoomTempOffset + OffsetValue;
+	//alert(RoomTempOffset);
+	//alert(TempValue);
+	//alert(RoomTempOffset);
+	//alert(TwoDegreesBelow);
+	//alert(TwoDegreesAbove);
+	
+
+	
+	if(TempValue < TwoDegreesBelow)
+	{
+	Background.getChildByName("LinearGradient").getChildNodes().item(1).setAttribute("Color","#42B4E6");
+	}
+	
+	if(TempValue > TwoDegreesAbove)
+	{
+	Background.getChildByName("LinearGradient").getChildNodes().item(1).setAttribute("Color","#B10043");
+	}
+	if((TempValue >= TwoDegreesBelow)&&(TempValue<=TwoDegreesAbove))
+	{
+	Background.getChildByName("LinearGradient").getChildNodes().item(1).setAttribute("Color","#DFE0E2");
+	}
+	
+	
+}]]></Script>
+    <Metadata Name="Name" Value="Active Setpoint"/>
+    <Metadata Name="Description" Value=""/>
+</Component>
