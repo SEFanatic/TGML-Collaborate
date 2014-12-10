@@ -1,0 +1,185 @@
+<?xml version="1.0"?>
+<Component ContentHeight="20" ContentWidth="100" Description=""
+    Fill="#FFD100" Height="20.0" Left="397.0" NAValue="163.835"
+    Name="IO Point (Digital)" OffText="Off" OnText="On"
+    OnValue="1,on,true" Top="290.0" Width="100.0">
+    <Script OnDocumentLoad="onLoad" OnSignalChange="onChange"><![CDATA[var comp;
+var onText;
+var offText;
+var onValue;
+var rtnArray = new Array();				// Variables that are declared globally so they can be used in all the functions 
+var borderColor;
+var forceColor;
+var valueBind;
+var ovrBind;
+var forcedState;
+
+
+function onLoad(evt)
+{
+	comp=evt.getCurrentTarget();	
+	borderColor=comp.getChildByName("background").getAttribute("Stroke");	
+	forceColor=comp.getAttribute("Fill");									// Short cuts that are made to improve readability and to cut down on typing. 
+	onText=comp.getAttribute("OnText");										// These short cuts are going to be used in the rest of the component. 
+	offText=comp.getAttribute("OffText");
+	onValue=buildArray(comp.getAttribute("OnValue").split(','));
+	forcedState = false;
+	
+
+	var bindGroup = comp.getChildByName("Binds");
+	if(bindGroup)
+	{
+		var bindList = bindGroup.getElementsByTagName("Bind");				// If statement that handles setting up the binds that the component is going to use. 
+		var i = bindList.length;											// This cycles through all the elements with the named bind and finds the corresponding. 
+		while(i--)															// binds by looking at the description of the bind. 
+		{
+			var child = bindList.item(i);
+			var description = String(child.getAttribute("Description"));
+
+			if(description.equals("ValueBind"))
+			{
+				valueBind = child;
+			}
+			if(description.equals("OvrBind"))
+			{
+				ovrBind = child;
+			}
+		}
+	}
+	else
+	{
+		alert("Not bindGroup");												// Sends an alert to the user if there isnt a bind group. 
+	}
+}
+
+
+function onChange(evt)															// Function that handles what happens when a bound value is changed. 
+{
+
+	if(evt.getTarget().getFullBindName() == valueBind.getFullBindName())		// If statement that executes some statements when the value bind is changed. 
+	{
+		var value = evt.getValue();		
+
+		if (isNumber(value))													// If that sees if the value is a number and says that values is greater than zero.
+		{
+			value = value > 0
+		}
+
+		if (Bool(value))														//	If statement that sets the content of the textbox based on whether the Boolean value of value is true or false.
+		{
+			comp.getChildByName("Text").setAttribute("Content", onText);
+		}
+		else
+		{
+			comp.getChildByName("Text").setAttribute("Content", offText);
+		}
+		
+		
+	}
+
+	if(evt.getTarget().getFullBindName() == ovrBind.getFullBindName())			// If statement that handles what happens when there is a change to the override bind. 
+	{
+					
+		var status = parseInt(evt.getStatus());
+		var outline = comp.getChildByName("background");
+
+		if(status!=3)															// If statement that handles what happens when the status of the bind isnt forced. 
+		{
+			
+			outline.setAttribute("Stroke", borderColor);
+			outline.setAttribute("StrokeWidth", "1");
+		}
+		else																	// Else statement that handles what happens what when it is forced. 
+		{
+			forcedState = true;
+			
+			outline.setAttribute("Stroke", forceColor);
+			outline.setAttribute("StrokeWidth", "2");
+		}		
+	}
+}
+
+function Bool(val)																//  Function that checks whether the value received matches any of the On values that are gathered from
+{																	  			//  from the exposed value called On Values.
+	for (var i=0;i<onValue.length;i++)
+	{	
+		if(String(val).toLowerCase() == String(onValue[i]).toLowerCase())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+function buildArray(Array)														// Function that builds the array that contains all of the On value strings.
+{																				// This array is used in the Bool(val) function. 
+	for (var i=0;i<Array.length;i++)
+	{
+		if (Array[i].substring(0,1) == " ")
+		{
+			Array[i] = Array[i].substring(1, Array[i].length);
+		}
+		if (isNumber(Array[i]) || Array[i]=="true" || Array[i]=="false" )
+		{
+			rtnArray[i] = Array[i]
+		}
+		else
+		{
+			rtnArray[i] = "'" + Array[i] + "'";
+		}
+	}
+	return rtnArray;
+}
+
+function isNumber (o)															// Function that checks if something is a number. 
+{
+	return ! isNaN (o-0) && o != null;
+}]]></Script>
+    <Expose ExposedAttribute="OffText" Name="Off Text"/>
+    <Expose ExposedAttribute="OnText" Name="On Text"/>
+    <Expose ExposedAttribute="OnValue" Name="On Value"/>
+    <Expose ExposedAttribute="NAValue" Name="WPT NA Value"/>
+    <Expose ExposedAttribute="Fill" Name="Forced Color"/>
+    <Rectangle Fill="None" Height="20.0" Left="0" Name="background"
+        RadiusX="5" RadiusY="5" Stroke="#626469" StrokeDashArray="0.0"
+        StrokeWidth="1.0" Top="0" Width="100">
+        <LinearGradient EndPoint="0,1">
+            <GradientStop Color="#FEFEFE" Offset="0"/>
+            <GradientStop Color="#DFE0E2" Offset="1.0"/>
+        </LinearGradient>
+        <Expose ExposedAttribute="Width" Name="Component Width"/>
+    </Rectangle>
+    <TextBox Fill="None" FontFamily="Arial" FontSize="15.0"
+        FontStyle="Normal" FontWeight="Normal" Height="20.0"
+        HorizontalAlign="Center" Left="-5" Name="Text" Stroke="#000000"
+        TextDecoration="None" Top="0.0" VerticalAlign="Middle"
+            Width="100"><![CDATA[...]]><Expose ExposedAttribute="Width" Name="Component Width"/>
+    </TextBox>
+    <Component Clip="False" ContentHeight="20.0" ContentWidth="15"
+        Height="20.0" Left="85" Name="OvrArrow" Top="0" Width="15.0">
+        <Path Fill="#009530" Name="OvrBox"
+            PathData="M0.0,0.0 C5.0,0.0 5,0 10,0 12,0 15,2 15,5 15,10 15,15 15,15 15,18 12,20 9,20 4,20 5.0,20.0 0.0,20.0 0.0,15.0 0.0,5.0 0.0,0.0"
+            Stroke="#004000" StrokeDashArray="0.0" StrokeWidth="1.0">
+            <Expose ExposedAttribute="Stroke" Name="Border Color"/>
+        </Path>
+        <Polygon Fill="#FFFFFF" Name="OvrArrow"
+            Points="9.83830081246947,3.812333812258316 2.670400857925415,9.837342605211944 9.83830081246947,15.862351398165572"
+            Stroke="None" StrokeDashArray="0.0" StrokeWidth="0"/>
+        <Expose ExposedAttribute="Left" Name="Ovr Icon Pos"/>
+    </Component>
+    <Group Name="Binds">
+        <Bind Attribute="" Color="#009530" Description="ValueBind" Id=""
+            Name="Value" PreventDefault="False">
+            <Expose ExposedAttribute="Name" Name="Value Bind"/>
+            <Expose ExposedAttribute="PreventDefault" Name="Prevent Default"/>
+        </Bind>
+        <Bind Description="OvrBind" Id="" Name="Override" PreventDefault="False">
+            <Expose ExposedAttribute="Name" Name="Override Bind"/>
+            <Expose ExposedAttribute="PreventDefault" Name="Prevent Default"/>
+        </Bind>
+    </Group>
+    <Expose ExposedAttribute="ContentWidth" Name="Component Width"/>
+    <Expose ExposedAttribute="Width" Name="Component Width"/>
+    <Metadata Name="Name" Value="IO Point (Digital)"/>
+    <Metadata Name="Description" Value=""/>
+</Component>

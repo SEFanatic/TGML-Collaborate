@@ -1,14 +1,17 @@
 <?xml version="1.0"?>
 <Component Clip="False" Color="#F0080E" ComponentCounter="5"
     ContentHeight="20" ContentWidth="100" Decimals="1" Fill="#FFD100"
-    GridSize="10" Height="20.0" Left="272.0" Name="Active Setpoint"
-    OffsetValue="3" RmTmpOfs="50" Stroke="#42B4E6" Top="55.0" Units="°F" Width="100.0">
+    GridSize="10" Height="20.0" Left="236.0" MaxColor="#B10043 "
+    MinColor="#42B4E6 " Name="Active Setpoint" OffsetValue="3"
+    RmTmpOfs="50" Stroke="#42B4E6" Top="231.0" Units="°F" Width="100.0">
     <Expose ExposedAttribute="Color" Name="Alarm Color"/>
     <Expose ExposedAttribute="Fill" Name="Forced Color"/>
     <Expose ExposedAttribute="Stroke" Name="Database Color"/>
     <Expose ExposedAttribute="Decimals" Name="Decimals"/>
     <Expose ExposedAttribute="Units" Name="Units"/>
     <Expose ExposedAttribute="OffsetValue" Name="OffsetValue"/>
+    <Expose ExposedAttribute="MinColor" Name="MinColor"/>
+    <Expose ExposedAttribute="MaxColor" Name="MaxColor"/>
     <Rectangle Fill="#E0E0E0" Height="20.0" Left="0.0" Name="background"
         RadiusX="5" RadiusY="5" Stroke="#626469" StrokeDashArray="0.0"
         StrokeWidth="1.0" Top="0.0" Width="100">
@@ -17,7 +20,6 @@
             <GradientStop Color="#DFE0E2" Offset="1.0"/>
         </LinearGradient>
     </Rectangle>
-    <TextBox Height="40" Name="OffsetValueText" Visibility="Hidden" Width="40"><![CDATA[0]]></TextBox>
     <TextBox Fill="None" FontFamily="Arial" FontSize="15.0"
         FontStyle="Normal" FontWeight="Normal" Height="20.0"
         HorizontalAlign="Center" Left="2.5" Name="Text" Stroke="#000000"
@@ -49,6 +51,7 @@ function onLoad(evt)
 
 function onChange(evt)
 {
+
 
 	var value = evt.getValue();
 	var status = parseInt(evt.getStatus());
@@ -102,31 +105,31 @@ function debug(str){
 	}]]></Script>
     </Bind>
     <Bind Name="RoomTempOffset"/>
-    <Script OnSignalChange="OnChange"><![CDATA[function OnChange(evt)
-
+    <Script OnSignalChange="OnChange"><![CDATA[var RoomTempOffset;
+function OnChange(evt)
 {	
 	var comp = evt.getTarget().getParentNode();
 	var value = evt.getValue();
 	var TempValue = parseInt(comp.getChildByName("Text").getAttribute("Content"));
 	var OffsetValue;
-	var Something;
 	var TwoDegreesBelow = 0;
 	var TwoDegreesAbove = 0;
+	var ShadePercentage;
+	var ConvertedColor;
 	var AnalogBind = comp.getElementsByTagName("Bind").item(0).getFullBindName();
 	var RoomTempOffsetBindName = comp.getElementsByTagName("Bind").item(1).getFullBindName(); 
-
+	var MinColor = comp.getAttribute("MinColor");
+	var MaxColor = comp.getAttribute("MaxColor");
 	
 	if (evt.getTarget().getFullBindName() == RoomTempOffsetBindName)	
 	{
-		
-		Something = value ;
-		comp.getChildByName("OffsetValueText").setAttribute("Content" , Something);
+		RoomTempOffset = parseInt(value);
 	}
-
 	
-	var RoomTempOffset= parseInt(comp.getChildByName("OffsetValueText").getAttribute("Content"));
+	
 	OffsetValue = parseInt(evt.getCurrentTarget().getAttribute("OffsetValue"));
 	Background =evt.getTarget().getParentNode().getChildByName("background");
+	RadientAccess = Background.getChildByName("LinearGradient").getChildNodes().item(1);
 	TwoDegreesBelow = RoomTempOffset - OffsetValue;
 	TwoDegreesAbove = RoomTempOffset + OffsetValue;
 	//alert(RoomTempOffset);
@@ -139,19 +142,31 @@ function debug(str){
 	
 	if(TempValue < TwoDegreesBelow)
 	{
-	Background.getChildByName("LinearGradient").getChildNodes().item(1).setAttribute("Color","#42B4E6");
+	ShadePercentage = (.01*(100-(2*(RoomTempOffset-(TempValue -(TempValue%10))))));
+	ConvertedColor = shade(MinColor,ShadePercentage);
+	RadientAccess.setAttribute("Color",ConvertedColor);
 	}
-	
 	if(TempValue > TwoDegreesAbove)
 	{
-	Background.getChildByName("LinearGradient").getChildNodes().item(1).setAttribute("Color","#B10043");
+	ShadePercentage = (.01*(100-(2*(TempValue-(RoomTempOffset -(RoomTempOffset%10))))));
+	ConvertedColor = shade(MaxColor,ShadePercentage);
+	RadientAccess.setAttribute("Color",ConvertedColor);
 	}
 	if((TempValue >= TwoDegreesBelow)&&(TempValue<=TwoDegreesAbove))
 	{
-	Background.getChildByName("LinearGradient").getChildNodes().item(1).setAttribute("Color","#DFE0E2");
+	RadientAccess.setAttribute("Color","#DFE0E2");
 	}
 	
 	
+}
+function shade(color, percent){
+    if (color.length > 7 ) return shadeRGBColor(color,percent);
+    else return shadeColor2(color,percent);
+}
+
+function shadeColor2(color, percent) {   
+    var f=parseInt(color.slice(1),16),t=percent<0?0:255,p=percent<0?percent*-1:percent,R=f>>16,G=f>>8&0x00FF,B=f&0x0000FF;
+    return "#"+(0x1000000+(Math.round((t-R)*p)+R)*0x10000+(Math.round((t-G)*p)+G)*0x100+(Math.round((t-B)*p)+B)).toString(16).slice(1);
 }]]></Script>
     <Metadata Name="Name" Value="Active Setpoint"/>
     <Metadata Name="Description" Value=""/>

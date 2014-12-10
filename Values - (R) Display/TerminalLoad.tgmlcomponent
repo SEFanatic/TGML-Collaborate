@@ -1,14 +1,16 @@
 <?xml version="1.0"?>
 <Component Clip="False" Color="#F0080E" ComponentCounter="5"
     ContentHeight="20" ContentWidth="100" Decimals="1" Fill="#FFD100"
-    GridSize="10" Height="20.0" Left="85.0" Name="TerminalLoad"
-    OffsetValue="3" RmTmpOfs="50" Stroke="#42B4E6" Top="179.0"
-    Units="°F" Width="100.0">
+    GridSize="10" Height="20.0" Left="228.0" MaxColor="#B10043 "
+    MinColor="#42B4E6 " Name="TerminalLoad" OffsetValue="3"
+    RmTmpOfs="50" Stroke="#42B4E6" Top="130.0" Units="°F" Width="100.0">
     <Expose ExposedAttribute="Color" Name="Alarm Color"/>
     <Expose ExposedAttribute="Fill" Name="Forced Color"/>
     <Expose ExposedAttribute="Stroke" Name="Database Color"/>
     <Expose ExposedAttribute="Decimals" Name="Decimals"/>
     <Expose ExposedAttribute="Units" Name="Units"/>
+    <Expose ExposedAttribute="MinColor" Name="MinColor"/>
+    <Expose ExposedAttribute="MaxColor" Name="MaxColor"/>
     <Rectangle Fill="#E0E0E0" Height="20.0" Left="0.0" Name="background"
         RadiusX="5" RadiusY="5" Stroke="#626469" StrokeDashArray="0.0"
         StrokeWidth="1.0" Top="0.0" Width="100">
@@ -107,33 +109,39 @@ function debug(str){
 
 var value = parseInt(evt.getValue());
 var comp = evt.getTarget().getParentNode();
+var ConvertedColor;
+var MinColor = comp.getAttribute("MinColor");
+var MaxColor = comp.getAttribute("MaxColor"); 
 
-//alert(comp.getChildByName("background").getChildByName("LinearGradient").getChildNodes().item(1).getAttribute("Color"));
 
-if((value < -50) && (value> -100))
+if((value < -51) && (value> -101))
 {
-
-comp.getChildByName("background").getChildByName("LinearGradient").getChildNodes().item(1).setAttribute("Color","#42B4E6");
-//alert("Between -50 and -100");
-
+ConvertedColor = shade(MinColor, (((value/100)*2)+2));
+comp.getChildByName("background").getChildByName("LinearGradient").getChildNodes().item(1).setAttribute("Color",ConvertedColor);
 }
 
-if((value < 50) && (value> -50))
+if((value < 51) && (value> -51))
 {
 comp.getChildByName("background").getChildByName("LinearGradient").getChildNodes().item(1).setAttribute("Color","#DFE0E2");
-//alert("Between -50 and 50");
-
 }
 
-if((value < 100) && (value> 50))
+if((value < 101) && (value> 49))
 {
-comp.getChildByName("background").getChildByName("LinearGradient").getChildNodes().item(1).setAttribute("Color","#B10043");
-//alert("Between 50 and 100");
-
+ConvertedColor = shade(MaxColor,((((value*-1)/100)*2)+2));
+comp.getChildByName("background").getChildByName("LinearGradient").getChildNodes().item(1).setAttribute("Color",ConvertedColor);
 }
 
 
 
+}
+function shade(color, percent){
+    if (color.length > 7 ) return shadeRGBColor(color,percent);
+    else return shadeColor2(color,percent);
+}
+
+function shadeColor2(color, percent) {   
+    var f=parseInt(color.slice(1),16),t=percent<0?0:255,p=percent<0?percent*-1:percent,R=f>>16,G=f>>8&0x00FF,B=f&0x0000FF;
+    return "#"+(0x1000000+(Math.round((t-R)*p)+R)*0x10000+(Math.round((t-G)*p)+G)*0x100+(Math.round((t-B)*p)+B)).toString(16).slice(1);
 }]]></Script>
     </Bind>
     <Metadata Name="Name" Value="TerminalLoad"/>

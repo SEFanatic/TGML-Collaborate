@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Component ContentHeight="20" ContentWidth="100" Decimals="2"
-    Description="" Fill="#FFD100" Height="20.0" Left="321.0"
-    NAValue="163.835" Name="IO Point" Top="335.0" Units="%" Width="100.0">
+    Description="" Fill="#FFD100" Height="20.0" Left="414.0"
+    NAValue="163.835" Name="IO Point(Analog)" Top="144.0" Units="%" Width="100.0">
     <Script OnDocumentLoad="onLoad" OnSignalChange="onChange"><![CDATA[var comp;
 var dec;
 var units;
@@ -182,6 +182,6 @@ function getDisplayText(value)				// Handles the formatting of the display text.
     </Group>
     <Expose ExposedAttribute="ContentWidth" Name="Component Width"/>
     <Expose ExposedAttribute="Width" Name="Component Width"/>
-    <Metadata Name="Name" Value="IO Point"/>
+    <Metadata Name="Name" Value="IO Point(Analog)"/>
     <Metadata Name="Description" Value=""/>
 </Component>
