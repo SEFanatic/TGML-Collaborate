@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <Component Clip="False" Color="#F0080E" ComponentCounter="5"
     ContentHeight="20" ContentWidth="100" Decimals="1" Fill="#FFD100"
-    GridSize="10" Height="20.0" Left="236.0" MaxColor="#B10043 "
+    GridSize="10" Height="20.0" Left="220.0" MaxColor="#B10043 "
     MinColor="#42B4E6 " Name="Active Setpoint" OffsetValue="3"
-    RmTmpOfs="50" Stroke="#42B4E6" Top="231.0" Units="°F" Width="100.0">
+    RmTmpOfs="50" Stroke="#42B4E6" Top="316.0" Units="°F" Width="100.0">
     <Expose ExposedAttribute="Color" Name="Alarm Color"/>
     <Expose ExposedAttribute="Fill" Name="Forced Color"/>
     <Expose ExposedAttribute="Stroke" Name="Database Color"/>
@@ -104,7 +104,9 @@ function debug(str){
 	alert(str);
 	}]]></Script>
     </Bind>
-    <Bind Name="RoomTempOffset"/>
+    <Bind Name="ActiveSetpoint">
+        <Expose ExposedAttribute="Name" Name="Active Setpoint Bind"/>
+    </Bind>
     <Script OnSignalChange="OnChange"><![CDATA[var RoomTempOffset;
 function OnChange(evt)
 {	
